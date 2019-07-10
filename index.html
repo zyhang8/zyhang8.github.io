@@ -25,9 +25,13 @@
 
 
 
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
 
 
 
+
+
+    <link rel="dns-prefetch" href="https://hm.baidu.com">
 
 
 
@@ -54,7 +58,7 @@
     <link rel="icon" href="/img/head_sculpture.png">
 
     <meta name="format-detection" content="telephone=no">
-    <meta name="description" itemprop="description" content="aaa">
+    <meta name="description" itemprop="description" content>
     <meta name="keywords" content="全栈 学习分享 编程路线">
     <meta name="theme-color" content="#0097A7">
 
@@ -259,7 +263,7 @@
     <meta property="og:type" content="blog">
     <meta property="og:title" content="一直小白的博客">
     <meta property="og:image" content="/img/head_sculpture.png">
-    <meta property="og:description" content="aaa">
+    <meta property="og:description" content>
     
 
     
@@ -293,7 +297,7 @@
         "@type": "WebPage",
         "@id": "http://yoursite.com"
     },
-    "description": "aaa"
+    "description": ""
 }
 </script>
 
@@ -304,6 +308,15 @@
 
     <!-- Analytics -->
     
+    
+        <script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?8c824176282809c2a3153ab0c6883a31';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
     
     
 
@@ -416,11 +429,32 @@
         </button>
         <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
             
-
+                <!-- All Site UV -->
+                <a class="index_share-link" href="#">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        <span id="busuanzi_container_site_uv">
+                            <span id="busuanzi_value_site_uv"></span>&nbsp;浏览量
+                        </span>
+                    </li>
+                </a>
             
 
             
 
+            
+                <a class="index_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=一直小白的博客&url=http://yoursite.com&pic=http://yoursite.com/img/head_sculpture.png&searchPic=false&style=simple" target="_blank">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        分享到微博
+                    </li>
+                </a>
+            
+
+            
+                <a class="index_share-link" href="https://twitter.com/intent/tweet?text=一直小白的博客&url=http://yoursite.com&via=一直小白" target="_blank">
+                    <li class="mdl-menu__item mdl-js-ripple-effect">
+                        分享到 Twitter
+                    </li>
+                </a>
             
 
             
@@ -442,7 +476,7 @@
             
 
             
-                <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一直小白的博客&title=一直小白的博客&summary=aaa&pics=http://yoursite.com/img/head_sculpture.png&url=http://yoursite.com" target="_blank">
+                <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一直小白的博客&title=一直小白的博客&summary=&pics=http://yoursite.com/img/head_sculpture.png&url=http://yoursite.com" target="_blank">
                     <li class="mdl-menu__item">
                         分享到 QQ
                     </li>
@@ -647,6 +681,14 @@
 
     <!-- Article Number  -->
     
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">1</span>
+            </a>
+        </li>
+        
+    
 </ul>
 
 
@@ -663,17 +705,8 @@ It will not impact the appearance and can give developers a lot of support :)
 
 <!-- Sidebar Divider -->
 
-    <div class="sidebar-divider"></div>
-
 
 <!-- Theme Material -->
-
-    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
-        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
-            主题 - Material
-            <span class="sidebar-badge badge-circle">i</span>
-        </div>
-    </a>
 
 
 <!-- Help & Support -->
@@ -851,6 +884,9 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 
+
+    <!-- Busuanzi -->
+    <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
