@@ -270,7 +270,7 @@
 
     
         <meta property="article:published_time" content="Sun Jun 30 2019 14:39:32 GMT+0800">
-        <meta property="article:modified_time" content="Sun Jun 30 2019 14:39:32 GMT+0800">
+        <meta property="article:modified_time" content="Wed Jul 10 2019 18:46:07 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -293,7 +293,7 @@
     "mainEntityOfPage": "http://yoursite.com/2019/06/30/hello-world/index.html",
     "headline": "Hello World",
     "datePublished": "Sun Jun 30 2019 14:39:32 GMT+0800",
-    "dateModified": "Sun Jun 30 2019 14:39:32 GMT+0800",
+    "dateModified": "Wed Jul 10 2019 18:46:07 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "一直小白",
@@ -386,7 +386,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Quick-Start"><span class="post-toc-number">1.</span> <span class="post-toc-text">Quick Start</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Create-a-new-post"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Create a new post</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Run-server"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Run server</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Generate-static-files"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Generate static files</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Deploy-to-remote-sites"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Quick-Start"><span class="post-toc-number">1.</span> <span class="post-toc-text">Quick Start</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Create-a-new-post"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Create a new post</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Run-server"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Run server</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Generate-static-files"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Generate static files</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Deploy-to-remote-sites"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Deploy to remote sites</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#notes"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">notes</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -563,6 +563,13 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h3 id="notes"><a href="#notes" class="headerlink" title="notes"></a>notes</h3><p>参数 | 描述 | 默认值<br>:-: | :-: | :-: | :-: | :-:<br>layout | 布局 | post<br>title | 标题 | 文件名<br>date | 建立日期 | 文件建立日期<br>updated | 更新日期 | 文件更新日期<br>tags | 标签（不适用于分页）<br>categories| 分类（不适用于分页）<br>permalink| 覆盖文章网址<br>thumbnail | 缩略图地址<br>toc | 显示TOC按钮 | true<br>comment | 显示评论 | true<br>notag | 不生成标签按钮 | false<br>top | 置顶 | false<br>mathJax | 启用Mathjax | false<br>description: 每篇文章在搜索结果中显示的链接描述站点配置文件中的description<br>缩略图功能<br>在Material主题中，每个Scheme都有缩略图功能。<br>只需要在Front-matter中添加参数thumbnail:，然后填入缩略图地址即可。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new xx.md</span><br></pre></td></tr></table></figure>
+
 
         
     
@@ -582,6 +589,14 @@
             <!-- Post Prev & Next Nav -->
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
+    
+        <a href="/2019/07/10/Hexo-Material/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
     
 
     <!-- Section Spacer -->
@@ -673,7 +688,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -699,13 +714,65 @@
 
     <!-- Pages  -->
     
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">tag_faces</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间轴">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                时间轴
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="图库">
+                
+                    <i class="material-icons sidebar-material-icons">burst_mode</i>
+                
+                图库
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="好朋友">
+                
+                    <i class="material-icons sidebar-material-icons">favorite_border</i>
+                
+                好朋友
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/me" title="关于我">
+                
+                    <i class="material-icons sidebar-material-icons">account_circle</i>
+                
+                关于我
+            </a>
+        </li>
+        
+            <li class="divider"></li>
+        
+    
 
     <!-- Article Number  -->
     
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">1</span>
+                <span class="sidebar-badge">2</span>
             </a>
         </li>
         
