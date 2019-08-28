@@ -52,7 +52,7 @@
     
     <title>
         
-            基于python的Splash基本使用和负载均衡配置 | 
+            游记·Wuxi | 
         
         一直小白的博客
     </title>
@@ -62,8 +62,8 @@
     <link rel="icon" href="/img/head_sculpture.png">
 
     <meta name="format-detection" content="telephone=no">
-    <meta name="description" itemprop="description" content="本项目来源于大二寒假学习python网络爬虫时所做的实战小项目">
-    <meta name="keywords" content="这是一只小白,Splash,python,lua,负载均衡测试">
+    <meta name="description" itemprop="description" content="无锡旅游">
+    <meta name="keywords" content="这是一只小白,游行,无锡">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -248,7 +248,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="一直小白的博客">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2019/07/12/Splash-load-balancing-test/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2019/08/23/wuxi/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="一直小白的博客">
@@ -263,16 +263,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2019/07/12/Splash-load-balancing-test/">
+    <meta property="og:url" content="http://yoursite.com/2019/08/23/wuxi/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="基于python的Splash基本使用和负载均衡配置 | 一直小白的博客">
+    <meta property="og:title" content="游记·Wuxi | 一直小白的博客">
     <meta property="og:image" content="/img/head_sculpture.png">
-    <meta property="og:description" content="本项目来源于大二寒假学习python网络爬虫时所做的实战小项目">
-    <meta property="og:article:tag" content="Splash"> <meta property="og:article:tag" content="python"> <meta property="og:article:tag" content="lua"> <meta property="og:article:tag" content="负载均衡测试"> 
+    <meta property="og:description" content="无锡旅游">
+    <meta property="og:article:tag" content="游行"> <meta property="og:article:tag" content="无锡"> 
 
     
-        <meta property="article:published_time" content="Fri Jul 12 2019 09:14:44 GMT+0800">
-        <meta property="article:modified_time" content="Wed Jul 31 2019 20:21:07 GMT+0800">
+        <meta property="article:published_time" content="Fri Aug 23 2019 20:37:15 GMT+0800">
+        <meta property="article:modified_time" content="Wed Aug 28 2019 21:20:55 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -280,7 +280,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2019/07/12/Splash-load-balancing-test/index.html">
+        <link rel="canonical" href="http://yoursite.com/2019/08/23/wuxi/index.html">
     
 
     <!-- Structured-data for SEO -->
@@ -292,10 +292,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2019/07/12/Splash-load-balancing-test/index.html",
-    "headline": "基于python的Splash基本使用和负载均衡配置",
-    "datePublished": "Fri Jul 12 2019 09:14:44 GMT+0800",
-    "dateModified": "Wed Jul 31 2019 20:21:07 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2019/08/23/wuxi/index.html",
+    "headline": "游记·Wuxi",
+    "datePublished": "Fri Aug 23 2019 20:37:15 GMT+0800",
+    "dateModified": "Wed Aug 28 2019 21:20:55 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "一直小白",
@@ -313,8 +313,8 @@
             "url": "/img/head_sculpture.png"
         }
     },
-    "keywords": ",Splash,python,lua,负载均衡测试这是一只小白",
-    "description": "本项目来源于大二寒假学习python网络爬虫时所做的实战小项目",
+    "keywords": ",游行,无锡这是一只小白",
+    "description": "无锡旅游",
 }
 </script>
 
@@ -388,7 +388,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前期准备"><span class="post-toc-number">1.</span> <span class="post-toc-text">前期准备</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#功能介绍"><span class="post-toc-number">2.</span> <span class="post-toc-text">功能介绍</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#项目实战"><span class="post-toc-number">3.</span> <span class="post-toc-text">项目实战</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Splash-Lua脚本"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Splash Lua脚本</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#入口及返回值"><span class="post-toc-number">3.1.1.</span> <span class="post-toc-text">入口及返回值</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#异步处理-———涉及对多个页面进行分析比较"><span class="post-toc-number">3.1.2.</span> <span class="post-toc-text">异步处理    ———涉及对多个页面进行分析比较</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Splash对象属性-——方法中的对象属性"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">Splash对象属性      ——方法中的对象属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Splash对象的方法"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">Splash对象的方法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Splash-API调用"><span class="post-toc-number">3.3.1.</span> <span class="post-toc-text">Splash API调用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#配置Splash服务"><span class="post-toc-number">3.3.2.</span> <span class="post-toc-text">配置Splash服务</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#配置负载均衡"><span class="post-toc-number">3.3.3.</span> <span class="post-toc-text">配置负载均衡</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#配置认证"><span class="post-toc-number">3.3.4.</span> <span class="post-toc-text">配置认证</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#测试"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">测试</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#心得体会"><span class="post-toc-number">4.</span> <span class="post-toc-text">心得体会</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#源代码"><span class="post-toc-number">5.</span> <span class="post-toc-text">源代码</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#附"><span class="post-toc-number">6.</span> <span class="post-toc-text">附</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#希望可以与我多多分享经验，有空必回"><span class="post-toc-number">7.</span> <span class="post-toc-text">希望可以与我多多分享经验，有空必回</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Wuxi"><span class="post-toc-number">1.</span> <span class="post-toc-text">Wuxi!</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#出行准备"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">出行准备</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#出行-2019-8-21-2019-8-26"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">出行(2019.8.21-2019.8.26)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第一天"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">第一天</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第二天"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">第二天</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第三天"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">第三天</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第四天"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">第四天</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#第五天-第六天"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">第五天-第六天</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#感悟"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">感悟</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -420,7 +420,7 @@
         
     
             <p class="article-headline-p">
-                基于python的Splash基本使用和负载均衡配置
+                游记·Wuxi
             </p>
         </div>
 
@@ -439,7 +439,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>一直小白</strong>
-        <span>7月 12, 2019</span>
+        <span>8月 23, 2019</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -461,7 +461,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAAC1klEQVR42u3aUXLbMAwFQN//0u0BMpIfAKaVyOVXxnYULjMTBA/8/DlyfbCxsbGxsbGxsbEfyf7E6+fnr165enLyeu8J93vGxsbGPoH95U//xWfyo7l62v0n77+rumdsbGzsE9jV0hI1AP/kCKI9Y2NjY2MHR5A0LVGxifeAjY2Njd1jJyUtCnqKARY2NjY29jxUqgZMvcJWLaK/nqVhY2NjP55dHfQ+4ev/MN/GxsbGfiS7uiaXe3plLx9FfNk5NjY29qbs6gh2zp4gC+Wq14FhY2Njv5CdFJIksskv6PQOuhAeXT0fGxsbe2t29QdXX5lcuOkFW9jY2NjYyQg2aUJ6K29a8hgLGxsbe292/uikwFRbl8lwovAuNjY29tbs5N/6arMxifuTd6vDYGxsbOxd2Ql1ch1nVZOzoIhiY2NjH8a+D+WTElIF5O1Kr3BiY2Nj78rO24O8SegdULKr+1/Jl5KJjY2NvSm7d00nL0V5uarG/XnwhI2NjX0ae/Tvflyc8mNNnrA4VMLGxsZ+Lbt3XWZVE1J9t4rHxsbG3pWdU5OWo3o0CaxX0rCxsbHPYU/C/bxdmcRD1eYHGxsb+zR2tQ2oHlMeG1UHCfmBYmNjY+/NTi7l9MrVJJya4LGxsbFPY/fGuvOiUi171cug2NjY2Oew57H+JNzPW5FfzNKwsbGxX87Ox7fV6L93rac6kCiMirGxsbEPYCdRTvWwekUr/zXke8bGxsbelV0tEqsi/jyoWhUtYWNjY+/Krq483MkPtNrYJIONZt3GxsbGfiG79+N7KznQfPxcjZawsbGx92ZXN9QrXdVhbbXJKYdK2NjY2Nux85HtPIpaxRtladjY2NhHsifbnRxKDr4sq9jY2NjYgwBofq2nup/FrQg2Njb2S9i92CjfVrUJ+RISxaURGxsb+wT2qqszeeQ0Yed7wMbGxj6Bfc7CxsbGxsbGxsbGfsz6Cy4Ow6YgKafaAAAAAElFTkSuQmCC">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACaklEQVR42u3aQXLCMAwFUO5/6XbbmRbzJSsmZV5WDBMSPy8sIenx9dHXAw8PDw8PDw8P72a8R3z98aAf36/v/33nszXsrw0PDw/vDO/FURvw1sj1E/LnR2vAw8PDO8hLFrd+ZcJ49sb1u/KNw8PDw7snL/9mJx3Hw8PD+yReL0j0ihR4eHh4d+YlC82LqvsH/RtqLXh4eHgxr7rok5+P9vfw8PDwAl55pKkVEvIke3joCg8PD+8CXn4Q5/j106YCAx4eHt57edUSwDoAVMsHSZst2TI8PDy8k7zqEED0mlYZt9oMa8Y9PDw8vA3ezkGfH/Hrwz1adJxY4+Hh4b2X1wsJ1edXixovfouHh4d3MS8fIa2Ok+YHfa89Vi5G4OHh4Q3xqmluXj7YCTxbyTceHh7exbydwak8AORlhbz1VR4dwMPDwxvi5QXTHJwHnjyVL2wfHh4e3hFedOC20ujqFuQpeLMYgYeHhzfKKzyiGCSqdw4PXeHh4eFdwMvLBNWWf7XdlRcjCoEBDw8Pb5S3M2LV24hqGXds6AoPDw9vlJcnzT1YtdiR3B+VcfHw8PAu4+Utsak0ujpoVWik4eHh4R3n9dr8vfZYjiyk7Hh4eHgHeeW//RtFh7xEW27C4eHh4V3Mq145qddgq4YiPDw8vPO83qGcU3vNtp2iMB4eHt4Z3mww2E+ghwMDHh4e3mW8qSGq6kb08Hh4eHj/i1dt8E8xosQdDw8P75a8XkhI2mn50MDTPwB4eHh4B3lJMWJ/7GBqpAAPDw/vvbypBLc6LrAzjnBJfw8PDw8v4H3ehYeHh4eHh4eHd4PrG5VOhpLSKWFBAAAAAElFTkSuQmCC">
     
 </ul>
 
@@ -475,7 +475,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Splash/">Splash</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/lua/">lua</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/python/">python</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/负载均衡测试/">负载均衡测试</a>
+        <a class="post_tag-link" href="/tags/无锡/">无锡</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/游行/">游行</a>
     </ul>
     
 
@@ -503,7 +503,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=基于python的Splash基本使用和负载均衡配置&url=http://yoursite.com/2019/07/12/Splash-load-balancing-test/index.html&pic=http://yoursite.com/img/head_sculpture.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=游记·Wuxi&url=http://yoursite.com/2019/08/23/wuxi/index.html&pic=http://yoursite.com/img/head_sculpture.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -512,7 +512,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=基于python的Splash基本使用和负载均衡配置&url=http://yoursite.com/2019/07/12/Splash-load-balancing-test/index.html&via=一直小白" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=游记·Wuxi&url=http://yoursite.com/2019/08/23/wuxi/index.html&via=一直小白" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -521,7 +521,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/07/12/Splash-load-balancing-test/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/08/23/wuxi/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -533,7 +533,7 @@
 
     <!-- Share LinkedIn -->
     
-        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2019/07/12/Splash-load-balancing-test/index.html&title=基于python的Splash基本使用和负载均衡配置" target="_blank">
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2019/08/23/wuxi/index.html&title=游记·Wuxi" target="_blank">
             <li class="mdl-menu__item">
                 分享到 LinkedIn
             </li>
@@ -542,7 +542,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一直小白的博客&title=基于python的Splash基本使用和负载均衡配置&summary=&pics=http://yoursite.com/img/head_sculpture.png&url=http://yoursite.com/2019/07/12/Splash-load-balancing-test/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一直小白的博客&title=游记·Wuxi&summary=&pics=http://yoursite.com/img/head_sculpture.png&url=http://yoursite.com/2019/08/23/wuxi/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -561,40 +561,25 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>本项目来源于大二寒假学习python网络爬虫时所做的实战小项目</p>
-<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><p>语言：python3.7,Lua<br>编译器：pycharm<br>包管理工具：pip<br>工具：Scrapy-Splash<br>应用容器引擎：docker（需要翻墙），可自行网上百度安装和配置教程</p>
-<h2 id="功能介绍"><a href="#功能介绍" class="headerlink" title="功能介绍"></a>功能介绍</h2><p>利用Splash，我们可以实现如下功能：<br>异步方式处理多个网页渲染过程；<br>获取渲染后的页面的源代码或截图；<br>通过关闭图片渲染或者使用Adblock规则来加快页面渲染速度；<br>可执行特定的JavaScript脚本；<br>可通过Lua脚本来控制页面渲染过程；<br>获取渲染的详细过程并通过HAR（HTTP Archive）格式呈现。</p>
-<h2 id="项目实战"><a href="#项目实战" class="headerlink" title="项目实战"></a>项目实战</h2><p>首先，在本机端口运行Splash服务，打开<a href="http://localhost:8050/" target="_blank" rel="noopener">http://localhost:8050/</a><br>在输入框内输入<a href="https://www.shou.edu.cn/，然后点击Render" target="_blank" rel="noopener">https://www.shou.edu.cn/，然后点击Render</a> me1<br>可以看到，网页的返回结果呈现了渲染截图、HAR加载统计数据、网页的源代码。<br>通过HAR的结果可以看到，Splash执行了整个网页的渲染过程，包括CSS、JavaScript的加载等过程，呈现的页面和浏览器中得到的结果完全一致。</p>
-<h3 id="Splash-Lua脚本"><a href="#Splash-Lua脚本" class="headerlink" title="Splash Lua脚本"></a>Splash Lua脚本</h3><p>Splash是通过Lua脚本来控制了页面的加载过程的，然后执行一系列渲染操作。</p>
-<h4 id="入口及返回值"><a href="#入口及返回值" class="headerlink" title="入口及返回值"></a>入口及返回值</h4><figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">main</span><span class="params">(splash, args)</span></span></span><br><span class="line">  splash:go(<span class="string">"https://www.shou.edu.cn/"</span>)</span><br><span class="line">  splash:wait(<span class="number">1</span>)  #等待时间</span><br><span class="line">  <span class="keyword">local</span> title = splash:evaljs(<span class="string">"document.title"</span>)  #需要对页面前端代码进行分析</span><br><span class="line">  <span class="keyword">return</span> &#123;title=title&#125;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
-<p>本代码通过evaljs()方法传入JavaScript脚本，而document.title的执行结果就是返回网页标题，执行完毕后将其赋值给一个title变量，随后将其返回。</p>
-<h4 id="异步处理-———涉及对多个页面进行分析比较"><a href="#异步处理-———涉及对多个页面进行分析比较" class="headerlink" title="异步处理    ———涉及对多个页面进行分析比较"></a>异步处理    ———涉及对多个页面进行分析比较</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function main(splash, args)</span><br><span class="line">  local example_urls = &#123;&quot;https://www.shou.edu.cn/&quot;, &quot;http://www.gdou.edu.cn/&quot;, &quot;http://www.ouc.edu.cn/&quot;&#125;</span><br><span class="line">  local urls = args.urls or example_urls</span><br><span class="line">  local results = &#123;&#125;</span><br><span class="line">  for index, url in ipairs(urls) do</span><br><span class="line">    local ok, reason = splash:go(&quot;http://&quot; .. url)</span><br><span class="line">    if ok then</span><br><span class="line">      splash:wait(2)</span><br><span class="line">      results[url] = splash:png()</span><br><span class="line">    end</span><br><span class="line">  end</span><br><span class="line">  return results</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-
-<p>在脚本内调用的wait()方法类似于Python中的sleep()，其参数为等待的秒数。当Splash执行到此方法时，它会转而去处理其他任务，然后在指定的时间过后再回来继续处理。<br>更多Lua脚本的语法详见<a href="http://www.runoob.com/lua/lua-basic-syntax.html" target="_blank" rel="noopener">文档</a></p>
-<h3 id="Splash对象属性-——方法中的对象属性"><a href="#Splash对象属性-——方法中的对象属性" class="headerlink" title="Splash对象属性      ——方法中的对象属性"></a>Splash对象属性      ——方法中的对象属性</h3><p>args</p>
-<p>该属性可以获取加载时配置的参数，比如URL，如果为GET请求，它还可以获取GET请求参数；如果为POST请求，它可以获取表单提交的数据。</p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">main</span><span class="params">(splash, args)</span></span></span><br><span class="line">    <span class="keyword">local</span> url = args.url</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
-<p>第二个参数args就相当于splash.args属性<br>js_enabled<br>这个属性是Splash的JavaScript执行开关，可以将其配置为true或false来控制是否执行JavaScript代码，默认为true。</p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">main</span><span class="params">(splash, args)</span></span></span><br><span class="line">  splash:go(<span class="string">"https://www.shou.edu.cn/"</span>)</span><br><span class="line">  splash.js_enabled = <span class="literal">false</span></span><br><span class="line">  <span class="keyword">local</span> title = splash:evaljs(<span class="string">"document.title"</span>)</span><br><span class="line">  <span class="keyword">return</span> &#123;title=title&#125;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
-
-<p>更多对象如resource_timeout、images_enabled、plugins_enabled、scroll_position详见<a href="https://blog.csdn.net/weixin_38239050/article/details/82584613" target="_blank" rel="noopener">https://blog.csdn.net/weixin_38239050/article/details/82584613</a></p>
-<h3 id="Splash对象的方法"><a href="#Splash对象的方法" class="headerlink" title="Splash对象的方法"></a>Splash对象的方法</h3><p>详见<a href="https://splash.readthedocs.io/en/stable/scripting-ref.html" target="_blank" rel="noopener">https://splash.readthedocs.io/en/stable/scripting-ref.html</a></p>
-<h4 id="Splash-API调用"><a href="#Splash-API调用" class="headerlink" title="Splash API调用"></a>Splash API调用</h4><p>详见<a href="https://splash.readthedocs.io/en/stable/scripting-element-object.html" target="_blank" rel="noopener">https://splash.readthedocs.io/en/stable/scripting-element-object.html</a></p>
-<h4 id="配置Splash服务"><a href="#配置Splash服务" class="headerlink" title="配置Splash服务"></a>配置Splash服务</h4><p>要搭建Splash负载均衡，首先要有多个Splash服务。假如多台远程主机的都开启了Splash服务，它这几个服务必须完全一致，都是通过Docker的Splash镜像开启的。访问其中任何一个服务时，都可以使用Splash服务。</p>
-<h4 id="配置负载均衡"><a href="#配置负载均衡" class="headerlink" title="配置负载均衡"></a>配置负载均衡</h4><p>选用任意一台带有公网IP的主机来配置负载均衡。首先，在这台主机上装好Nginx，然后修改Nginx的配置文件nginx.conf，添加各台主机的ip。</p>
-<h4 id="配置认证"><a href="#配置认证" class="headerlink" title="配置认证"></a>配置认证</h4><p>现在Splash是可以公开访问的，如果不想让其公开访问，还可以配置认证，这仍然借助于Nginx。  （Nginx为服务器代理服务）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">http &#123;</span><br><span class="line">    upstream splash &#123;</span><br><span class="line">        least_conn;</span><br><span class="line">        server xxx;    ——xxx为服务器ip地址</span><br><span class="line">        server xxx;</span><br><span class="line">   ……</span><br><span class="line">    &#125;</span><br><span class="line">    server &#123;</span><br><span class="line">        listen 8050;</span><br><span class="line">        location / &#123;</span><br><span class="line">            proxy_pass http://splash;</span><br><span class="line">            auth_basic &quot;Restricted&quot;;</span><br><span class="line">            auth_basic_user_file /etc/nginx/conf.d/.htpasswd;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> urllib.parse <span class="keyword">import</span> quote</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line">lua = <span class="string">'''</span></span><br><span class="line"><span class="string">function main(splash, args)</span></span><br><span class="line"><span class="string">  local treat = require("treat")</span></span><br><span class="line"><span class="string">  local response = splash:http_get("https://www.shou.edu.cn/")</span></span><br><span class="line"><span class="string">  return treat.as_string(response.body)</span></span><br><span class="line"><span class="string">end</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line">url = <span class="string">'http://splash:8050/execute?lua_source='</span> + quote(lua)</span><br><span class="line">response = requests.get(url, auth=(<span class="string">'admin'</span>, <span class="string">'admin'</span>))</span><br><span class="line">ip = re.search(<span class="string">'(\d+\.\d+\.\d+\.\d+)'</span>, response.text).group(<span class="number">1</span>)</span><br><span class="line">print(ip)</span><br></pre></td></tr></table></figure>
-
-<p>这里URL中的splash字符串请自行替换成自己的Nginx服务器IP。这里我修改了Hosts，设置了splash为Nginx服务器IP。</p>
-<h2 id="心得体会"><a href="#心得体会" class="headerlink" title="心得体会"></a>心得体会</h2><p>通过本项目，我对于js有了更深一步的了解，对于前端代码有了进一步的认识，服务器配置方面，因只有单台服务器，只能单看教程无法做出新的体会。</p>
-<p>本项目对于Lua脚本语言只是冰山一角，本文也是一个抛砖引玉，最主要的还是记录我自己学习过程，通过实战不断锻炼自己。</p>
-<h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h2><p><a href="https://github.com/zyhang8/Web-Crawler-Development/tree/master/%E5%8A%A8%E6%80%81%E6%B8%B2%E6%9F%93%E9%A1%B5%E9%9D%A2%E7%88%AC%E5%8F%96/Splash%E7%9A%84%E4%BD%BF%E7%94%A8" target="_blank" rel="noopener">https://github.com/zyhang8/Web-Crawler-Development/tree/master/%E5%8A%A8%E6%80%81%E6%B8%B2%E6%9F%93%E9%A1%B5%E9%9D%A2%E7%88%AC%E5%8F%96/Splash%E7%9A%84%E4%BD%BF%E7%94%A8</a></p>
-<h2 id="附"><a href="#附" class="headerlink" title="附"></a>附</h2><p>本博客只是基于Splash的强大渲染性能对其进行学习理解，其中的代码是源于崔老师的实战对其分析进行理解后自己做的一些小改变。</p>
-<h2 id="希望可以与我多多分享经验，有空必回"><a href="#希望可以与我多多分享经验，有空必回" class="headerlink" title="希望可以与我多多分享经验，有空必回"></a>希望可以与我多多分享经验，有空必回</h2><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/07/12/Splash-load-balancing-test/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/07/12/Splash-load-balancing-test/</a></p></blockquote>
+        <h1 id="Wuxi"><a href="#Wuxi" class="headerlink" title="Wuxi!"></a>Wuxi!</h1><h2 id="出行准备"><a href="#出行准备" class="headerlink" title="出行准备"></a>出行准备</h2><p>码上行App(巨优惠且方便)<br>支付宝无锡公交乘车码(公交)<br>无锡实时公交(实时公交)<br>马蜂窝(本地菜景点)<br>高德(导航)<br>电影/书籍(路上消磨时间)<br>身份证/学生证 随身(景点必备)</p>
+<h2 id="出行-2019-8-21-2019-8-26"><a href="#出行-2019-8-21-2019-8-26" class="headerlink" title="出行(2019.8.21-2019.8.26)"></a>出行(2019.8.21-2019.8.26)</h2><h3 id="第一天"><a href="#第一天" class="headerlink" title="第一天"></a>第一天</h3><p>住到无锡子鱼居酒店（便宜，环境不错，离景区近，交通便利，早餐便利）</p>
+<h2 id="第二天"><a href="#第二天" class="headerlink" title="第二天"></a>第二天</h2><ul>
+<li>早上去了鼋头渚风景区，里面还是风景挺漂亮的，不过没去对季节，樱花没开，貌似与日本的弘前樱花园，以及美国华盛顿樱花园，一致被公认为全球三大赏樱圣地；后面爬上了鹿顶迎晖山顶，观赏太湖和无锡美景</li>
+<li>去玩后去了蠡园，刚好他在装修，毫无游玩体验，听说对面按的西施庄不错，没想到还得等1小时的游船，于是30小时就逛完了</li>
+<li>下午去了三国城影视基地，30块钱买了观光车，在里面四处游玩，看了很多影视表演，感觉挺划算的，最后的三英战吕布表演简直是压轴戏，看的全场尖叫欢呼，总之体验不错，就是玩太久了，导致水浒城没去，但是之前买了三国水浒联票……呜呜呜</li>
+<li>晚上去了东长街，品尝了无锡的混沌和包子，喝了奶茶小吃等。</li>
+</ul>
+<h2 id="第三天"><a href="#第三天" class="headerlink" title="第三天"></a>第三天</h2><ul>
+<li>早上去了灵山胜境，一开始感觉门票好贵，全票210，但是进去后确实一分钱一分价。先买了30块钱观光车，可以整个景区随意游玩，印象最深刻就是灵山大佛和梵宫，在那里修心养性，梵宫看出来是真的豪华，整个大宫赤壁辉煌</li>
+<li>中午吃了豆花，鸭血粉丝汤，鸡公面汤后打了黑车去了拈花湾，那里就是步行街，听说到处花花草草，不过季节不对也看不到，而且一个大草坪在装修，入门就听到这个景点晚上去好一点，看夜景不过就当做逛街，看了荷花喷泉表演后就离开了</li>
+<li>回酒店拿了行李，去了汽车站(没有无锡到扬州的高铁，差评)，前往扬州</li>
+<li><a href="https://zyhang8.github.io/2019/08/25/yangzhou/" target="_blank" rel="noopener">扬州</a></li>
+</ul>
+<h2 id="第四天"><a href="#第四天" class="headerlink" title="第四天"></a>第四天</h2><p><a href="https://zyhang8.github.io/2019/08/25/yangzhou/" target="_blank" rel="noopener">扬州</a></p>
+<h2 id="第五天-第六天"><a href="#第五天-第六天" class="headerlink" title="第五天-第六天"></a>第五天-第六天</h2><p><a href="https://zyhang8.github.io/2019/08/26/nanjing/" target="_blank" rel="noopener">南京</a></p>
+<p>人感觉不多,空调也挺凉快</p>
+<h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><p>感觉无锡的物价还是相对比较低，但是看了2018江苏省GDP却排名第二，而江苏省又是长时间处于GDP全国第二的大省，而且游玩圣地也很多，实在羡慕。</p>
+<blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/08/23/wuxi/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/08/23/wuxi/</a></p></blockquote>
 
         
     
@@ -613,8 +598,8 @@
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://yoursite.com/2019/07/12/Splash-load-balancing-test/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://yoursite.com/2019/07/12/Splash-load-balancing-test/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://yoursite.com/2019/08/23/wuxi/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/08/23/wuxi/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -644,7 +629,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2019/07/18/Ningbo/" id="post_nav-newer" class="prev-content">
+        <a href="/2019/08/25/yangzhou/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -658,7 +643,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2019/07/10/markdown-md/" id="post_nav-older" class="next-content">
+        <a href="/2019/08/09/record/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
