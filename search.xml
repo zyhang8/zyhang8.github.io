@@ -4,13 +4,25 @@
   
     
     <entry>
-      <title>fish-mac</title>
+      <title>鱼的记忆|mac必备手册</title>
       <link href="/2019/09/06/fish-mac/"/>
       <url>/2019/09/06/fish-mac/</url>
       
-        <content type="html"><![CDATA[<blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/07/18/Ningbo/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/07/18/Ningbo/</a></p></blockquote>]]></content>
+        <content type="html"><![CDATA[<p>mac个人常用易忘语法</p><h2 id="iTerm"><a href="#iTerm" class="headerlink" title="iTerm"></a>iTerm</h2><ul><li>检查环境变量：sudo vi ~/.bash_profile</li><li>手动添加环境变量:export PATH=”/Users/anaconda3/bin:$PATH”（这里要填写自己的路径哦）</li><li>刷新环境变量：source ~/.bash_profile</li></ul><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/09/06/fish-mac/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/09/06/fish-mac/</a></p></blockquote>]]></content>
       
       
+      <categories>
+          
+          <category> 鱼的记忆 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mac </tag>
+            
+        </tags>
       
     </entry>
     
