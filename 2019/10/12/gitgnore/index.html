@@ -52,7 +52,7 @@
     
     <title>
         
-            归档: 2019 | 
+            鱼的记忆|gitgnore | 
         
         一直小白的博客
     </title>
@@ -62,8 +62,8 @@
     <link rel="icon" href="/img/head_sculpture.png">
 
     <meta name="format-detection" content="telephone=no">
-    <meta name="description" itemprop="description" content>
-    <meta name="keywords" content="这是一只小白">
+    <meta name="description" itemprop="description" content="gitgnore语法记忆">
+    <meta name="keywords" content="这是一只小白,gitgnore">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -248,7 +248,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="一直小白的博客">
-    <meta name="msapplication-starturl" content="http://yoursite.com/archives/2019/page/2/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2019/10/12/gitgnore/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="一直小白的博客">
@@ -263,13 +263,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/archives/2019/page/2/">
+    <meta property="og:url" content="http://yoursite.com/2019/10/12/gitgnore/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2019 | 一直小白的博客">
+    <meta property="og:title" content="鱼的记忆|gitgnore | 一直小白的博客">
     <meta property="og:image" content="/img/head_sculpture.png">
-    <meta property="og:description" content>
-    
+    <meta property="og:description" content="gitgnore语法记忆">
+    <meta property="og:article:tag" content="gitgnore"> 
 
+    
+        <meta property="article:published_time" content="Sat Oct 12 2019 22:28:12 GMT+0800">
+        <meta property="article:modified_time" content="Sun Oct 13 2019 20:07:23 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -277,13 +280,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/archives/2019/page/2/index.html">
+        <link rel="canonical" href="http://yoursite.com/2019/10/12/gitgnore/index.html">
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2019/10/12/gitgnore/index.html",
+    "headline": "鱼的记忆|gitgnore",
+    "datePublished": "Sat Oct 12 2019 22:28:12 GMT+0800",
+    "dateModified": "Sun Oct 13 2019 20:07:23 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "一直小白",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/head_sculpture.png"
+        },
+        "description": "求知若饥,谦虚若愚"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "一直小白的博客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/head_sculpture.png"
+        }
+    },
+    "keywords": ",gitgnore这是一只小白",
+    "description": "gitgnore语法记忆",
+}
+</script>
 
 
     
@@ -326,659 +359,335 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#gitgnore"><span class="post-toc-number">1.</span> <span class="post-toc-text">gitgnore</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#忽略文件原则"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">忽略文件原则</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#语法规范"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">语法规范</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置文件实例"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">配置文件实例</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#python"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">python</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Byte-compiled-optimized-DLL-files"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">Byte-compiled / optimized / DLL files</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#C-extensions"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">C extensions</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Distribution-packaging"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">Distribution / packaging</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#PyInstaller"><span class="post-toc-number">1.4.4.</span> <span class="post-toc-text">PyInstaller</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Installer-logs"><span class="post-toc-number">1.4.5.</span> <span class="post-toc-text">Installer logs</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Unit-test-coverage-reports"><span class="post-toc-number">1.4.6.</span> <span class="post-toc-text">Unit test / coverage reports</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Translations"><span class="post-toc-number">1.4.7.</span> <span class="post-toc-text">Translations</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Django-stuff"><span class="post-toc-number">1.4.8.</span> <span class="post-toc-text">Django stuff</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Flask-stuff"><span class="post-toc-number">1.4.9.</span> <span class="post-toc-text">Flask stuff</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Scrapy-stuff"><span class="post-toc-number">1.4.10.</span> <span class="post-toc-text">Scrapy stuff</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Sphinx-documentation"><span class="post-toc-number">1.4.11.</span> <span class="post-toc-text">Sphinx documentation</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#PyBuilder"><span class="post-toc-number">1.4.12.</span> <span class="post-toc-text">PyBuilder</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Jupyter-Notebook"><span class="post-toc-number">1.4.13.</span> <span class="post-toc-text">Jupyter Notebook</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#IPython"><span class="post-toc-number">1.4.14.</span> <span class="post-toc-text">IPython</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#pyenv"><span class="post-toc-number">1.4.15.</span> <span class="post-toc-text">pyenv</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#pipenv"><span class="post-toc-number">1.4.16.</span> <span class="post-toc-text">pipenv</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#celery-beat-schedule-file"><span class="post-toc-number">1.4.17.</span> <span class="post-toc-text">celery beat schedule file</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#SageMath-parsed-files"><span class="post-toc-number">1.4.18.</span> <span class="post-toc-text">SageMath parsed files</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Environments"><span class="post-toc-number">1.4.19.</span> <span class="post-toc-text">Environments</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Spyder-project-settings"><span class="post-toc-number">1.4.20.</span> <span class="post-toc-text">Spyder project settings</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Rope-project-settings"><span class="post-toc-number">1.4.21.</span> <span class="post-toc-text">Rope project settings</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#mkdocs-documentation"><span class="post-toc-number">1.4.22.</span> <span class="post-toc-text">mkdocs documentation</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#mypy"><span class="post-toc-number">1.4.23.</span> <span class="post-toc-text">mypy</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Pyre-type-checker"><span class="post-toc-number">1.4.24.</span> <span class="post-toc-text">Pyre type checker</span></a></li></ol></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/09/03/book/">熏陶|书</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/09/03/book/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/head_sculpture.png" width="44px" height="44px" alt="一直小白's avatar">
-            </div>
-            <div>
-                <strong>一直小白</strong>
-                <span>9月 03, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/书籍/">书籍</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/09/03/js-note/">笔记|JavaScript</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            大创需要用到，顺便系统学习一下js
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/09/03/js-note/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/head_sculpture.png" width="44px" height="44px" alt="一直小白's avatar">
-            </div>
-            <div>
-                <strong>一直小白</strong>
-                <span>9月 03, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/笔记/">笔记</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/09/02/fish-django/">鱼的记忆|django</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            django个人常用易忘语法
-
-以前也经常用django进行小程序和web项目的开发，不过还是有一些语法记不住...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/09/02/fish-django/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/head_sculpture.png" width="44px" height="44px" alt="一直小白's avatar">
-            </div>
-            <div>
-                <strong>一直小白</strong>
-                <span>9月 02, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/鱼的记忆/">鱼的记忆</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/08/26/nanjing/">游记·Nanjing</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            N...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/08/26/nanjing/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/head_sculpture.png" width="44px" height="44px" alt="一直小白's avatar">
-            </div>
-            <div>
-                <strong>一直小白</strong>
-                <span>8月 26, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/游记/">游记</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/08/25/yangzhou/">游记·Yangzhou</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/08/25/yangzhou/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/head_sculpture.png" width="44px" height="44px" alt="一直小白's avatar">
-            </div>
-            <div>
-                <strong>一直小白</strong>
-                <span>8月 25, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/游记/">游记</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/08/23/wuxi/">游记·Wuxi</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Wuxi!...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/08/23/wuxi/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/head_sculpture.png" width="44px" height="44px" alt="一直小白's avatar">
-            </div>
-            <div>
-                <strong>一直小白</strong>
-                <span>8月 23, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/游记/">游记</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/08/09/record/">鱼的记忆|程序员经典语录</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            在和朋友聊天过程中，突然聊起了经典语录，很多次呼之欲出，本文档用来记录程序员经典语录
-
-从入门到放弃
-从入...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/08/09/record/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/head_sculpture.png" width="44px" height="44px" alt="一直小白's avatar">
-            </div>
-            <div>
-                <strong>一直小白</strong>
-                <span>8月 09, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/鱼的记忆/">鱼的记忆</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/08/07/rainmeter-config/">基于rainmeter的ini,inc文件的修改</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            今天花了半天时间修改贴吧大神的源代码，打造成适合自己的桌面零部散件。一开始很曲折，因为对该配置文件修改还得看文档，而且调用插件，配置文件的变量也不能...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/08/07/rainmeter-config/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/head_sculpture.png" width="44px" height="44px" alt="一直小白's avatar">
-            </div>
-            <div>
-                <strong>一直小白</strong>
-                <span>8月 07, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/lua/">lua</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/08/05/fish-html/">鱼的记忆|html必备手册</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            html个人常用易忘语法
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/08/05/fish-html/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/head_sculpture.png" width="44px" height="44px" alt="一直小白's avatar">
-            </div>
-            <div>
-                <strong>一直小白</strong>
-                <span>8月 05, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/鱼的记忆/">鱼的记忆</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/08/05/electronics/">评测|电子产品</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/08/05/electronics/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/head_sculpture.png" width="44px" height="44px" alt="一直小白's avatar">
-            </div>
-            <div>
-                <strong>一直小白</strong>
-                <span>8月 05, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/评测/">评测</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-    <!-- Index nav -->
-        <nav class="material-nav mdl-cell mdl-cell--12-col">
-            <a class="extend prev" rel="prev" href="/archives/2019/"><button aria-label="Last page" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_back</i></button></a><a class="page-number" href="/archives/2019/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2019/page/3/">3</a><a class="page-number" href="/archives/2019/page/4/">4</a><a class="extend next" rel="next" href="/archives/2019/page/3/"><button aria-label="Next page" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"><i class="material-icons" role="presentation">arrow_forward</i></button></a>
-        </nav>
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                鱼的记忆|gitgnore
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/head_sculpture.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>一直小白</strong>
+        <span>10月 12, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACcElEQVR42u3aQW7DMAwEwPz/0+0DCie7lKy6xfgUII7M8YFiKL6+/vX1wsPDw8PDw8PDexjvFV9Xv7pa5+f9Pz9frbYUGx4eHt4R3odU+/aeWRD5ym1seHh4eCd5VwGtbwDJyttWwMPDw3swr13nQ0IfrYmHh4f3V3izgnjWpMDDw8N7Mi8JNG86rJTmv9ZrwcPDw4t5bdAnPx8938PDw8MLePVIU5CsZyX1LUNXeHh4eDfw8kTcAnZtMHk8eHh4eM/hvce0yT15We0AKx4eHt5JXrJ0lI4DfH6Qlm850T8GPDw8vBt4bUJvx0zfJ/fkSKwo9PHw8PBu5uWDTfm41fsXNBu9Sn6Lh4eHd4bXFtY5IGkBzwrr4egAHh4e3g28PKG3Dd+8zTHbqPDw8PBO8mah7Do2a4vspdEBPDw8vE2894+cNSbahsJsjKBoRuDh4eFt5eUjoXmybhu17fDBh2fh4eHhHeS1RXByzJ+HnhTuw2YEHh4e3lZeUs7mJW+7ebRNjQ0HYHh4eHibePmi7ThU3qrIN4wPrx4PDw/vZl7bJF0/JEvWadsTeHh4eOd5wxRcpvj1An24MeDh4eHdxmsPrmaPT+5vtxw8PDy83+IloSRhzYYS2mO2y2jx8PDwbua1V9u0bV9TXnZHGwMeHh7eDbxZUs5bDCvbxuaZMjw8PLytvGQzWGnptmMKs1YvHh4e3nleO3iaFNDtiEC+ReHh4eH9LV5bjrfDASuDXHh4eHjP5CXItuBeP/rCw8PDO89ri+PZt3lpPgPj4eHhneG1BfGsAdEOXeUtDDw8PLyTvP934eHh4eHh4eHhPeD6BlwezkozUHQRAAAAAElFTkSuQmCC">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/gitgnore/">gitgnore</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=鱼的记忆|gitgnore&url=http://yoursite.com/2019/10/12/gitgnore/index.html&pic=http://yoursite.com/img/head_sculpture.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=鱼的记忆|gitgnore&url=http://yoursite.com/2019/10/12/gitgnore/index.html&via=一直小白" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/10/12/gitgnore/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2019/10/12/gitgnore/index.html&title=鱼的记忆|gitgnore" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一直小白的博客&title=鱼的记忆|gitgnore&summary=&pics=http://yoursite.com/img/head_sculpture.png&url=http://yoursite.com/2019/10/12/gitgnore/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="gitgnore"><a href="#gitgnore" class="headerlink" title="gitgnore"></a>gitgnore</h2><blockquote>
+<p>gitgnore语法记忆</p>
+</blockquote>
+<h3 id="忽略文件原则"><a href="#忽略文件原则" class="headerlink" title="忽略文件原则"></a>忽略文件原则</h3><ul>
+<li>忽略操作系统自动生成的文件，比如缩略图等；</li>
+<li>忽略编译生成的中间文件、可执行文件等，也就是如果一个文件是通过另一个文件自动生成的，那自动生成的文件就没必要放进版本库</li>
+<li>忽略你自己的带有敏感信息的配置文件，比如存放口令的配置文件。</li>
+</ul>
+<h3 id="语法规范"><a href="#语法规范" class="headerlink" title="语法规范"></a>语法规范</h3><ul>
+<li>空行或是以#开头的行即注释行将被忽略；</li>
+<li>以斜杠 “/” 结尾表示目录；</li>
+<li>以星号 “*” 通配多个字符；</li>
+<li>以问号 “?” 通配单个字符</li>
+<li>以方括号 “[]” 包含单个字符的匹配列表；</li>
+<li>以叹号 “!” 表示不忽略(跟踪)匹配到的文件或目录；</li>
+<li>可以在前面添加斜杠 “/” 来避免递归,下面的例子中可以很明白的看出来与下一条的区别。</li>
+</ul>
+<h3 id="配置文件实例"><a href="#配置文件实例" class="headerlink" title="配置文件实例"></a>配置文件实例</h3><ol>
+<li>忽略 .a 文件</li>
+</ol>
+<p>*.a</p>
+<ol start="2">
+<li>但否定忽略 lib.a, 尽管已经在前面忽略了 .a 文件<br>!lib.a</li>
+<li>仅在当前目录下忽略 TODO 文件， 但不包括子目录下的 subdir/TODO<br>/TODO</li>
+<li>忽略 build/ 文件夹下的所有文件<br>build/</li>
+<li>忽略 doc/notes.txt, 不包括 doc/server/arch.txt<br>doc/*.txt</li>
+<li>忽略所有的 .pdf 文件 在 doc/ directory 下的<br>doc/<em>*/</em>.pdf</li>
+</ol>
+<h3 id="python"><a href="#python" class="headerlink" title="python"></a>python</h3><h4 id="Byte-compiled-optimized-DLL-files"><a href="#Byte-compiled-optimized-DLL-files" class="headerlink" title="Byte-compiled / optimized / DLL files"></a>Byte-compiled / optimized / DLL files</h4><p><strong>pycache</strong>/<br>*.py[cod]<br>*$py.class</p>
+<h4 id="C-extensions"><a href="#C-extensions" class="headerlink" title="C extensions"></a>C extensions</h4><p>*.so</p>
+<h4 id="Distribution-packaging"><a href="#Distribution-packaging" class="headerlink" title="Distribution / packaging"></a>Distribution / packaging</h4><p>.Python<br>build/<br>develop-eggs/<br>dist/<br>downloads/<br>eggs/<br>.eggs/<br>lib/<br>lib64/<br>parts/<br>sdist/<br>var/<br>wheels/<br>pip-wheel-metadata/<br>share/python-wheels/<br>*.egg-info/<br>.installed.cfg<br>*.egg<br>MANIFEST</p>
+<h4 id="PyInstaller"><a href="#PyInstaller" class="headerlink" title="PyInstaller"></a>PyInstaller</h4><blockquote>
+<p>Usually these files are written by a python script from a template before PyInstaller builds the exe, so as to inject date/other infos into it.</p>
+</blockquote>
+<p>*.manifest<br>*.spec</p>
+<h4 id="Installer-logs"><a href="#Installer-logs" class="headerlink" title="Installer logs"></a>Installer logs</h4><p>pip-log.txt<br>pip-delete-this-directory.txt</p>
+<h4 id="Unit-test-coverage-reports"><a href="#Unit-test-coverage-reports" class="headerlink" title="Unit test / coverage reports"></a>Unit test / coverage reports</h4><p>htmlcov/<br>.tox/<br>.nox/<br>.coverage<br>.coverage.*<br>.cache<br>nosetests.xml<br>coverage.xml<br>*.cover<br>*.py,cover<br>.hypothesis/<br>.pytest_cache/</p>
+<h4 id="Translations"><a href="#Translations" class="headerlink" title="Translations"></a>Translations</h4><p>*.mo<br>*.pot</p>
+<h4 id="Django-stuff"><a href="#Django-stuff" class="headerlink" title="Django stuff"></a>Django stuff</h4><p>*.log<br>local_settings.py<br>db.sqlite3<br>db.sqlite3-journal</p>
+<h4 id="Flask-stuff"><a href="#Flask-stuff" class="headerlink" title="Flask stuff"></a>Flask stuff</h4><p>instance/<br>.webassets-cache</p>
+<h4 id="Scrapy-stuff"><a href="#Scrapy-stuff" class="headerlink" title="Scrapy stuff"></a>Scrapy stuff</h4><p>.scrapy</p>
+<h4 id="Sphinx-documentation"><a href="#Sphinx-documentation" class="headerlink" title="Sphinx documentation"></a>Sphinx documentation</h4><p>docs/_build/</p>
+<h4 id="PyBuilder"><a href="#PyBuilder" class="headerlink" title="PyBuilder"></a>PyBuilder</h4><p>target/</p>
+<h4 id="Jupyter-Notebook"><a href="#Jupyter-Notebook" class="headerlink" title="Jupyter Notebook"></a>Jupyter Notebook</h4><p>.ipynb_checkpoints</p>
+<h4 id="IPython"><a href="#IPython" class="headerlink" title="IPython"></a>IPython</h4><p>profile_default/<br>ipython_config.py</p>
+<h4 id="pyenv"><a href="#pyenv" class="headerlink" title="pyenv"></a>pyenv</h4><p>.python-version</p>
+<h4 id="pipenv"><a href="#pipenv" class="headerlink" title="pipenv"></a>pipenv</h4><blockquote>
+<p>ccording to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.However, in case of collaboration, if having platform-specific dependencies or dependencies having no cross-platform support, pipenv may install dependencies that don’t work, or not install all needed dependencies.</p>
+</blockquote>
+<p>Pipfile.lock</p>
+<h4 id="celery-beat-schedule-file"><a href="#celery-beat-schedule-file" class="headerlink" title="celery beat schedule file"></a>celery beat schedule file</h4><p>celerybeat-schedule</p>
+<h4 id="SageMath-parsed-files"><a href="#SageMath-parsed-files" class="headerlink" title="SageMath parsed files"></a>SageMath parsed files</h4><p>*.sage.py</p>
+<h4 id="Environments"><a href="#Environments" class="headerlink" title="Environments"></a>Environments</h4><p>.env<br>.venv<br>env/<br>venv/<br>ENV/<br>env.bak/<br>venv.bak/</p>
+<h4 id="Spyder-project-settings"><a href="#Spyder-project-settings" class="headerlink" title="Spyder project settings"></a>Spyder project settings</h4><p>.spyderproject<br>.spyproject</p>
+<h4 id="Rope-project-settings"><a href="#Rope-project-settings" class="headerlink" title="Rope project settings"></a>Rope project settings</h4><p>.ropeproject</p>
+<h4 id="mkdocs-documentation"><a href="#mkdocs-documentation" class="headerlink" title="mkdocs documentation"></a>mkdocs documentation</h4><p>/site</p>
+<h4 id="mypy"><a href="#mypy" class="headerlink" title="mypy"></a>mypy</h4><p>.mypy_cache/<br>.dmypy.json<br>dmypy.json</p>
+<h4 id="Pyre-type-checker"><a href="#Pyre-type-checker" class="headerlink" title="Pyre type checker"></a>Pyre type checker</h4><p>.pyre/</p>
+<blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/10/12/gitgnore/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/10/12/gitgnore/</a></p></blockquote>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2019/10/12/gitgnore/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/10/12/gitgnore/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//yizhixiaobai.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/10/12/eq/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
