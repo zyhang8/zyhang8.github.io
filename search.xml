@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>cipher-math</title>
+      <link href="/2019/10/15/cipher-math/"/>
+      <url>/2019/10/15/cipher-math/</url>
+      
+        <content type="html"><![CDATA[<h1 id="多种密钥面临的的数学难题"><a href="#多种密钥面临的的数学难题" class="headerlink" title="多种密钥面临的的数学难题"></a>多种密钥面临的的数学难题</h1><h2 id="Diffie-Hellman密钥协商算法"><a href="#Diffie-Hellman密钥协商算法" class="headerlink" title="Diffie-Hellman密钥协商算法"></a>Diffie-Hellman密钥协商算法</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>Diffie-Hellman密钥协商算法主要解决秘钥配送问题，本身并非用来加密用的；该算法其背后有对应数学理论做支撑，简单来讲就是构造一个复杂的计算难题，使得对该问题的求解在现实的时间内无法快速有效的求解。</p><h3 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h3><p>为了解决第一个问题，原文提出两种方法：公钥加密系统(public key cryptosystem)和秘钥分发系统(public key distribution system)。对于公钥加密系统，原文只是勾画了一种比较抽象的公钥加密系统的概念模型，重点是加解密采用不同的秘钥，并总结了该系统应该满足的一些特性，相当于是一种思想实验，并没有给出具体的算法实现途径，但这在当时应该来说已经足够吸引人。后来RSA三人组（Ron Rivest、Adi Shamir 和 Leonard Adleman）受此启发，经过许多轮失败的尝试后，于第二年在论文A Method for Obtaining Digital Signatures and Public-Key Cryptosystems中提出了切实可行且很具体的公钥加密算法–RSA公钥加密算法。而对于秘钥分发系统，就是本文的DH秘钥协商算法。</p><p>为了解决第二个问题，原文通过单向函数（one-way function）来解决，这就是单向认证的问题。另外作者还讨论了这些密码学问题之间的关联性以及如何相互转化。比如一个安全的密码系统（可以防御明文攻击）可以用来生成一个的单向函数、公钥加密系统可以用来作为单向认证、陷门密码系统可以用来生成一个公钥加密系统。数学难题的计算复杂度被当成一种保障密码学安全问题的有效工具被利用起来，这一重要思想贯穿现代密码学的许多加密算法。</p><h3 id="存在的问题"><a href="#存在的问题" class="headerlink" title="存在的问题"></a>存在的问题</h3><p>是否DH秘钥协商算法就一定安全呢？应该说也不是，因为存在一种伪装者攻击（或者称为中间人攻击）能够对这种秘钥协商算法构成威胁。</p><p>假设秘钥协商过程中，在Alice和Bob中间有一个称为Mallory的主动攻击者，他能够截获Alice和Bob的消息并伪造假消息，考虑如下情况。</p><p>1）Alice和Bob已经共享一个素数𝑝及其该素数𝑝的本原根𝑔，当然Mallory监听到报文也得知了这两个消息。</p><p>2）此时Alice计算𝑌𝑎=𝑔𝐴𝑚𝑜𝑑𝑝，然而在将𝑌𝑎发送给Bob的过程中被Mallory拦截，Mallory自己选定一个随机数𝑆，计算𝑌𝑠𝑏=𝑔𝑆𝑚𝑜𝑑𝑝，然后将𝑌𝑠𝑏发送给了Bob。</p><p><img src="https://images2018.cnblogs.com/blog/653357/201805/653357-20180509203733832-1457088379.png" alt="avatar1"></p><p>3）同时Bob计算𝑌𝑏=𝑔𝐵𝑚𝑜𝑑𝑝，然而在将𝑌𝑏发送给Alice的过程中被Mallory拦截，Mallory自己选定一个随机数𝑇，计算𝑌𝑡𝑎=𝑔𝑇𝑚𝑜𝑑𝑝，然后将𝑌𝑡𝑎发送给了Alice。</p><p><img src="https://images2018.cnblogs.com/blog/653357/201805/653357-20180509204257982-320719224.png" alt="avatar2"></p><p>由于通讯消息被替换，Alice计算出的秘钥实际上是Alice和Mallory之间协商秘钥：𝐾𝑎𝑚=𝑔𝐴×𝑇𝑚𝑜𝑑𝑝；Bob计算出的秘钥实际上是Bob与Mallory之间协商的秘钥：𝐾𝑏𝑚=𝑔𝐵×𝑆𝑚𝑜𝑑𝑝。如果之后Alice和Bob用他们计算出的秘钥加密任何信</p><h2 id="ECC椭圆加密算法"><a href="#ECC椭圆加密算法" class="headerlink" title="ECC椭圆加密算法"></a>ECC椭圆加密算法</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>椭圆加密算法（ECC）是一种公钥加密体制，最初由Koblitz和Miller两人于1985年提出，其数学基础是利用椭圆曲线上的有理点构成Abel加法群上椭圆离散对数的计算困难性。</p><h3 id="难题"><a href="#难题" class="headerlink" title="难题"></a>难题</h3><p>ECC是建立在基于椭圆曲线的离散对数问题上的密码体制，给定椭圆曲线上的一个点G，并选取一个整数k，求解K=kG很容易(注意根据kG求解出来的K也是椭圆曲线上的一个点)；反过来，在椭圆曲线上给定两个点K和G，若使K=kG，求整数k是一个难题。ECC就是建立在此数学难题之上,这一数学难题称为椭圆曲线离散对数问题。其中椭圆曲线上的点K则为公钥(注意公钥K不是一个整数而是一个椭圆曲线点，这个点在OpenSSL里面是用结构体EC_Point来表示的，为了加深理解，建议自行下载OpenSSL进行查看学习)，整数k则为私钥(实际上是一个大整数)。</p><p>不知我说明白了没有，这是网上的一位网友总结的，供参考：<br>考虑如下等式：K=kG [其中 K,G为Ep(a,b)上的点，k为小于n（n是点G的阶）的整数]，不难发现，给定k和G，根据加法法则，计算K很容易；但给定K和G，求k就相对困难了。这就是椭圆曲线加密算法采用的难题，我们把点G称为基点（base point）。<br>现在我们描述一个利用椭圆曲线进行加密通信的过程：</p><p>1、用户A选定一条椭圆曲线Ep(a,b)，并取椭圆曲线上一点，作为基点G。<br>2、用户A选择一个私有密钥k，并生成公开密钥K=kG。<br>3、用户A将Ep(a,b)和点K，G传给用户B。<br>4、用户B接到信息后 ，将待传输的明文编码到Ep(a,b)上一点M（编码方法很多，这里不作讨论），并产生一个随机整数r。<br>5、用户B计算点C1=M+rK；C2=rG。<br>6、用户B将C1、C2传给用户A。<br>7、用户A接到信息后，计算C1-kC2，结果就是点M。因为 C1-kC2=M+rK-k(rG)=M+rK-r(kG)=M<br>      再对点M进行解码就可以得到明文。</p><p>在这个加密通信中，如果有一个偷窥者H ，他只能看到Ep(a,b)、K、G、C1、C2，而通过K、G 求k 或通过C2、G求r 都是相对困难的，因此，H无法得到A、B间传送的明文信息。</p><h2 id="ElGamal加密算法"><a href="#ElGamal加密算法" class="headerlink" title="ElGamal加密算法"></a>ElGamal加密算法</h2><h3 id="算法定义"><a href="#算法定义" class="headerlink" title="算法定义"></a>算法定义</h3><p>ELGamal密码体制是T.ElGamal在1985年提出的公钥密码体制。它的安全性是基于求解离散对数问题的困难性，是RSA以后比较有希望的一个公钥密码。美国的DSS(Digital Signature Standard)的DSA(Digital Signature Algorithm)算法就是经ElGamal算法演变而来。目前DSA算法应用也非常广泛。</p><h3 id="数学难题"><a href="#数学难题" class="headerlink" title="数学难题"></a>数学难题</h3><p>1、有两个全局公开的参数，一个素数q和一个整数a，a是q的一个原根。<br>2、假设用户A和B希望交换一个密钥，用户A选择一个作为私有密钥的随机数XA&lt;q，并计算公开密钥YA=a^XA mod q。A对XA的值保密存放而使YA能被B公开获得。类似地，用户B选择一个私有的随机数XB&lt;q，并计算公开密钥YB=a^XB mod q。B对XB的值保密存放而使YB能被A公开获得。<br>3、用户A产生共享秘密密钥的计算方式是K = (YB)^XA mod q。同样，用户B产生共享秘密密钥的计算是K = (YA)^XB mod q。这两个计算产生相同的结果：<br>K = (YB)^XA mod q<br>= (a^XB mod q)^XA mod q<br>= (a^XB)^XA mod q （根据取模运算规则得到）<br>= a^XBXA mod q<br>= (a^XA)^XB mod q<br>= (a^XA mod q)^XB mod q<br>= (YA)^XB mod q</p><p>因此相当于双方已经交换了一个相同的秘密密钥。<br>4、因为XA和XB是保密的，一个敌对方可以利用的参数只有q、a、YA和YB。因而敌对方被迫取离散对数来确定密钥。例如，要获取用户B的秘密密钥，敌对方必须先计算<br>XB = inda ,q(YB)<br>然后再使用用户B采用的同样方法计算其秘密密钥K。<br>Diffie-Hellman密钥交换算法的安全性依赖于这样一个事实：虽然计算以一个素数为模的指</p><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/07/15/cipher-math/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/07/15/cipher-math/</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 密码学 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 密码学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>彩色图像处理</title>
       <link href="/2019/10/15/cv-exp3/"/>
       <url>/2019/10/15/cv-exp3/</url>
@@ -950,6 +975,17 @@
     
     
     <entry>
+      <title></title>
+      <link href="/PGP/index.html"/>
+      <url>/PGP/index.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="什么是-PGP-？它能做什么-？"><a href="#什么是-PGP-？它能做什么-？" class="headerlink" title="什么是 PGP ？它能做什么 ？"></a>什么是 PGP ？它能做什么 ？</h1><p>PGP 是 Pretty Good Privacy 的缩写，它是一套用于消息加密、验证的数据交换方法。遵守 OpenPGP 数据加解密标准 (RFC 4880) 。<br>PGP 可以用作 加密、数字签名、认证。</p><h2 id="使用-PGP-与我通讯"><a href="#使用-PGP-与我通讯" class="headerlink" title="使用 PGP 与我通讯"></a>使用 PGP 与我通讯</h2><p>首先下载我的 <a href="https://files.cnblogs.com/files/pipi-pig/PGP_public.zip" target="_blank" rel="noopener">PGP 公钥</a> 并导入到你的 PGP 加密程序中。(Mac OS 可以使用GPG Keychain)<br>注意验证我的公钥指纹为 A038 89C1 542D 6DB7 BD66  CEE3 D00F F13E B0B8 1FDA，如果指纹一致说明你下载的公钥没有被篡改。<br>使用这个公钥加密你的信息，并发送到 <a href="mailto:zhongyuhang113@gmail.com" target="_blank" rel="noopener">zhongyuhang113@gmail.com</a> 字样即可被我的邮箱自动分类。</p><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/PGP/" target="_blank" rel="noopener">https://zyhang8.github.io/PGP/</a></p></blockquote>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>gallery</title>
       <link href="/gallery/index.html"/>
       <url>/gallery/index.html</url>
@@ -962,10 +998,21 @@
     
     <entry>
       <title></title>
-      <link href="/PGP/index.html"/>
-      <url>/PGP/index.html</url>
+      <link href="/agree/index.html"/>
+      <url>/agree/index.html</url>
       
-        <content type="html"><![CDATA[<h1 id="什么是-PGP-？它能做什么-？"><a href="#什么是-PGP-？它能做什么-？" class="headerlink" title="什么是 PGP ？它能做什么 ？"></a>什么是 PGP ？它能做什么 ？</h1><p>PGP 是 Pretty Good Privacy 的缩写，它是一套用于消息加密、验证的数据交换方法。遵守 OpenPGP 数据加解密标准 (RFC 4880) 。<br>PGP 可以用作 加密、数字签名、认证。</p><h2 id="使用-PGP-与我通讯"><a href="#使用-PGP-与我通讯" class="headerlink" title="使用 PGP 与我通讯"></a>使用 PGP 与我通讯</h2><p>首先下载我的 <a href="https://files.cnblogs.com/files/pipi-pig/PGP_public.zip" target="_blank" rel="noopener">PGP 公钥</a> 并导入到你的 PGP 加密程序中。(Mac OS 可以使用GPG Keychain)<br>注意验证我的公钥指纹为 A038 89C1 542D 6DB7 BD66  CEE3 D00F F13E B0B8 1FDA，如果指纹一致说明你下载的公钥没有被篡改。<br>使用这个公钥加密你的信息，并发送到 <a href="mailto:zhongyuhang113@gmail.com" target="_blank" rel="noopener">zhongyuhang113@gmail.com</a> 字样即可被我的邮箱自动分类。</p><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/PGP/" target="_blank" rel="noopener">https://zyhang8.github.io/PGP/</a></p></blockquote>]]></content>
+        <content type="html"><![CDATA[<h1 id="知识共享协议"><a href="#知识共享协议" class="headerlink" title="知识共享协议"></a>知识共享协议</h1><p> 一只小白（以下简称本人），是 “一直小白” 博客（以下简称本博客）的拥有者<br>本博客上创造和发布的内容可用于传播和共享，对于本人发布的原创内容（包含图片、文字、音乐、视频）采用 CC BY-NC-SA 3.0 CN 即 署名-非商业性使用-相同方式共享 3.0 中国大陆 协议许可进行保护.</p><p><a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/07/29/e3SCG9.png" alt="e3SCG9.png"></a></p><p>您可以自由地：</p><ul><li>分享 — 在任何媒介以任何形式复制、发行本作品</li><li>演绎 — 修改、转换或以本作品为基础进行创作</li></ul><p>惟须遵守下列条件：</p><ul><li>署名</li><li>非商业性使用</li><li>相同方式共享</li></ul><h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2><h3 id="内容侵权"><a href="#内容侵权" class="headerlink" title="内容侵权"></a>内容侵权</h3><p>如您发现本博客上存在侵犯您自身合法权益的内容，请及时与本人联系，并提供具有法律效力的证明，以便本人进行处理.</p><h3 id="非原创内容相关"><a href="#非原创内容相关" class="headerlink" title="非原创内容相关"></a>非原创内容相关</h3><p>被本博客收录的非原创作品，原作者依然持有商业使用其作品的权利.<br>如果您希望商业使用这些被收录的内容，请与所有 参与此作品创作的原作者 和/或 版权持有者 联系，打成协议后方可商业使用.<br>本博客及本人不进行任何商业接洽工作，请自行联络原作者.</p><h2 id="CC-3-0-BY-NC-SA-CN-协议概要"><a href="#CC-3-0-BY-NC-SA-CN-协议概要" class="headerlink" title="CC 3.0 BY-NC-SA CN 协议概要"></a>CC 3.0 BY-NC-SA CN 协议概要</h2><h3 id="语言：中文"><a href="#语言：中文" class="headerlink" title="语言：中文"></a>语言：中文</h3><blockquote><p>该 <code>协议概要</code> 摘抄于 Thu Mar 9 02:28:36 UTC 2017<br>这是一份普通人可以理解的许可协议概要 (但不是替代) 。</p></blockquote><p><em>您可以自由地：</em></p><ul><li>分享 — 在任何媒介以任何形式复制、发行本作品</li><li>演绎 — 修改、转换或以本作品为基础进行创作</li><li>只要你遵守许可协议条款，许可人就无法收回你的这些权利。</li></ul><p><em>惟须遵守下列条件：</em></p><ul><li>署名 — 你必须遵守信用，注明来源链接和演绎内容，并提供一个通往与 原作所用协议并不冲突的知识共享协议 许可证页面的链接。你可以用任何合适的方式实现这个，但这并不暗示许可证拥有者和原作者认可该分享方式.</li><li>非商业性使用 — 您不得将本作品用于商业目的。</li><li>相同方式共享 — 如果你节选、翻译、重排版，或基于本作品二次创作，你必须将你的贡献用 相同的协议 进行分享，并分别注明原作者与你的贡献.</li><li>没有附加限制 — 虽然您可能依旧不适用那些法律上限制的任何关于知识产权的法律条款或技术措施，即使你的行为符合知识共享协议.</li></ul><p>##语言：英文</p><blockquote><p>This copy was copied at Thu Mar 9 02:28:36 UTC 2017<br>This is a human-readable summary of (and not a substitute for) the license.</p></blockquote><p>You are free to:</p><ul><li><p>Share — copy and redistribute the material in any medium or format</p></li><li><p>Adapt — remix, transform, and build upon the material</p></li><li><p>The licensor cannot revoke these freedoms as long as you follow the license terms.</p></li><li><p>Under the following terms:</p></li><li><p>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</p></li><li><p>NonCommercial — You may not use the material for commercial purposes.</p></li><li><p>ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</p></li><li><p>No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</p></li></ul><h2 id="CC-3-0-BY-NC-SA-CN-完整协议"><a href="#CC-3-0-BY-NC-SA-CN-完整协议" class="headerlink" title="CC 3.0 BY-NC-SA CN 完整协议"></a>CC 3.0 BY-NC-SA CN 完整协议</h2><h3 id="语言：中文-1"><a href="#语言：中文-1" class="headerlink" title="语言：中文"></a>语言：中文</h3><p><a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/legalcode" target="_blank" rel="noopener">知识共享协议 署名-非商业性使用-相同方式共享 3.0 中国大陆 许可协议</a></p><h3 id="署名方法"><a href="#署名方法" class="headerlink" title="署名方法"></a>署名方法</h3><p>在转载本博客中任何内容时必须给出原页面的 URL 链接，并注明文章（全文，部分）从 天空之边 转载，并提供一个与 <code>CC 3.0 BY-NC-SA China Mainland</code> 不相违背的知识共享协议的许可证；<br>如果你对本博客的原创内容进行了演绎，则必须注明演绎的内容；并提供 CC 3.0 BY-NC-SA 协议 的许可证</p><p><em>演绎政策</em><br>本博客属于所有在网络上公开发表的，任何人可访问的作品，故本人在这里明确声明 <code>所有原创内容均允许演绎</code>.</p><blockquote><p>知识共享协议中对 演绎 的定义是：在不改变原作者的原创内容的含义和内涵的基础上，对原创内容进行 节选、翻译、重排版，或将原作者的原创内容作为论据和素材，或基于原作者的原创内容进行二次创作。</p></blockquote><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">https://zyhang8.github.io/agree/</a></p></blockquote>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>links</title>
+      <link href="/links/index.html"/>
+      <url>/links/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -988,28 +1035,6 @@
       <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>links</title>
-      <link href="/links/index.html"/>
-      <url>/links/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/agree/index.html"/>
-      <url>/agree/index.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="知识共享协议"><a href="#知识共享协议" class="headerlink" title="知识共享协议"></a>知识共享协议</h1><p> 一只小白（以下简称本人），是 “一直小白” 博客（以下简称本博客）的拥有者<br>本博客上创造和发布的内容可用于传播和共享，对于本人发布的原创内容（包含图片、文字、音乐、视频）采用 CC BY-NC-SA 3.0 CN 即 署名-非商业性使用-相同方式共享 3.0 中国大陆 协议许可进行保护.</p><p><a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/07/29/e3SCG9.png" alt="e3SCG9.png"></a></p><p>您可以自由地：</p><ul><li>分享 — 在任何媒介以任何形式复制、发行本作品</li><li>演绎 — 修改、转换或以本作品为基础进行创作</li></ul><p>惟须遵守下列条件：</p><ul><li>署名</li><li>非商业性使用</li><li>相同方式共享</li></ul><h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2><h3 id="内容侵权"><a href="#内容侵权" class="headerlink" title="内容侵权"></a>内容侵权</h3><p>如您发现本博客上存在侵犯您自身合法权益的内容，请及时与本人联系，并提供具有法律效力的证明，以便本人进行处理.</p><h3 id="非原创内容相关"><a href="#非原创内容相关" class="headerlink" title="非原创内容相关"></a>非原创内容相关</h3><p>被本博客收录的非原创作品，原作者依然持有商业使用其作品的权利.<br>如果您希望商业使用这些被收录的内容，请与所有 参与此作品创作的原作者 和/或 版权持有者 联系，打成协议后方可商业使用.<br>本博客及本人不进行任何商业接洽工作，请自行联络原作者.</p><h2 id="CC-3-0-BY-NC-SA-CN-协议概要"><a href="#CC-3-0-BY-NC-SA-CN-协议概要" class="headerlink" title="CC 3.0 BY-NC-SA CN 协议概要"></a>CC 3.0 BY-NC-SA CN 协议概要</h2><h3 id="语言：中文"><a href="#语言：中文" class="headerlink" title="语言：中文"></a>语言：中文</h3><blockquote><p>该 <code>协议概要</code> 摘抄于 Thu Mar 9 02:28:36 UTC 2017<br>这是一份普通人可以理解的许可协议概要 (但不是替代) 。</p></blockquote><p><em>您可以自由地：</em></p><ul><li>分享 — 在任何媒介以任何形式复制、发行本作品</li><li>演绎 — 修改、转换或以本作品为基础进行创作</li><li>只要你遵守许可协议条款，许可人就无法收回你的这些权利。</li></ul><p><em>惟须遵守下列条件：</em></p><ul><li>署名 — 你必须遵守信用，注明来源链接和演绎内容，并提供一个通往与 原作所用协议并不冲突的知识共享协议 许可证页面的链接。你可以用任何合适的方式实现这个，但这并不暗示许可证拥有者和原作者认可该分享方式.</li><li>非商业性使用 — 您不得将本作品用于商业目的。</li><li>相同方式共享 — 如果你节选、翻译、重排版，或基于本作品二次创作，你必须将你的贡献用 相同的协议 进行分享，并分别注明原作者与你的贡献.</li><li>没有附加限制 — 虽然您可能依旧不适用那些法律上限制的任何关于知识产权的法律条款或技术措施，即使你的行为符合知识共享协议.</li></ul><p>##语言：英文</p><blockquote><p>This copy was copied at Thu Mar 9 02:28:36 UTC 2017<br>This is a human-readable summary of (and not a substitute for) the license.</p></blockquote><p>You are free to:</p><ul><li><p>Share — copy and redistribute the material in any medium or format</p></li><li><p>Adapt — remix, transform, and build upon the material</p></li><li><p>The licensor cannot revoke these freedoms as long as you follow the license terms.</p></li><li><p>Under the following terms:</p></li><li><p>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</p></li><li><p>NonCommercial — You may not use the material for commercial purposes.</p></li><li><p>ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</p></li><li><p>No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</p></li></ul><h2 id="CC-3-0-BY-NC-SA-CN-完整协议"><a href="#CC-3-0-BY-NC-SA-CN-完整协议" class="headerlink" title="CC 3.0 BY-NC-SA CN 完整协议"></a>CC 3.0 BY-NC-SA CN 完整协议</h2><h3 id="语言：中文-1"><a href="#语言：中文-1" class="headerlink" title="语言：中文"></a>语言：中文</h3><p><a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/legalcode" target="_blank" rel="noopener">知识共享协议 署名-非商业性使用-相同方式共享 3.0 中国大陆 许可协议</a></p><h3 id="署名方法"><a href="#署名方法" class="headerlink" title="署名方法"></a>署名方法</h3><p>在转载本博客中任何内容时必须给出原页面的 URL 链接，并注明文章（全文，部分）从 天空之边 转载，并提供一个与 <code>CC 3.0 BY-NC-SA China Mainland</code> 不相违背的知识共享协议的许可证；<br>如果你对本博客的原创内容进行了演绎，则必须注明演绎的内容；并提供 CC 3.0 BY-NC-SA 协议 的许可证</p><p><em>演绎政策</em><br>本博客属于所有在网络上公开发表的，任何人可访问的作品，故本人在这里明确声明 <code>所有原创内容均允许演绎</code>.</p><blockquote><p>知识共享协议中对 演绎 的定义是：在不改变原作者的原创内容的含义和内涵的基础上，对原创内容进行 节选、翻译、重排版，或将原作者的原创内容作为论据和素材，或基于原作者的原创内容进行二次创作。</p></blockquote><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">https://zyhang8.github.io/agree/</a></p></blockquote>]]></content>
       
     </entry>
     
