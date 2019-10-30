@@ -52,7 +52,7 @@
     
     <title>
         
-            标签: markdown | 
+            常用命令及文件操作 | 
         
         一直小白的博客
     </title>
@@ -63,7 +63,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content>
-    <meta name="keywords" content="这是一只小白">
+    <meta name="keywords" content="这是一只小白,linux">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -248,7 +248,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="一直小白的博客">
-    <meta name="msapplication-starturl" content="http://yoursite.com/tags/markdown/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2019/10/17/linux-exp2/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="一直小白的博客">
@@ -263,13 +263,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/tags/markdown/">
+    <meta property="og:url" content="http://yoursite.com/2019/10/17/linux-exp2/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: markdown | 一直小白的博客">
+    <meta property="og:title" content="常用命令及文件操作 | 一直小白的博客">
     <meta property="og:image" content="/img/head_sculpture.png">
     <meta property="og:description" content>
-    
+    <meta property="og:article:tag" content="linux"> 
 
+    
+        <meta property="article:published_time" content="Thu Oct 17 2019 19:51:38 GMT+0800">
+        <meta property="article:modified_time" content="Wed Oct 30 2019 19:53:02 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -277,13 +280,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/tags/markdown/index.html">
+        <link rel="canonical" href="http://yoursite.com/2019/10/17/linux-exp2/index.html">
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2019/10/17/linux-exp2/index.html",
+    "headline": "常用命令及文件操作",
+    "datePublished": "Thu Oct 17 2019 19:51:38 GMT+0800",
+    "dateModified": "Wed Oct 30 2019 19:53:02 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "一直小白",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/head_sculpture.png"
+        },
+        "description": "求知若饥,谦虚若愚"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "一直小白的博客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/head_sculpture.png"
+        }
+    },
+    "keywords": ",linux这是一只小白",
+    "description": "",
+}
+</script>
 
 
     
@@ -326,99 +359,377 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Linux第二次实验报告"><span class="post-toc-number">1.</span> <span class="post-toc-text">Linux第二次实验报告</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#实验要求"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">实验要求</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Part-1"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">Part 1</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#实验步骤"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">实验步骤</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#实验内容"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">实验内容</span></a></li></ol></li></ol></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2019/07/10/markdown-md/">鱼的记忆|markdown必备手册</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            markdown个人常用易忘语法
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2019/07/10/markdown-md/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/head_sculpture.png" width="44px" height="44px" alt="一直小白's avatar">
-            </div>
-            <div>
-                <strong>一直小白</strong>
-                <span>7月 10, 2019</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-              <!-- Category -->
-              <span class="post_entry-category">
-                  <a class="post_category-link" href="/categories/鱼的记忆/">鱼的记忆</a>
-              </span>
-            
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                常用命令及文件操作
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/head_sculpture.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>一直小白</strong>
+        <span>10月 17, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACa0lEQVR42u3aMZLjMAwEQP//03fpJpIHAEWxXK1oS2XLbAUEd4DPv5++Pnh4eHh4eHh4eIfxPvF19a3kzv0n/95fsDY8PDy8LbwvW238meSlXN25ehHVteHh4eHt5N1v5fePTkhJmbn63XxteHh4eCfzqgffvGDg4eHh/R7v/lv3y50fuPHw8PDO4SX/8CeRbvUAnRSGTVkLHh4eXszLD8H7/97a38PDw8MLeM3BpvEhuxd8lIeu8PDw8B7g9dr5+ShVb7xgAsbDw8N7mpc/NKEmAW715SYvCw8PD28nr1cG8u2+OpiVr2rU38PDw8Mb83qL6IUUeSTRfDV4eHh4G3nV0CFvXE3i3WowgYeHh/cW7/5xvWWtaoyNJiPw8PDwFvHmh+xqGcgjiWqRwMPDw3uaV912e/FEfk0Gv/Dw8PD28OYFoFokqsMK1WEsPDw8vJ28/H65nV8c6kqejIeHh/cur/fD+VBUfjTPi1A5pcbDw8NbxOsdgnuN/3yJkwsPDw/vLV5yzM0HDvIhgJw6Kgx4eHh4S3nV43VyyK6GHUmDDQ8PD+8tXq+1X936k9/Ko4ovK8HDw8N7mJdHA9XBrLWBbxKX4OHh4e3hrR26qjbJ8rKBh4eHdw6v3F4qBgT5nSSkiCJjPDw8vId51e04CXN7hWFVqwwPDw9vDy8vBmvj12SjX1AY8PDw8B7jzTf66nG8F0l8+RU8PDy8w3j58To/mudPjgIRPDw8vMN4veC191LykAIPDw/vLd6qplcvSugVj8UxLh4eHl7Mq446TZpbSYtrVJDw8PDwHub93oWHh4eHh4eHh3fA9R/SJfcT1JMCTQAAAABJRU5ErkJggg==">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/linux/">linux</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=常用命令及文件操作&url=http://yoursite.com/2019/10/17/linux-exp2/index.html&pic=http://yoursite.com/img/head_sculpture.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=常用命令及文件操作&url=http://yoursite.com/2019/10/17/linux-exp2/index.html&via=一直小白" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/10/17/linux-exp2/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2019/10/17/linux-exp2/index.html&title=常用命令及文件操作" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一直小白的博客&title=常用命令及文件操作&summary=&pics=http://yoursite.com/img/head_sculpture.png&url=http://yoursite.com/2019/10/17/linux-exp2/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Linux第二次实验报告"><a href="#Linux第二次实验报告" class="headerlink" title="Linux第二次实验报告"></a>Linux第二次实验报告</h1><h2 id="实验要求"><a href="#实验要求" class="headerlink" title="实验要求"></a>实验要求</h2><h3 id="Part-1"><a href="#Part-1" class="headerlink" title="Part 1"></a>Part 1</h3><p>回顾文件管理部分 （chapter 4 File Mangement and Operation） 基础知识和示例（PPT29-32）<br>完成文件管理部分（第2章 常用命令及文件操作）的课后思考题1-10</p>
+<h3 id="实验步骤"><a href="#实验步骤" class="headerlink" title="实验步骤"></a>实验步骤</h3><ol>
+<li>简述Linux命令的一般格式</li>
+<li>请说明下述命令的功能：<br>date,cp,pwd,rm,echo,who,cat,more</li>
+<li>公元2016年的元旦是星期几？</li>
+<li>什么是文件？Linux系统中主要由哪几种文件？各自的功能用什么？</li>
+<li>下面的正则表达式表示的含义是什么？<br>file*.c<br>dir??<br>Char[a-f].o</li>
+<li>命令cp和mv有何异同？你能用copy作为复制文件的命令吗？为什么？</li>
+<li>将文件file1的前20行、文件file2的最后15行合并成一个文件AB</li>
+<li>要确定在文件ABC中是否含有表示星期六或者星期日字符的行，应使用什么命令？</li>
+<li>如何对文件ABC分别按字典顺序、月份顺序、算术值进行排序？</li>
+<li>自己建一个文本文件file_1，把它复制到文件other中，对other进行修改，然后比较它与文件file_1的区别</li>
+<li>mkdir,rmdir</li>
+<li>cd,pwd,ls</li>
+<li>ln</li>
+</ol>
+<h3 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h3><ol>
+<li>命令 [OPTION]  FILE</li>
+<li><table>
+<thead>
+<tr>
+<th align="center">命令</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">date</td>
+<td align="center">用于在屏幕上显示或者设置系统的日期和时间。如果没有选择和参数将直接显示系统当前的日期和时间</td>
+</tr>
+<tr>
+<td align="center">cp</td>
+<td align="center">将源文件或目录复制到目标文件或目录中</td>
+</tr>
+<tr>
+<td align="center">pwd</td>
+<td align="center">显示当前目录的路径</td>
+</tr>
+<tr>
+<td align="center">rm</td>
+<td align="center">可以删除指定的文件或目录（默认情况下不能删除目录）</td>
+</tr>
+<tr>
+<td align="center">echo</td>
+<td align="center">在屏幕上显示命令行中所给出的字符串STRING.。该命令往往用于shell脚本中</td>
+</tr>
+<tr>
+<td align="center">who</td>
+<td align="center">将列出所有正在使用系统的用户、所有终端和注册到系统的时间。</td>
+</tr>
+<tr>
+<td align="center">cat</td>
+<td align="center">链接文件并打印到标准输出设备上。</td>
+</tr>
+<tr>
+<td align="center">more</td>
+<td align="center">显示文件内容，一次显示一屏</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<p><img src="https://s2.ax1x.com/2019/10/08/uWH7uR.png" alt="uWH7uR.png"></p>
+<ol start="3">
+<li>date -d 20160101 +%A</li>
+</ol>
+<p><img src="https://s2.ax1x.com/2019/10/08/uWHov9.png" alt="uWHov9.png"></p>
+<ol start="4">
+<li>文件是被命名的相关信息的集合体。一般的，文件是由二进制代码、字节、行或记录组成的序列，它们由文件创造者或用户定义<br>文件分为3种：普通文件、目录文件、特别文件以及符号链接文件<br>普通文件：核心对这些数据没有进行结构化，只是作为有序的字节序列把它提交给应用程序。应用程序自己组织和解释这些数据。<br>目录文件：利用目录文件可以构成文件系统的分层树形结构，它也包括数据文件但是核心可以对这些文件加以结构。<br>特别文件：系统利用他们来表示各个设备驱动器，核心使用他们与硬件设备通信<br>符号链接文件：是一种特别类型的文件，事实上，他只是一个小文本文件，其中包括它所链接的目标文件和目标文件的绝对路径。</li>
+<li>个人不觉得这普遍的那种正则表达式，而是linux下的通配符。<br>匹配文件中的任何字符串，包括空字符串。<br>列出目录文件名中的任何单个字符<br>匹配文件中的字符,范围为a-f</li>
+<li>异：cp是将源文件或目录复制到目标文件或目录中；mv命令是用来对文件或目录重新命名，或者将文件从一个目录转移到另一个目录中。他们的结果不同，mv好像文件“搬家”，文件个数并未增加。而cp对文件进行复制，文件个数增加了。<br>同：都可以将制定文件或目录移动到另一个目录中<br>不能，因为在linux 下，cp就是copy的简称，没必要再学copy，linux下，不识别copy</li>
+</ol>
+<p><img src="https://s2.ax1x.com/2019/10/08/uWHIgJ.png" alt="uWHIgJ.png"></p>
+<ol start="7">
+<li>head -n 20 filel &gt; AB.txt &amp;&amp; tail -n 15 file2 &gt;&gt; AB.txt</li>
+</ol>
+<p><img src="https://s2.ax1x.com/2019/10/08/uWH4CF.png" alt="uWH4CF.png"></p>
+<ol start="8">
+<li>grep -iE ‘saturday|sunday’ ABC</li>
+</ol>
+<p><img src="https://s2.ax1x.com/2019/10/08/uWHREV.png" alt="uWHREV.png"></p>
+<p><img src="https://s2.ax1x.com/2019/10/08/uWHWNT.png" alt="uWHWNT.png"></p>
+<ol start="9">
+<li>sort -d ABC<br>sort -M ABC<br>sort -n ABC</li>
+</ol>
+<p><img src="https://s2.ax1x.com/2019/10/08/uWH534.png" alt="uWH534.png"></p>
+<ol start="10">
+<li>vim file_1<br>cp file_1 other<br>more file_1<br>more other</li>
+</ol>
+<p><img src="https://s2.ax1x.com/2019/10/08/uWHf4U.png" alt="uWHf4U.png"></p>
+<ol start="11">
+<li>mkdir –mode=700 test<br>mkdir -p -m 750 bin/os_1<br>rmdir -p bin/os_1</li>
+</ol>
+<p><img src="https://s2.ax1x.com/2019/10/08/uWOCr9.png" alt="uWOCr9.png"></p>
+<ol start="12">
+<li>ls  -C Desktop/<br>ls -lai<br>ls  -F<br>cd<br>cd ..<br>cd test/<br>pwd</li>
+</ol>
+<p><img src="https://s2.ax1x.com/2019/10/08/uWO9KJ.png" alt="uWO9KJ.png"></p>
+<ol start="13">
+<li>ln test test1<br>ln -s /test abc</li>
+</ol>
+<p><img src="https://s2.ax1x.com/2019/10/08/uWLz2F.png" alt="uWLz2F.png"></p>
+<blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/10/17/linux-exp2/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/10/17/linux-exp2/</a></p></blockquote>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2019/10/17/linux-exp2/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/10/17/linux-exp2/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//yizhixiaobai.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/10/16/linux-exp1/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
@@ -658,6 +969,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
