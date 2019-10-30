@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>目录和进程管理</title>
+      <link href="/2019/10/18/linux-exp3/"/>
+      <url>/2019/10/18/linux-exp3/</url>
+      
+        <content type="html"><![CDATA[<h1 id="目录和进程管理"><a href="#目录和进程管理" class="headerlink" title="目录和进程管理"></a>目录和进程管理</h1><h2 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h2><p>Part1:</p><p>回顾及操作目录全县部分及进程管理的所有PPT实例</p><p>Part2:目录操作部分</p><p>“实验一 文件和目录操作”的11-12题</p><p>目录这一章的课后思考题地5-11题</p><p>Part3:“实验二 进程管理及其他命令”所有内容</p><h2 id="实验步骤"><a href="#实验步骤" class="headerlink" title="实验步骤"></a>实验步骤</h2><h2 id="“实验一-文件和目录操作”的11-12题"><a href="#“实验一-文件和目录操作”的11-12题" class="headerlink" title="“实验一 文件和目录操作”的11-12题"></a>“实验一 文件和目录操作”的11-12题</h2><p>ls -l 该目录下文件的详细信息</p><p>chmod 777 file</p><p>chmod -x file</p><h2 id="目录这一章的课后思考题地5-11题"><a href="#目录这一章的课后思考题地5-11题" class="headerlink" title="目录这一章的课后思考题地5-11题"></a>目录这一章的课后思考题地5-11题</h2><h3 id="5"><a href="#5" class="headerlink" title="5"></a>5</h3><ol><li>目录文件,rwx(Owner)r-x(Group)r-x(Other) 读,写,执行,-为不可以</li><li>存放系统命令</li><li>账户密码配置文件</li><li>设备文件,rw-(-Owner)rw-(Group)rw-(Other) 读,写,执行,-为不可以</li><li>0号标准软驱</li><li>动态库</li><li>普通文件,rwx(-Owner)–x(Group)–x(Other) 读,写,执行,-为不可以</li></ol><h3 id="6"><a href="#6" class="headerlink" title="6"></a>6</h3><ol><li>文件名称 progl;普通文件</li><li>chmod users-x progl</li><li>ln progl /home/liuzh/temp</li><li>第一个为l链接文件,最后的名称为temp,时间,大小,文件所属,拥有者,文件数变为2,文件属性其他均相同</li></ol><h3 id="7"><a href="#7" class="headerlink" title="7"></a>7</h3><ol><li>返回用户目录</li><li>返回上一层目录</li><li>返回上两层目录</li><li>返回根目录</li></ol><h3 id="8"><a href="#8" class="headerlink" title="8"></a>8</h3><p>rm -rf ABC</p><h3 id="9"><a href="#9" class="headerlink" title="9"></a>9</h3><p>ls -ap | grep “/“ | wc -l</p><h3 id="10"><a href="#10" class="headerlink" title="10"></a>10</h3><p>硬链接和软链接。硬链接相当于复制软链接相当于快捷方式区别在于：软链接的源文件删除之后，软链接失效。硬链接的源文件删除之后，该链接仍然可以访问。</p><h3 id="11"><a href="#11" class="headerlink" title="11"></a>11</h3><p>加–help</p><h2 id="“实验二-进程管理及其他命令”所有内容"><a href="#“实验二-进程管理及其他命令”所有内容" class="headerlink" title="“实验二 进程管理及其他命令”所有内容"></a>“实验二 进程管理及其他命令”所有内容</h2><h3 id="1"><a href="#1" class="headerlink" title="1"></a>1</h3><p>ps 运行ps的进程信息 PID唯一标识进程 TTY虚拟控制台 CMD进程名称 TIME时间</p><p>ps -a 显示同一终端下的所有程序</p><p>ps -l 用来观察自己的bash相关的进程</p><p>ps -e 显示同一终端下的所有程序</p><p>ps -f 感觉这个命令是ps f把,-f只是显示ps -f这个命令所处的进程信息</p><p>ps u 以用户为主的格式来显示程序状况。</p><p>ps x 显示所有程序，不以终端机来区分。</p><p><img src="https://s2.ax1x.com/2019/10/22/K35Z5Q.png" alt="K35Z5Q.png"><br><img src="https://s2.ax1x.com/2019/10/22/K35kb8.png" alt="K35kb8.png"><br><img src="https://s2.ax1x.com/2019/10/22/K35mCj.png" alt="K35mCj.png"><br><img src="https://s2.ax1x.com/2019/10/22/K35VUg.png" alt="K35VUg.png"></p><h3 id="2"><a href="#2" class="headerlink" title="2"></a>2</h3><p>相同,PID唯一标识进程,动态分配</p><h3 id="3"><a href="#3" class="headerlink" title="3"></a>3</h3><p>太多进程了,就演示两个例子把</p><p><img src="https://s2.ax1x.com/2019/10/22/K35EVS.png" alt="K35EVS.png"></p><h3 id="4"><a href="#4" class="headerlink" title="4"></a>4</h3><p>没有反应，编译成功。加&amp;显示新的编译，并显示上一次编译完成</p><p><img src="https://s2.ax1x.com/2019/10/22/K35n8s.png" alt="K35n8s.png"></p><h3 id="5-1"><a href="#5-1" class="headerlink" title="5"></a>5</h3><p>太多进程了，有点难找，总之，找到后，查看其对应的PID，然后kill Pid即可</p><p><img src="https://s2.ax1x.com/2019/10/22/K35u2n.png" alt="K35u2n.png"></p><h3 id="6-1"><a href="#6-1" class="headerlink" title="6"></a>6</h3><p>sleep为睡眠；who grep为指定用户</p><h3 id="7-1"><a href="#7-1" class="headerlink" title="7"></a>7</h3><p><img src="https://s2.ax1x.com/2019/10/22/K35Kvq.png" alt="K35Kvq.png"></p><h3 id="8-1"><a href="#8-1" class="headerlink" title="8"></a>8</h3><p>大小变为三分之一</p><p><img src="https://s2.ax1x.com/2019/10/22/K35QK0.png" alt="K35QK0.png"><br><img src="https://s2.ax1x.com/2019/10/22/K35lrV.png" alt="K35lrV.png"></p><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/10/18/linux-exp3/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/10/18/linux-exp3/</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>常用命令及文件操作</title>
       <link href="/2019/10/17/linux-exp2/"/>
       <url>/2019/10/17/linux-exp2/</url>
@@ -1025,28 +1050,6 @@
     
     
     <entry>
-      <title></title>
-      <link href="/PGP/index.html"/>
-      <url>/PGP/index.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="什么是-PGP-？它能做什么-？"><a href="#什么是-PGP-？它能做什么-？" class="headerlink" title="什么是 PGP ？它能做什么 ？"></a>什么是 PGP ？它能做什么 ？</h1><p>PGP 是 Pretty Good Privacy 的缩写，它是一套用于消息加密、验证的数据交换方法。遵守 OpenPGP 数据加解密标准 (RFC 4880) 。<br>PGP 可以用作 加密、数字签名、认证。</p><h2 id="使用-PGP-与我通讯"><a href="#使用-PGP-与我通讯" class="headerlink" title="使用 PGP 与我通讯"></a>使用 PGP 与我通讯</h2><p>首先下载我的 <a href="https://files.cnblogs.com/files/pipi-pig/PGP_public.zip" target="_blank" rel="noopener">PGP 公钥</a> 并导入到你的 PGP 加密程序中。(Mac OS 可以使用GPG Keychain)<br>注意验证我的公钥指纹为 A038 89C1 542D 6DB7 BD66  CEE3 D00F F13E B0B8 1FDA，如果指纹一致说明你下载的公钥没有被篡改。<br>使用这个公钥加密你的信息，并发送到 <a href="mailto:zhongyuhang113@gmail.com" target="_blank" rel="noopener">zhongyuhang113@gmail.com</a> 字样即可被我的邮箱自动分类。</p><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/PGP/" target="_blank" rel="noopener">https://zyhang8.github.io/PGP/</a></p></blockquote>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/agree/index.html"/>
-      <url>/agree/index.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="知识共享协议"><a href="#知识共享协议" class="headerlink" title="知识共享协议"></a>知识共享协议</h1><p> 一只小白（以下简称本人），是 “一直小白” 博客（以下简称本博客）的拥有者<br>本博客上创造和发布的内容可用于传播和共享，对于本人发布的原创内容（包含图片、文字、音乐、视频）采用 CC BY-NC-SA 3.0 CN 即 署名-非商业性使用-相同方式共享 3.0 中国大陆 协议许可进行保护.</p><p><a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/07/29/e3SCG9.png" alt="e3SCG9.png"></a></p><p>您可以自由地：</p><ul><li>分享 — 在任何媒介以任何形式复制、发行本作品</li><li>演绎 — 修改、转换或以本作品为基础进行创作</li></ul><p>惟须遵守下列条件：</p><ul><li>署名</li><li>非商业性使用</li><li>相同方式共享</li></ul><h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2><h3 id="内容侵权"><a href="#内容侵权" class="headerlink" title="内容侵权"></a>内容侵权</h3><p>如您发现本博客上存在侵犯您自身合法权益的内容，请及时与本人联系，并提供具有法律效力的证明，以便本人进行处理.</p><h3 id="非原创内容相关"><a href="#非原创内容相关" class="headerlink" title="非原创内容相关"></a>非原创内容相关</h3><p>被本博客收录的非原创作品，原作者依然持有商业使用其作品的权利.<br>如果您希望商业使用这些被收录的内容，请与所有 参与此作品创作的原作者 和/或 版权持有者 联系，打成协议后方可商业使用.<br>本博客及本人不进行任何商业接洽工作，请自行联络原作者.</p><h2 id="CC-3-0-BY-NC-SA-CN-协议概要"><a href="#CC-3-0-BY-NC-SA-CN-协议概要" class="headerlink" title="CC 3.0 BY-NC-SA CN 协议概要"></a>CC 3.0 BY-NC-SA CN 协议概要</h2><h3 id="语言：中文"><a href="#语言：中文" class="headerlink" title="语言：中文"></a>语言：中文</h3><blockquote><p>该 <code>协议概要</code> 摘抄于 Thu Mar 9 02:28:36 UTC 2017<br>这是一份普通人可以理解的许可协议概要 (但不是替代) 。</p></blockquote><p><em>您可以自由地：</em></p><ul><li>分享 — 在任何媒介以任何形式复制、发行本作品</li><li>演绎 — 修改、转换或以本作品为基础进行创作</li><li>只要你遵守许可协议条款，许可人就无法收回你的这些权利。</li></ul><p><em>惟须遵守下列条件：</em></p><ul><li>署名 — 你必须遵守信用，注明来源链接和演绎内容，并提供一个通往与 原作所用协议并不冲突的知识共享协议 许可证页面的链接。你可以用任何合适的方式实现这个，但这并不暗示许可证拥有者和原作者认可该分享方式.</li><li>非商业性使用 — 您不得将本作品用于商业目的。</li><li>相同方式共享 — 如果你节选、翻译、重排版，或基于本作品二次创作，你必须将你的贡献用 相同的协议 进行分享，并分别注明原作者与你的贡献.</li><li>没有附加限制 — 虽然您可能依旧不适用那些法律上限制的任何关于知识产权的法律条款或技术措施，即使你的行为符合知识共享协议.</li></ul><p>##语言：英文</p><blockquote><p>This copy was copied at Thu Mar 9 02:28:36 UTC 2017<br>This is a human-readable summary of (and not a substitute for) the license.</p></blockquote><p>You are free to:</p><ul><li><p>Share — copy and redistribute the material in any medium or format</p></li><li><p>Adapt — remix, transform, and build upon the material</p></li><li><p>The licensor cannot revoke these freedoms as long as you follow the license terms.</p></li><li><p>Under the following terms:</p></li><li><p>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</p></li><li><p>NonCommercial — You may not use the material for commercial purposes.</p></li><li><p>ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</p></li><li><p>No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</p></li></ul><h2 id="CC-3-0-BY-NC-SA-CN-完整协议"><a href="#CC-3-0-BY-NC-SA-CN-完整协议" class="headerlink" title="CC 3.0 BY-NC-SA CN 完整协议"></a>CC 3.0 BY-NC-SA CN 完整协议</h2><h3 id="语言：中文-1"><a href="#语言：中文-1" class="headerlink" title="语言：中文"></a>语言：中文</h3><p><a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/legalcode" target="_blank" rel="noopener">知识共享协议 署名-非商业性使用-相同方式共享 3.0 中国大陆 许可协议</a></p><h3 id="署名方法"><a href="#署名方法" class="headerlink" title="署名方法"></a>署名方法</h3><p>在转载本博客中任何内容时必须给出原页面的 URL 链接，并注明文章（全文，部分）从 天空之边 转载，并提供一个与 <code>CC 3.0 BY-NC-SA China Mainland</code> 不相违背的知识共享协议的许可证；<br>如果你对本博客的原创内容进行了演绎，则必须注明演绎的内容；并提供 CC 3.0 BY-NC-SA 协议 的许可证</p><p><em>演绎政策</em><br>本博客属于所有在网络上公开发表的，任何人可访问的作品，故本人在这里明确声明 <code>所有原创内容均允许演绎</code>.</p><blockquote><p>知识共享协议中对 演绎 的定义是：在不改变原作者的原创内容的含义和内涵的基础上，对原创内容进行 节选、翻译、重排版，或将原作者的原创内容作为论据和素材，或基于原作者的原创内容进行二次创作。</p></blockquote><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">https://zyhang8.github.io/agree/</a></p></blockquote>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>links</title>
       <link href="/links/index.html"/>
       <url>/links/index.html</url>
@@ -1080,11 +1083,33 @@
     
     
     <entry>
+      <title></title>
+      <link href="/PGP/index.html"/>
+      <url>/PGP/index.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="什么是-PGP-？它能做什么-？"><a href="#什么是-PGP-？它能做什么-？" class="headerlink" title="什么是 PGP ？它能做什么 ？"></a>什么是 PGP ？它能做什么 ？</h1><p>PGP 是 Pretty Good Privacy 的缩写，它是一套用于消息加密、验证的数据交换方法。遵守 OpenPGP 数据加解密标准 (RFC 4880) 。<br>PGP 可以用作 加密、数字签名、认证。</p><h2 id="使用-PGP-与我通讯"><a href="#使用-PGP-与我通讯" class="headerlink" title="使用 PGP 与我通讯"></a>使用 PGP 与我通讯</h2><p>首先下载我的 <a href="https://files.cnblogs.com/files/pipi-pig/PGP_public.zip" target="_blank" rel="noopener">PGP 公钥</a> 并导入到你的 PGP 加密程序中。(Mac OS 可以使用GPG Keychain)<br>注意验证我的公钥指纹为 A038 89C1 542D 6DB7 BD66  CEE3 D00F F13E B0B8 1FDA，如果指纹一致说明你下载的公钥没有被篡改。<br>使用这个公钥加密你的信息，并发送到 <a href="mailto:zhongyuhang113@gmail.com" target="_blank" rel="noopener">zhongyuhang113@gmail.com</a> 字样即可被我的邮箱自动分类。</p><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/PGP/" target="_blank" rel="noopener">https://zyhang8.github.io/PGP/</a></p></blockquote>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>tags</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/agree/index.html"/>
+      <url>/agree/index.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="知识共享协议"><a href="#知识共享协议" class="headerlink" title="知识共享协议"></a>知识共享协议</h1><p> 一只小白（以下简称本人），是 “一直小白” 博客（以下简称本博客）的拥有者<br>本博客上创造和发布的内容可用于传播和共享，对于本人发布的原创内容（包含图片、文字、音乐、视频）采用 CC BY-NC-SA 3.0 CN 即 署名-非商业性使用-相同方式共享 3.0 中国大陆 协议许可进行保护.</p><p><a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/07/29/e3SCG9.png" alt="e3SCG9.png"></a></p><p>您可以自由地：</p><ul><li>分享 — 在任何媒介以任何形式复制、发行本作品</li><li>演绎 — 修改、转换或以本作品为基础进行创作</li></ul><p>惟须遵守下列条件：</p><ul><li>署名</li><li>非商业性使用</li><li>相同方式共享</li></ul><h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2><h3 id="内容侵权"><a href="#内容侵权" class="headerlink" title="内容侵权"></a>内容侵权</h3><p>如您发现本博客上存在侵犯您自身合法权益的内容，请及时与本人联系，并提供具有法律效力的证明，以便本人进行处理.</p><h3 id="非原创内容相关"><a href="#非原创内容相关" class="headerlink" title="非原创内容相关"></a>非原创内容相关</h3><p>被本博客收录的非原创作品，原作者依然持有商业使用其作品的权利.<br>如果您希望商业使用这些被收录的内容，请与所有 参与此作品创作的原作者 和/或 版权持有者 联系，打成协议后方可商业使用.<br>本博客及本人不进行任何商业接洽工作，请自行联络原作者.</p><h2 id="CC-3-0-BY-NC-SA-CN-协议概要"><a href="#CC-3-0-BY-NC-SA-CN-协议概要" class="headerlink" title="CC 3.0 BY-NC-SA CN 协议概要"></a>CC 3.0 BY-NC-SA CN 协议概要</h2><h3 id="语言：中文"><a href="#语言：中文" class="headerlink" title="语言：中文"></a>语言：中文</h3><blockquote><p>该 <code>协议概要</code> 摘抄于 Thu Mar 9 02:28:36 UTC 2017<br>这是一份普通人可以理解的许可协议概要 (但不是替代) 。</p></blockquote><p><em>您可以自由地：</em></p><ul><li>分享 — 在任何媒介以任何形式复制、发行本作品</li><li>演绎 — 修改、转换或以本作品为基础进行创作</li><li>只要你遵守许可协议条款，许可人就无法收回你的这些权利。</li></ul><p><em>惟须遵守下列条件：</em></p><ul><li>署名 — 你必须遵守信用，注明来源链接和演绎内容，并提供一个通往与 原作所用协议并不冲突的知识共享协议 许可证页面的链接。你可以用任何合适的方式实现这个，但这并不暗示许可证拥有者和原作者认可该分享方式.</li><li>非商业性使用 — 您不得将本作品用于商业目的。</li><li>相同方式共享 — 如果你节选、翻译、重排版，或基于本作品二次创作，你必须将你的贡献用 相同的协议 进行分享，并分别注明原作者与你的贡献.</li><li>没有附加限制 — 虽然您可能依旧不适用那些法律上限制的任何关于知识产权的法律条款或技术措施，即使你的行为符合知识共享协议.</li></ul><p>##语言：英文</p><blockquote><p>This copy was copied at Thu Mar 9 02:28:36 UTC 2017<br>This is a human-readable summary of (and not a substitute for) the license.</p></blockquote><p>You are free to:</p><ul><li><p>Share — copy and redistribute the material in any medium or format</p></li><li><p>Adapt — remix, transform, and build upon the material</p></li><li><p>The licensor cannot revoke these freedoms as long as you follow the license terms.</p></li><li><p>Under the following terms:</p></li><li><p>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</p></li><li><p>NonCommercial — You may not use the material for commercial purposes.</p></li><li><p>ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</p></li><li><p>No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</p></li></ul><h2 id="CC-3-0-BY-NC-SA-CN-完整协议"><a href="#CC-3-0-BY-NC-SA-CN-完整协议" class="headerlink" title="CC 3.0 BY-NC-SA CN 完整协议"></a>CC 3.0 BY-NC-SA CN 完整协议</h2><h3 id="语言：中文-1"><a href="#语言：中文-1" class="headerlink" title="语言：中文"></a>语言：中文</h3><p><a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/legalcode" target="_blank" rel="noopener">知识共享协议 署名-非商业性使用-相同方式共享 3.0 中国大陆 许可协议</a></p><h3 id="署名方法"><a href="#署名方法" class="headerlink" title="署名方法"></a>署名方法</h3><p>在转载本博客中任何内容时必须给出原页面的 URL 链接，并注明文章（全文，部分）从 天空之边 转载，并提供一个与 <code>CC 3.0 BY-NC-SA China Mainland</code> 不相违背的知识共享协议的许可证；<br>如果你对本博客的原创内容进行了演绎，则必须注明演绎的内容；并提供 CC 3.0 BY-NC-SA 协议 的许可证</p><p><em>演绎政策</em><br>本博客属于所有在网络上公开发表的，任何人可访问的作品，故本人在这里明确声明 <code>所有原创内容均允许演绎</code>.</p><blockquote><p>知识共享协议中对 演绎 的定义是：在不改变原作者的原创内容的含义和内涵的基础上，对原创内容进行 节选、翻译、重排版，或将原作者的原创内容作为论据和素材，或基于原作者的原创内容进行二次创作。</p></blockquote><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">https://zyhang8.github.io/agree/</a></p></blockquote>]]></content>
       
     </entry>
     
