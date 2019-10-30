@@ -29,6 +29,31 @@
     
     
     <entry>
+      <title>维吉利亚密码密钥长度怎么确定</title>
+      <link href="/2019/10/13/vigenere-cipher/"/>
+      <url>/2019/10/13/vigenere-cipher/</url>
+      
+        <content type="html"><![CDATA[<h1 id="维吉利亚密码密钥长度怎么确定"><a href="#维吉利亚密码密钥长度怎么确定" class="headerlink" title="维吉利亚密码密钥长度怎么确定"></a>维吉利亚密码密钥长度怎么确定</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>维吉尼亚密码（又译维热纳尔密码）是使用一系列凯撒密码组成密码字母表的加密算法，属于多表密码的一种简单形式。</p><h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>在一个凯撒密码中，字母表中的每一字母都会作一定的偏移，例如偏移量为3时，A就转换为了D、B转换为了E……而维吉尼亚密码则是由一些偏移量不同的恺撒密码组成。<br>为了生成密码，需要使用表格法。这一表格（如图1所示）包括了26行字母表，每一行都由前一行向左偏移一位得到。具体使用哪一行字母表进行编译是基于密钥进行的，在过程中会不断地变换。<br>图1.表格<br>图1.表格<br>例如，假设明文为：<br>ATTACKATDAWN<br>选择某一关键词并重复而得到密钥，如关键词为LEMON时，密钥为：<br>LEMONLEMONLE<br>对于明文的第一个字母A，对应密钥的第一个字母L，于是使用表格中L行字母表进行加密，得到密文第一个字母L。类似地，明文第二个字母为T，在表格中使用对应的E行进行加密，得到密文第二个字母X。以此类推，可以得到：<br>明文：ATTACKATDAWN密钥：LEMONLEMONLE密文：LXFOPVEFRNHR<br>解密的过程则与加密相反。例如：根据密钥第一个字母L所对应的L行字母表，发现密文第一个字母L位于A列，因而明文第一个字母为A。密钥第二个字母E对应E行字母表，而密文第二个字母X位于此行T列，因而明文第二个字母为T。以此类推便可得到明文。</p><h2 id="长度确定"><a href="#长度确定" class="headerlink" title="长度确定"></a>长度确定</h2><p>确定密钥长度主要有两种方法，Kasiski 测试法相对简单很多，但Friedman 测试法的效果明显优于Kasiski 测试法。</p><h2 id="Kasiski-测试法"><a href="#Kasiski-测试法" class="headerlink" title="Kasiski 测试法"></a>Kasiski 测试法</h2><p>在英文中，一些常见的单词如the有几率被密钥的相同部分加密，即原文中的the可能在密文中呈现为相同的三个字母。在这种情况下，相同片段的间距就是密文长度的倍数。所以我们可以通过在密文中找到相同的片段，计算出这些相同片段之间的间距，而密钥长度理论上就是这些间距的公约数。</p><p>具体方法：搜索长度至少为3的相同密文段，记录这些相同密文端到起始点之间的距离（d1,d2,d3……），找出（d1,d2,d3……）的所有公因子，同样为了确保秘钥长度的准确性，我们在搜索另一至少长为3的相同密文段，重复上操作，最后找出他们共同的公因子，若公因子不唯一，则在采用下边的重合因子测试法确定密钥长度。</p><h2 id="Friedman-测试法"><a href="#Friedman-测试法" class="headerlink" title="Friedman 测试法"></a>Friedman 测试法</h2><p>首先我们要知道，对于一种特定的自然语言，如果文本足够长，那么各个字母出现的概率是相对稳定的。<br>以下是维基百科给出的英语的字母频率表：</p><table><thead><tr><th align="center">字母</th><th align="center">英语中出现的频率</th></tr></thead><tbody><tr><td align="center">a</td><td align="center">8.167%</td></tr><tr><td align="center">b</td><td align="center">1.492%</td></tr><tr><td align="center">c</td><td align="center">2.782%</td></tr><tr><td align="center">d</td><td align="center">4.253%</td></tr><tr><td align="center">e</td><td align="center">12.702%</td></tr><tr><td align="center">f</td><td align="center">2.228%</td></tr><tr><td align="center">g</td><td align="center">2.015%</td></tr><tr><td align="center">h</td><td align="center">6.094%</td></tr><tr><td align="center">i</td><td align="center">6.966%</td></tr><tr><td align="center">j</td><td align="center">0.153%</td></tr><tr><td align="center">k</td><td align="center">0.772%</td></tr><tr><td align="center">l</td><td align="center">4.025%</td></tr><tr><td align="center">m</td><td align="center">2.406%</td></tr><tr><td align="center">n</td><td align="center">6.749%</td></tr><tr><td align="center">o</td><td align="center">7.507%</td></tr><tr><td align="center">p</td><td align="center">1.929%</td></tr><tr><td align="center">q</td><td align="center">0.095%</td></tr><tr><td align="center">r</td><td align="center">5.987%</td></tr><tr><td align="center">s</td><td align="center">6.327%</td></tr><tr><td align="center">t</td><td align="center">9.056%</td></tr><tr><td align="center">u</td><td align="center">2.758%</td></tr><tr><td align="center">v</td><td align="center">0.978%</td></tr><tr><td align="center">w</td><td align="center">2.360%</td></tr><tr><td align="center">x</td><td align="center">0.150%</td></tr><tr><td align="center">y</td><td align="center">1.974%</td></tr><tr><td align="center">z</td><td align="center">0.074%</td></tr></tbody></table><p>然后我们需要知道重合指数（IC, index of coincidence）的概念。<br>重合指数表示两个随机选出的字母是相同的的概率，即随机选出两个A的概率+随机选出两个B的概率+随机选出两个C的概率+……+随机选出两个Z的概率。<br>对英语而言，根据上述的频率表，我们可以计算出英语文本的重合指数为<br>P(A)^2 + P(B)^2+……+P(Z)^2 = 0.65<br>利用重合指数推测密钥长度的原理在于，对于一个由凯撒密码加密的序列，由于所有字母的位移程度相同，所以密文的重合指数应等于原文语言的重合指数。<br>据此，我们可以逐一计算不同密钥长度下的重合指数，当重合指数接近期望的0.65时，我们就可以推测这是我们所要找的密钥长度。<br>举例来说，对密文ABCDEABCDEABCDEABC<br>首先测试密钥长度=1，对密文ABCDEABCDEABCDEABC统计每个字符出现的次数：<br>A: 4 B: 4 C: 4 D:3 E:3<br>那么对于该序列的重合指数就为：(4/18)^2 + (4/18)^2 + (4/18)^2 +(3/18)^2 +(3/18)^2 != 0.65<br>然后测试密钥长度=2，将密文ABCDEABCDEABCDEABC分解为两组：<br>组1：A C E B D A C E B<br>组2：B D A C E B D A C<br>我们知道如果密钥长度真的是2，那么组1，组2都是一个凯撒密码。对组1组2分别计算重合指数。<br>如果组1的重合指数接近0.65，组2的重合指数也接近0.65，那么基本可以断定密钥长度为2。</p><h2 id="字母频度分析"><a href="#字母频度分析" class="headerlink" title="字母频度分析"></a>字母频度分析</h2><p>在知道了密钥长度n以后，就可将密文分解为n组，每一组都是一个凯撒密码，然后对每一组用字母频度分析进行解密，和在一起就能成功解密凯撒密码。<br>上文已经说到，自然语言的字母频度是一定的。字母频度分析就是将密文的字母频度和自然语言的自然频度排序对比，从而找出可能的原文。<br>理论上文本长度越长，字母频度分析的效果更好。</p><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/10/13/vigenere-cipher/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/10/13/vigenere-cipher/</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 密码学 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 密码学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>鱼的记忆|gitgnore</title>
       <link href="/2019/10/12/gitgnore/"/>
       <url>/2019/10/12/gitgnore/</url>
@@ -925,33 +950,22 @@
     
     
     <entry>
-      <title></title>
-      <link href="/PGP/index.html"/>
-      <url>/PGP/index.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="什么是-PGP-？它能做什么-？"><a href="#什么是-PGP-？它能做什么-？" class="headerlink" title="什么是 PGP ？它能做什么 ？"></a>什么是 PGP ？它能做什么 ？</h1><p>PGP 是 Pretty Good Privacy 的缩写，它是一套用于消息加密、验证的数据交换方法。遵守 OpenPGP 数据加解密标准 (RFC 4880) 。<br>PGP 可以用作 加密、数字签名、认证。</p><h2 id="使用-PGP-与我通讯"><a href="#使用-PGP-与我通讯" class="headerlink" title="使用 PGP 与我通讯"></a>使用 PGP 与我通讯</h2><p>首先下载我的 <a href="https://files.cnblogs.com/files/pipi-pig/PGP_public.zip" target="_blank" rel="noopener">PGP 公钥</a> 并导入到你的 PGP 加密程序中。(Mac OS 可以使用GPG Keychain)<br>注意验证我的公钥指纹为 A038 89C1 542D 6DB7 BD66  CEE3 D00F F13E B0B8 1FDA，如果指纹一致说明你下载的公钥没有被篡改。<br>使用这个公钥加密你的信息，并发送到 <a href="mailto:zhongyuhang113@gmail.com" target="_blank" rel="noopener">zhongyuhang113@gmail.com</a> 字样即可被我的邮箱自动分类。</p><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/PGP/" target="_blank" rel="noopener">https://zyhang8.github.io/PGP/</a></p></blockquote>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/agree/index.html"/>
-      <url>/agree/index.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="知识共享协议"><a href="#知识共享协议" class="headerlink" title="知识共享协议"></a>知识共享协议</h1><p> 一只小白（以下简称本人），是 “一直小白” 博客（以下简称本博客）的拥有者<br>本博客上创造和发布的内容可用于传播和共享，对于本人发布的原创内容（包含图片、文字、音乐、视频）采用 CC BY-NC-SA 3.0 CN 即 署名-非商业性使用-相同方式共享 3.0 中国大陆 协议许可进行保护.</p><p><a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/07/29/e3SCG9.png" alt="e3SCG9.png"></a></p><p>您可以自由地：</p><ul><li>分享 — 在任何媒介以任何形式复制、发行本作品</li><li>演绎 — 修改、转换或以本作品为基础进行创作</li></ul><p>惟须遵守下列条件：</p><ul><li>署名</li><li>非商业性使用</li><li>相同方式共享</li></ul><h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2><h3 id="内容侵权"><a href="#内容侵权" class="headerlink" title="内容侵权"></a>内容侵权</h3><p>如您发现本博客上存在侵犯您自身合法权益的内容，请及时与本人联系，并提供具有法律效力的证明，以便本人进行处理.</p><h3 id="非原创内容相关"><a href="#非原创内容相关" class="headerlink" title="非原创内容相关"></a>非原创内容相关</h3><p>被本博客收录的非原创作品，原作者依然持有商业使用其作品的权利.<br>如果您希望商业使用这些被收录的内容，请与所有 参与此作品创作的原作者 和/或 版权持有者 联系，打成协议后方可商业使用.<br>本博客及本人不进行任何商业接洽工作，请自行联络原作者.</p><h2 id="CC-3-0-BY-NC-SA-CN-协议概要"><a href="#CC-3-0-BY-NC-SA-CN-协议概要" class="headerlink" title="CC 3.0 BY-NC-SA CN 协议概要"></a>CC 3.0 BY-NC-SA CN 协议概要</h2><h3 id="语言：中文"><a href="#语言：中文" class="headerlink" title="语言：中文"></a>语言：中文</h3><blockquote><p>该 <code>协议概要</code> 摘抄于 Thu Mar 9 02:28:36 UTC 2017<br>这是一份普通人可以理解的许可协议概要 (但不是替代) 。</p></blockquote><p><em>您可以自由地：</em></p><ul><li>分享 — 在任何媒介以任何形式复制、发行本作品</li><li>演绎 — 修改、转换或以本作品为基础进行创作</li><li>只要你遵守许可协议条款，许可人就无法收回你的这些权利。</li></ul><p><em>惟须遵守下列条件：</em></p><ul><li>署名 — 你必须遵守信用，注明来源链接和演绎内容，并提供一个通往与 原作所用协议并不冲突的知识共享协议 许可证页面的链接。你可以用任何合适的方式实现这个，但这并不暗示许可证拥有者和原作者认可该分享方式.</li><li>非商业性使用 — 您不得将本作品用于商业目的。</li><li>相同方式共享 — 如果你节选、翻译、重排版，或基于本作品二次创作，你必须将你的贡献用 相同的协议 进行分享，并分别注明原作者与你的贡献.</li><li>没有附加限制 — 虽然您可能依旧不适用那些法律上限制的任何关于知识产权的法律条款或技术措施，即使你的行为符合知识共享协议.</li></ul><p>##语言：英文</p><blockquote><p>This copy was copied at Thu Mar 9 02:28:36 UTC 2017<br>This is a human-readable summary of (and not a substitute for) the license.</p></blockquote><p>You are free to:</p><ul><li><p>Share — copy and redistribute the material in any medium or format</p></li><li><p>Adapt — remix, transform, and build upon the material</p></li><li><p>The licensor cannot revoke these freedoms as long as you follow the license terms.</p></li><li><p>Under the following terms:</p></li><li><p>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</p></li><li><p>NonCommercial — You may not use the material for commercial purposes.</p></li><li><p>ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</p></li><li><p>No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</p></li></ul><h2 id="CC-3-0-BY-NC-SA-CN-完整协议"><a href="#CC-3-0-BY-NC-SA-CN-完整协议" class="headerlink" title="CC 3.0 BY-NC-SA CN 完整协议"></a>CC 3.0 BY-NC-SA CN 完整协议</h2><h3 id="语言：中文-1"><a href="#语言：中文-1" class="headerlink" title="语言：中文"></a>语言：中文</h3><p><a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/legalcode" target="_blank" rel="noopener">知识共享协议 署名-非商业性使用-相同方式共享 3.0 中国大陆 许可协议</a></p><h3 id="署名方法"><a href="#署名方法" class="headerlink" title="署名方法"></a>署名方法</h3><p>在转载本博客中任何内容时必须给出原页面的 URL 链接，并注明文章（全文，部分）从 天空之边 转载，并提供一个与 <code>CC 3.0 BY-NC-SA China Mainland</code> 不相违背的知识共享协议的许可证；<br>如果你对本博客的原创内容进行了演绎，则必须注明演绎的内容；并提供 CC 3.0 BY-NC-SA 协议 的许可证</p><p><em>演绎政策</em><br>本博客属于所有在网络上公开发表的，任何人可访问的作品，故本人在这里明确声明 <code>所有原创内容均允许演绎</code>.</p><blockquote><p>知识共享协议中对 演绎 的定义是：在不改变原作者的原创内容的含义和内涵的基础上，对原创内容进行 节选、翻译、重排版，或将原作者的原创内容作为论据和素材，或基于原作者的原创内容进行二次创作。</p></blockquote><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">https://zyhang8.github.io/agree/</a></p></blockquote>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>gallery</title>
       <link href="/gallery/index.html"/>
       <url>/gallery/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/PGP/index.html"/>
+      <url>/PGP/index.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="什么是-PGP-？它能做什么-？"><a href="#什么是-PGP-？它能做什么-？" class="headerlink" title="什么是 PGP ？它能做什么 ？"></a>什么是 PGP ？它能做什么 ？</h1><p>PGP 是 Pretty Good Privacy 的缩写，它是一套用于消息加密、验证的数据交换方法。遵守 OpenPGP 数据加解密标准 (RFC 4880) 。<br>PGP 可以用作 加密、数字签名、认证。</p><h2 id="使用-PGP-与我通讯"><a href="#使用-PGP-与我通讯" class="headerlink" title="使用 PGP 与我通讯"></a>使用 PGP 与我通讯</h2><p>首先下载我的 <a href="https://files.cnblogs.com/files/pipi-pig/PGP_public.zip" target="_blank" rel="noopener">PGP 公钥</a> 并导入到你的 PGP 加密程序中。(Mac OS 可以使用GPG Keychain)<br>注意验证我的公钥指纹为 A038 89C1 542D 6DB7 BD66  CEE3 D00F F13E B0B8 1FDA，如果指纹一致说明你下载的公钥没有被篡改。<br>使用这个公钥加密你的信息，并发送到 <a href="mailto:zhongyuhang113@gmail.com" target="_blank" rel="noopener">zhongyuhang113@gmail.com</a> 字样即可被我的邮箱自动分类。</p><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/PGP/" target="_blank" rel="noopener">https://zyhang8.github.io/PGP/</a></p></blockquote>]]></content>
       
     </entry>
     
@@ -969,6 +983,17 @@
     
     
     <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>links</title>
       <link href="/links/index.html"/>
       <url>/links/index.html</url>
@@ -980,20 +1005,20 @@
     
     
     <entry>
-      <title>timeline</title>
-      <link href="/timeline/index.html"/>
-      <url>/timeline/index.html</url>
+      <title></title>
+      <link href="/agree/index.html"/>
+      <url>/agree/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="知识共享协议"><a href="#知识共享协议" class="headerlink" title="知识共享协议"></a>知识共享协议</h1><p> 一只小白（以下简称本人），是 “一直小白” 博客（以下简称本博客）的拥有者<br>本博客上创造和发布的内容可用于传播和共享，对于本人发布的原创内容（包含图片、文字、音乐、视频）采用 CC BY-NC-SA 3.0 CN 即 署名-非商业性使用-相同方式共享 3.0 中国大陆 协议许可进行保护.</p><p><a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/07/29/e3SCG9.png" alt="e3SCG9.png"></a></p><p>您可以自由地：</p><ul><li>分享 — 在任何媒介以任何形式复制、发行本作品</li><li>演绎 — 修改、转换或以本作品为基础进行创作</li></ul><p>惟须遵守下列条件：</p><ul><li>署名</li><li>非商业性使用</li><li>相同方式共享</li></ul><h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2><h3 id="内容侵权"><a href="#内容侵权" class="headerlink" title="内容侵权"></a>内容侵权</h3><p>如您发现本博客上存在侵犯您自身合法权益的内容，请及时与本人联系，并提供具有法律效力的证明，以便本人进行处理.</p><h3 id="非原创内容相关"><a href="#非原创内容相关" class="headerlink" title="非原创内容相关"></a>非原创内容相关</h3><p>被本博客收录的非原创作品，原作者依然持有商业使用其作品的权利.<br>如果您希望商业使用这些被收录的内容，请与所有 参与此作品创作的原作者 和/或 版权持有者 联系，打成协议后方可商业使用.<br>本博客及本人不进行任何商业接洽工作，请自行联络原作者.</p><h2 id="CC-3-0-BY-NC-SA-CN-协议概要"><a href="#CC-3-0-BY-NC-SA-CN-协议概要" class="headerlink" title="CC 3.0 BY-NC-SA CN 协议概要"></a>CC 3.0 BY-NC-SA CN 协议概要</h2><h3 id="语言：中文"><a href="#语言：中文" class="headerlink" title="语言：中文"></a>语言：中文</h3><blockquote><p>该 <code>协议概要</code> 摘抄于 Thu Mar 9 02:28:36 UTC 2017<br>这是一份普通人可以理解的许可协议概要 (但不是替代) 。</p></blockquote><p><em>您可以自由地：</em></p><ul><li>分享 — 在任何媒介以任何形式复制、发行本作品</li><li>演绎 — 修改、转换或以本作品为基础进行创作</li><li>只要你遵守许可协议条款，许可人就无法收回你的这些权利。</li></ul><p><em>惟须遵守下列条件：</em></p><ul><li>署名 — 你必须遵守信用，注明来源链接和演绎内容，并提供一个通往与 原作所用协议并不冲突的知识共享协议 许可证页面的链接。你可以用任何合适的方式实现这个，但这并不暗示许可证拥有者和原作者认可该分享方式.</li><li>非商业性使用 — 您不得将本作品用于商业目的。</li><li>相同方式共享 — 如果你节选、翻译、重排版，或基于本作品二次创作，你必须将你的贡献用 相同的协议 进行分享，并分别注明原作者与你的贡献.</li><li>没有附加限制 — 虽然您可能依旧不适用那些法律上限制的任何关于知识产权的法律条款或技术措施，即使你的行为符合知识共享协议.</li></ul><p>##语言：英文</p><blockquote><p>This copy was copied at Thu Mar 9 02:28:36 UTC 2017<br>This is a human-readable summary of (and not a substitute for) the license.</p></blockquote><p>You are free to:</p><ul><li><p>Share — copy and redistribute the material in any medium or format</p></li><li><p>Adapt — remix, transform, and build upon the material</p></li><li><p>The licensor cannot revoke these freedoms as long as you follow the license terms.</p></li><li><p>Under the following terms:</p></li><li><p>Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.</p></li><li><p>NonCommercial — You may not use the material for commercial purposes.</p></li><li><p>ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.</p></li><li><p>No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.</p></li></ul><h2 id="CC-3-0-BY-NC-SA-CN-完整协议"><a href="#CC-3-0-BY-NC-SA-CN-完整协议" class="headerlink" title="CC 3.0 BY-NC-SA CN 完整协议"></a>CC 3.0 BY-NC-SA CN 完整协议</h2><h3 id="语言：中文-1"><a href="#语言：中文-1" class="headerlink" title="语言：中文"></a>语言：中文</h3><p><a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/legalcode" target="_blank" rel="noopener">知识共享协议 署名-非商业性使用-相同方式共享 3.0 中国大陆 许可协议</a></p><h3 id="署名方法"><a href="#署名方法" class="headerlink" title="署名方法"></a>署名方法</h3><p>在转载本博客中任何内容时必须给出原页面的 URL 链接，并注明文章（全文，部分）从 天空之边 转载，并提供一个与 <code>CC 3.0 BY-NC-SA China Mainland</code> 不相违背的知识共享协议的许可证；<br>如果你对本博客的原创内容进行了演绎，则必须注明演绎的内容；并提供 CC 3.0 BY-NC-SA 协议 的许可证</p><p><em>演绎政策</em><br>本博客属于所有在网络上公开发表的，任何人可访问的作品，故本人在这里明确声明 <code>所有原创内容均允许演绎</code>.</p><blockquote><p>知识共享协议中对 演绎 的定义是：在不改变原作者的原创内容的含义和内涵的基础上，对原创内容进行 节选、翻译、重排版，或将原作者的原创内容作为论据和素材，或基于原作者的原创内容进行二次创作。</p></blockquote><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">https://zyhang8.github.io/agree/</a></p></blockquote>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>timeline</title>
+      <link href="/timeline/index.html"/>
+      <url>/timeline/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
