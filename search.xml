@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>JDBC数据库编程范例</title>
+      <link href="/2019/10/28/j2ee-exp2/"/>
+      <url>/2019/10/28/j2ee-exp2/</url>
+      
+        <content type="html"><![CDATA[<h1 id="JDBC数据库编程范例"><a href="#JDBC数据库编程范例" class="headerlink" title="JDBC数据库编程范例"></a>JDBC数据库编程范例</h1><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>本次实验的主要内容是连接数据库分页显示记录并更新数据库记录，通过这个实验掌握在JSP中使用JDBC访问数据库的方法，以及对数据库记录进行分页显示和更新记录的方法。</p><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>1.安装MySQL （可在云班课的“资源”共享文件夹中找到下载软件）</p><ol start="2"><li>安装JDBC驱动 （可在云班课的“资源”共享文件夹中找到下载软件）<br>JDBC驱动程序：mysql-connector-java-5.1.42-bin.jar，将此文件放入新创建的工程（本实验范例是class工程）文件夹的WebContent\WEB-INF\lib目录下（可在云班课的“资源”共享文件夹中找到并下载class压缩文件，此JDBC驱动程序已经放入相应的lib目录下）。</li><li>其他所需相关软件如Tomcat和Eclipse的安装调试之前已经介绍过，这里不再重复。</li></ol><h2 id="编程思路"><a href="#编程思路" class="headerlink" title="编程思路"></a>编程思路</h2><ol><li>启动并登录MySQL, 创建数据库test。(参考命令行：create database test;)</li><li>导入事先定义好的数据库文件test-dump.sql (存放在source 文件夹中，可在云班课的“资源”共享文件夹中找到并下载），拷贝到本地数据库文件test。<br>( 参考命令行：mysql -u root -p test  &lt;  ...（本地存放test-dump.sql的路径）\test-dump.sql)<br>（备注：输入此命令行前需要先退出MySQL, 在Windows命令行中输入此命令行）</li></ol><h2 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h2><p>JDBC是Java 数据库连接（Java Database Connectivity) 的缩写，它由一组用Java 编程语言编写的类和接口组成。有了JDBC API, 就不必为访问不同的数据库（比如Sybase, Oracle和Informix)编写不同的程序了。只需用JDBC API编写一个程序就可向相应数据库发送SQL语句。本次实验范例中主要是对ResultSet对象的操作。首先定义数据库查询结果集rs (ResultSet rs=null;), 然后连接数据库（test) 并创建Statement 对象<br>String sConnStr = “jdbc:mysql://localhost/test?user=”+username+”&amp;password=”+password+”&amp;useUnicode=true&amp;characterEncoding=utf8”;<br>try {<br>conn = DriverManager.getConnection(sConnStr);<br>conn.setAutoCommit(true);<br>//建立Statement 对象并设置指针可前后移动<br>stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE ,       ResultSet.CONCUR_READ_ONLY);<br>}catch(Exception e) {<br>System.err.println(“数据库连接错误: “ + e.getMessage());<br>out.print(“数据库连接错误”);<br>return;<br>}</p><p>在有了Statement 对象后，可以通过Statement 执行SQL 语句来获得查询结果<br>try{//从表midwareclass中取出数据<br>rs=stmt.executeQuery(“select * from midwareclass”);<br>}catch(SQLException ex){<br>System.err.println(“数据库查询错误: “+ex);<br>}<br>运行结果<br>1.classview.jsp 的运行结果如下：</p><p><img src="https://s2.ax1x.com/2019/10/31/KorthV.png" alt="KorthV.png"></p><ol start="2"><li>update.jsp 的运行结果如下：<br>首先输入midwareclass表中已有的一位同学的学号和姓名：（例如：1451325 钟宇）</li></ol><p><img src="https://s2.ax1x.com/2019/10/31/KorETI.png" alt="KorETI.png"></p><ol start="3"><li>然后再次运行classview.jsp，可以看到已经更新的数据库：</li></ol><p><img src="https://s2.ax1x.com/2019/10/31/KorZkt.png" alt="KorZkt.png"></p><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>很久很久以前部署过jdbc的项目，不过现在忘了如何操作，刚好重新练手.</p><p>安装配置，一开始tomcat又不好用了，端口冲突-更换端口号；<br>后来遇到无法等待时间超过45s，网上教程都没用，自己新建用了一个server就好了，这次的server只引入一个项目，然后就可以启动tomcat了，自己认为可能eclipse还是太膨胀，内存堆栈导致时间长等等。。</p><p>首先官网下载connect/J jdbc，根据教程把jdbc中的两个jar包引入到项目中</p><p><img src="https://s2.ax1x.com/2019/10/31/Kormff.png" alt="Kormff.png"></p><p>再通过navicat运行sql脚本，后更新了test数据库；</p><p><img src="https://s2.ax1x.com/2019/10/31/KoretP.png" alt="KoretP.png"></p><p>修改代码中的password，运行<br>很正常，error</p><p><img src="https://s2.ax1x.com/2019/10/31/Korup8.png" alt="Korup8.png"></p><p>数据库连接错误</p><p><img src="https://s2.ax1x.com/2019/10/31/KorK1S.png" alt="KorK1S.png"></p><p>命名自己更换密码后保存文件再运行的啊？<br>在次运行，虽然密码对了，但是还是报错<br>于是cmder去看看mysql有什么端倪</p><p><img src="https://s2.ax1x.com/2019/10/31/KorQXQ.png" alt="KorQXQ.png"></p><p>命名数据库名是没有错的，而且navicat也可以正常显示</p><p><img src="https://s2.ax1x.com/2019/10/31/Kor1mj.png" alt="Kor1mj.png"></p><p>突然发现没有端口，加上后运行<br>还是错误，看到这个url感觉还是有点别扭，毕竟&amp;和？这种带参数restful架构已经落后的，目前流行全部用/来代表参数。网上查阅资料看看有没有sConnStr的其他表现形式</p><p><img src="https://s2.ax1x.com/2019/10/31/Kor30s.png" alt="Kor30s.png"></p><p>替换源代码，运行，依旧报错<br>网上查找</p><p><img src="https://s2.ax1x.com/2019/10/31/Kor87n.png" alt="Kor87n.png"></p><p>貌似第一步只是引入，没有添加到lib下<br>作为素质良好的程序员顺便查了一下hibernate<br>附：Hibernate是一个开放源代码的对象关系映射框架，它对JDBC进行了非常轻量级的对象封装，它将POJO与数据库表建立映射关系，是一个全自动的orm框架，hibernate可以自动生成SQL语句，自动执行，使得Java程序员可以随心所欲的使用对象编程思维来操纵数据库。<br>发现是个好东西（orm），有了它就可以不用写sql语句了</p><p>回来继续改bug，添加了之后运行还是报错</p><p>算了，先运行update.jsp吧</p><p><img src="https://s2.ax1x.com/2019/10/31/KorJkq.png" alt="KorJkq.png"></p><p>闲着无聊reflash了一下项目，并restart了server，好了</p><p><img src="https://s2.ax1x.com/2019/10/31/KorYt0.png" alt="KorYt0.png"><br><img src="https://s2.ax1x.com/2019/10/31/KorUpT.png" alt="KorUpT.png"></p><p>开始吐槽ide，隔壁的pycharm也是java写的，但人家确实做得不错，包括这次的自动保存功能。。</p><p><img src="https://s2.ax1x.com/2019/10/31/Kora1U.png" alt="Kora1U.png"></p><p>秀一下小工具</p><p><img src="https://s2.ax1x.com/2019/10/31/KordcF.png" alt="KordcF.png"></p><p>看到只有10页，修改了一下url为11和12，竟然都能显示，还是有点小bug</p><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/10/28/j2ee-exp2/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/10/28/j2ee-exp2/</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> j2ee </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> j2ee </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>j2ee-tomcat</title>
       <link href="/2019/10/27/j2ee-exp1/"/>
       <url>/2019/10/27/j2ee-exp1/</url>
@@ -1076,9 +1101,9 @@
       
         <tags>
             
-            <tag> 游行 </tag>
-            
             <tag> 北京 </tag>
+            
+            <tag> 游行 </tag>
             
         </tags>
       
@@ -1157,9 +1182,9 @@
       
         <tags>
             
-            <tag> 宁波 </tag>
-            
             <tag> 游行 </tag>
+            
+            <tag> 宁波 </tag>
             
         </tags>
       
@@ -1287,6 +1312,17 @@
     
     
     <entry>
+      <title>gallery</title>
+      <link href="/gallery/index.html"/>
+      <url>/gallery/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>links</title>
       <link href="/links/index.html"/>
       <url>/links/index.html</url>
@@ -1309,31 +1345,20 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>gallery</title>
-      <link href="/gallery/index.html"/>
-      <url>/gallery/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>timeline</title>
       <link href="/timeline/index.html"/>
       <url>/timeline/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
