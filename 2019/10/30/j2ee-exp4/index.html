@@ -52,7 +52,7 @@
     
     <title>
         
-            游记·Yangzhou | 
+            EJB+无状态HelloBean开发介绍 | 
         
         一直小白的博客
     </title>
@@ -62,8 +62,8 @@
     <link rel="icon" href="/img/head_sculpture.png">
 
     <meta name="format-detection" content="telephone=no">
-    <meta name="description" itemprop="description" content="扬州旅游">
-    <meta name="keywords" content="这是一只小白,游行,扬州">
+    <meta name="description" itemprop="description" content>
+    <meta name="keywords" content="这是一只小白,j2ee">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -248,7 +248,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="一直小白的博客">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2019/08/25/yangzhou/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2019/10/30/j2ee-exp4/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="一直小白的博客">
@@ -263,16 +263,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2019/08/25/yangzhou/">
+    <meta property="og:url" content="http://yoursite.com/2019/10/30/j2ee-exp4/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="游记·Yangzhou | 一直小白的博客">
+    <meta property="og:title" content="EJB+无状态HelloBean开发介绍 | 一直小白的博客">
     <meta property="og:image" content="/img/head_sculpture.png">
-    <meta property="og:description" content="扬州旅游">
-    <meta property="og:article:tag" content="游行"> <meta property="og:article:tag" content="扬州"> 
+    <meta property="og:description" content>
+    <meta property="og:article:tag" content="j2ee"> 
 
     
-        <meta property="article:published_time" content="Sun Aug 25 2019 20:44:18 GMT+0800">
-        <meta property="article:modified_time" content="Wed Aug 28 2019 22:19:54 GMT+0800">
+        <meta property="article:published_time" content="Wed Oct 30 2019 19:34:37 GMT+0800">
+        <meta property="article:modified_time" content="Thu Oct 31 2019 19:35:43 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -280,7 +280,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2019/08/25/yangzhou/index.html">
+        <link rel="canonical" href="http://yoursite.com/2019/10/30/j2ee-exp4/index.html">
     
 
     <!-- Structured-data for SEO -->
@@ -292,10 +292,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2019/08/25/yangzhou/index.html",
-    "headline": "游记·Yangzhou",
-    "datePublished": "Sun Aug 25 2019 20:44:18 GMT+0800",
-    "dateModified": "Wed Aug 28 2019 22:19:54 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2019/10/30/j2ee-exp4/index.html",
+    "headline": "EJB+无状态HelloBean开发介绍",
+    "datePublished": "Wed Oct 30 2019 19:34:37 GMT+0800",
+    "dateModified": "Thu Oct 31 2019 19:35:43 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "一直小白",
@@ -313,8 +313,8 @@
             "url": "/img/head_sculpture.png"
         }
     },
-    "keywords": ",游行,扬州这是一只小白",
-    "description": "扬州旅游",
+    "keywords": ",j2ee这是一只小白",
+    "description": "",
 }
 </script>
 
@@ -388,7 +388,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Yangzhou"><span class="post-toc-number">1.</span> <span class="post-toc-text">Yangzhou!</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#出行准备"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">出行准备</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#出行-2019-8-21-2019-8-26"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">出行(2019.8.21-2019.8.26)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第一天-第二天"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">第一天-第二天</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第三天"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">第三天</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第四天"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">第四天</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第五天"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">第五天</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第六天"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">第六天</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#感悟"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">感悟</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#EJB-无状态HelloBean开发介绍"><span class="post-toc-number">1.</span> <span class="post-toc-text">EJB+无状态HelloBean开发介绍</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置安装"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">配置安装</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -420,7 +420,7 @@
         
     
             <p class="article-headline-p">
-                游记·Yangzhou
+                EJB+无状态HelloBean开发介绍
             </p>
         </div>
 
@@ -439,7 +439,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>一直小白</strong>
-        <span>8月 25, 2019</span>
+        <span>10月 30, 2019</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -461,7 +461,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACV0lEQVR42u3aW24CMRAEQO5/6eQACNLtFw6q/UKBrF37sR71zOPnq68HHh4eHh4eHh7eZbxHfLX/9fz758/Pd1uwNzw8PLwjvD9etW9/kyz86g7Jndu94eHh4Z3kJZtLvk0ewftDYmxveHh4eDfzkpf1q5I3geHh4eF9H2+w2B0KKfDw8PBu5iUbzaOH/DGNRRV4eHh4n+XlTabzn4/29/Dw8PACXj3SFBfKbUm96sLDw8PbzWvL5Zngde3BgIeHh/dZXv4qTwYI2qMlD4sHY1w8PDy8pbyckS+ZbCVvfbVNODw8PLyTvN2MpD2WrIKHh4d3G68tuNtiuh29atfCw8PD281LXtN5y6qNgHcU1nh4eHhneG2x25bR70mrAgs8PDy8G3j5Au14Qdt42zgZgYeHh1fy2vhgPuqNAoW83ZWMDuDh4eEt5eWA+RB25ggpIgw8PDy8zbz2eBiLJOaPkKmhKzw8PLylvPwWURAQHyp5WFy31vDw8PCO8FbFtW37v32s0d3w8PDwjvBmitq81F71aOqsBQ8PD28bb6zMbe+Wt7sGR7vw8PDwLuDl5XUxGjV98Cw7GPDw8PAW8XLkWNusbbAVA1t4eHh4m3nzYwTz4DywiIJdPDw8vM28sdfxfCw7P8JVjw7g4eHhLeUlL/S8kZ/jDx0MeHh4eNt4Y22nfKPzB0a0Ch4eHt71vHzsYP7v0cPCw8PD+4e8pGHWtsGKoBkPDw/vIC8JI9pieuxxzIDx8PDwzvDGIoC2WdUOXeURBh4eHt5J3vddeHh4eHh4eHh4F1y/idv3E1qNw+0AAAAASUVORK5CYII=">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACZUlEQVR42u3aQW7DMAwEwPz/0+21QFtnSUpyEoxPQeA4Hh1EYsXH10dfDzw8PDw8PDw8vBfjPeLr5/1/PPTXnb3vJ++Gh4eHd5L3ZKv9h1ddjt6S5e+Gh4eHd56Xv2Kylef395YSDw8P711413cmr3i9EHh4eHifx1u1BEkkgYeHh/f6vLzxzctDErz22nE8PDy8e3m9A7Azn28738PDw8PbMHR1HSj0NvrFQ1d4eHh4G3jVVjiJXyftch4NN4eu8PDw8DbwqiVhshy94PjJUuLh4eFt5lWLRL7d5wXj+t+roTAeHh7ebl7vgKq6uVdHE5JFHx2A4eHh4S3lTZrmZHxqsulHsQUeHh7eZt58y56UliQWKbfpeHh4eEd4vS273Oy22u5lMS4eHh7eBl4veM3v7y1reYHw8PDwNvOuHzoPbfOWetKs4+Hh4Z3nXZPy7T55Tl5a8jEsPDw8vJO8VX9TDRSSd8ifjIeHh3eSNykMzZZ3PNT15N3w8PDwNvN6B1dJAJFs9PMSVah7eHh4eIt41RGo6gHVJFbI22g8PDy887xeCFsdIJjEEPlBGh4eHt5JXu+AP/lt3nzPIwk8PDy8M7y8POwYBegdnuHh4eHdxate1dGBakgxCXDx8PDwzvCqbWsvbK020ElQUk6p8fDw8JbyqsUgCSby46v8GKxZGPDw8PC28SYbdLL1Jw13Ia7Fw8PDeyte8s18xCopV+XJCDw8PLzjvGoDXR2xqobCeHh4ePfy8uGq3qZfXaw8bsbDw8M7z+uNOuWB7KRgJHg8PDy8k7zPu/Dw8PDw8PDw8F7g+gaS4dgk4E4hRgAAAABJRU5ErkJggg==">
     
 </ul>
 
@@ -475,7 +475,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/扬州/">扬州</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/游行/">游行</a>
+        <a class="post_tag-link" href="/tags/j2ee/">j2ee</a>
     </ul>
     
 
@@ -503,7 +503,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=游记·Yangzhou&url=http://yoursite.com/2019/08/25/yangzhou/index.html&pic=http://yoursite.com/img/head_sculpture.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=EJB+无状态HelloBean开发介绍&url=http://yoursite.com/2019/10/30/j2ee-exp4/index.html&pic=http://yoursite.com/img/head_sculpture.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -512,7 +512,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=游记·Yangzhou&url=http://yoursite.com/2019/08/25/yangzhou/index.html&via=一直小白" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=EJB+无状态HelloBean开发介绍&url=http://yoursite.com/2019/10/30/j2ee-exp4/index.html&via=一直小白" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -521,7 +521,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/08/25/yangzhou/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/10/30/j2ee-exp4/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -533,7 +533,7 @@
 
     <!-- Share LinkedIn -->
     
-        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2019/08/25/yangzhou/index.html&title=游记·Yangzhou" target="_blank">
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2019/10/30/j2ee-exp4/index.html&title=EJB+无状态HelloBean开发介绍" target="_blank">
             <li class="mdl-menu__item">
                 分享到 LinkedIn
             </li>
@@ -542,7 +542,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一直小白的博客&title=游记·Yangzhou&summary=&pics=http://yoursite.com/img/head_sculpture.png&url=http://yoursite.com/2019/08/25/yangzhou/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一直小白的博客&title=EJB+无状态HelloBean开发介绍&summary=&pics=http://yoursite.com/img/head_sculpture.png&url=http://yoursite.com/2019/10/30/j2ee-exp4/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -561,33 +561,29 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="Yangzhou"><a href="#Yangzhou" class="headerlink" title="Yangzhou!"></a>Yangzhou!</h1><h2 id="出行准备"><a href="#出行准备" class="headerlink" title="出行准备"></a>出行准备</h2><p>支付宝扬州公交乘车码(公交)<br>扬州实时公交(实时公交)<br>马蜂窝(本地菜景点)<br>高德(导航)<br>电影/书籍(路上消磨时间)<br>身份证/学生证 随身(景点必备)</p>
-<h2 id="出行-2019-8-21-2019-8-26"><a href="#出行-2019-8-21-2019-8-26" class="headerlink" title="出行(2019.8.21-2019.8.26)"></a>出行(2019.8.21-2019.8.26)</h2><h3 id="第一天-第二天"><a href="#第一天-第二天" class="headerlink" title="第一天-第二天"></a>第一天-第二天</h3><p><a href="https://zyhang8.github.io/2019/08/23/wuxi/" target="_blank" rel="noopener">无锡</a></p>
-<h3 id="第三天"><a href="#第三天" class="headerlink" title="第三天"></a>第三天</h3><ul>
-<li><a href="https://zyhang8.github.io/2019/08/23/wuxi/" target="_blank" rel="noopener">无锡</a></li>
-<li>到了扬州站后，前往了文昌阁，没想到，这个又是在装修(不是季节不对就是在装修，不过这样也好，人也不多)</li>
-<li>于是打车前往酒店,放好行李前往酒店旁边的东关街。里面可是美食一条街，很多各地小吃都汇聚于此。首先到了一家店简单吃了晚餐（有点难吃），后在东关街买了长沙臭豆腐，奶茶还有酒酿饮料后回了酒店</li>
-</ul>
-<h3 id="第四天"><a href="#第四天" class="headerlink" title="第四天"></a>第四天</h3><ul>
-<li>起床去了富春茶社吃早点，吃了蟹肉狮子头，包子套餐还有喝了魁龙珠茶，虽然贵但是确实代表了扬州的小吃风味</li>
-<li>后去了瘦西湖，确实是不错的景点，公园很大，柳树成荫，可以看出里面孕育了很长的历史，看了白塔，苗圆等景色</li>
-<li>后去了附近的大明寺，听说是淮东第一观，而且里面有天下第五泉，进去了里面也当做散步</li>
-<li>后回到酒店，并在东关街吃了粗茶淡饭，昨晚就看到他排了长队，很幸运，去的时候有人走了刚好有位置，点了7大菜，吃得特别饱，里面的每个菜都符合我的胃口，藕粉确实好吃，不愧是网红饭店</li>
-<li>下午去了个园，听说是中国四大名圆之一(颐和园，拙政园，避暑山庄)，这下只剩避暑山庄，里面还是挺豪华的，跟恭门府还是有点像的，竹子很多，而且又在装修，就前往了何园</li>
-<li>何园称为晚晴第一园，还是挺具有特色的，里面的故居也挺豪华</li>
-<li>在那累了就在那休息了</li>
-<li>然后就去看了京杭大运河(本来想晚上去看夜景的，不过太累了想先看完回去了)</li>
-<li>又去了东关街吃了一家百年饺面店，确实好吃，那家的元宵汤圆真的绝了，那个汤真的太好喝了，吃了混沌，面，包子感觉就很满足了</li>
-</ul>
-<h3 id="第五天"><a href="#第五天" class="headerlink" title="第五天"></a>第五天</h3><ul>
-<li>早上前往扬州站，坐动车去了南京</li>
-<li><a href="https://zyhang8.github.io/2019/08/26/nanjing/" target="_blank" rel="noopener">南京</a></li>
-</ul>
-<h3 id="第六天"><a href="#第六天" class="headerlink" title="第六天"></a>第六天</h3><ul>
-<li><a href="https://zyhang8.github.io/2019/08/26/nanjing/" target="_blank" rel="noopener">南京</a></li>
-</ul>
-<h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><p>扬州感觉很有历史遗迹，跟苏州一样也是很多古典园林，公交车也挺发达，22个站才29分钟，路很宽敞，而且有一天公交车专属道路，没有地铁也是快快哒</p>
-<blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/08/25/yangzhou/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/08/25/yangzhou/</a></p></blockquote>
+        <h1 id="EJB-无状态HelloBean开发介绍"><a href="#EJB-无状态HelloBean开发介绍" class="headerlink" title="EJB+无状态HelloBean开发介绍"></a>EJB+无状态HelloBean开发介绍</h1><p>首先查一下joss到底是啥…</p>
+<p>JBOSS是一个基于J2EE的开放源代码的应用服务器，是一个管理EJB的容器和服务器。</p>
+<p>EJB是一个用来构筑企业级应用的服务器端可被管理组件</p>
+<p>貌似终于学习高级组件了</p>
+<p>进入正题</p>
+<h2 id="配置安装"><a href="#配置安装" class="headerlink" title="配置安装"></a>配置安装</h2><p>一开照网上的教程，配置安装后发现8080一直访问不了，后查了一下原因发现jdk1.8不兼容joss7.1.1</p>
+<p><img src="https://s2.ax1x.com/2019/10/31/KoaOcd.png" alt="KoaOcd.png"></p>
+<p>原因可能是：jboss需要使用JVM中的永久区来存放数据，而jdk1.8取消了永久区，直接调用系统内存，这样理论上，只要系统内存无限大，就能放无限的东西进去</p>
+<p>后来下载了jdk1.7，切换了环境，挺麻烦的，还得把System的某些文件删除后才生效</p>
+<p><img src="https://s2.ax1x.com/2019/10/31/KoaxBt.png" alt="KoaxBt.png"></p>
+<p>后成功</p>
+<p>在Eclipse部署中，一开始按照老师下载了 JBoss Tools,后来提示我restart，但是一restart后就打不开了，eclipse报错，查看日志和工作区也无果，后来重装了一下</p>
+<p><img src="https://s2.ax1x.com/2019/10/31/KoavnI.png" alt="KoavnI.png"></p>
+<p>提示eclipse需要环境为jdk1.8，有切换了路径</p>
+<p><img src="https://s2.ax1x.com/2019/10/31/Koaq9e.png" alt="Koaq9e.png"></p>
+<p>后来就带着1.8不是不能兼容jboss7.1.1的问题继续部署</p>
+<p>后来果然报错</p>
+<p>查看了网上教程，修改了jboss的系统文件，原本jdk使用的系统，后来自己修改成jdk为1.7的路径</p>
+<p>成功</p>
+<p><img src="https://s2.ax1x.com/2019/10/31/KoaL1H.png" alt="KoaL1H.png"></p>
+<p>后配置了jboss的web项目和java原生客户端，具体就看里面的代码和项目结构</p>
+<p><img src="https://s2.ax1x.com/2019/10/31/KoaXjA.png" alt="KoaXjA.png"></p>
+<blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/10/30/Ningj2ee-exp4bo/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/10/30/j2ee-exp4/</a></p></blockquote>
 
         
     
@@ -606,8 +602,8 @@
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://yoursite.com/2019/08/25/yangzhou/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://yoursite.com/2019/08/25/yangzhou/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://yoursite.com/2019/10/30/j2ee-exp4/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/10/30/j2ee-exp4/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -637,21 +633,13 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2019/08/26/nanjing/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2019/08/23/wuxi/" id="post_nav-older" class="next-content">
+        <a href="/2019/10/29/j2ee-exp3/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
