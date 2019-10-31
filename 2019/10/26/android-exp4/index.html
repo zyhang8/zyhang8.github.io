@@ -52,7 +52,7 @@
     
     <title>
         
-            tags | 
+            Activity生命周期 | 
         
         一直小白的博客
     </title>
@@ -248,7 +248,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="一直小白的博客">
-    <meta name="msapplication-starturl" content="http://yoursite.com/tags/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2019/10/26/android-exp4/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="一直小白的博客">
@@ -263,13 +263,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/tags/">
+    <meta property="og:url" content="http://yoursite.com/2019/10/26/android-exp4/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="tags | 一直小白的博客">
+    <meta property="og:title" content="Activity生命周期 | 一直小白的博客">
     <meta property="og:image" content="/img/head_sculpture.png">
     <meta property="og:description" content>
     
 
+    
+        <meta property="article:published_time" content="Sat Oct 26 2019 14:52:33 GMT+0800">
+        <meta property="article:modified_time" content="Thu Oct 31 2019 14:53:21 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -277,13 +280,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/tags/index.html">
+        <link rel="canonical" href="http://yoursite.com/2019/10/26/android-exp4/index.html">
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2019/10/26/android-exp4/index.html",
+    "headline": "Activity生命周期",
+    "datePublished": "Sat Oct 26 2019 14:52:33 GMT+0800",
+    "dateModified": "Thu Oct 31 2019 14:53:21 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "一直小白",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/head_sculpture.png"
+        },
+        "description": "求知若饥,谦虚若愚"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "一直小白的博客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/head_sculpture.png"
+        }
+    },
+    "keywords": "这是一只小白",
+    "description": "",
+}
+</script>
 
 
     
@@ -328,60 +361,293 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Activity生命周期"><span class="post-toc-number">1.</span> <span class="post-toc-text">Activity生命周期</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#实验目的"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">实验目的</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#实验内容"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">实验内容</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#实验步骤"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">实验步骤</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
 
 <!-- Layouts -->
 
-    <!-- Tags Cloud -->
-    <style>
-    #bottom{
-        position: relative;
-    }
+    <!-- Post Module -->
+    <div class="material-post_container">
 
-    @media screen and (max-width: 480px) {
-        .material-tagscloud{
-            margin: 6em 2em 0;
-        }
-    }
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 
-    .material-tagscloud a{
-        text-decoration:none;
-        padding: 1px 9px;
-        margin: 9px 1px;
-        line-height: 40px;
-        white-space: nowrap;
-        transition: .6s;
-        opacity: .85;
-    }
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-    .material-tagscloud a:hover{
-        transition: .6s;
-        opacity: 1;
-        background: #FAFAFA;
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-    }
-</style>
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
 
-<div class=" material-tagscloud">
-    <div class="material-post mdl-grid">
-        <a href="/tags/C/" style="font-size: 16px; color: #757575">C++</a> <a href="/tags/Splash/" style="font-size: 16px; color: #757575">Splash</a> <a href="/tags/android/" style="font-size: 25.5px; color: #4b4b4b">android</a> <a href="/tags/css/" style="font-size: 16px; color: #757575">css</a> <a href="/tags/database/" style="font-size: 16px; color: #757575">database</a> <a href="/tags/django/" style="font-size: 16px; color: #757575">django</a> <a href="/tags/gitgnore/" style="font-size: 16px; color: #757575">gitgnore</a> <a href="/tags/html/" style="font-size: 20.75px; color: #606060">html</a> <a href="/tags/java/" style="font-size: 16px; color: #757575">java</a> <a href="/tags/linux/" style="font-size: 30.25px; color: #363636">linux</a> <a href="/tags/loss/" style="font-size: 16px; color: #757575">loss</a> <a href="/tags/lua/" style="font-size: 20.75px; color: #606060">lua</a> <a href="/tags/machine-learning/" style="font-size: 16px; color: #757575">machine_learning</a> <a href="/tags/markdown/" style="font-size: 16px; color: #757575">markdown</a> <a href="/tags/opencv/" style="font-size: 30.25px; color: #363636">opencv</a> <a href="/tags/python/" style="font-size: 16px; color: #757575">python</a> <a href="/tags/python之chan/" style="font-size: 16px; color: #757575">python之chan</a> <a href="/tags/rainmeter/" style="font-size: 16px; color: #757575">rainmeter</a> <a href="/tags/书籍/" style="font-size: 16px; color: #757575">书籍</a> <a href="/tags/北京/" style="font-size: 16px; color: #757575">北京</a> <a href="/tags/南京/" style="font-size: 16px; color: #757575">南京</a> <a href="/tags/天津/" style="font-size: 16px; color: #757575">天津</a> <a href="/tags/宁波/" style="font-size: 16px; color: #757575">宁波</a> <a href="/tags/密码学/" style="font-size: 20.75px; color: #606060">密码学</a> <a href="/tags/心理学/" style="font-size: 16px; color: #757575">心理学</a> <a href="/tags/情商/" style="font-size: 16px; color: #757575">情商</a> <a href="/tags/扬州/" style="font-size: 16px; color: #757575">扬州</a> <a href="/tags/搭建博客/" style="font-size: 16px; color: #757575">搭建博客</a> <a href="/tags/无锡/" style="font-size: 16px; color: #757575">无锡</a> <a href="/tags/曲阜/" style="font-size: 16px; color: #757575">曲阜</a> <a href="/tags/泰安/" style="font-size: 16px; color: #757575">泰安</a> <a href="/tags/济南/" style="font-size: 16px; color: #757575">济南</a> <a href="/tags/游行/" style="font-size: 35px; color: #212121">游行</a> <a href="/tags/电子产品/" style="font-size: 16px; color: #757575">电子产品</a> <a href="/tags/算法/" style="font-size: 16px; color: #757575">算法</a> <a href="/tags/绍兴/" style="font-size: 16px; color: #757575">绍兴</a> <a href="/tags/经典语录/" style="font-size: 16px; color: #757575">经典语录</a> <a href="/tags/耳机/" style="font-size: 20.75px; color: #606060">耳机</a> <a href="/tags/英文缩写/" style="font-size: 16px; color: #757575">英文缩写</a> <a href="/tags/计算机网络/" style="font-size: 20.75px; color: #606060">计算机网络</a> <a href="/tags/评测/" style="font-size: 25.5px; color: #4b4b4b">评测</a> <a href="/tags/负载均衡测试/" style="font-size: 16px; color: #757575">负载均衡测试</a> <a href="/tags/配置/" style="font-size: 16px; color: #757575">配置</a> <a href="/tags/键盘/" style="font-size: 16px; color: #757575">键盘</a> <a href="/tags/青岛/" style="font-size: 16px; color: #757575">青岛</a>
+        
+    
+            <p class="article-headline-p">
+                Activity生命周期
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/head_sculpture.png" width="44px" height="44px" alt="Author Avatar"/>
     </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>一直小白</strong>
+        <span>10月 26, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACaUlEQVR42u3aQZLCMAwEQP7/6d0H7GJGsiMC1TlRQBx3DpZrrMfPV18PPDw8PDw8PDy8m/Ee8fX3rn+GDv7/7Nf194W54eHh4Y3wXiy1wX+eTWhn5N4IeHh4eJO8Z5PLl/XqhPJnJXPDw8PDuzNvvbVNNr7JC8LDw8P7Vt66YCThQjICHh4e3j15+SY4WdxzwHrM0awFDw8PL+blh0zzn0fP9/Dw8PACXrmlqRgx9ALcrRni4eHhXcyrRrT55rhaYPIRXrxWPDw8vBFetS01DxSqccZ6zGaMi4eHh3eUlzz+VKnoPTHH4+Hh4U3ykmklW95eLJuXqGZhwMPDwzvKqzaS5qFAHgEn8e76ezw8PLw78JLmquoryH/tRcN4eHh487x88e0dUJ0KHQphBB4eHt4IL39wHsj2go/mYRseHh7exbwdZG8jnrcj9Job8PDw8GZ4edi6s3XuFZXq68bDw8Ob4e1sfJMlu9oKkIzW7CnDw8PD2+aVQ9JWzNo73EoiYzw8PLx38fJWgOrWuXpXNYzAw8PDexdvJzioFoYDS38eRuDh4eFdzKs2PyWFJDk865WBA01XeHh4eNu8arDbjFlb5SF/ZXh4eHjzvN5RVm9y1REOFAY8PDy8bV71OlsSqveWwwg8PDy8C3i9pbw33WoBaIYjeHh4eCO8vBjkU9mPfXtRLx4eHt4krzr1JIRdtxT04owXo+Hh4eHdmFdttNrZWOPh4eF9Oi8vBtWNe7VRoNxThoeHh3eUlx96Jey8eSvfoK9fIh4eHt4k70AEEG+Ir4gw8PDw8CZ533fh4eHh4eHh4eHd4PoFRxRno18jE18AAAAASUVORK5CYII=">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Activity生命周期&url=http://yoursite.com/2019/10/26/android-exp4/index.html&pic=http://yoursite.com/img/head_sculpture.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Activity生命周期&url=http://yoursite.com/2019/10/26/android-exp4/index.html&via=一直小白" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/10/26/android-exp4/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2019/10/26/android-exp4/index.html&title=Activity生命周期" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一直小白的博客&title=Activity生命周期&summary=&pics=http://yoursite.com/img/head_sculpture.png&url=http://yoursite.com/2019/10/26/android-exp4/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Activity生命周期"><a href="#Activity生命周期" class="headerlink" title="Activity生命周期"></a>Activity生命周期</h1><h2 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h2><p>1.了解Android应用的生命周期与进程优先级的切换。<br>2.理解Activity的生命周期与状态切换。<br>3.掌握Activity在启动、停止和销毁等不同阶段，9种重载函数的调用顺序，<br>4.掌握Android调试工具LogCat的使用方法。</p>
+<h2 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h2><p>1.在Activity中重载下图中9种事件函数，在调用不同函数时使用LogCat在Eclipse的控制台中输出调用日志。</p>
+<p><img src="https://s2.ax1x.com/2019/10/30/K5MFsJ.png" alt="K5MFsJ.png"></p>
+<h2 id="实验步骤"><a href="#实验步骤" class="headerlink" title="实验步骤"></a>实验步骤</h2><p>1.创建名为“ActivityLifeCycle”的Android应用程序，按下图设置”Activity Name”和”Layout Name”：</p>
+<p><img src="https://s2.ax1x.com/2019/10/30/K5M9RU.png" alt="K5M9RU.png"></p>
+<p>2.修改默认的“Hello World! ”为“Hello World,ActivityLifeCycleActivity!”</p>
+<p>3.在界面上添加一个按钮，并命名为”btn_finish”，并将其文本修改为“ ”</p>
+<p><img src="https://s2.ax1x.com/2019/10/30/K5MCzF.png" alt="K5MCzF.png"></p>
+<p><img src="https://s2.ax1x.com/2019/10/30/K5MEZR.png" alt="K5MEZR.png"></p>
+<p><img src="https://s2.ax1x.com/2019/10/30/K5MiM4.png" alt="K5MiM4.png"><br>4.在ActivityLifeCycleActivity.java类中添加一行<br>private static String TAG = “LIFECYCLE”;</p>
+<p>5.修改“ActivityLifeCycleActivity.java”文件，在onCreate函数中添加如下代码：</p>
+<p>Log.i(TAG, “(1) onCreate()”);</p>
+<pre><code>Button button = (Button)findViewById(R.id.btn_finish);
+
+button.setOnClickListener(new View.OnClickListener() {
+  public void onClick(View view) {
+  finish();
+  }
+});</code></pre><p>6.选择菜单Source-&gt;Override/Implement Menthods，在打开的对话框中勾选onRestoreInstanceState、onStart、onRestart、onResume、onSaveInstanceState、onPause、onStop、onDestroy等8个方法，单击”OK”，系统会自动生成这些方法的重载代码。</p>
+<p><img src="https://s2.ax1x.com/2019/10/30/K5MkL9.png" alt="K5MkL9.png"></p>
+<p><img src="https://s2.ax1x.com/2019/10/30/K5MZIx.png" alt="K5MZIx.png"></p>
+<p>7.在这些方法里分别添加语句，用于调试。比如，在OnStart方法中添加<br>Log.i(TAG, “(2) onStart()”);<br>在Logcat里添加一个过滤器，如下图</p>
+<p><img src="https://s2.ax1x.com/2019/10/30/K5MVd1.png" alt="K5MVd1.png"></p>
+<p>8.在模拟器里运行程序，通过按下返回键、home键，切换应用等方式测试在全生命周期、可视生命周期中Activity各事件的发生顺序。观察Logcat中日志的变化并做好记录。<br>思考题：<br>1.除了使用Logcat，还有那些调试应用程序的工具和方法？试简述之。<br>android 默认使用Logcat调试应用程序工具，通过输出Log信息来查找或定位程序的错误；<br>其他的调试应用程序工具<br>记录栈跟踪日志<br>     使用Log.d(String,String,Throwable)来快熟查看关键位置的结果，是否正确。<br>设置断点<br>     利用程序调试器，一步一步跟踪代码执行。<br>Android Lint<br>     android代码静态分析器，在平常书写代码的时候他就会一直在后台默默的运行，找到代码中语法或者一些版本的错误而无需运行代码。若果需要检查整个project的代码，那么可以在analyze-&gt;inspect codet运行Lint，选择范围，运行检查。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.thinkpad.activitylifecycle;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> android.support.v7.app.AppCompatActivity;</span><br><span class="line"><span class="keyword">import</span> android.os.Bundle;</span><br><span class="line"><span class="keyword">import</span> android.view.View;</span><br><span class="line"><span class="keyword">import</span> android.widget.Button;</span><br><span class="line"><span class="keyword">import</span> android.util.Log;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ActivityLifeCycleActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String TAG = <span class="string">"LIFECYCLE"</span>;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.main);</span><br><span class="line">        Log.i(TAG, <span class="string">"(1) onCreate()"</span>);</span><br><span class="line">        Button button = (Button)findViewById(R.id.btn_finish);</span><br><span class="line">        button.setOnClickListener(<span class="keyword">new</span> View.OnClickListener() &#123;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">                finish();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onStart</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onStart();</span><br><span class="line">        <span class="comment">// 输出日志</span></span><br><span class="line">        Log.d(TAG, <span class="string">"-------onStart------"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onRestart</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onRestart();</span><br><span class="line">        <span class="comment">// 输出日志</span></span><br><span class="line">        Log.d(TAG, <span class="string">"-------onRestart------"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResume</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onResume();</span><br><span class="line">        <span class="comment">// 输出日志</span></span><br><span class="line">        Log.d(TAG, <span class="string">"-------onResume------"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onPause</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onPause();</span><br><span class="line">        <span class="comment">// 输出日志</span></span><br><span class="line">        Log.d(TAG, <span class="string">"-------onPause------"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onStop</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onStop();</span><br><span class="line">        <span class="comment">// 输出日志</span></span><br><span class="line">        Log.d(TAG, <span class="string">"-------onStop------"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onDestroy</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onDestroy();</span><br><span class="line">        <span class="comment">// 输出日志</span></span><br><span class="line">        Log.d(TAG, <span class="string">"-------onDestroy------"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">layout</span><br><span class="line">&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"utf-8"</span>?&gt;</span><br><span class="line">&lt;android.support.constraint.ConstraintLayout xmlns:android=<span class="string">"http://schemas.android.com/apk/res/android"</span></span><br><span class="line">    xmlns:app=<span class="string">"http://schemas.android.com/apk/res-auto"</span></span><br><span class="line">    xmlns:tools=<span class="string">"http://schemas.android.com/tools"</span></span><br><span class="line">    android:layout_width=<span class="string">"match_parent"</span></span><br><span class="line">    android:layout_height=<span class="string">"match_parent"</span></span><br><span class="line">    tools:context=<span class="string">".ActivityLifeCycleActivity"</span>&gt;</span><br><span class="line"></span><br><span class="line">    &lt;TextView</span><br><span class="line">        android:layout_width=<span class="string">"wrap_content"</span></span><br><span class="line">        android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">        android:text=<span class="string">"Hello World,ActivityLifeCycleActivity!"</span></span><br><span class="line">        app:layout_constraintBottom_toBottomOf=<span class="string">"parent"</span></span><br><span class="line">        app:layout_constraintHorizontal_bias=<span class="string">"0.0"</span></span><br><span class="line">        app:layout_constraintLeft_toLeftOf=<span class="string">"parent"</span></span><br><span class="line">        app:layout_constraintRight_toRightOf=<span class="string">"parent"</span></span><br><span class="line">        app:layout_constraintTop_toTopOf=<span class="string">"parent"</span></span><br><span class="line">        app:layout_constraintVertical_bias=<span class="string">"0.0"</span> /&gt;</span><br><span class="line"></span><br><span class="line">    &lt;Button</span><br><span class="line">        android:id=<span class="string">"@+id/btn_finish"</span></span><br><span class="line">        android:layout_width=<span class="string">"wrap_content"</span></span><br><span class="line">        android:layout_height=<span class="string">"wrap_content"</span></span><br><span class="line">        android:text=<span class="string">"结束程序"</span></span><br><span class="line">        tools:layout_editor_absoluteX=<span class="string">"0dp"</span></span><br><span class="line">        tools:layout_editor_absoluteY=<span class="string">"37dp"</span> /&gt;</span><br><span class="line">&lt;/android.support.constraint.ConstraintLayout&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.ax1x.com/2019/10/30/K5Mmi6.png" alt="K5Mmi6.png"></p>
+<p>运行后出现onStart，onResume，onPause结束出现onStop,onDestroy</p>
+<blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/10/26/android-exp4/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/10/26/android-exp4/</a></p></blockquote>
+
+        
+    
+
+    
 </div>
 
 
-<script type="text/ls-javascript" id="page-tagcloud-script">
-    var adjustFooter = function() {
-        if( ($('#bottom').offset().top + $('#bottom').outerHeight() ) < $(window).height() ) {
-            var footerBottom = $(window).height() - $('#bottom').outerHeight() - $('#bottom').offset().top;
-            $('#bottom').css('bottom', '-' + footerBottom + 'px');
-        }
-    };
+                
 
-    $(document).ready(function() {
-        adjustFooter();
-    });
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2019/10/26/android-exp4/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/10/26/android-exp4/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//yizhixiaobai.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
 </script>
 
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
 
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/10/25/jdk/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
 
 
 
@@ -622,6 +888,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
