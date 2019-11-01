@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>计算机网络-第三章课后习题</title>
+      <link href="/2019/11/02/cn-exp3/"/>
+      <url>/2019/11/02/cn-exp3/</url>
+      
+        <content type="html"><![CDATA[<h1 id="计算机网络-第三章课后习题"><a href="#计算机网络-第三章课后习题" class="headerlink" title="计算机网络-第三章课后习题"></a>计算机网络-第三章课后习题</h1><ul><li>要填写的数据为1101011011，CRC，添加余数</li><li>PPP协议使用同步传输技术传送比特串0110111111111100.试问经过零比特填充后编程怎样的字符串？若接收端收到的PPP帧的数据部分是0001110111110111110110.问删除发送端加入的零比特后变成怎样的字符串？</li><li>3-33填写表格</li></ul><h2 id="Page109-3-07"><a href="#Page109-3-07" class="headerlink" title="Page109,3-07"></a>Page109,3-07</h2><p>根据公式，二进制为10011.共五位</p><p>在二进制序列后添加5-1=4个0，为11010110110000，除法后，商为1100001010，余数为1110，即为检验序列</p><p>第一问，现在最后以为为0，变为11010110101110，除数为10011，得到商为1100001011，余数为0011，因余数不为0，所以有差错，可以发现</p><p>第二问，11010110001110除以10011，商为1100001001，余数为0101，可以发现</p><p>第三问，不是。当接收方进行CRC检验时，如果发现有差错，就简单地丢弃这个帧。数据链路层并不能保证接收方接收到的和发送方发送的完全一致。</p><h2 id="Page110-3-10"><a href="#Page110-3-10" class="headerlink" title="Page110,3-10"></a>Page110,3-10</h2><p>第一问，零比特填充即5个1后加0，为011011111 0 11111 0 00</p><p>第二问，删0.为 000111011111 11111 110</p><h2 id="Page111-3-33"><a href="#Page111-3-33" class="headerlink" title="Page111,3-33"></a>Page111,3-33</h2><table><thead><tr><th align="center">动作</th><th align="center">交换表的状态</th><th align="center">向哪些接口转发帧</th><th align="center">说明</th></tr></thead><tbody><tr><td align="center">A发送帧给D</td><td align="center">写入(A,1)</td><td align="center">所有的接口</td><td align="center">开始时交换表是空的，交换机不知道应向何接口转发帧</td></tr><tr><td align="center">D发送帧给A</td><td align="center">写入(D,4)</td><td align="center">A</td><td align="center">交换机已经知道A连接在接口1</td></tr><tr><td align="center">E发送帧给A</td><td align="center">写入(E,5)</td><td align="center">A</td><td align="center">交换机已经知道A连接在接口1</td></tr><tr><td align="center">A发送帧给E</td><td align="center">不变</td><td align="center">E</td><td align="center">交换机已经知道E连接在接口5</td></tr></tbody></table><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/11/02/cn-exp3/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/11/02/cn-exp3/</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数据存储一：临时存储和文件存储</title>
       <link href="/2019/11/01/android-exp6/"/>
       <url>/2019/11/01/android-exp6/</url>
@@ -1713,9 +1738,9 @@
       
         <tags>
             
-            <tag> 北京 </tag>
-            
             <tag> 游行 </tag>
+            
+            <tag> 北京 </tag>
             
         </tags>
       
@@ -1794,9 +1819,9 @@
       
         <tags>
             
-            <tag> 游行 </tag>
-            
             <tag> 宁波 </tag>
+            
+            <tag> 游行 </tag>
             
         </tags>
       
@@ -1913,6 +1938,17 @@
     
     
     <entry>
+      <title>gallery</title>
+      <link href="/gallery/index.html"/>
+      <url>/gallery/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title></title>
       <link href="/agree/index.html"/>
       <url>/agree/index.html</url>
@@ -1946,17 +1982,6 @@
     
     
     <entry>
-      <title>timeline</title>
-      <link href="/timeline/index.html"/>
-      <url>/timeline/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>tags</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
@@ -1968,9 +1993,9 @@
     
     
     <entry>
-      <title>gallery</title>
-      <link href="/gallery/index.html"/>
-      <url>/gallery/index.html</url>
+      <title>timeline</title>
+      <link href="/timeline/index.html"/>
+      <url>/timeline/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
