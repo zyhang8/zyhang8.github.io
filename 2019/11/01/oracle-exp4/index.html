@@ -52,7 +52,7 @@
     
     <title>
         
-            基于vs2019ide,win10系统下自身opencv的部署 | 
+            Oracle数据库安全管理 | 
         
         一直小白的博客
     </title>
@@ -62,8 +62,8 @@
     <link rel="icon" href="/img/head_sculpture.png">
 
     <meta name="format-detection" content="telephone=no">
-    <meta name="description" itemprop="description" content="opencv项目在vs2019win系统的部署自身配置过程">
-    <meta name="keywords" content="这是一只小白,opencv,配置,C++">
+    <meta name="description" itemprop="description" content>
+    <meta name="keywords" content="这是一只小白,oracle">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -248,7 +248,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="一直小白的博客">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2019/07/30/opencv-vs2019-win-config/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2019/11/01/oracle-exp4/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="一直小白的博客">
@@ -263,16 +263,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2019/07/30/opencv-vs2019-win-config/">
+    <meta property="og:url" content="http://yoursite.com/2019/11/01/oracle-exp4/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="基于vs2019ide,win10系统下自身opencv的部署 | 一直小白的博客">
+    <meta property="og:title" content="Oracle数据库安全管理 | 一直小白的博客">
     <meta property="og:image" content="/img/head_sculpture.png">
-    <meta property="og:description" content="opencv项目在vs2019win系统的部署自身配置过程">
-    <meta property="og:article:tag" content="opencv"> <meta property="og:article:tag" content="配置"> <meta property="og:article:tag" content="C++"> 
+    <meta property="og:description" content>
+    <meta property="og:article:tag" content="oracle"> 
 
     
-        <meta property="article:published_time" content="Tue Jul 30 2019 10:11:39 GMT+0800">
-        <meta property="article:modified_time" content="Wed Sep 04 2019 19:27:42 GMT+0800">
+        <meta property="article:published_time" content="Fri Nov 01 2019 12:12:52 GMT+0800">
+        <meta property="article:modified_time" content="Fri Nov 01 2019 12:13:37 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -280,7 +280,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2019/07/30/opencv-vs2019-win-config/index.html">
+        <link rel="canonical" href="http://yoursite.com/2019/11/01/oracle-exp4/index.html">
     
 
     <!-- Structured-data for SEO -->
@@ -292,10 +292,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2019/07/30/opencv-vs2019-win-config/index.html",
-    "headline": "基于vs2019ide,win10系统下自身opencv的部署",
-    "datePublished": "Tue Jul 30 2019 10:11:39 GMT+0800",
-    "dateModified": "Wed Sep 04 2019 19:27:42 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2019/11/01/oracle-exp4/index.html",
+    "headline": "Oracle数据库安全管理",
+    "datePublished": "Fri Nov 01 2019 12:12:52 GMT+0800",
+    "dateModified": "Fri Nov 01 2019 12:13:37 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "一直小白",
@@ -313,8 +313,8 @@
             "url": "/img/head_sculpture.png"
         }
     },
-    "keywords": ",opencv,配置,C++这是一只小白",
-    "description": "opencv项目在vs2019win系统的部署自身配置过程",
+    "keywords": ",oracle这是一只小白",
+    "description": "",
 }
 </script>
 
@@ -382,6 +382,15 @@
     <!-- Left aligned menu below button -->
     
     
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Oracle数据库安全管理"><span class="post-toc-number">1.</span> <span class="post-toc-text">Oracle数据库安全管理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一、实验目的"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">一、实验目的</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二、实验要求（具体步骤进行截屏展示并配以文字说明）"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">二、实验要求（具体步骤进行截屏展示并配以文字说明）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1创建一个名为Tom的用户，采用口令认证方式，口令为Tom，默认表空间为USERS，默认临时空间为TEMP。（与创建Tom类似，继续创建用户Jack，Bob）；创建完三个用户后，授予相应权限使他们都能连接到数据库；"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">1创建一个名为Tom的用户，采用口令认证方式，口令为Tom，默认表空间为USERS，默认临时空间为TEMP。（与创建Tom类似，继续创建用户Jack，Bob）；创建完三个用户后，授予相应权限使他们都能连接到数据库；</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-为Tom授予CREATE-TABLE-CREATE-VIEW系统权限，并可以进行权限传递；将HR方案中EMPLOYEES对象的SELECT-UPDATE-INSERT-DELETE权限授予TOM，并允许对象权限的传递；"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">2 为Tom授予CREATE TABLE, CREATE VIEW系统权限，并可以进行权限传递；将HR方案中EMPLOYEES对象的SELECT, UPDATE, INSERT, DELETE权限授予TOM，并允许对象权限的传递；</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-查看Tom-Jack-Bob用户所具有的对象权限和系统权限的详细信息；"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">3 查看Tom, Jack, Bob用户所具有的对象权限和系统权限的详细信息；</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-以Tom用户登录系统，将CREATE-TABLE-CREATE-VIEW系统权限，HR方案中EMPLOYEES对象的SELECT-UPDATE-INSERT-DELETE权限授予Jack和Bob-并查看Tom-Jack-Bob用户所具有的对象权限和系统权限的详细信息；"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">4 以Tom用户登录系统，将CREATE TABLE, CREATE VIEW系统权限，HR方案中EMPLOYEES对象的SELECT, UPDATE, INSERT, DELETE权限授予Jack和Bob,并查看Tom, Jack, Bob用户所具有的对象权限和系统权限的详细信息；</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-以SYSTEM用户登录系统，收回用户Tom的CREATE-TABLE-CREATE-VIEW系统权限，HR方案中EMPLOYEES对象的SELECT-UPDATE-INSERT-DELETE权限，查看Tom-zyh-Jack-zyh-Bob-zyh用户所具有的对象权限和系统权限的详细信息；讨论在收回具有权限传递的系统权限和对象权限的级联效应。"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">5 以SYSTEM用户登录系统，收回用户Tom的CREATE TABLE, CREATE VIEW系统权限，HR方案中EMPLOYEES对象的SELECT, UPDATE, INSERT, DELETE权限，查看Tom_zyh, Jack_zyh, Bob_zyh用户所具有的对象权限和系统权限的详细信息；讨论在收回具有权限传递的系统权限和对象权限的级联效应。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-创建一个角色（名字自拟），授予该角色CREATE-TABLE-CREATE-VIEW系统权限，HR方案中EMPLOYEES对象的SELECT-UPDATE-INSERT-DELETE权限，并将该角色指派给Tom，查看Tom用户所具有的对象权限和系统权限的详细信息；"><span class="post-toc-number">1.2.6.</span> <span class="post-toc-text">6 创建一个角色（名字自拟），授予该角色CREATE TABLE, CREATE VIEW系统权限，HR方案中EMPLOYEES对象的SELECT, UPDATE, INSERT, DELETE权限，并将该角色指派给Tom，查看Tom用户所具有的对象权限和系统权限的详细信息；</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-创建一个概要文件，DEMO。要求每个用户的最多会话数为3个，最长的连接时间为60分钟，最大空闲时间为20分钟，每个会话占用CPU的最大时间为10秒；用户使用口令登录系统的最大尝试次数为3次，登录失败后账户锁定7天。"><span class="post-toc-number">1.2.7.</span> <span class="post-toc-text">7 创建一个概要文件，DEMO。要求每个用户的最多会话数为3个，最长的连接时间为60分钟，最大空闲时间为20分钟，每个会话占用CPU的最大时间为10秒；用户使用口令登录系统的最大尝试次数为3次，登录失败后账户锁定7天。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-将概要文件指派给用户Jack，然后以Jack账户登录系统并连续三次输入错误口令，查看账户状态。"><span class="post-toc-number">1.2.8.</span> <span class="post-toc-text">8 将概要文件指派给用户Jack，然后以Jack账户登录系统并连续三次输入错误口令，查看账户状态。</span></a></li></ol></li></ol></li></ol>
+    </ul>
+    
 
 
 
@@ -411,7 +420,7 @@
         
     
             <p class="article-headline-p">
-                基于vs2019ide,win10系统下自身opencv的部署
+                Oracle数据库安全管理
             </p>
         </div>
 
@@ -430,7 +439,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>一直小白</strong>
-        <span>7月 30, 2019</span>
+        <span>11月 01, 2019</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -452,7 +461,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAACzUlEQVR42u3aQXIbMQwEQP3/084DYsszwCq14TZPKpe1YlMHCAO+vh65XtjY2NjY2NjY2Ni3ZL/i9c2D/vp78q5oiz88ebNnbGxs7LPZ7SaSDb1/b8vY7xkbGxv7CeyfPuz96+QJ7zeX/H+yh/fHjY2NjY29aTZmRzArftjY2NjYOTuBvUYrP0RsbGxs7NnHXBVLJe1HHlR9MEvDxsbGvj07Lyr3ef1P59vY2NjYN2a3q20ekpFtUiA3F4CwsbGxz2bnhaE9lLzZaD99tk9sbGzsU9l56JPESfvLPXn81JY6bGxs7FPZSYTUlpBZLDU7oByPjY2NfSo7/3Gf/yUhtYFUUhSLQS82Njb2cezZj/42HkoKT1ucklKHjY2NfTY7LypJkzAb+m4+fTXoxcbGxj6Uvb+mMxsezFqRosRiY2NjP4DdlplZOcnDoPwrWU1FsLGxsY9gt/HQrKmYPWEzkMDGxsZ+GjsfA7TlJ2lXcl7SwGBjY2M/h91ufdaEXHW5Z1U+sbGxsQ9lJ49rRwVFe3BpwLSaimBjY2Mfwd5va9aQtIWz/aqwsbGxz2YnJWo2Em5LUT5aGF4AwsbGxj6UvYlvfrkiUzL2AdNlHRg2Njb2Eey2qZhFUfuBblJosbGxsc9mtyHOPk7KR7ybgTE2Njb2c9hXDXo3A+DNNaB8CIGNjY19NntPascA7XHsmyJsbGzsJ7CjK4xlfL8vlrOmpShg2NjY2AexN1HOHnltWa3rNjY2NvZ/y27XfpCQH9BmhPxLAcPGxsY+iP25oL+9fJNHUcPoChsbG/to9n6k2lLzWL9tk7CxsbGfzG6LxyzQz0vdbGFjY2Njt21AHjblx5QcRP0EbGxsbOxyMJy3N+2oYDYkwMbGxn4Ce7/F9gjywXBe0j6SpWFjY2Pfnr0KaxbXdPJAahY2YWNjYz+B/ZyFjY2NjY2NjY2NfZv1B5cRzYAMDlmQAAAAAElFTkSuQmCC">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACc0lEQVR42u3aS27DMAwFwNz/0u22QFrnkZTkNBivguZjjRei+sjH10dfDzw8PDw8PDw8vDfjPeLr5+evf+H53V8W8cffJ2vDw8PDO8lLbnN9y+d3q4uePAI8PDy8u3hJMUhgvaLy173yteHh4eG9J+/6W8kSr7+Fh4eH93m8/ADdKxULHj0eHh7eQV7+D//1sTiPLV7ECuezFjw8PLyY12uAnXl9W38PDw8Pb+nQVTIoMGmPLRu6wsPDw9vAy4/Cq8YF8vtWgwk8PDy8d+BVw4Le46i2vl48Sjw8PLzNvGT7rja6egUjfwTNMAIPDw9vEa8ckgbI6qE5LxLXsS8eHh7eGV6yWU+W0juOJ6Wl2QDDw8PDG/Oq0cMk0u21vqrDWHh4eHi7edUjb3V0oHrsnsQieHh4eGd4+ZBTXhISwHUBqMa7eHh4eHfxekMDyevk3erxvVwY8PDw8JbyelvwPAjOY4j8eI2Hh4d3kpcPE+Qhb29oYDSggIeHh7eZ14tZ8008b2hVr1FKjYeHhzfg5YWh2tRPykDvN198Hg8PD+8Ir9qUyscOqrFvbygBDw8P7y5edbOuBrI5LGp05TEuHh4e3mZeHtRWI9pqCJI35/Dw8PDO86qL68Ws898cZS14eHh4i3jVKw8jkq28GnaUCwMeHh7eBl51O56Xgeq9FsS4eHh4eBt4eTGYBAfVmGNZYcDDw8PbxpsEE8mmnxyvJzEEHh4e3v/iVeOG5MB9aHQADw8PbzOvelDuDWCNCgYeHh7eQV7e9KqSqlt8Hmrg4eHh3cXrNaVWjQXkZSN6WHh4eHibeZ934eHh4eHh4eHhvcH1DaHc9xOTrmNmAAAAAElFTkSuQmCC">
     
 </ul>
 
@@ -466,7 +475,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/C/">C++</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/opencv/">opencv</a></li><li class="mdl-menu__item"><a class="post_tag-link" href="/tags/配置/">配置</a>
+        <a class="post_tag-link" href="/tags/oracle/">oracle</a>
     </ul>
     
 
@@ -494,7 +503,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=基于vs2019ide,win10系统下自身opencv的部署&url=http://yoursite.com/2019/07/30/opencv-vs2019-win-config/index.html&pic=http://yoursite.com/img/head_sculpture.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Oracle数据库安全管理&url=http://yoursite.com/2019/11/01/oracle-exp4/index.html&pic=http://yoursite.com/img/head_sculpture.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -503,7 +512,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=基于vs2019ide,win10系统下自身opencv的部署&url=http://yoursite.com/2019/07/30/opencv-vs2019-win-config/index.html&via=一直小白" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Oracle数据库安全管理&url=http://yoursite.com/2019/11/01/oracle-exp4/index.html&via=一直小白" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -512,7 +521,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/07/30/opencv-vs2019-win-config/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/11/01/oracle-exp4/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -524,7 +533,7 @@
 
     <!-- Share LinkedIn -->
     
-        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2019/07/30/opencv-vs2019-win-config/index.html&title=基于vs2019ide,win10系统下自身opencv的部署" target="_blank">
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2019/11/01/oracle-exp4/index.html&title=Oracle数据库安全管理" target="_blank">
             <li class="mdl-menu__item">
                 分享到 LinkedIn
             </li>
@@ -533,7 +542,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一直小白的博客&title=基于vs2019ide,win10系统下自身opencv的部署&summary=&pics=http://yoursite.com/img/head_sculpture.png&url=http://yoursite.com/2019/07/30/opencv-vs2019-win-config/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一直小白的博客&title=Oracle数据库安全管理&summary=&pics=http://yoursite.com/img/head_sculpture.png&url=http://yoursite.com/2019/11/01/oracle-exp4/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -552,28 +561,114 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>由于部署配置比较麻烦,而且容易忘记,所以写这个blog来方便自己以后再次进行配置</p>
-<ol>
-<li>修改文件夹名字</li>
-<li>项目名称(google翻译)</li>
-<li>新建项目</li>
-<li>控制台应用-&gt;下一步</li>
-<li>位置:\Mac\Home\Desktop\github\opencv_practice\charpterx\xx\xx</li>
-<li>打开源代码的文件,把源代码的源图(附件)copy到opencv_practice里面</li>
-<li>工具栏上选择Debug配置x64平台</li>
-<li>导航栏选择调试-&gt;xx属性</li>
-<li>v/c++目录:包含目录添加  C:\software\opencv\opencv\build\include   C:\software\opencv\opencv\build\include\opencv2</li>
-<li>v/c++目录:库目录添加  C:\software\opencv\opencv\build\x64\vc15\lib</li>
-<li>连接器-&gt;输入:附加依赖项添加   opencv_world346d.lib</li>
-<li>关闭当前项目源代码ide</li>
-<li>打开下一个源代码文件</li>
-<li>弹出的安全警告把<code>对于此解决方案的每一个项目都询问我的勾去掉</code></li>
-<li>检查解决方案直接点确定</li>
-<li>push</li>
-<li>删除.vs文件(解决方案太大放不下GitHub)</li>
-<li>重复1-16</li>
-</ol>
-<blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/07/30/opencv-vs2019-win-config/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/07/30/opencv-vs2019-win-config/</a></p></blockquote>
+        <h1 id="Oracle数据库安全管理"><a href="#Oracle数据库安全管理" class="headerlink" title="Oracle数据库安全管理"></a>Oracle数据库安全管理</h1><h2 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h2><p>1 掌握Oracle安全控制的实现；</p>
+<p>2 掌握Oracle用户管理；权限管理；</p>
+<p>3 掌握Oracle数据库角色管理；</p>
+<p>4 了解Oracle数据库概要文件的管理；</p>
+<p>5 了解Oracle数据库审计；</p>
+<h2 id="二、实验要求（具体步骤进行截屏展示并配以文字说明）"><a href="#二、实验要求（具体步骤进行截屏展示并配以文字说明）" class="headerlink" title="二、实验要求（具体步骤进行截屏展示并配以文字说明）"></a>二、实验要求（具体步骤进行截屏展示并配以文字说明）</h2><h3 id="1创建一个名为Tom的用户，采用口令认证方式，口令为Tom，默认表空间为USERS，默认临时空间为TEMP。（与创建Tom类似，继续创建用户Jack，Bob）；创建完三个用户后，授予相应权限使他们都能连接到数据库；"><a href="#1创建一个名为Tom的用户，采用口令认证方式，口令为Tom，默认表空间为USERS，默认临时空间为TEMP。（与创建Tom类似，继续创建用户Jack，Bob）；创建完三个用户后，授予相应权限使他们都能连接到数据库；" class="headerlink" title="1创建一个名为Tom的用户，采用口令认证方式，口令为Tom，默认表空间为USERS，默认临时空间为TEMP。（与创建Tom类似，继续创建用户Jack，Bob）；创建完三个用户后，授予相应权限使他们都能连接到数据库；"></a>1创建一个名为Tom的用户，采用口令认证方式，口令为Tom，默认表空间为USERS，默认临时空间为TEMP。（与创建Tom类似，继续创建用户Jack，Bob）；创建完三个用户后，授予相应权限使他们都能连接到数据库；</h3><p><strong>由于之前的win10oracle和imac中docker两个oracle镜像崩溃，本想再安个虚拟机再装，后来嫌太麻烦于是在林宇靖同学的VM上进行了这次实验</strong></p>
+<p><em>下面的TOM，JACK, BOB的用户名将用TOM_zyh, Jack_zyh, Bob_zyh用户名进行代替，由于该VM没有之前作也的HR表导致一些命令无法实现，但原理经过学习已经掌握大概</em></p>
+<p>CREATE TABLESPACE TEMP_zyh DATAFILE ‘C:\1759116\TEMP_1.DBF’ SIZE 50M;</p>
+<p><img src="https://s2.ax1x.com/2019/06/01/V11BJx.png" alt="V11BJx.png"></p>
+<p>CREATE USER Tom_zyh IDENTIFIED BY Tom DEFAULT TABLESPACE USERS TEMPORARY TABLESPACE TEMP;</p>
+<p>CREATE USER Jack_zyh IDENTIFIED BY Jack DEFAULT TABLESPACE USERS TEMPORARY TABLESPACE TEMP;</p>
+<p>CREATE USER Bob_zyh IDENTIFIED BY Bob DEFAULT TABLESPACE USERS TEMPORARY TABLESPACE TEMP;</p>
+<p>创建用户Tom_zyh,Jack_zyh,Bob_zyh</p>
+<p><img src="https://s2.ax1x.com/2019/06/01/V110F1.png" alt="V110F1.png"></p>
+<p><img src="https://s2.ax1x.com/2019/06/01/V116yD.png" alt="V116yD.png"></p>
+<p>GRANT CREATE SESSION TO Tom_zyh;</p>
+<p>GRANT CREATE SESSION TO Jack_zyh;</p>
+<p>GRANT CREATE SESSION TO Bob_zyh;</p>
+<p><img src="https://s2.ax1x.com/2019/06/01/V11doR.png" alt="V11doR.png"></p>
+<p>给Tom_zyh、Jack_zyh、Bob_zyh授权连接数据库</p>
+<h3 id="2-为Tom授予CREATE-TABLE-CREATE-VIEW系统权限，并可以进行权限传递；将HR方案中EMPLOYEES对象的SELECT-UPDATE-INSERT-DELETE权限授予TOM，并允许对象权限的传递；"><a href="#2-为Tom授予CREATE-TABLE-CREATE-VIEW系统权限，并可以进行权限传递；将HR方案中EMPLOYEES对象的SELECT-UPDATE-INSERT-DELETE权限授予TOM，并允许对象权限的传递；" class="headerlink" title="2 为Tom授予CREATE TABLE, CREATE VIEW系统权限，并可以进行权限传递；将HR方案中EMPLOYEES对象的SELECT, UPDATE, INSERT, DELETE权限授予TOM，并允许对象权限的传递；"></a>2 为Tom授予CREATE TABLE, CREATE VIEW系统权限，并可以进行权限传递；将HR方案中EMPLOYEES对象的SELECT, UPDATE, INSERT, DELETE权限授予TOM，并允许对象权限的传递；</h3><p>GRANT CREATE TABLE,CREATE VIEW TO Tom_zyh WITH ADMIN OPTION;</p>
+<p>授予Tom_zyh系统权限，用WITH ADMIN OPTION可以进行权限传递</p>
+<p><img src="https://s2.ax1x.com/2019/06/01/V11aw9.png" alt="V11aw9.png"></p>
+<p>GRANT SELECT,UPDATE,INSERT,DELETE ON HR.EMPLOYEES TO Tom_zyh WITH GRANT OPTION;</p>
+<p>授予Tom_zyh HR方案中EMPLOYEES对象的权限，使用WITH GRANT OPTION 可以进行对象权限的传递<br>用于没有该原始表，依旧错误</p>
+<p><img src="https://s2.ax1x.com/2019/06/01/V112eH.png" alt="V112eH.png"></p>
+<h3 id="3-查看Tom-Jack-Bob用户所具有的对象权限和系统权限的详细信息；"><a href="#3-查看Tom-Jack-Bob用户所具有的对象权限和系统权限的详细信息；" class="headerlink" title="3 查看Tom, Jack, Bob用户所具有的对象权限和系统权限的详细信息；"></a>3 查看Tom, Jack, Bob用户所具有的对象权限和系统权限的详细信息；</h3><p><strong>这里没有系统和对象权限应该跟原始表确实有关，跟王金峰同学代码运行依旧报错</strong></p>
+<p>SELECT * FROM DBA_TAB_PRIVS WHERE GRANTEE=’TOM’;<br>没有对象权限</p>
+<p>SELECT * FROM DBA_SYS_PRIVS WHERE GRANTEE=’TOM_zyh’;<br>没有系统权限</p>
+<p>SELECT * FROM DBA_TAB_PRIVS WHERE GRANTEE=’JACK_zyh’;</p>
+<p>没有对象权限</p>
+<p>SELECT * FROM DBA_SYS_PRIVS WHERE GRANTEE=’JACK_zyh’;</p>
+<p>没有系统权限</p>
+<p>SELECT * FROM DBA_TAB_PRIVS WHERE GRANTEE=’Bob_zyh’;</p>
+<p>没有对象权限</p>
+<p>SELECT * FROM DBA_SYS_PRIVS WHERE GRANTEE=’Bob_zyh’;</p>
+<p>没有系统权限</p>
+<p><img src="https://s2.ax1x.com/2019/06/01/V11sSK.png" alt="V11sSK.png"></p>
+<h3 id="4-以Tom用户登录系统，将CREATE-TABLE-CREATE-VIEW系统权限，HR方案中EMPLOYEES对象的SELECT-UPDATE-INSERT-DELETE权限授予Jack和Bob-并查看Tom-Jack-Bob用户所具有的对象权限和系统权限的详细信息；"><a href="#4-以Tom用户登录系统，将CREATE-TABLE-CREATE-VIEW系统权限，HR方案中EMPLOYEES对象的SELECT-UPDATE-INSERT-DELETE权限授予Jack和Bob-并查看Tom-Jack-Bob用户所具有的对象权限和系统权限的详细信息；" class="headerlink" title="4 以Tom用户登录系统，将CREATE TABLE, CREATE VIEW系统权限，HR方案中EMPLOYEES对象的SELECT, UPDATE, INSERT, DELETE权限授予Jack和Bob,并查看Tom, Jack, Bob用户所具有的对象权限和系统权限的详细信息；"></a>4 以Tom用户登录系统，将CREATE TABLE, CREATE VIEW系统权限，HR方案中EMPLOYEES对象的SELECT, UPDATE, INSERT, DELETE权限授予Jack和Bob,并查看Tom, Jack, Bob用户所具有的对象权限和系统权限的详细信息；</h3><p>退出系统用户，用Tom_zyh用户登录系统</p>
+<p>GRANT CREATE TABLE,CREATE VIEW TO JACK WITH ADMIN OPTION;</p>
+<p>GRANT SELECT,UPDATE,INSERT,DELETE ON HR.EMPLOYEES TO JACK WITH GRANT OPTION;</p>
+<p>GRANT CREATE TABLE,CREATE VIEW TO BOB WITH ADMIN OPTION;</p>
+<p>GRANT SELECT,UPDATE,INSERT,DELETE ON HR.EMPLOYEES TO BOB WITH GRANT OPTION;</p>
+<p><img src="https://s2.ax1x.com/2019/06/01/V11DW6.png" alt="V11DW6.png"></p>
+<p>SELECT * FROM DBA_TAB_PRIVS WHERE GRANTEE=’TOM_zyh’;</p>
+<p>SELECT * FROM DBA_SYS_PRIVS WHERE GRANTEE=’TOM_zyh’;</p>
+<p><img src="https://s2.ax1x.com/2019/06/01/V11yQO.png" alt="V11yQO.png"></p>
+<p>SELECT * FROM DBA_TAB_PRIVS WHERE GRANTEE=’Jack_zyh’;</p>
+<p>SELECT * FROM DBA_SYS_PRIVS WHERE GRANTEE=’Jack_zyh’;</p>
+<p>SELECT * FROM DBA_TAB_PRIVS WHERE GRANTEE=’Bob_zyh’;</p>
+<p>SELECT * FROM DBA_SYS_PRIVS WHERE GRANTEE=’Bob_zyh’;</p>
+<p><img src="https://s2.ax1x.com/2019/06/01/V11cOe.png" alt="V11cOe.png"></p>
+<p>看到TOM_zyh授权给Jack_zyh和Bob_zyh的对象权限和系统权限</p>
+<h3 id="5-以SYSTEM用户登录系统，收回用户Tom的CREATE-TABLE-CREATE-VIEW系统权限，HR方案中EMPLOYEES对象的SELECT-UPDATE-INSERT-DELETE权限，查看Tom-zyh-Jack-zyh-Bob-zyh用户所具有的对象权限和系统权限的详细信息；讨论在收回具有权限传递的系统权限和对象权限的级联效应。"><a href="#5-以SYSTEM用户登录系统，收回用户Tom的CREATE-TABLE-CREATE-VIEW系统权限，HR方案中EMPLOYEES对象的SELECT-UPDATE-INSERT-DELETE权限，查看Tom-zyh-Jack-zyh-Bob-zyh用户所具有的对象权限和系统权限的详细信息；讨论在收回具有权限传递的系统权限和对象权限的级联效应。" class="headerlink" title="5 以SYSTEM用户登录系统，收回用户Tom的CREATE TABLE, CREATE VIEW系统权限，HR方案中EMPLOYEES对象的SELECT, UPDATE, INSERT, DELETE权限，查看Tom_zyh, Jack_zyh, Bob_zyh用户所具有的对象权限和系统权限的详细信息；讨论在收回具有权限传递的系统权限和对象权限的级联效应。"></a>5 以SYSTEM用户登录系统，收回用户Tom的CREATE TABLE, CREATE VIEW系统权限，HR方案中EMPLOYEES对象的SELECT, UPDATE, INSERT, DELETE权限，查看Tom_zyh, Jack_zyh, Bob_zyh用户所具有的对象权限和系统权限的详细信息；讨论在收回具有权限传递的系统权限和对象权限的级联效应。</h3><p>REVOKE CREATE TABLE,CREATE VIEW FROM TOM_zyh;</p>
+<p>REVOKE SELECT,UPDATE,INSERT,DELETE ON HR.EMPLOYEES FROM TOM_zyh;</p>
+<p>回收系统权限和对象权限</p>
+<p><img src="https://s2.ax1x.com/2019/06/01/V11Rwd.png" alt="V11Rwd.png"></p>
+<p>SELECT * FROM DBA_TAB_PRIVS WHERE GRANTEE=’TOM_zyh’;</p>
+<p>SELECT * FROM DBA_SYS_PRIVS WHERE GRANTEE=’TOM_zyh’;</p>
+<p><img src="https://s2.ax1x.com/2019/06/01/V11WTA.png" alt="V11WTA.png"></p>
+<p>SELECT * FROM DBA_TAB_PRIVS WHERE GRANTEE=’JACK_zyh’;</p>
+<p>SELECT * FROM DBA_SYS_PRIVS WHERE GRANTEE=’JACK_zyh’;</p>
+<p><img src="https://s2.ax1x.com/2019/06/01/V115fP.png" alt="V115fP.png"></p>
+<p>SELECT * FROM DBA_TAB_PRIVS WHERE GRANTEE=’BOB_zyh’;</p>
+<p>SELECT * FROM DBA_SYS_PRIVS WHERE GRANTEE=’BOB_zyh’;</p>
+<p><img src="https://s2.ax1x.com/2019/06/01/V114Yt.png" alt="V114Yt.png"></p>
+<p>讨论在收回具有权限传递的系统权限和对象权限的级联效应。</p>
+<p>TOM_zyh的权限被收回，由TOM_zyh授予Jack_zyh和Bob_zyh的权限同样也被收回</p>
+<h3 id="6-创建一个角色（名字自拟），授予该角色CREATE-TABLE-CREATE-VIEW系统权限，HR方案中EMPLOYEES对象的SELECT-UPDATE-INSERT-DELETE权限，并将该角色指派给Tom，查看Tom用户所具有的对象权限和系统权限的详细信息；"><a href="#6-创建一个角色（名字自拟），授予该角色CREATE-TABLE-CREATE-VIEW系统权限，HR方案中EMPLOYEES对象的SELECT-UPDATE-INSERT-DELETE权限，并将该角色指派给Tom，查看Tom用户所具有的对象权限和系统权限的详细信息；" class="headerlink" title="6 创建一个角色（名字自拟），授予该角色CREATE TABLE, CREATE VIEW系统权限，HR方案中EMPLOYEES对象的SELECT, UPDATE, INSERT, DELETE权限，并将该角色指派给Tom，查看Tom用户所具有的对象权限和系统权限的详细信息；"></a>6 创建一个角色（名字自拟），授予该角色CREATE TABLE, CREATE VIEW系统权限，HR方案中EMPLOYEES对象的SELECT, UPDATE, INSERT, DELETE权限，并将该角色指派给Tom，查看Tom用户所具有的对象权限和系统权限的详细信息；</h3><p>CREATE USER ZYH IDENTIFIED BY ZYH DEFAULT TABLESPACE USERS TEMPORARY TABLESPACE TEMP;<br>GRANT CREATE SESSION TO ZYH;</p>
+<p>GRANT CREATE TABLE,CREATE VIEW TO ZYH WITH ADMIN OPTION;</p>
+<p>GRANT SELECT,UPDATE,INSERT,DELETE ON HR.EMPLOYEES TO ZYH WITH GRANT OPTION;</p>
+<p>重复之前的操作，创建用户ZYH</p>
+<p><img src="https://s2.ax1x.com/2019/06/01/V11hFI.png" alt="V11hFI.png"></p>
+<p>登录ZYH，授予TOM权限</p>
+<p>GRANT CREATE TABLE,CREATE VIEW TO TOM_zyh WITH ADMIN OPTION;</p>
+<p>GRANT SELECT,UPDATE,INSERT,DELETE ON HR.EMPLOYEES TO TOM_zyh WITH GRANT OPTION;</p>
+<p><img src="https://s2.ax1x.com/2019/06/01/V1176S.png" alt="V1176S.png"></p>
+<p>SELECT * FROM DBA_TAB_PRIVS WHERE GRANTEE=’TOM_zyh’;</p>
+<p>SELECT * FROM DBA_SYS_PRIVS WHERE GRANTEE=’TOM_zyh’;</p>
+<p><img src="https://s2.ax1x.com/2019/06/01/V11oSf.png" alt="V11oSf.png"></p>
+<p>To_zyh的权限来自ZYH</p>
+<p>SELECT * FROM DBA_TAB_PRIVS WHERE GRANTEE=’JACK_zyh’;</p>
+<p>SELECT * FROM DBA_SYS_PRIVS WHERE GRANTEE=’JACK_zyh’;</p>
+<p>SELECT * FROM DBA_TAB_PRIVS WHERE GRANTEE=’Bob_zyh’;</p>
+<p>SELECT * FROM DBA_SYS_PRIVS WHERE GRANTEE=’Bob_zyh’;</p>
+<p><img src="https://s2.ax1x.com/2019/06/01/V11Tl8.png" alt="V11Tl8.png"></p>
+<p>JACK_zyh和Bob_zyh的权限随着TOM的权限被收回而消失，ZYH授予TOM_zyh的权限不能进行权限传递，JACK_zyh和Bob_zyh没有获得权限</p>
+<h3 id="7-创建一个概要文件，DEMO。要求每个用户的最多会话数为3个，最长的连接时间为60分钟，最大空闲时间为20分钟，每个会话占用CPU的最大时间为10秒；用户使用口令登录系统的最大尝试次数为3次，登录失败后账户锁定7天。"><a href="#7-创建一个概要文件，DEMO。要求每个用户的最多会话数为3个，最长的连接时间为60分钟，最大空闲时间为20分钟，每个会话占用CPU的最大时间为10秒；用户使用口令登录系统的最大尝试次数为3次，登录失败后账户锁定7天。" class="headerlink" title="7 创建一个概要文件，DEMO。要求每个用户的最多会话数为3个，最长的连接时间为60分钟，最大空闲时间为20分钟，每个会话占用CPU的最大时间为10秒；用户使用口令登录系统的最大尝试次数为3次，登录失败后账户锁定7天。"></a>7 创建一个概要文件，DEMO。要求每个用户的最多会话数为3个，最长的连接时间为60分钟，最大空闲时间为20分钟，每个会话占用CPU的最大时间为10秒；用户使用口令登录系统的最大尝试次数为3次，登录失败后账户锁定7天。</h3><p>CREATE PROFILE DEMO_zyh LIMIT</p>
+<p>SESSIONS_PER_USER 3 CONNECT_TIME 60 IDLE_TIME 20</p>
+<p>CPU_PER_CALL 100 FAILED_LOGIN_ATTEMPTS 3 PASSWORD_LOCK_TIME 7;</p>
+<p>创建概要文件DEMO：create profile demo</p>
+<p>限制：limit</p>
+<p>最多会话数3个：sessions_per_user 3</p>
+<p>最长的连接时间为60分钟：connect_time 60</p>
+<p>最大空闲时间20分钟：idle_time 20</p>
+<p>每个会话占用CPU的最大时间为10秒：cpu_per_call 100</p>
+<p>用户使用口令登录系统的最大尝试次数为3次：failed_login_attempts 3</p>
+<p>登陆失败后账户锁定7天：password_lock_time 7</p>
+<p><img src="https://s2.ax1x.com/2019/06/01/V11OTs.png" alt="V11OTs.png"></p>
+<h3 id="8-将概要文件指派给用户Jack，然后以Jack账户登录系统并连续三次输入错误口令，查看账户状态。"><a href="#8-将概要文件指派给用户Jack，然后以Jack账户登录系统并连续三次输入错误口令，查看账户状态。" class="headerlink" title="8 将概要文件指派给用户Jack，然后以Jack账户登录系统并连续三次输入错误口令，查看账户状态。"></a>8 将概要文件指派给用户Jack，然后以Jack账户登录系统并连续三次输入错误口令，查看账户状态。</h3><p>ALTER USER JACK PROFILE DEMO_zyh;</p>
+<p><img src="https://s2.ax1x.com/2019/06/01/V11Lwj.png" alt="V11Lwj.png"></p>
+<p>连续输入三次错误口令后闪退</p>
+<p><img src="https://s2.ax1x.com/2019/06/01/V11HOg.png" alt="V11HOg.png"></p>
+<p>查看账号状态</p>
+<p>SELECT ACCOUNT_STATUS FROM DBA_USERS WHERE USERNAME=’Jack_zyh’;</p>
+<p><img src="https://s2.ax1x.com/2019/06/01/V11qmQ.png" alt="V11qmQ.png"></p>
+<p>用户Jack_zyh被锁定LOCKED(TIMED)</p>
+<blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/10/01/oracle-exp4/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/10/01/oracle-exp4/</a></p></blockquote>
 
         
     
@@ -592,8 +687,8 @@
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://yoursite.com/2019/07/30/opencv-vs2019-win-config/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://yoursite.com/2019/07/30/opencv-vs2019-win-config/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://yoursite.com/2019/11/01/oracle-exp4/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/11/01/oracle-exp4/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -623,7 +718,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2019/07/31/keyboard/" id="post_nav-newer" class="prev-content">
+        <a href="/2019/11/01/android-exp6/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -637,7 +732,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2019/07/29/Peking/" id="post_nav-older" class="next-content">
+        <a href="/2019/11/01/oracle-exp3/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
