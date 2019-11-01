@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
+
+
+    <link rel="dns-prefetch" href="https://yizhixiaobai.disqus.com">
+
+
+
+    <link rel="dns-prefetch" href="https://hm.baidu.com">
+
+
+
+    <link rel="dns-prefetch" href="https://lib.baomitu.com">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            oracle-exp2 | 
+        
+        一直小白的博客
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/head_sculpture.png">
+    <link rel="icon" href="/img/head_sculpture.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content>
+    <meta name="keywords" content="这是一只小白">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微锟斤拷锟脚猴拷", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <style>
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: regular;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.svg#Roboto) format('svg')
+        }
+    </style>
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="一直小白的博客">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2019/11/01/oracle-exp2/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="一直小白的博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/head_sculpture.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com/2019/11/01/oracle-exp2/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="oracle-exp2 | 一直小白的博客">
+    <meta property="og:image" content="/img/head_sculpture.png">
+    <meta property="og:description" content>
+    
+
+    
+        <meta property="article:published_time" content="Fri Nov 01 2019 12:04:12 GMT+0800">
+        <meta property="article:modified_time" content="Fri Nov 01 2019 12:04:34 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/2019/11/01/oracle-exp2/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2019/11/01/oracle-exp2/index.html",
+    "headline": "oracle-exp2",
+    "datePublished": "Fri Nov 01 2019 12:04:12 GMT+0800",
+    "dateModified": "Fri Nov 01 2019 12:04:34 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "一直小白",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/head_sculpture.png"
+        },
+        "description": "求知若饥,谦虚若愚"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "一直小白的博客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/head_sculpture.png"
+        }
+    },
+    "keywords": "这是一只小白",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+        <script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?5a42bcc3e66e1db4931abdcca1a9aa74';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#实验三-Oracle对象的创建与管理"><span class="post-toc-number">1.</span> <span class="post-toc-text">实验三  Oracle对象的创建与管理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一、实验目的"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">一、实验目的</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二、实验要求（具体步骤进行截屏展示并配以文字说明）"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">二、实验要求（具体步骤进行截屏展示并配以文字说明）</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三、实验步骤和结果"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">三、实验步骤和结果</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                oracle-exp2
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/head_sculpture.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>一直小白</strong>
+        <span>11月 01, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACV0lEQVR42u3aQXKDMBAEQP//08k1JzyzAoGd1smFjVFzkLZG+/r56vHCw8PDw8PDw8N7GO8Vj7+/zz/n3x5fT+aGh4eHt5P3Zqk9nNwM0L7KZG54eHh4+3n5Y5KlfGWKS3PDw8PDexivKG2DKyvPxcPDw/sUXr7cz7YKPDw8vM/itSVvXgQn5XgefFyYteDh4eHFvOsOwNY/P/p8Dw8P71/y2pE84LgIXt9+3vwPHh4e3sW84yI4Z5zVTJAHwXXTFR4eHt5lvDyQXacmxXT9UvDw8PBu4rWlc76U52V6Eovg4eHh7eflQUN+eD9jzzYVPDw8vP28PDJYmcRKxFDHwXh4eHgX89og4CxAHnnkz8XDw8Pbw1svms9tEWhbrPDw8PDu5eWLe7ugz4KP49/j4eHh3cVLRr7c5y2nSXPALJLAw8PD28lrl/U2eJ21DuQRCR4eHt5OXlvgtkv5LPhomwbw8PDwdvKi2w7L37xQzkv24zIaDw8P7y7eerPpehndxiJv5oaHh4d3K68tcGexQtsugIeHh3cvb9ZGkGwYbSvAyr14eHh4+3mz5bttOGijihPaVfHw8PAu4M2aUIvjqFGJ3N6Fh4eHt5PXjnZy6wFxG/vi4eHhXc2bhbBtkZ0Hu3kkgYeHh3cvL98MZk0Ds4Ox2faDh4eHt5OXN04lU2/bAlaaD/Dw8PCezGtL3ja6TbaoYU8ZHh4e3q289rirnfrs6AsPDw9vP6899FqZehJ25BsPHh4e3n7eShAwe0Gz68ONAQ8PD+9U3vcNPDw8PDw8PDy8B4xffCwhTFR9XCIAAAAASUVORK5CYII=">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=oracle-exp2&url=http://yoursite.com/2019/11/01/oracle-exp2/index.html&pic=http://yoursite.com/img/head_sculpture.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=oracle-exp2&url=http://yoursite.com/2019/11/01/oracle-exp2/index.html&via=一直小白" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/11/01/oracle-exp2/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2019/11/01/oracle-exp2/index.html&title=oracle-exp2" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一直小白的博客&title=oracle-exp2&summary=&pics=http://yoursite.com/img/head_sculpture.png&url=http://yoursite.com/2019/11/01/oracle-exp2/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="实验三-Oracle对象的创建与管理"><a href="#实验三-Oracle对象的创建与管理" class="headerlink" title="实验三  Oracle对象的创建与管理"></a>实验三  Oracle对象的创建与管理</h1><h2 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h2><p>1掌握Oracle数据库表的创建与管理；</p>
+<p>2掌握Oracle数据库索引的创建与管理；</p>
+<h2 id="二、实验要求（具体步骤进行截屏展示并配以文字说明）"><a href="#二、实验要求（具体步骤进行截屏展示并配以文字说明）" class="headerlink" title="二、实验要求（具体步骤进行截屏展示并配以文字说明）"></a>二、实验要求（具体步骤进行截屏展示并配以文字说明）</h2><p>1完成表管理操作；包括表的创建，修改表；查询表信息；删除表。</p>
+<p>（1）创建新的表空间MYTABLESAPCE，MYINDX创建以下表存于MYTABLESAPCE。</p>
+<p>REGIONS</p>
+<table>
+<thead>
+<tr>
+<th align="center">字段名</th>
+<th align="center">数据类型</th>
+<th align="center">长度</th>
+<th align="center">约束</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">region_id</td>
+<td align="center">NUMBER</td>
+<td align="center"></td>
+<td align="center">PRIMARY KEY</td>
+<td align="center">区域编号                                                                                                                                                                                                                                                                                NUMBER        PRIMARY KEY    区域编号</td>
+</tr>
+<tr>
+<td align="center">region_name</td>
+<td align="center">VARCHAR2</td>
+<td align="center">25</td>
+<td align="center">NOT NULL</td>
+<td align="center">区域名称</td>
+</tr>
+</tbody></table>
+<p>COUNTRIES</p>
+<table>
+<thead>
+<tr>
+<th align="center">字段名</th>
+<th align="center">数据类型</th>
+<th align="center">长度</th>
+<th align="center">约束</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">country_id</td>
+<td align="center">CHAR</td>
+<td align="center">2</td>
+<td align="center">PRIMAR KEY</td>
+<td align="center">国家编号</td>
+</tr>
+<tr>
+<td align="center">country_name</td>
+<td align="center">VARCHAR2</td>
+<td align="center">40</td>
+<td align="center">NOT NULL</td>
+<td align="center">国家名称</td>
+</tr>
+<tr>
+<td align="center">region_id</td>
+<td align="center">NUMBER</td>
+<td align="center"></td>
+<td align="center">FOREIGN KEY</td>
+<td align="center">所属区域编号</td>
+</tr>
+</tbody></table>
+<p>LOCATIONS</p>
+<table>
+<thead>
+<tr>
+<th align="center">字段名</th>
+<th align="center">数据类型</th>
+<th align="center">长度</th>
+<th align="center">约束</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">location_id</td>
+<td align="center">NUMBER</td>
+<td align="center">4</td>
+<td align="center">PRIMAR KEY</td>
+<td align="center">位置编号</td>
+</tr>
+<tr>
+<td align="center">street_address</td>
+<td align="center">VARCHAR2</td>
+<td align="center">40</td>
+<td align="center">街道</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">postal_code</td>
+<td align="center">VARCHAR2</td>
+<td align="center">12</td>
+<td align="center">邮编</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">city</td>
+<td align="center">VARCHAR2</td>
+<td align="center">30</td>
+<td align="center">NOT NULL</td>
+<td align="center">城市名称</td>
+</tr>
+<tr>
+<td align="center">state_province</td>
+<td align="center">VARCHAR2</td>
+<td align="center">25</td>
+<td align="center">州或省名称</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">country_id</td>
+<td align="center">CHAR</td>
+<td align="center">2</td>
+<td align="center">FOREIGN KEY</td>
+<td align="center">所属国家编号</td>
+</tr>
+</tbody></table>
+<p>DEPARTMENTS</p>
+<table>
+<thead>
+<tr>
+<th align="center">字段名</th>
+<th align="center">数据类型</th>
+<th align="center">长度</th>
+<th align="center">约束</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">department_id</td>
+<td align="center">NUMBER</td>
+<td align="center">4</td>
+<td align="center">PRIMAR KEY</td>
+<td align="center">部门编号</td>
+</tr>
+<tr>
+<td align="center">department_name</td>
+<td align="center">VARCHAR2</td>
+<td align="center">30</td>
+<td align="center">NOT NULL</td>
+<td align="center">部门名称</td>
+</tr>
+<tr>
+<td align="center">manager_id</td>
+<td align="center">NUMBER</td>
+<td align="center">6</td>
+<td align="center">部门管理者工号</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">location_id</td>
+<td align="center">NUMBER</td>
+<td align="center">4</td>
+<td align="center">FOREIGN KEY</td>
+<td align="center">位置编号</td>
+</tr>
+</tbody></table>
+<p>JOBS</p>
+<table>
+<thead>
+<tr>
+<th align="center">字段名</th>
+<th align="center">数据类型</th>
+<th align="center">长度</th>
+<th align="center">约束</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">job_id</td>
+<td align="center">VARCHAR2</td>
+<td align="center">10</td>
+<td align="center">PRIMAR KEY</td>
+<td align="center">职位编号</td>
+</tr>
+<tr>
+<td align="center">job_title</td>
+<td align="center">VARCHAR2</td>
+<td align="center">35</td>
+<td align="center">NOT NULL</td>
+<td align="center">职位名称</td>
+</tr>
+<tr>
+<td align="center">min_salary</td>
+<td align="center">NUMBER</td>
+<td align="center">6</td>
+<td align="center">职位最低工资</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">max_salary</td>
+<td align="center">NUMBER</td>
+<td align="center">6</td>
+<td align="center">职位最高工资</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p>EMPLOYEES</p>
+<table>
+<thead>
+<tr>
+<th align="center">字段名</th>
+<th align="center">数据类型</th>
+<th align="center">长度</th>
+<th align="center">约束</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">employee_id</td>
+<td align="center">NUMBER</td>
+<td align="center">6</td>
+<td align="center">PRIMARY KEY</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">first_name</td>
+<td align="center">VARCHAR2</td>
+<td align="center">20</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">last_name</td>
+<td align="center">VARCHAR2</td>
+<td align="center">25</td>
+<td align="center">NOT NULL</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">email</td>
+<td align="center">VARCHAR2</td>
+<td align="center">25</td>
+<td align="center">NOT NULL</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">phone_number</td>
+<td align="center">VARCHAR2</td>
+<td align="center">20</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">hire_date</td>
+<td align="center">DATE</td>
+<td align="center"></td>
+<td align="center">NOT NULL</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">job_id</td>
+<td align="center">VARCHAR2</td>
+<td align="center">10</td>
+<td align="center">NOT NULL,FOREIGN KEY</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">salary</td>
+<td align="center">NUMBER</td>
+<td align="center">8,2</td>
+<td align="center">大于0</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">commission_pct</td>
+<td align="center">NUMBER</td>
+<td align="center">2,2</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">manager_id</td>
+<td align="center">NUMBER</td>
+<td align="center">6</td>
+<td align="center">FOREIGEN KEY</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">department_id</td>
+<td align="center">NUMBER</td>
+<td align="center">4</td>
+<td align="center">FOREIGN KEY</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p>JOB_HISTORY</p>
+<table>
+<thead>
+<tr>
+<th align="center">字段名</th>
+<th align="center">数据类型</th>
+<th align="center">长度</th>
+<th align="center">约束</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">employee_id</td>
+<td align="center">NUMBER</td>
+<td align="center">6</td>
+<td align="center">PRIMARY KEY</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">start_date</td>
+<td align="center">DATE</td>
+<td align="center"></td>
+<td align="center">PRIMARY KEY</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">end_date</td>
+<td align="center">DATE</td>
+<td align="center"></td>
+<td align="center">NOT NULL, end_date&gt;start_date</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">job_id</td>
+<td align="center">VARCHAR2</td>
+<td align="center">10</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">department_id</td>
+<td align="center">NUMBER</td>
+<td align="center">4</td>
+<td align="center">FOREIGN KEY</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p>SAL_GRADES</p>
+<table>
+<thead>
+<tr>
+<th align="center">字段名</th>
+<th align="center">数据类型</th>
+<th align="center">长度</th>
+<th align="center">约束</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">grade</td>
+<td align="center">NUMBER</td>
+<td align="center">2</td>
+<td align="center">PRIMAR KEY</td>
+<td align="center">工资等级</td>
+</tr>
+<tr>
+<td align="center">min_salary</td>
+<td align="center">NUMBER</td>
+<td align="center">6</td>
+<td align="center">NOT NULL</td>
+<td align="center">职位最低工资</td>
+</tr>
+<tr>
+<td align="center">max_salary</td>
+<td align="center">NUMBER</td>
+<td align="center">6</td>
+<td align="center">NOT NULL</td>
+<td align="center">职位最高工资</td>
+</tr>
+</tbody></table>
+<p>（2）为DEPARTMENTS添加一个列headcount，数据类型为number,可以为空；为EMPLOYEES添加一个列gender数据类型为char(1)，约束是该列的取值只能是M或者F; 通过查询相关视图检验操作是否成功。</p>
+<p>（3）为EMPLOYEES表的email列添加唯一性约束（UNIQUE），通过查询相关视图检验操作是否成功。</p>
+<p>（4）在EMPLOYEES表的（first_name,last_name）上创建一个B树索引，要求索引值为大写字母并存于MYINDX表空间；在gender上创建位图索引。通过查询相关视图检验操作是否成功。</p>
+<h2 id="三、实验步骤和结果"><a href="#三、实验步骤和结果" class="headerlink" title="三、实验步骤和结果"></a>三、实验步骤和结果</h2><p>1完成表管理操作；包括表的创建，修改表；查询表信息；删除表。</p>
+<p>（1）创建新的表空间MYTABLESAPCE，MYINDX创建以下表存于MYTABLESAPCE。</p>
+<p>1）首先查询表空间信息，输入</p>
+<p>SQL&gt; SELECT TABLESPACE_NAME, EXTENT_MANAGEMENT, ALLOCATION_TYPE, CONTENTS FROM DBA_TABLESPACES;</p>
+<p>出现</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/KTOWlT.png" alt="KTOWlT.png"></p>
+<p>2）找出打开数据库的时候报错的地方</p>
+<p>SQL&gt; select open_mode from v$database;</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/KTOgf0.png" alt="KTOgf0.png"></p>
+<p>3）抛出的错误：</p>
+<p>SQL&gt; alter database open;</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/KTORpV.png" alt="KTORpV.png"></p>
+<p>后分析为上次实验二的残留文件还未删除</p>
+<p>4）删除残留文件</p>
+<p>SQL&gt; alter database datafile ‘C:\USERS\901\DESKTOP\DATAFILE2.DBF’ offline drop;</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/KTOcYq.png" alt="KTOcYq.png"></p>
+<p>5）删除完查看状态</p>
+<p>SQL&gt; alter database open;</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/KTO6kn.png" alt="KTO6kn.png"></p>
+<p>6）查看表空间信息成功</p>
+<p>SQL&gt; SELECT TABLESPACE_NAME, EXTENT_MANAGEMENT, ALLOCATION_TYPE, CONTENTS FROM DBA_TABLESPACES;</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/KTOf6U.png" alt="KTOf6U.png"></p>
+<p>7）创建MYTABLESAPCE表空间</p>
+<p>SQL&gt; CREATE TABLESPACE MYTABLESAPCE DATAFILE ‘D:\Test\MYTABLESAPCE.DBF’ SIZE 50M EXTENT MANAGEMENT LOCAL UNIFORM SIZE 512K SEGMENT SPACE MANAGEMENT MANUAL;</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/KTOhXF.png" alt="KTOhXF.png"></p>
+<p>8）创建MYINDX表空间</p>
+<p>SQL&gt; CREATE TABLESPACE MYINDX DATAFILE ‘D:\Test\MYINDX.DBF’ SIZE 50M EXTENT MANAGEMENT LOCAL UNIFORM SIZE 512K SEGMENT SPACE MANAGEMENT MANUAL;</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/KTO5m4.png" alt="KTO5m4.png"></p>
+<p>9）创建REGIONS表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; create table REGIONS(</span><br><span class="line">           region_id  NUMBER primary key,</span><br><span class="line">           region_name VARCHAR(25) not null</span><br><span class="line">           );</span><br></pre></td></tr></table></figure>
+
+<p>number加括号不加参数会显示错误</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/KTOI0J.png" alt="KTOI0J.png"></p>
+<p>加括号后成功</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/KTOo79.png" alt="KTOo79.png"></p>
+<p>number默认参数为p（精度）为38，小数点位数的合法值为-84~127</p>
+<p>到第10步发现把VARCHAR2看成VARCHAR类型，并查找VARCHAR和VARCHAR2的区别，后删除表</p>
+<p>SQL&gt; DROP TABLE DEPARTMENTS;</p>
+<p>SQL&gt; DROP TABLE COUNTRIES;</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/KTO7kR.png" alt="KTO7kR.png"></p>
+<p>重新创建</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; create table REGIONS(</span><br><span class="line">region_id  NUMBER primary key,</span><br><span class="line">region_name VARCHAR2(25) not null</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.ax1x.com/2019/11/01/KTOHt1.png" alt="KTOHt1.png"></p>
+<p>10）创建COUNTRIES表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; create table COUNTRIES(</span><br><span class="line">country_id CHAR(2) primary key,</span><br><span class="line">country_name VARCHAR2(40) not null，</span><br><span class="line">region_id number references REGIONS (region_id )</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>到注释添加时失败回过头来看发现字段名称打错</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/KTObfx.png" alt="KTObfx.png"></p>
+<p>修改表字段名称</p>
+<p>SQL&gt; alter table COUNTRIES rename column classid to region_id;</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/KTOLp6.png" alt="KTOLp6.png"></p>
+<p>11）创建LOCATIONS表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; create table LOCATIONS (</span><br><span class="line">location_id NUMBER(4) primary key,</span><br><span class="line">street_address VARCHAR2(40)，</span><br><span class="line">postal_code VARCHAR2(12),</span><br><span class="line">city VARCHAR2(30) not null,</span><br><span class="line">state_province VARCHAR2(25),</span><br><span class="line">country_id CHAR references COUNTRIES (country_id)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.ax1x.com/2019/11/01/KTOO1K.png" alt="KTOO1K.png"></p>
+<p>12）创建DEPARTMENTS表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; create table DEPARTMENTS (</span><br><span class="line">department_id NUMBER(4) primary key ,</span><br><span class="line">department_name VARCHAR2(30) not null，</span><br><span class="line">manager_id NUMBER(6),</span><br><span class="line">location_id NUMBER(4) references LOCATIONS (location_id)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.ax1x.com/2019/11/01/KTOX6O.png" alt="KTOX6O.png"></p>
+<p>13）创建JOBS表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; create table JOBS (</span><br><span class="line">job_id VARCHAR2(10) primary key ,</span><br><span class="line">job_title VARCHAR2(35) not null，</span><br><span class="line">min_salary NUMBER(6),max_salary NUMBER(6)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.ax1x.com/2019/11/01/KTOjXD.png" alt="KTOjXD.png"></p>
+<p>14）创建EMPLOYEES表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; create table EMPLOYEES (</span><br><span class="line">employee_id  NUMBER(6) primary key,</span><br><span class="line">first_name VARCHAR2(20),</span><br><span class="line">last_name VARCHAR2(25) not null,</span><br><span class="line">email VARCHAR2(20) not null,</span><br><span class="line">phone_number VARCHAR2(20) ,</span><br><span class="line"> hire_date DATE not null ,</span><br><span class="line">job_id VARCHAR2(10) not null references JOBS (job_id),</span><br><span class="line">salary NUMBER(8,2) <span class="keyword">CHECK</span> (salary &gt; <span class="number">0</span>),</span><br><span class="line">commission_pct <span class="built_in">NUMBER</span>(<span class="number">2</span>,<span class="number">2</span>),</span><br><span class="line">manager_id <span class="built_in">NUMBER</span>(<span class="number">6</span>),</span><br><span class="line">department_id <span class="built_in">NUMBER</span>(<span class="number">4</span>) <span class="keyword">references</span> DEPARTMENTS (department_id)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.ax1x.com/2019/11/01/KTOxne.png" alt="KTOxne.png"></p>
+<p>于是查看DEPARTMENTS表中查看manage_id字段，他并不是主键，所以不能使用外键来进行约束，可能老师您题目出错了。<br>去掉manage_id的外键约束</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/KTOz0H.png" alt="KTOz0H.png"></p>
+<p>成功。</p>
+<p>15）创建JOB_HISTORY表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; create table JOB_HISTORY (</span><br><span class="line">employee_id  NUMBER(6) not null references employees(employee_id), </span><br><span class="line">start_date DATE not null,</span><br><span class="line">end_date DATE not null,</span><br><span class="line">job_id VARCHAR2(10),</span><br><span class="line">department_id NUMBER(4) references DEPARTMENTS (department_id),</span><br><span class="line">CONSTRAINT jhist_date_interval <span class="keyword">CHECK</span> (end_date &gt; start_date),</span><br><span class="line"><span class="keyword">CONSTRAINT</span> jhist_emp_id_st_date_pk PRIMARY <span class="keyword">KEY</span> (employee_id, start_date)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>一开始按自己思路写，后显示错误，意识到表里不能有两个主键</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/KTXS7d.png" alt="KTXS7d.png"></p>
+<p>修改为课本案例，修改后的CONSTRAINT的意思为添加约束，成功</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/KTX9AA.png" alt="KTX9AA.png"></p>
+<p>16）创建SAL_GRADES表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; create table SAL_GRADES (</span><br><span class="line">grade  NUMBER(2) PRIMARY KEY,</span><br><span class="line">min_salary NUMBER(6) not null,</span><br><span class="line">max_salary NUMBER(6) not null</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.ax1x.com/2019/11/01/KTXCtI.png" alt="KTXCtI.png"></p>
+<p>17）给所有表中的字段添加注释</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; COMMENT ON COLUMN REGIONS.region_id IS '区域编号';</span><br><span class="line">SQL&gt; COMMENT ON COLUMN REGIONS.region_name IS '区域名称';</span><br><span class="line">SQL&gt; COMMENT ON COLUMN COUNTRIES.country_id IS '国家编号';</span><br><span class="line">SQL&gt; COMMENT ON COLUMN COUNTRIES.country_name IS '国家名称';</span><br><span class="line">SQL&gt; COMMENT ON COLUMN COUNTRIES.region_id IS '所属区域编号';</span><br><span class="line">SQL&gt; COMMENT ON COLUMN LOCATIONS.location_id IS '位置编号';</span><br><span class="line">SQL&gt; COMMENT ON COLUMN LOCATIONS.street_address IS '街道';</span><br><span class="line">SQL&gt; COMMENT ON COLUMN LOCATIONS.postal_code IS '邮编';</span><br><span class="line">SQL&gt; COMMENT ON COLUMN LOCATIONS.city IS '城市名称';</span><br><span class="line">SQL&gt; COMMENT ON COLUMN LOCATIONS.state_province IS '州或省名称';</span><br><span class="line">SQL&gt; COMMENT ON COLUMN LOCATIONS.country_id IS '所属国家编号';</span><br><span class="line">SQL&gt; COMMENT ON COLUMN DEPARTMENTS.department_id IS '部门编号';</span><br><span class="line">SQL&gt; COMMENT ON COLUMN DEPARTMENTS.department_name IS '部门名称';</span><br><span class="line">SQL&gt; COMMENT ON COLUMN DEPARTMENTS.manager_id IS '部门管理者工号';</span><br><span class="line">SQL&gt; COMMENT ON COLUMN DEPARTMENTS.location_id IS '位置编号';</span><br><span class="line">SQL&gt; COMMENT ON COLUMN JOBS.job_id IS '职位编号';</span><br><span class="line">SQL&gt; COMMENT ON COLUMN JOBS.job_title IS '职位名称';</span><br><span class="line">SQL&gt; COMMENT ON COLUMN JOBS.min_salary IS '职位最低工资';</span><br><span class="line">SQL&gt; COMMENT ON COLUMN JOBS.max_salary IS '职位最高工资';</span><br><span class="line">SQL&gt; COMMENT ON COLUMN SAL_GRADES.grade IS '工资等级';</span><br><span class="line">SQL&gt; COMMENT ON COLUMN SAL_GRADES.min_salary IS '职位最低工资';</span><br><span class="line">SQL&gt; COMMENT ON COLUMN SAL_GRADES.max_salary IS '职位最高工资';</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.ax1x.com/2019/11/01/KTXPht.png" alt="KTXPht.png"></p>
+<p><img src="https://s2.ax1x.com/2019/11/01/KTXF9P.png" alt="KTXF9P.png"></p>
+<p>一开始出现3处备注错误</p>
+<p>修改后成功</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/K73W8A.png" alt="K73W8A.png"></p>
+<p><img src="https://s2.ax1x.com/2019/11/01/K73wg1.png" alt="K73wg1.png"></p>
+<p><img src="https://s2.ax1x.com/2019/11/01/K730jx.png" alt="K730jx.png"></p>
+<p>（2）为DEPARTMENTS添加一个列headcount，数据类型为number,可以为空；为EMPLOYEES添加一个列gender数据类型为char(1)，约束是该列的取值只能是M或者F; 通过查询相关视图检验操作是否成功。</p>
+<p>1）添加列headcount</p>
+<p>SQL&gt; ALTER TABLE DEPARTMENTS</p>
+<p>ADD(headcount number);</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/K73d3R.png" alt="K73d3R.png"></p>
+<p>2）添加列gender</p>
+<p>SQL&gt; ALTER TABLE EMPLOYEES</p>
+<p>ADD(gender char(1));</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/K73aC9.png" alt="K73aC9.png"></p>
+<p>3)添加gender检查约束</p>
+<p>SQL&gt;  ALTER TABLE EMPLOYEES ADD CONSTRAINT gender CHECK (gender in (‘F’,’M’));</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/K73Du6.png" alt="K73Du6.png"></p>
+<p>4)查询相关视图</p>
+<p>SQL&gt; select t.column_name, t.column_name from user_col_comments t where t.table_name = ‘DEPARTMENTS’; </p>
+<p><img src="https://s2.ax1x.com/2019/11/01/K73rDK.png" alt="K73rDK.png"></p>
+<p>SQL&gt; select t.column_name, t.column_name from user_col_comments t where t.table_name = ‘EMPLOYEES’; </p>
+<p><img src="https://s2.ax1x.com/2019/11/01/K73sHO.png" alt="K73sHO.png"></p>
+<p>select table_name,constraint_name,constraint_type from user_constraints where table_name=’EMPLOYEES’;</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/K736ED.png" alt="K736ED.png"></p>
+<p>（3）为EMPLOYEES表的email列添加唯一性约束（UNIQUE），通过查询相关视图检验操作是否成功。</p>
+<p>1)添加约束</p>
+<p>SQL&gt; ALTER TABLE EMPLOYEES ADD CONSTRAINT E_UK UNIQUE(email);</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/K73cUe.png" alt="K73cUe.png"></p>
+<p>2)查询检验</p>
+<p>SQL&gt; select table_name,constraint_name,constraint_type from user_constraints where table_name=’EMPLOYEES’;</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/K73hvt.png" alt="K73hvt.png"></p>
+<p>（4）在EMPLOYEES表的（first_name,last_name）上创建一个B树索引，要求索引值为大写字母并存于MYINDX表空间；在gender上创建位图索引。通过查询相关视图检验操作是否成功。</p>
+<p>1）前提准备</p>
+<p>之前知道什么是索引，但是不知道B树索引，于是寻找相关概念</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/K78YsP.png" alt="K78YsP.png"></p>
+<p>2）创建B树索引</p>
+<p>不知道索引值的概念，网上也查不到，我觉得老师您的意思应该是索引名吧</p>
+<p>SQL&gt; CREATE INDEX B ON EMPLOYEES (first_name,last_name) TABLESPACE MYINDX;</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/K73g4H.png" alt="K73g4H.png"></p>
+<p>3）创建位图索引</p>
+<p>SQL&gt; CREATE BITMAP INDEX emp_gender_index ON EMPLOYEES (gender) TABLESPACE MYINDX;</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/K73RCd.png" alt="K73RCd.png"></p>
+<p>4)查询检验</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">b.uniqueness, a.index_name, a.table_name, a.column_name</span><br><span class="line"><span class="keyword">FROM</span> all_ind_columns a, all_indexes b</span><br><span class="line"><span class="keyword">WHERE</span> a.index_name=b.index_name</span><br><span class="line"><span class="keyword">AND</span> a.table_name = <span class="keyword">upper</span>(<span class="string">'EMPLOYEES'</span>)</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> a.table_name, a.index_name, a.column_position;</span><br></pre></td></tr></table></figure>
+
+<p>一开始复制题目的EMPLOYEE结果总是出现</p>
+<p><img src="https://s2.ax1x.com/2019/11/01/K78JMt.png" alt="K78JMt.png"></p>
+<p>查询网上发现大部分情况为表为空，明明创了表怎么可能为空</p>
+<p>结果发现之前表明是EMPLOYEES，题目少了S</p>
+<p>修改语句中的表明<br><img src="https://s2.ax1x.com/2019/11/01/K735KP.png" alt="K735KP.png"></p>
+<p>成功</p>
+<blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/07/18/Ningbo/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/07/18/Ningbo/</a></p></blockquote>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2019/11/01/oracle-exp2/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/11/01/oracle-exp2/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//yizhixiaobai.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2019/11/01/android-exp6/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/10/31/android-exp5/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/head_sculpture.png" alt="一直小白's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        zhongyuhang113@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:zhongyuhang113@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2019/11/">十一月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">26</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Database/">Database<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/android/">android<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/html/">html<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/j2ee/">j2ee<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/java/">java<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/lua/">lua<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/opencv/">opencv<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/oracle/">oracle<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/书籍/">书籍<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端/">前端<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/密码学/">密码学<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/开箱/">开箱<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/心理学/">心理学<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/测试/">测试<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/游记/">游记<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/笔记/">笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机网络/">计算机网络<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/评测/">评测<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/鱼的记忆/">鱼的记忆<span class="sidebar_archives-count">9</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">table</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间轴">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                时间轴
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/video" title="目之所及">
+                
+                    <i class="material-icons sidebar-material-icons">movie</i>
+                
+                目之所及
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="图库">
+                
+                    <i class="material-icons sidebar-material-icons">collections</i>
+                
+                图库
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="好朋友">
+                
+                    <i class="material-icons sidebar-material-icons">favorite_border</i>
+                
+                好朋友
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/PGP" title="PGP密钥">
+                
+                    <i class="material-icons sidebar-material-icons">vpn_key</i>
+                
+                PGP密钥
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/agree" title="知识共享协议">
+                
+                    <i class="material-icons sidebar-material-icons">https</i>
+                
+                知识共享协议
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/me" title="关于小白">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于小白
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">60</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/WTOJL7dDTsa8Dcd" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/zyhang8" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https:www.github.com/zyhang8" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;一直小白的博客
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//yizhixiaobai.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2017;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
