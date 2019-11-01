@@ -29,19 +29,6 @@
     
     
     <entry>
-      <title>requirement-exp9</title>
-      <link href="/2019/11/01/requirement-exp9/"/>
-      <url>/2019/11/01/requirement-exp9/</url>
-      
-        <content type="html"><![CDATA[<blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/07/18/Ningbo/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/07/18/Ningbo/</a></p></blockquote>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Oracle数据库对象管理（2）</title>
       <link href="/2019/11/01/oracle-exp3/"/>
       <url>/2019/11/01/oracle-exp3/</url>
@@ -1290,6 +1277,31 @@
         <tags>
             
             <tag> linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>海洋生物识别系统软件需求规格说明书</title>
+      <link href="/2019/09/04/requirement-exp9/"/>
+      <url>/2019/09/04/requirement-exp9/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://files.cnblogs.com/files/pipi-pig/%E8%BD%AF%E4%BB%B6%E9%9C%80%E6%B1%82%E8%A7%84%E6%A0%BC%E8%AF%B4%E6%98%8E%E4%B9%A6.docx.zip" target="_blank" rel="noopener">海洋生物识别系统软件需求规格说明书</a></p><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/09/04/requirement-exp9/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/09/04/requirement-exp9/</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 需求分析 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 需求分析 </tag>
             
         </tags>
       
