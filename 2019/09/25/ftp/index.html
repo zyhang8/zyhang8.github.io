@@ -52,7 +52,7 @@
     
     <title>
         
-            FTP测试 | 
+            基于JMeter的Quick Easy FTP Server性能测试 | 
         
         一直小白的博客
     </title>
@@ -265,14 +265,14 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://yoursite.com/2019/09/25/ftp/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="FTP测试 | 一直小白的博客">
+    <meta property="og:title" content="基于JMeter的Quick Easy FTP Server性能测试 | 一直小白的博客">
     <meta property="og:image" content="/img/head_sculpture.png">
     <meta property="og:description" content>
     <meta property="og:article:tag" content="测试"> 
 
     
         <meta property="article:published_time" content="Wed Sep 25 2019 20:39:56 GMT+0800">
-        <meta property="article:modified_time" content="Thu Oct 31 2019 20:41:26 GMT+0800">
+        <meta property="article:modified_time" content="Fri Nov 01 2019 12:45:06 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -293,9 +293,9 @@
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "mainEntityOfPage": "http://yoursite.com/2019/09/25/ftp/index.html",
-    "headline": "FTP测试",
+    "headline": "基于JMeter的Quick Easy FTP Server性能测试",
     "datePublished": "Wed Sep 25 2019 20:39:56 GMT+0800",
-    "dateModified": "Thu Oct 31 2019 20:41:26 GMT+0800",
+    "dateModified": "Fri Nov 01 2019 12:45:06 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "一直小白",
@@ -388,7 +388,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#FTP测试"><span class="post-toc-number">1.</span> <span class="post-toc-text">FTP测试</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#引言"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">引言</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#背景说明"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">背景说明</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-2文档目的"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">1.2文档目的</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#测试环境"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">测试环境</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#测试配置"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">测试配置</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#性能测试需求"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">性能测试需求</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#性能测试描述过程"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">性能测试描述过程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">总结</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#基于JMeter的Quick-Easy-FTP-Server性能测试"><span class="post-toc-number">1.</span> <span class="post-toc-text">基于JMeter的Quick Easy FTP Server性能测试</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#引言"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">引言</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#背景说明"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">背景说明</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-2文档目的"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">1.2文档目的</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#测试环境"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">测试环境</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#测试配置"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">测试配置</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#性能测试需求"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">性能测试需求</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#性能测试描述过程"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">性能测试描述过程</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#总结"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">总结</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -420,7 +420,7 @@
         
     
             <p class="article-headline-p">
-                FTP测试
+                基于JMeter的Quick Easy FTP Server性能测试
             </p>
         </div>
 
@@ -503,7 +503,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=FTP测试&url=http://yoursite.com/2019/09/25/ftp/index.html&pic=http://yoursite.com/img/head_sculpture.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=基于JMeter的Quick Easy FTP Server性能测试&url=http://yoursite.com/2019/09/25/ftp/index.html&pic=http://yoursite.com/img/head_sculpture.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -512,7 +512,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=FTP测试&url=http://yoursite.com/2019/09/25/ftp/index.html&via=一直小白" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=基于JMeter的Quick Easy FTP Server性能测试&url=http://yoursite.com/2019/09/25/ftp/index.html&via=一直小白" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -533,7 +533,7 @@
 
     <!-- Share LinkedIn -->
     
-        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2019/09/25/ftp/index.html&title=FTP测试" target="_blank">
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2019/09/25/ftp/index.html&title=基于JMeter的Quick Easy FTP Server性能测试" target="_blank">
             <li class="mdl-menu__item">
                 分享到 LinkedIn
             </li>
@@ -542,7 +542,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一直小白的博客&title=FTP测试&summary=&pics=http://yoursite.com/img/head_sculpture.png&url=http://yoursite.com/2019/09/25/ftp/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一直小白的博客&title=基于JMeter的Quick Easy FTP Server性能测试&summary=&pics=http://yoursite.com/img/head_sculpture.png&url=http://yoursite.com/2019/09/25/ftp/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -561,7 +561,7 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="FTP测试"><a href="#FTP测试" class="headerlink" title="FTP测试"></a>FTP测试</h1><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><h3 id="背景说明"><a href="#背景说明" class="headerlink" title="背景说明"></a>背景说明</h3><pre><code>本测试选用的是一个小型的FTP服务器软件：Quick Easy FTP Server。Quick Easy FTP Server是一个全中文的FTP服务器软件,反应迅速,操作方便,实现了标准FTP服务器所具有的功能。</code></pre><p>该软件具有以下特点：1.软件安装程序极小,但性能毫不逊色于专业的那些FTP服务器软件2.功能全面.具备完整的帐户管理,便捷的服务器配置,安全性设置,在线用户信息, 服务器日志,实时数据统计,检软件界面查更新一应俱全3.支持断点续传4.完整的帮助系统5.全中文,更适合中国人使用。</p>
+        <h1 id="基于JMeter的Quick-Easy-FTP-Server性能测试"><a href="#基于JMeter的Quick-Easy-FTP-Server性能测试" class="headerlink" title="基于JMeter的Quick Easy FTP Server性能测试"></a>基于JMeter的Quick Easy FTP Server性能测试</h1><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><h3 id="背景说明"><a href="#背景说明" class="headerlink" title="背景说明"></a>背景说明</h3><pre><code>本测试选用的是一个小型的FTP服务器软件：Quick Easy FTP Server。Quick Easy FTP Server是一个全中文的FTP服务器软件,反应迅速,操作方便,实现了标准FTP服务器所具有的功能。</code></pre><p>该软件具有以下特点：1.软件安装程序极小,但性能毫不逊色于专业的那些FTP服务器软件2.功能全面.具备完整的帐户管理,便捷的服务器配置,安全性设置,在线用户信息, 服务器日志,实时数据统计,检软件界面查更新一应俱全3.支持断点续传4.完整的帮助系统5.全中文,更适合中国人使用。</p>
 <p>之前使用FileZilla搭建服务器顺便搭建了WordPress网站，这次尝试用Quick Easy FTP Server搭建ftp服务器并进行网络传输性能测试</p>
 <h3 id="1-2文档目的"><a href="#1-2文档目的" class="headerlink" title="1.2文档目的"></a>1.2文档目的</h3><pre><code>通过JMeter来测试Quick Easy FTP Server的上传与下载性能。</code></pre><h2 id="测试环境"><a href="#测试环境" class="headerlink" title="测试环境"></a>测试环境</h2><h3 id="测试配置"><a href="#测试配置" class="headerlink" title="测试配置"></a>测试配置</h3><pre><code>Windows10 i5-7200CPU @ 3.30GHz；RAM：8GB；64位操作系统
 
@@ -788,7 +788,7 @@ FTP服务软件：Quick Easy FTP Server 4.0.0</code></pre><h2 id="性能测试�
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2019/11/">十一月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">29</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">14</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/archives/2019/11/">十一月 2019<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">29</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">15</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -806,7 +806,7 @@ FTP服务软件：Quick Easy FTP Server 4.0.0</code></pre><h2 id="性能测试�
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Database/">Database<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/IT项目管理/">IT项目管理<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/android/">android<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/html/">html<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/j2ee/">j2ee<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/java/">java<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/lua/">lua<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/opencv/">opencv<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/oracle/">oracle<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/书籍/">书籍<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端/">前端<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/密码学/">密码学<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/开箱/">开箱<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/心理学/">心理学<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/测试/">测试<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/游记/">游记<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/笔记/">笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机网络/">计算机网络<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/评测/">评测<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/鱼的记忆/">鱼的记忆<span class="sidebar_archives-count">9</span></a>
+                <a class="sidebar_archives-link" href="/categories/Database/">Database<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/IT项目管理/">IT项目管理<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/android/">android<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/html/">html<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/j2ee/">j2ee<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/java/">java<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/lua/">lua<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/opencv/">opencv<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/oracle/">oracle<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/书籍/">书籍<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端/">前端<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/密码学/">密码学<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/开箱/">开箱<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/心理学/">心理学<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/测试/">测试<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/游记/">游记<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/笔记/">笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机网络/">计算机网络<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/评测/">评测<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/鱼的记忆/">鱼的记忆<span class="sidebar_archives-count">9</span></a>
             </ul>
         </li>
         
@@ -900,7 +900,7 @@ FTP服务软件：Quick Easy FTP Server 4.0.0</code></pre><h2 id="性能测试�
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">65</span>
+                <span class="sidebar-badge">67</span>
             </a>
         </li>
         
