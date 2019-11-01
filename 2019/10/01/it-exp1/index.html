@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
+
+
+    <link rel="dns-prefetch" href="https://yizhixiaobai.disqus.com">
+
+
+
+    <link rel="dns-prefetch" href="https://hm.baidu.com">
+
+
+
+    <link rel="dns-prefetch" href="https://lib.baomitu.com">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            小账本APP——软件项目风险管理及解决办法案例 | 
+        
+        一直小白的博客
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/head_sculpture.png">
+    <link rel="icon" href="/img/head_sculpture.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content>
+    <meta name="keywords" content="这是一只小白,IT项目管理">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微锟斤拷锟脚猴拷", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <style>
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: regular;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.svg#Roboto) format('svg')
+        }
+    </style>
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="一直小白的博客">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2019/10/01/it-exp1/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="一直小白的博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/head_sculpture.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com/2019/10/01/it-exp1/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="小账本APP——软件项目风险管理及解决办法案例 | 一直小白的博客">
+    <meta property="og:image" content="/img/head_sculpture.png">
+    <meta property="og:description" content>
+    <meta property="og:article:tag" content="IT项目管理"> 
+
+    
+        <meta property="article:published_time" content="Tue Oct 01 2019 12:18:18 GMT+0800">
+        <meta property="article:modified_time" content="Fri Nov 01 2019 12:22:08 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/2019/10/01/it-exp1/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2019/10/01/it-exp1/index.html",
+    "headline": "小账本APP——软件项目风险管理及解决办法案例",
+    "datePublished": "Tue Oct 01 2019 12:18:18 GMT+0800",
+    "dateModified": "Fri Nov 01 2019 12:22:08 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "一直小白",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/head_sculpture.png"
+        },
+        "description": "求知若饥,谦虚若愚"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "一直小白的博客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/head_sculpture.png"
+        }
+    },
+    "keywords": ",IT项目管理这是一只小白",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+        <script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?5a42bcc3e66e1db4931abdcca1a9aa74';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#小账本APP——软件项目风险管理及解决办法案例"><span class="post-toc-number">1.</span> <span class="post-toc-text">小账本APP——软件项目风险管理及解决办法案例</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#摘要"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">摘要</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#项目风险管理"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">项目风险管理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#人员风险（Personal-risk）"><span class="post-toc-number">1.1.1.1.</span> <span class="post-toc-text">人员风险（Personal risk）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#问题解决方案"><span class="post-toc-number">1.1.1.2.</span> <span class="post-toc-text">问题解决方案</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#流程风险（Process-risk）"><span class="post-toc-number">1.1.1.3.</span> <span class="post-toc-text">流程风险（Process risk）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#问题解决方案-1"><span class="post-toc-number">1.1.1.4.</span> <span class="post-toc-text">问题解决方案</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#技术风险（Technologyrisk）"><span class="post-toc-number">1.1.1.5.</span> <span class="post-toc-text">技术风险（Technologyrisk）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#问题解决方案-2"><span class="post-toc-number">1.1.1.6.</span> <span class="post-toc-text">问题解决方案</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#环境风险（Environmentrisk）"><span class="post-toc-number">1.1.1.7.</span> <span class="post-toc-text">环境风险（Environmentrisk）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#问题解决方案-3"><span class="post-toc-number">1.1.1.8.</span> <span class="post-toc-text">问题解决方案</span></a></li></ol></li></ol></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                小账本APP——软件项目风险管理及解决办法案例
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/head_sculpture.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>一直小白</strong>
+        <span>10月 01, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACZ0lEQVR42u3bQXLCMAwFUO5/6fYALeFLsh1gnldMJ3X8sojFt3j8fPV44OHh4eHh4eHhvRnvEY+/1/8z9Z+/P7v+2QyTteHh4eGd5CW3ST4n+GSJvbXh4eHhneddbwYJI1/6s22jel88PDy89+f1lnV9r3xOPDw8vE/kTTaJPLzAw8PD+xRe/oV/Ul4ns92WteDh4eHFvOoB2MnPN5zv4eHh4V3yRu1NcXww34SaTVd4eHh4G3jVUrh3zF+NhpOQotl0hYeHh7eIl7eT5ozrorxauBfaEfDw8PA28ybUa3zedHX9eXQAhoeHh7eNV71NL3pYtQ2UNwY8PDy8pby8/N0XVSSPY3HrAB4eHt6YV325JzFEfk1+VBY9Jjw8PLzNvLw5IH9NVxtY8wOzUYyLh4eHd5CXl7+TGXq8UbsqHh4e3gbe4pigGBBXtyU8PDy887w8DsjjhnnAkeDx8PDw7uL1pl5FnYQUeHh4eHfx8kOpZAvpBRyTnwTg4eHhneH1jqyq7Vn5g8gDjqikxsPDwzvC65W/+1q1ylfi4eHhHeGNYtOYl2wqvdnw8PDw7uI1S9hiMT0vx19EvXh4eHhHeOWXb7CgamtCXtw3wwg8PDy8RbzqqC4reYh5O1d5Y8DDw8PbwHvEIw8p9v1X9DUADw8P7wgv3wzyeDeJaJMSeWPWgoeHhzfm5ZtBfsBfDW2rYQQeHh7eZ/Gq7VYLXvpJwIGHh4f3Zry8UM5L58UHY3h4eHgHefmhVy+YSDaPSbGOh4eHd5JXPQDLX+VJoVwNMl48CDw8PLzNvO8beHh4eHh4eHh4bzB+Ad5gNQCMa3rDAAAAAElFTkSuQmCC">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/IT项目管理/">IT项目管理</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=小账本APP——软件项目风险管理及解决办法案例&url=http://yoursite.com/2019/10/01/it-exp1/index.html&pic=http://yoursite.com/img/head_sculpture.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=小账本APP——软件项目风险管理及解决办法案例&url=http://yoursite.com/2019/10/01/it-exp1/index.html&via=一直小白" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/10/01/it-exp1/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2019/10/01/it-exp1/index.html&title=小账本APP——软件项目风险管理及解决办法案例" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一直小白的博客&title=小账本APP——软件项目风险管理及解决办法案例&summary=&pics=http://yoursite.com/img/head_sculpture.png&url=http://yoursite.com/2019/10/01/it-exp1/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="小账本APP——软件项目风险管理及解决办法案例"><a href="#小账本APP——软件项目风险管理及解决办法案例" class="headerlink" title="小账本APP——软件项目风险管理及解决办法案例"></a>小账本APP——软件项目风险管理及解决办法案例</h1><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>软件项目风险是指在软件开发过程中遇到的预算和进度等方面的问题以及这些问题对软件项目的影响。软件项目风险会影响项目计划的实现，如果项目风险变成现实，就有可能影响项目的进度，增加项目的成本，甚至使软件项目不能实现。如果对项目进行风险管理，就可以最大限度的减少风险的发生。</p>
+<h3 id="项目风险管理"><a href="#项目风险管理" class="headerlink" title="项目风险管理"></a>项目风险管理</h3><h4 id="人员风险（Personal-risk）"><a href="#人员风险（Personal-risk）" class="headerlink" title="人员风险（Personal risk）"></a>人员风险（Personal risk）</h4><p>一、人员流动风险：</p>
+<p>在团队本项目过程中，技术人员的流动可能会给这款软件的开发带来很大损失，人员流动需要很高的成本，雇佣一个新员工的成本相当于老员工4.5~5个月的工资，人员的频繁流动还将抑制企业引进新技术、指定培训计划和发展策略，也就导致这款软件的开发、发展以及更新进度停滞不前</p>
+<p>二、人员商业泄密风险：</p>
+<p>在软件开发过程中，技术人员需要有着较好的保密性，如果在职开发人员将该软件的核心特色方面等泄漏给相似产品的竞争对手，那么对于我们软件的发布的初期将会造成非常大的阻碍以及损失。</p>
+<p>三、人员恶意犯罪风险：</p>
+<p>在软件开发中，有着极小概率的但不是没可能的会产生一种极端的情况：开发人员由于巨大的压力和各种负面化的情绪挤压，导致突发的情绪崩溃或者报复心理的激发，使得恶意的破坏整个软件的开发进度和内容，这种情况带来的损失将会是非常巨大的</p>
+<p>四、人员技术风险：</p>
+<p>对于账本业务而言，是指账本技术系统发生技术故障，导致数据中断、更新停滞、不畅，或在容量、运作等方面不能保障业务正常、有序、高效、顺利地进行，而可能给客户造成损失，创作团队因承担赔偿责任而带来经济或声誉损失的风险。还包括因软件设计缺陷，造成用户记录数据计算错误，给用户财产造成损失，作为先决条件的任务(如培训及其他项目)不能按时完成。以及在信息技术层面，用户数据数据被破坏、修改、泄漏等等风险。</p>
+<p>五、人员关系风险：</p>
+<p>开发人员和管理层之间关系不佳，导致整个软件的开发进度和内容；</p>
+<p>六、人员冲突风险：</p>
+<p>冲突的形成，原因包括个性差异的因素，创业团队内部资源的有限性，价值观的差异，角色的不同，职责划分不清等原因。而由于项目组成员之间发生冲突，导致沟通不畅、设计欠佳、接口出现错误和额外的重复工作。</p>
+<p>七、人员滞留风险：</p>
+<p>不适应工作的成员没有调离项目组，影响了项目组其他成员的积极性，拖慢整个项目团队的工作；</p>
+<p>八、人员缺乏风险：</p>
+<p>若在一段时间内，没有找到项目急需的具有特定技能的人，或者缺乏可以对新功能进行决策和开发的人员。那么将拉低整个团队的业绩，拖慢整个项目的进度。</p>
+<h4 id="问题解决方案"><a href="#问题解决方案" class="headerlink" title="问题解决方案"></a>问题解决方案</h4><p>1）对于人员流动风险方案：</p>
+<p>①找出人员流动的原因。可以与项目现有人员一起探讨人员流动的问题。</p>
+<p>②当项目启动后，假设会发生人员流动并采取一些技术措施保证当人员离开时的工作连续性。</p>
+<p>③对所有工作进行详细复审，使得不止一个人熟悉该项工作。</p>
+<p>④对于每一个关键的技术人员都制定一个后备人员。</p>
+<p>⑤满足员工的个人成长需要，进行丰富的再培养计划，缓解员工压力，保证员工个人需求。</p>
+<p>⑥持续培养团队文化，强调以人为本，给员工成就感，提供各种保证策略以提高员工对自己的满意度，给他们在企业足够的发展空间。</p>
+<p>2）对于人员商业泄密风险：</p>
+<p>①明确严格的规章制度，对于泄漏者采取法律手段严惩。</p>
+<p>②当项目启动后，将项目小组的成员与其他无关该项目的人员分隔开，达到该项目的内容计划只有该项目的内部人员知道，将人员经行分区化管理</p>
+<p>3）对于人员恶意犯罪风险：</p>
+<p>①适时的开展一些活动拓展，缓解人员的压力，释放他们的情绪以及提高人员的幸福感</p>
+<p>②及时了解开发成员的情况，对于员工的不满等倾诉，进行合理的，及时的解决，决不能放任不管</p>
+<p>4）对于人员技术风险：</p>
+<p>①PM重视是搞好团队培训的前提</p>
+<p>②科学确定培训内容</p>
+<p>③创新技能培训方式是搞好团队培训的保证</p>
+<p>④选择适当的培训方式。包括贴身式学习，独立式学习，度假式学习，轮换式学习。</p>
+<p>5）对于人员关系风险：</p>
+<p>作为管理层，多倾听员工心声。开展团体活动，管理层多与员工进行沟通交流。指定详细的行为规范，用于以后闹矛盾有依可寻。</p>
+<p>6）对于人员冲突风险：</p>
+<p>开展员工活动，指定良好的奖励制度。促进员工之间的交流。平时之前员工可以达成共识，管理层不偏袒员工。</p>
+<p>7）对于人员滞留风险：</p>
+<p>①与有问题的员工进行开诚布公的交流是正确解决问题的一个好办法。在你发现哪位员工有问题时，应该第一时间与其交谈。</p>
+<p>②不要等到他们自己也意识到同样的问题，也许这样的事情不会发生。如果你延误了这个时间，那么有问题的员工会以为他们的工作表现是被接受的，在你发现哪位员工有问题时，应该第一时间与其交谈。</p>
+<p>③不要等到他们自己也意识到同样的问题，也许这样的事情不会发生。如果你延误了这个时间，那么有问题的员工会以为他们的工作表现是被接受的。</p>
+<p>8）对于人员缺乏风险：</p>
+<p>合理划分员工的职位需求，建立预测模型，观察基于饱和度的数据，可计算该职位所需人数。</p>
+<h4 id="流程风险（Process-risk）"><a href="#流程风险（Process-risk）" class="headerlink" title="流程风险（Process risk）"></a>流程风险（Process risk）</h4><p>一、流程临时变更风险：</p>
+<p>在软件开发的过程中，由于用户需求的临时变更，人员流动的变化，资金链的暂时短缺等各种因素可能会导致整个项目流程的临时变更，如果应对的措手不及，带了的损失也将会是巨大的</p>
+<p>二、流程制定不妥当风险：</p>
+<p>一个妥当完善的开发流程对于一款软件的开发是非常重要的，如果项目进行到一半发现后续流程有问题，不符合该软件的开发，那么在中途重新规划流程，不仅在时间上耽误了，更是浪费了大量的财力物力，直接将成本提高了不少，对于产品发布后的盈利也将造成不小的损失</p>
+<p>三、流程纸面风险</p>
+<p>大量的纸面工作导致进程比预期的慢。向管理层撰写进程报告占用开发人员的时间比预期的多。</p>
+<p>四、流程正规风险</p>
+<p>①太不正规(缺乏对软件开发策略和标准的遵循)，导致沟通不足，质量欠佳，甚至需重新开发。过于正规(教条地坚持软件开发策略和标准)，导致过多耗时于无用的工作。</p>
+<h4 id="问题解决方案-1"><a href="#问题解决方案-1" class="headerlink" title="问题解决方案"></a>问题解决方案</h4><p>1）对于流程临时变更风险：</p>
+<p>①在项目开发启动之前，确定好用户需需求，并对未来可能的需求变化做好应对措施，同时对于其他各种情况造成的流程变更做好第二方案，使得整个项目留有足够应对大部分高概率情况造成的流程变更问题的后备流程方案</p>
+<p>②在整个项目开发按照流程进行的过程中，制定的流程应该保证后一流程的变更不会对前一流程造成十分大的影响，能够在后备方案排不上用场的时候，仅仅改变后续流程即可接着进行项目</p>
+<p>2）对于流程制定不妥当风险：</p>
+<p>①在初期制定好一个妥当、晚上的流程，对流程的各个方面的可行性经行严格的分析和审核</p>
+<p>②同样的，在整个项目开发按照流程进行的过程中，制定的流程应该保证后一流程的变更不会对前一流程造成十分大的影响，在发现流程有问题的时候，仅仅改变后续流程即可接着进行项目，将损失减到最小</p>
+<p>3）对于流程纸面风险：</p>
+<p>①缩减不必要的纸面材料，让开发人员专注于开发。</p>
+<p>②招募一定数量的编写纸质材料的员工</p>
+<p>③提前编辑好纸质材料的样式和模板。</p>
+<p>4）对于流程制定不妥当风险：</p>
+<p>①招募一定数量的需求分析师对产品进行分析</p>
+<p>②做好完整的调查分析，规划软件的发展方向。</p>
+<h4 id="技术风险（Technologyrisk）"><a href="#技术风险（Technologyrisk）" class="headerlink" title="技术风险（Technologyrisk）"></a>技术风险（Technologyrisk）</h4><p>一、技术不足风险:</p>
+<p>现有开发人员不足以实现软件全部功能,导致产品流产;</p>
+<p>二、技术落后风险：</p>
+<p>由于在软件项目的过程中，我们的软件还没完全开发出来，市面上就会产生新的技术来匹配同类的产品，那么这也许就意味着我们需要丢弃前面的开发进度，重新开始，这是一种在财力，人力，物力以及时间上的一种巨大损失，及时强行投入市面上也得不到可观的效益。举个例子，就好比几年前街道旁刚开始有出租车按钮，按一下过一会就会有的士收到信息并过来的的士按钮站，但它刚出现不久，就有手机打车软件出现，那么这种情况对于的士按钮站这个软件来说，无疑是一种巨大的冲击。</p>
+<p>三、技术重点不匹配风险：</p>
+<p>如果在项目中，没有把握好软件的定位以及功能，将技术的重点研究方向与产品不匹配，这样开发出来的软件将会是没有市场的，等于做了无用功。比如银行相关App的技术重点多半是放在加密技术和防入侵上。但如果你将界面视觉效果作为技术重点放在银行App上，那么结果可想而知，是没有前景和市场的，并且给用户和我们自己带来巨大的损失</p>
+<p>四、技术更新缓慢：</p>
+<p>在软件发布后，随着市场的发展，软件内的各种技术更新换代也是非常快的，如果没有及时的做好这一点，那么根据市场导向我们的软件也将会被逐渐淘汰</p>
+<p>五、技术冗余风险:</p>
+<p>开发额外的不需要的功能，延长了计划进度；重复开发已有技术;</p>
+<h4 id="问题解决方案-2"><a href="#问题解决方案-2" class="headerlink" title="问题解决方案"></a>问题解决方案</h4><p>1）对于技术不足风险:</p>
+<p>①认真做好可行性研究中的技术分析</p>
+<p>②明确产品需要用到哪些技术</p>
+<p>③仔细了解所用技术的局限性</p>
+<p>④确保开发人员的能力符合要求,并定期开展相关技术培训</p>
+<p>⑤认真考虑是否能遵循所用技术的版权协议</p>
+<p>2）对于技术落后风险：</p>
+<p>①首先最基本的是要求开发人员有着深厚的技术功底，能应对技术变更比软件开发进度快的风险，对新技术的学习能力强，能很快的对自身软件进行更新</p>
+<p>②在软件开发中应考虑到留有一个技术相关的接口，能快速的将市面上出现的新技术嵌入我们的软件中</p>
+<p>③使用敏捷开发思想,合理规划,即时上线,快速迭代</p>
+<p>3）对于技术重点不匹配风险：</p>
+<p>①结合需求和可行性定位好自己软件的主打方向，避免盲目开发</p>
+<p>②将资金，物资，人力等分配，按照重点级别分配，这样即使在软件的技术不小心发展在了在非重点的方向上，也会因为各方面短缺的阻碍使得整个项目组停下里经行重新分析，使得项目组意识到存在的问题</p>
+<p>4）对于技术更新缓慢风险：</p>
+<p>①及时了解和掌握市面上的技术更新方向，对技术的更新换代进行及时处理，不能拖延</p>
+<p>②要求开发人员有着深厚的技术功底，对新技术的学习能力强，能很快的对自身软件进行更新换代</p>
+<p>③接纳变化,及时安排重构</p>
+<p>5）对于技术冗余风险:</p>
+<p>①认真做好需求分析,明确系统边界</p>
+<p>②以业余理财为核心,认真划分各模块的重要等级</p>
+<p>③严格控制项目进度,必要时放弃不重要模块的开发</p>
+<p>④需求分析中合理划分模块,确保代码可重用性</p>
+<h4 id="环境风险（Environmentrisk）"><a href="#环境风险（Environmentrisk）" class="headerlink" title="环境风险（Environmentrisk）"></a>环境风险（Environmentrisk）</h4><p>一、市场环境风险：</p>
+<p>可能会发生金融危机等市场大变动的环境风险，在这个期间开发软件，不管是对开发过程、初期发布以及后期发展都是巨大的阻碍，处理不当严重的甚至会导致项目直接宣告失败</p>
+<p>二、内部环境风险：</p>
+<p>开发软件的公司或者团队可能由于不良的负面新闻、失策的公关等内部因素的，导致人们对软件的了解度很低或者严重的是对我们自身而不是软件有着很低的评分以及负面的看法，那么即使你的软件做的再好，也会在初期造成十分大的损失。</p>
+<p>三、开发环境风险:</p>
+<p>①开发工具多样化,开发环境不统一,造成项目编译运行混乱,严重影响开发进度</p>
+<p>②开发工具不如期望的那样有效,开发人员需要时间创建工作环境或者切换新的工具</p>
+<p>③新的开发工具的学习期比预期的长,内容繁多</p>
+<h4 id="问题解决方案-3"><a href="#问题解决方案-3" class="headerlink" title="问题解决方案"></a>问题解决方案</h4><p>1）市场环境风险：</p>
+<p>①在软件开发的每个阶段，都做好应对市场动荡的后备方案</p>
+<p>②实时了解和分析市场情动荡，并根据情况及时修改后备方案以应对风险</p>
+<p>2）内部环境风险：</p>
+<p>①做好合理的公关，在做好软件的同时，打造团队的良好口碑</p>
+<p>②在每一阶段适当的公开软件相关信息，提高人们的关注度</p>
+<p>3）开发环境风险:</p>
+<p>①开发工具应适合项目,功能强大,易于学习,最好请有经验且涉猎较广的开发人员推荐</p>
+<p>②开发环境应与本软件项目密切相关</p>
+<p>③必要时使用较多经费用于购买开发工具</p>
+<p>④必要时向第三方购买解决方案</p>
+<p>⑤统一开发环境</p>
+<p>⑥为开发人员预留一定时间用于熟悉开发工具与开发环境</p>
+<blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/10/01/it-exp1/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/10/01/it-exp1/</a></p></blockquote>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2019/10/01/it-exp1/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/10/01/it-exp1/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//yizhixiaobai.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2019/10/04/algorithm/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/09/30/oracle-exp4/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/head_sculpture.png" alt="一直小白's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        zhongyuhang113@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:zhongyuhang113@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2019/11/">十一月 2019<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">27</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">14</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Database/">Database<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/IT项目管理/">IT项目管理<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/android/">android<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/html/">html<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/j2ee/">j2ee<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/java/">java<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/lua/">lua<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/opencv/">opencv<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/oracle/">oracle<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/书籍/">书籍<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端/">前端<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/密码学/">密码学<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/开箱/">开箱<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/心理学/">心理学<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/测试/">测试<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/游记/">游记<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/笔记/">笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机网络/">计算机网络<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/评测/">评测<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/鱼的记忆/">鱼的记忆<span class="sidebar_archives-count">9</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">table</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间轴">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                时间轴
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/video" title="目之所及">
+                
+                    <i class="material-icons sidebar-material-icons">movie</i>
+                
+                目之所及
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="图库">
+                
+                    <i class="material-icons sidebar-material-icons">collections</i>
+                
+                图库
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="好朋友">
+                
+                    <i class="material-icons sidebar-material-icons">favorite_border</i>
+                
+                好朋友
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/PGP" title="PGP密钥">
+                
+                    <i class="material-icons sidebar-material-icons">vpn_key</i>
+                
+                PGP密钥
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/agree" title="知识共享协议">
+                
+                    <i class="material-icons sidebar-material-icons">https</i>
+                
+                知识共享协议
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/me" title="关于小白">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于小白
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">63</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/WTOJL7dDTsa8Dcd" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/zyhang8" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https:www.github.com/zyhang8" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;一直小白的博客
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//yizhixiaobai.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2017;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
