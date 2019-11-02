@@ -4,7 +4,32 @@
   
     
     <entry>
-      <title>pta-1002</title>
+      <title>C++    PTA-B   1003 我要通过！</title>
+      <link href="/2019/11/13/pta-1003/"/>
+      <url>/2019/11/13/pta-1003/</url>
+      
+        <content type="html"><![CDATA[<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>“答案正确”是自动判题系统给出的最令人欢喜的回复。本题属于 PAT 的“答案正确”大派送 —— 只要读入的字符串满足下列条件，系统就输出“答案正确”，否则输出“答案错误”。<br>得到“答案正确”的条件是：</p><p>字符串中必须仅有 P、 A、 T这三种字符，不可以包含其它字符；<br>任意形如 xPATx 的字符串都可以获得“答案正确”，其中 x 或者是空字符串，或者是仅由字母 A 组成的字符串；<br>如果 aPbTc 是正确的，那么 aPbATca 也是正确的，其中 a、 b、 c 均或者是空字符串，或者是仅由字母 A 组成的字符串。</p><p>现在就请你为 PAT 写一个自动裁判程序，判定哪些字符串是可以获得“答案正确”的。<br>输入格式：<br>每个测试输入包含 1 个测试用例。第 1 行给出一个正整数 n (&lt;10)，是需要检测的字符串个数。接下来每个字符串占一行，字符串长度不超过 100，且不包含空格。<br>输出格式：<br>每个字符串的检测结果占一行，如果该字符串可以获得“答案正确”，则输出 YES，否则输出 NO。</p><font color="blue">**输入样例：8PATPAATAAPATAAAAPAATAAAAxPATxPTWhateverAPAAATAA**  </font><font color="blue">**输出样例：YESYESYESYESNONONONO** </font><h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>一开始一头雾水，后来bing后了解一些规律<br>一句话总结字符串的要求：<br><font color="orange"> <strong>只能有一个P一个T，中间末尾和开头可以随便插入A。<br>但是必须满足开头的A的个数 * 中间的A的个数 = 结尾的A的个数，而且P和T之间不能没有A</strong> </font></p><h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">char</span> s[<span class="number">10001</span>];</span><br><span class="line"><span class="keyword">int</span> i,a,b,c,n;</span><br><span class="line"><span class="keyword">char</span> *p;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">&#123;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; s;</span><br><span class="line"><span class="keyword">if</span>(!<span class="built_in">strcmp</span>(s,<span class="string">"PAT"</span>))&#123;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"YES"</span>&lt;&lt;<span class="built_in">endl</span>;<span class="keyword">continue</span>;</span><br><span class="line">&#125;</span><br><span class="line">a=b=c=<span class="number">0</span>;</span><br><span class="line">p=s;</span><br><span class="line"><span class="keyword">while</span>(*p==<span class="string">'A'</span>)&#123;</span><br><span class="line">        a++;</span><br><span class="line">        p++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(*p==<span class="string">'P'</span>)&#123;</span><br><span class="line">    p++;</span><br><span class="line">    <span class="keyword">while</span>(*p==<span class="string">'A'</span>)&#123;</span><br><span class="line">        b++;</span><br><span class="line">        p++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(*p==<span class="string">'T'</span>) &#123;</span><br><span class="line">        p++;</span><br><span class="line">        <span class="keyword">while</span>(*p==<span class="string">'A'</span>)&#123;</span><br><span class="line">            c++;</span><br><span class="line">            p++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(!(*p)&amp;&amp;b&gt;<span class="number">0</span>&amp;&amp;c==a*b)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"YES"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;<span class="string">"NO"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/11/13/pta-1003/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/11/13/pta-1003/</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C++ PTA 1002 写出这个数</title>
       <link href="/2019/11/12/pta-1002/"/>
       <url>/2019/11/12/pta-1002/</url>
       
@@ -2193,17 +2218,6 @@
     
     
     <entry>
-      <title>links</title>
-      <link href="/links/index.html"/>
-      <url>/links/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>gallery</title>
       <link href="/gallery/index.html"/>
       <url>/gallery/index.html</url>
@@ -2215,11 +2229,22 @@
     
     
     <entry>
-      <title></title>
-      <link href="/me/index.html"/>
-      <url>/me/index.html</url>
+      <title>links</title>
+      <link href="/links/index.html"/>
+      <url>/links/index.html</url>
       
-        <content type="html"><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><p>欢迎来到我的博客，你可以叫我一只小白或者一直小白。当前还是上海某高校的本科生哦,现在就任某实验室里<del>实力划水</del></p><p>第一特长: 乒乓球,数学,码<br>第二特长: 羽毛球,跑步<br>兴趣： 斗地主,象棋,摄影,唱歌</p><h1 id="这是哪里呢？"><a href="#这是哪里呢？" class="headerlink" title="这是哪里呢？"></a>这是哪里呢？</h1><p>这里是我的博客，可能很少会更新，不过应该会记录一些学习记录和生活趣事，以后应该看到会很有趣吧。</p><h1 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h1><p>首先，感谢提供这个博客主机的 kookxiang ，谢谢~<br>其次，感谢开发了这个博客程序的开发者们~<br>然后，感谢编写了这套设计模板的人们<del>在网站的右下角可以链接到这个主题的 Github 页上哟</del></p><h1 id="如果你想与我交换友链"><a href="#如果你想与我交换友链" class="headerlink" title="如果你想与我交换友链"></a>如果你想与我交换友链</h1><p>如果你想与我交换友链请在下方评论。<br>我仅接受个人博客申请友链。<br>我的友链信息如下</p><blockquote><p>博客名: 一只小白<br>网址: <a href="https://zyhang8.github.io" target="_blank" rel="noopener">https://zyhang8.github.io</a><br>头像: <a href="https://zyhang8.github.io/img/head_sculpture.png" target="_blank" rel="noopener">https://zyhang8.github.io/img/head_sculpture.png</a><br>描述: 这是一只小白<br>注意：如果你的博客没有 https 支持，在 永远的好伙伴 页面将不会显示绿锁标志。</p></blockquote><h1 id="最后唠叨几句www"><a href="#最后唠叨几句www" class="headerlink" title="最后唠叨几句www"></a>最后唠叨几句www</h1><p>我个人不是很会写文章，所以估计文章都是一些记录或者想法而已<del>而且更新可能很少啦</del>也感谢现在正在看我的博客的你，谢谢你的支持哟~</p><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/me/" target="_blank" rel="noopener">https://zyhang8.github.io/me/</a></p></blockquote>]]></content>
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -2237,11 +2262,11 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title></title>
+      <link href="/me/index.html"/>
+      <url>/me/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><p>欢迎来到我的博客，你可以叫我一只小白或者一直小白。当前还是上海某高校的本科生哦,现在就任某实验室里<del>实力划水</del></p><p>第一特长: 乒乓球,数学,码<br>第二特长: 羽毛球,跑步<br>兴趣： 斗地主,象棋,摄影,唱歌</p><h1 id="这是哪里呢？"><a href="#这是哪里呢？" class="headerlink" title="这是哪里呢？"></a>这是哪里呢？</h1><p>这里是我的博客，可能很少会更新，不过应该会记录一些学习记录和生活趣事，以后应该看到会很有趣吧。</p><h1 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h1><p>首先，感谢提供这个博客主机的 kookxiang ，谢谢~<br>其次，感谢开发了这个博客程序的开发者们~<br>然后，感谢编写了这套设计模板的人们<del>在网站的右下角可以链接到这个主题的 Github 页上哟</del></p><h1 id="如果你想与我交换友链"><a href="#如果你想与我交换友链" class="headerlink" title="如果你想与我交换友链"></a>如果你想与我交换友链</h1><p>如果你想与我交换友链请在下方评论。<br>我仅接受个人博客申请友链。<br>我的友链信息如下</p><blockquote><p>博客名: 一只小白<br>网址: <a href="https://zyhang8.github.io" target="_blank" rel="noopener">https://zyhang8.github.io</a><br>头像: <a href="https://zyhang8.github.io/img/head_sculpture.png" target="_blank" rel="noopener">https://zyhang8.github.io/img/head_sculpture.png</a><br>描述: 这是一只小白<br>注意：如果你的博客没有 https 支持，在 永远的好伙伴 页面将不会显示绿锁标志。</p></blockquote><h1 id="最后唠叨几句www"><a href="#最后唠叨几句www" class="headerlink" title="最后唠叨几句www"></a>最后唠叨几句www</h1><p>我个人不是很会写文章，所以估计文章都是一些记录或者想法而已<del>而且更新可能很少啦</del>也感谢现在正在看我的博客的你，谢谢你的支持哟~</p><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/me/" target="_blank" rel="noopener">https://zyhang8.github.io/me/</a></p></blockquote>]]></content>
       
     </entry>
     
