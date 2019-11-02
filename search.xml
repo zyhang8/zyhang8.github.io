@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>基本网络服务与应用配置</title>
+      <link href="/2019/11/15/cn-exp4/"/>
+      <url>/2019/11/15/cn-exp4/</url>
+      
+        <content type="html"><![CDATA[<h1 id="实验三-基本网络服务与应用配置"><a href="#实验三-基本网络服务与应用配置" class="headerlink" title="实验三 基本网络服务与应用配置"></a>实验三 基本网络服务与应用配置</h1><h2 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h2><p>理解基本网络服务的原理与应用<br>掌握WEB服务器的基本配置<br>了解DNS服务器的基本配置与应用</p><h2 id="实验条件"><a href="#实验条件" class="headerlink" title="实验条件"></a>实验条件</h2><p>计算机：网络连接正常<br>操作系统：windows 10/macOS Catalina</p><h2 id="实验内容"><a href="#实验内容" class="headerlink" title="实验内容"></a>实验内容</h2><ol><li>WEB服务器(IIS)基本配置</li><li>DNS服务器基本配置</li><li>FTP服务配置（选做）</li></ol><h2 id="实验步骤与结果"><a href="#实验步骤与结果" class="headerlink" title="实验步骤与结果"></a>实验步骤与结果</h2><h3 id="搭建Web服务器"><a href="#搭建Web服务器" class="headerlink" title="搭建Web服务器"></a>搭建Web服务器</h3><p>总感觉之前好像自己搭过</p><p><img src="https://s2.ax1x.com/2019/11/02/KLr1hj.png" alt="KLr1hj.png"></p><p><img src="https://s2.ax1x.com/2019/11/02/KLDqk4.jpg" alt="KLDqk4.jpg"></p><p><img src="https://s2.ax1x.com/2019/11/02/KLr89s.png" alt="KLr89s.png"></p><p><img src="https://s2.ax1x.com/2019/11/02/KLrG3n.png" alt="KLrG3n.png"></p><p><img src="https://s2.ax1x.com/2019/11/02/KLrJcq.png" alt="KLrJcq.png"></p><p><img src="https://s2.ax1x.com/2019/11/02/KLrYj0.png" alt="KLrYj0.png"></p><p>配置后放进我之前写的一个网站，成功运行</p><h3 id="2-DNS基本配置"><a href="#2-DNS基本配置" class="headerlink" title="2 DNS基本配置"></a>2 DNS基本配置</h3><p>这道题必须是server版本才可以做，普通的windows控制面板固化，没有服务器管理这个功能，还是跑去了机房做了一下</p><h4 id="2-1-安装DNS服务"><a href="#2-1-安装DNS服务" class="headerlink" title="2.1 安装DNS服务"></a>2.1 安装DNS服务</h4><p>在windows server 2008 上操作，控制面板-&gt;管理工具-&gt;服务器管理，点击“角色”-&gt;“添加角色”，选择“DNS服务器”,默认选择直至安装完成。</p><p><img src="https://s2.ax1x.com/2019/11/02/KLDH7F.png" alt="KLDH7F.png"></p><p><img src="https://s2.ax1x.com/2019/11/02/KLDIXV.png" alt="KLDIXV.png"></p><h4 id="2-2-配置DNS"><a href="#2-2-配置DNS" class="headerlink" title="2.2 配置DNS"></a>2.2 配置DNS</h4><p>–控制面板-&gt;管理工具-&gt;DNS，打开DNS的配置界面</p><p>–右键点击“正向查找区域”-&gt;“新建区域”：</p><p><img src="https://s2.ax1x.com/2019/11/02/KLDTmT.png" alt="KLDTmT.png"></p><p>–默认选择，设置区域名称 zyh.com</p><p><img src="https://s2.ax1x.com/2019/11/02/KLD4lq.png" alt="KLD4lq.png"></p><p>–然后，默认各选择项，直至新建区域完成。</p><p><img src="https://s2.ax1x.com/2019/11/02/KLD560.png" alt="KLD560.png"></p><p>–右键单击“lzd.com”，然后“新建主机”。 –输入新建主机名称”www”,和对应的IP地址192.168.100.10。表示在DNS中注册了主机<a href="http://www.zyh.com" target="_blank" rel="noopener">www.zyh.com</a>, 该主机IP为192.168.100.10</p><p><img src="https://s2.ax1x.com/2019/11/02/KLDLtJ.png" alt="KLDLtJ.png"></p><p>DNS服务器配置结果：</p><p><img src="https://s2.ax1x.com/2019/11/02/KLDOh9.png" alt="KLDOh9.png"></p><h4 id="2-3-在windows7上指定使用DNS服务的提供者（DNS服务器）地址"><a href="#2-3-在windows7上指定使用DNS服务的提供者（DNS服务器）地址" class="headerlink" title="2.3 在windows7上指定使用DNS服务的提供者（DNS服务器）地址"></a>2.3 在windows7上指定使用DNS服务的提供者（DNS服务器）地址</h4><p><img src="https://s2.ax1x.com/2019/11/02/KLDjpR.png" alt="KLDjpR.png"></p><h4 id="2-4在windows7上使用www-zyh-com访问该网站"><a href="#2-4在windows7上使用www-zyh-com访问该网站" class="headerlink" title="2.4在windows7上使用www.zyh.com访问该网站"></a>2.4在windows7上使用<a href="http://www.zyh.com访问该网站" target="_blank" rel="noopener">www.zyh.com访问该网站</a></h4><p><img src="https://s2.ax1x.com/2019/11/02/KLDv11.png" alt="KLDv11.png"></p><h3 id="3-ftp服务配置（选做）"><a href="#3-ftp服务配置（选做）" class="headerlink" title="3. ftp服务配置（选做）"></a>3. ftp服务配置（选做）</h3><p>（1）匿名ftp</p><p>首先我们创建一个用户账户用于登录FTP进行操作。右键点击桌面的“计算机”点击选择“管理”选项，进入管理界面打开“本地用户和组”选项，我们可以看到列表中的用户选项。</p><p><img src="https://s2.ax1x.com/2019/11/02/KLDx6x.png" alt="KLDx6x.png"></p><p>然后右键用户选项，在下拉菜单中选择新用户，开始建立我们的用户，填写用户名称以及密码。描述可以不填。然后点击创建。创建完成在右边的用户列表中就可以看到我们创建的用户了。</p><p><img src="https://s2.ax1x.com/2019/11/02/KLrpnK.png" alt="KLrpnK.png"></p><p><img src="https://s2.ax1x.com/2019/11/02/KLDzX6.png" alt="KLDzX6.png"></p><p>创建用户完成后我们开始添加IIS程序服务。打开电脑的开始菜单找到控制面板选项，打开进入。进入控制面板界面找到程序选项，点击下方的卸载程序按钮，进入到安装程序列表界面。</p><p><img src="https://s2.ax1x.com/2019/11/02/KLrC7D.png" alt="KLrC7D.png"></p><p><img src="https://s2.ax1x.com/2019/11/02/KLriAe.png" alt="KLriAe.png"></p><p>进入到程序和功能选项栏目，我们可以看到左上方的菜单栏中有一个打开或关闭Windows功能选项，点击进入</p><p><img src="https://s2.ax1x.com/2019/11/02/KLrFtH.png" alt="KLrFtH.png"></p><p>进入到打开或关闭Windows功能界面，我们在好到Internet信息服务，然后点击打开在FTP服务器前面打勾，也就是把其子菜单的FTP服务和FTP扩展性打勾，然后点击下方的确定按钮。</p><p><img src="https://s2.ax1x.com/2019/11/02/KLrkhd.png" alt="KLrkhd.png"></p><p>注意：Web管理工具也要设置，否则后面可能会找不到Internet信息服务管理。</p><p><img src="https://s2.ax1x.com/2019/11/02/KLrE9A.png" alt="KLrE9A.png"></p><p>添加完成 IIS服务之后，开始创建我们的FTP站点，右键点击我的电脑选择管理，然后找到服务和应用程序选项点击打开，接着点击Internet信息服务管理–此时我们可以看到右边出现了一个连接框。</p><p><img src="https://s2.ax1x.com/2019/11/02/KLrV1I.png" alt="KLrV1I.png"></p><p>点击打开连接框下面的本地主机主页，然后可以看到应用程序池和网站选项，我们右键点击网站选择添加网站，然后在弹出的添加网站框里面输入我们的网站名称，物理路径也就是我们的FTP本地文件夹，我们可以在磁盘里面新建好，然后选择添加，IP地址选择我们本机的IP地址。</p><p><img src="https://s2.ax1x.com/2019/11/02/KLrZct.png" alt="KLrZct.png"></p><p>新建完成我们的FTP之后，我们可以看到网站的下方多出了一个我们刚刚建立的网，右键点击网站名称，选择添加FTP站点发布，然后开始绑定和SSL设置，端口号选择2121.IP地址填写本机IP地址</p><p><img src="https://s2.ax1x.com/2019/11/02/KLrejP.png" alt="KLrejP.png"></p><p><img src="https://s2.ax1x.com/2019/11/02/KLruB8.png" alt="KLruB8.png"></p><p>然后进入身份验证设置选项，我们根据个人用途选择身份验证的基本要求，已经用户的相关权限，设置完毕点击完成选项。此时会提醒我们FTP站点发布成功。</p><p><img src="https://s2.ax1x.com/2019/11/02/KLrKHS.png" alt="KLrKHS.png"></p><p><img src="https://s2.ax1x.com/2019/11/02/KLrQAg.png" alt="KLrQAg.png"></p><p>然后我们打开电脑的浏览器在上方的地址栏里面输入FTP://IP地址：2121点击回车就可以看到我们的FTP服务器已经添加成功了我们可以在添加的本地文件夹里面来管理我们FTP服务器文上传与下载。</p><p><img src="https://s2.ax1x.com/2019/11/02/KLrlNQ.png" alt="KLrlNQ.png"></p><h2 id="实验总结"><a href="#实验总结" class="headerlink" title="实验总结"></a>实验总结</h2><p>理解了基本网络服务的原理与应用，并且掌握WEB服务器的基本配置，了解DNS服务器的基本配置与应用，最后学会ftp服务配置。</p><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/11/15/cn-exp4/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/11/15/cn-exp4/</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>计算机网络-第三章课后习题</title>
       <link href="/2019/11/14/cn-exp3/"/>
       <url>/2019/11/14/cn-exp3/</url>
@@ -2322,17 +2347,6 @@
     
     
     <entry>
-      <title>gallery</title>
-      <link href="/gallery/index.html"/>
-      <url>/gallery/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title></title>
       <link href="/agree/index.html"/>
       <url>/agree/index.html</url>
@@ -2344,11 +2358,33 @@
     
     
     <entry>
+      <title>gallery</title>
+      <link href="/gallery/index.html"/>
+      <url>/gallery/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>links</title>
       <link href="/links/index.html"/>
       <url>/links/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/me/index.html"/>
+      <url>/me/index.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><p>欢迎来到我的博客，你可以叫我一只小白或者一直小白。当前还是上海某高校的本科生哦,现在就任某实验室里<del>实力划水</del></p><p>第一特长: 乒乓球,数学,码<br>第二特长: 羽毛球,跑步<br>兴趣： 斗地主,象棋,摄影,唱歌</p><h1 id="这是哪里呢？"><a href="#这是哪里呢？" class="headerlink" title="这是哪里呢？"></a>这是哪里呢？</h1><p>这里是我的博客，可能很少会更新，不过应该会记录一些学习记录和生活趣事，以后应该看到会很有趣吧。</p><h1 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h1><p>首先，感谢提供这个博客主机的 kookxiang ，谢谢~<br>其次，感谢开发了这个博客程序的开发者们~<br>然后，感谢编写了这套设计模板的人们<del>在网站的右下角可以链接到这个主题的 Github 页上哟</del></p><h1 id="如果你想与我交换友链"><a href="#如果你想与我交换友链" class="headerlink" title="如果你想与我交换友链"></a>如果你想与我交换友链</h1><p>如果你想与我交换友链请在下方评论。<br>我仅接受个人博客申请友链。<br>我的友链信息如下</p><blockquote><p>博客名: 一只小白<br>网址: <a href="https://zyhang8.github.io" target="_blank" rel="noopener">https://zyhang8.github.io</a><br>头像: <a href="https://zyhang8.github.io/img/head_sculpture.png" target="_blank" rel="noopener">https://zyhang8.github.io/img/head_sculpture.png</a><br>描述: 这是一只小白<br>注意：如果你的博客没有 https 支持，在 永远的好伙伴 页面将不会显示绿锁标志。</p></blockquote><h1 id="最后唠叨几句www"><a href="#最后唠叨几句www" class="headerlink" title="最后唠叨几句www"></a>最后唠叨几句www</h1><p>我个人不是很会写文章，所以估计文章都是一些记录或者想法而已<del>而且更新可能很少啦</del>也感谢现在正在看我的博客的你，谢谢你的支持哟~</p><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/me/" target="_blank" rel="noopener">https://zyhang8.github.io/me/</a></p></blockquote>]]></content>
       
     </entry>
     
@@ -2371,17 +2407,6 @@
       <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/me/index.html"/>
-      <url>/me/index.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><p>欢迎来到我的博客，你可以叫我一只小白或者一直小白。当前还是上海某高校的本科生哦,现在就任某实验室里<del>实力划水</del></p><p>第一特长: 乒乓球,数学,码<br>第二特长: 羽毛球,跑步<br>兴趣： 斗地主,象棋,摄影,唱歌</p><h1 id="这是哪里呢？"><a href="#这是哪里呢？" class="headerlink" title="这是哪里呢？"></a>这是哪里呢？</h1><p>这里是我的博客，可能很少会更新，不过应该会记录一些学习记录和生活趣事，以后应该看到会很有趣吧。</p><h1 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h1><p>首先，感谢提供这个博客主机的 kookxiang ，谢谢~<br>其次，感谢开发了这个博客程序的开发者们~<br>然后，感谢编写了这套设计模板的人们<del>在网站的右下角可以链接到这个主题的 Github 页上哟</del></p><h1 id="如果你想与我交换友链"><a href="#如果你想与我交换友链" class="headerlink" title="如果你想与我交换友链"></a>如果你想与我交换友链</h1><p>如果你想与我交换友链请在下方评论。<br>我仅接受个人博客申请友链。<br>我的友链信息如下</p><blockquote><p>博客名: 一只小白<br>网址: <a href="https://zyhang8.github.io" target="_blank" rel="noopener">https://zyhang8.github.io</a><br>头像: <a href="https://zyhang8.github.io/img/head_sculpture.png" target="_blank" rel="noopener">https://zyhang8.github.io/img/head_sculpture.png</a><br>描述: 这是一只小白<br>注意：如果你的博客没有 https 支持，在 永远的好伙伴 页面将不会显示绿锁标志。</p></blockquote><h1 id="最后唠叨几句www"><a href="#最后唠叨几句www" class="headerlink" title="最后唠叨几句www"></a>最后唠叨几句www</h1><p>我个人不是很会写文章，所以估计文章都是一些记录或者想法而已<del>而且更新可能很少啦</del>也感谢现在正在看我的博客的你，谢谢你的支持哟~</p><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/me/" target="_blank" rel="noopener">https://zyhang8.github.io/me/</a></p></blockquote>]]></content>
       
     </entry>
     
