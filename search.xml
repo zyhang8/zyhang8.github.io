@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>c++ PTA 1001 害死人不偿命的(3n+1)猜想</title>
+      <link href="/2019/11/11/pta-1001/"/>
+      <url>/2019/11/11/pta-1001/</url>
+      
+        <content type="html"><![CDATA[<p>1001 害死人不偿命的(3n+1)猜想 （15 分）卡拉兹(Callatz)猜想：</p><p>对任何一个正整数 n，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把 (3n+1) 砍掉一半。这样一直反复砍下去，最后一定在某一步得到 n=1。卡拉兹在 1950 年的世界数学家大会上公布了这个猜想，传说当时耶鲁大学师生齐动员，拼命想证明这个貌似很傻很天真的命题，结果闹得学生们无心学业，一心只证 (3n+1)，以至于有人说这是一个阴谋，卡拉兹是在蓄意延缓美国数学界教学与科研的进展……</p><p>我们今天的题目不是证明卡拉兹猜想，而是对给定的任一不超过 1000 的正整数 n，简单地数一下，需要多少步（砍几下）才能得到 n=1？</p><p>输入格式：</p><p>每个测试输入包含 1 个测试用例，即给出正整数 n 的值。</p><p>输出格式：</p><p>输出从 n 计算到 1 需要的步数。</p><p>输入样例：<br>3</p><p>输出样例：<br>5</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">int</span> j=<span class="number">0</span>;</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line"><span class="keyword">while</span>(n!=<span class="number">1</span>)</span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">if</span>(n%<span class="number">2</span>==<span class="number">0</span>)&#123;</span><br><span class="line">    n=n/<span class="number">2</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">else</span> &#123;</span><br><span class="line">    n=(<span class="number">3</span>*n+<span class="number">1</span>)/<span class="number">2</span>;</span><br><span class="line">  &#125;</span><br><span class="line">j++;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; j;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/11/11/pta-1001/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/11/11/pta-1001/</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> c++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>迭代器、中介者和工厂模式实验课</title>
       <link href="/2019/11/10/design-exp5/"/>
       <url>/2019/11/10/design-exp5/</url>
@@ -2122,17 +2147,6 @@
     
     <entry>
       <title></title>
-      <link href="/PGP/index.html"/>
-      <url>/PGP/index.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="什么是-PGP-？它能做什么-？"><a href="#什么是-PGP-？它能做什么-？" class="headerlink" title="什么是 PGP ？它能做什么 ？"></a>什么是 PGP ？它能做什么 ？</h1><p>PGP 是 Pretty Good Privacy 的缩写，它是一套用于消息加密、验证的数据交换方法。遵守 OpenPGP 数据加解密标准 (RFC 4880) 。<br>PGP 可以用作 加密、数字签名、认证。</p><h2 id="使用-PGP-与我通讯"><a href="#使用-PGP-与我通讯" class="headerlink" title="使用 PGP 与我通讯"></a>使用 PGP 与我通讯</h2><p>首先下载我的 <a href="https://files.cnblogs.com/files/pipi-pig/PGP_public.zip" target="_blank" rel="noopener">PGP 公钥</a> 并导入到你的 PGP 加密程序中。(Mac OS 可以使用GPG Keychain)<br>注意验证我的公钥指纹为 A038 89C1 542D 6DB7 BD66  CEE3 D00F F13E B0B8 1FDA，如果指纹一致说明你下载的公钥没有被篡改。<br>使用这个公钥加密你的信息，并发送到 <a href="mailto:zhongyuhang113@gmail.com" target="_blank" rel="noopener">zhongyuhang113@gmail.com</a> 字样即可被我的邮箱自动分类。</p><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/PGP/" target="_blank" rel="noopener">https://zyhang8.github.io/PGP/</a></p></blockquote>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
       <link href="/agree/index.html"/>
       <url>/agree/index.html</url>
       
@@ -2144,10 +2158,10 @@
     
     <entry>
       <title></title>
-      <link href="/me/index.html"/>
-      <url>/me/index.html</url>
+      <link href="/PGP/index.html"/>
+      <url>/PGP/index.html</url>
       
-        <content type="html"><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><p>欢迎来到我的博客，你可以叫我一只小白或者一直小白。当前还是上海某高校的本科生哦,现在就任某实验室里<del>实力划水</del></p><p>第一特长: 乒乓球,数学,码<br>第二特长: 羽毛球,跑步<br>兴趣： 斗地主,象棋,摄影,唱歌</p><h1 id="这是哪里呢？"><a href="#这是哪里呢？" class="headerlink" title="这是哪里呢？"></a>这是哪里呢？</h1><p>这里是我的博客，可能很少会更新，不过应该会记录一些学习记录和生活趣事，以后应该看到会很有趣吧。</p><h1 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h1><p>首先，感谢提供这个博客主机的 kookxiang ，谢谢~<br>其次，感谢开发了这个博客程序的开发者们~<br>然后，感谢编写了这套设计模板的人们<del>在网站的右下角可以链接到这个主题的 Github 页上哟</del></p><h1 id="如果你想与我交换友链"><a href="#如果你想与我交换友链" class="headerlink" title="如果你想与我交换友链"></a>如果你想与我交换友链</h1><p>如果你想与我交换友链请在下方评论。<br>我仅接受个人博客申请友链。<br>我的友链信息如下</p><blockquote><p>博客名: 一只小白<br>网址: <a href="https://zyhang8.github.io" target="_blank" rel="noopener">https://zyhang8.github.io</a><br>头像: <a href="https://zyhang8.github.io/img/head_sculpture.png" target="_blank" rel="noopener">https://zyhang8.github.io/img/head_sculpture.png</a><br>描述: 这是一只小白<br>注意：如果你的博客没有 https 支持，在 永远的好伙伴 页面将不会显示绿锁标志。</p></blockquote><h1 id="最后唠叨几句www"><a href="#最后唠叨几句www" class="headerlink" title="最后唠叨几句www"></a>最后唠叨几句www</h1><p>我个人不是很会写文章，所以估计文章都是一些记录或者想法而已<del>而且更新可能很少啦</del>也感谢现在正在看我的博客的你，谢谢你的支持哟~</p><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/me/" target="_blank" rel="noopener">https://zyhang8.github.io/me/</a></p></blockquote>]]></content>
+        <content type="html"><![CDATA[<h1 id="什么是-PGP-？它能做什么-？"><a href="#什么是-PGP-？它能做什么-？" class="headerlink" title="什么是 PGP ？它能做什么 ？"></a>什么是 PGP ？它能做什么 ？</h1><p>PGP 是 Pretty Good Privacy 的缩写，它是一套用于消息加密、验证的数据交换方法。遵守 OpenPGP 数据加解密标准 (RFC 4880) 。<br>PGP 可以用作 加密、数字签名、认证。</p><h2 id="使用-PGP-与我通讯"><a href="#使用-PGP-与我通讯" class="headerlink" title="使用 PGP 与我通讯"></a>使用 PGP 与我通讯</h2><p>首先下载我的 <a href="https://files.cnblogs.com/files/pipi-pig/PGP_public.zip" target="_blank" rel="noopener">PGP 公钥</a> 并导入到你的 PGP 加密程序中。(Mac OS 可以使用GPG Keychain)<br>注意验证我的公钥指纹为 A038 89C1 542D 6DB7 BD66  CEE3 D00F F13E B0B8 1FDA，如果指纹一致说明你下载的公钥没有被篡改。<br>使用这个公钥加密你的信息，并发送到 <a href="mailto:zhongyuhang113@gmail.com" target="_blank" rel="noopener">zhongyuhang113@gmail.com</a> 字样即可被我的邮箱自动分类。</p><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/PGP/" target="_blank" rel="noopener">https://zyhang8.github.io/PGP/</a></p></blockquote>]]></content>
       
     </entry>
     
@@ -2165,11 +2179,11 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title></title>
+      <link href="/me/index.html"/>
+      <url>/me/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><p>欢迎来到我的博客，你可以叫我一只小白或者一直小白。当前还是上海某高校的本科生哦,现在就任某实验室里<del>实力划水</del></p><p>第一特长: 乒乓球,数学,码<br>第二特长: 羽毛球,跑步<br>兴趣： 斗地主,象棋,摄影,唱歌</p><h1 id="这是哪里呢？"><a href="#这是哪里呢？" class="headerlink" title="这是哪里呢？"></a>这是哪里呢？</h1><p>这里是我的博客，可能很少会更新，不过应该会记录一些学习记录和生活趣事，以后应该看到会很有趣吧。</p><h1 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h1><p>首先，感谢提供这个博客主机的 kookxiang ，谢谢~<br>其次，感谢开发了这个博客程序的开发者们~<br>然后，感谢编写了这套设计模板的人们<del>在网站的右下角可以链接到这个主题的 Github 页上哟</del></p><h1 id="如果你想与我交换友链"><a href="#如果你想与我交换友链" class="headerlink" title="如果你想与我交换友链"></a>如果你想与我交换友链</h1><p>如果你想与我交换友链请在下方评论。<br>我仅接受个人博客申请友链。<br>我的友链信息如下</p><blockquote><p>博客名: 一只小白<br>网址: <a href="https://zyhang8.github.io" target="_blank" rel="noopener">https://zyhang8.github.io</a><br>头像: <a href="https://zyhang8.github.io/img/head_sculpture.png" target="_blank" rel="noopener">https://zyhang8.github.io/img/head_sculpture.png</a><br>描述: 这是一只小白<br>注意：如果你的博客没有 https 支持，在 永远的好伙伴 页面将不会显示绿锁标志。</p></blockquote><h1 id="最后唠叨几句www"><a href="#最后唠叨几句www" class="headerlink" title="最后唠叨几句www"></a>最后唠叨几句www</h1><p>我个人不是很会写文章，所以估计文章都是一些记录或者想法而已<del>而且更新可能很少啦</del>也感谢现在正在看我的博客的你，谢谢你的支持哟~</p><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/me/" target="_blank" rel="noopener">https://zyhang8.github.io/me/</a></p></blockquote>]]></content>
       
     </entry>
     
@@ -2190,6 +2204,17 @@
       <title>timeline</title>
       <link href="/timeline/index.html"/>
       <url>/timeline/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
