@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>计算机网络-第三章课后习题</title>
+      <link href="/2019/11/14/cn-exp3/"/>
+      <url>/2019/11/14/cn-exp3/</url>
+      
+        <content type="html"><![CDATA[<h1 id="计算机网络-第三章课后习题"><a href="#计算机网络-第三章课后习题" class="headerlink" title="计算机网络-第三章课后习题"></a>计算机网络-第三章课后习题</h1><ul><li>要填写的数据为1101011011，CRC，添加余数</li><li>PPP协议使用同步传输技术传送比特串0110111111111100.试问经过零比特填充后编程怎样的字符串？若接收端收到的PPP帧的数据部分是0001110111110111110110.问删除发送端加入的零比特后变成怎样的字符串？</li><li>3-33填写表格</li></ul><h2 id="Page109-3-07"><a href="#Page109-3-07" class="headerlink" title="Page109,3-07"></a>Page109,3-07</h2><p>根据公式，二进制为10011.共五位</p><p>在二进制序列后添加5-1=4个0，为11010110110000，除法后，商为1100001010，余数为1110，即为检验序列</p><p>第一问，现在最后以为为0，变为11010110101110，除数为10011，得到商为1100001011，余数为0011，因余数不为0，所以有差错，可以发现</p><p>第二问，11010110001110除以10011，商为1100001001，余数为0101，可以发现</p><p>第三问，不是。当接收方进行CRC检验时，如果发现有差错，就简单地丢弃这个帧。数据链路层并不能保证接收方接收到的和发送方发送的完全一致。</p><h2 id="Page110-3-10"><a href="#Page110-3-10" class="headerlink" title="Page110,3-10"></a>Page110,3-10</h2><p>第一问，零比特填充即5个1后加0，为011011111 0 11111 0 00</p><p>第二问，删0.为 000111011111 11111 110</p><h2 id="Page111-3-33"><a href="#Page111-3-33" class="headerlink" title="Page111,3-33"></a>Page111,3-33</h2><table><thead><tr><th align="center">动作</th><th align="center">交换表的状态</th><th align="center">向哪些接口转发帧</th><th align="center">说明</th></tr></thead><tbody><tr><td align="center">A发送帧给D</td><td align="center">写入(A,1)</td><td align="center">所有的接口</td><td align="center">开始时交换表是空的，交换机不知道应向何接口转发帧</td></tr><tr><td align="center">D发送帧给A</td><td align="center">写入(D,4)</td><td align="center">A</td><td align="center">交换机已经知道A连接在接口1</td></tr><tr><td align="center">E发送帧给A</td><td align="center">写入(E,5)</td><td align="center">A</td><td align="center">交换机已经知道A连接在接口1</td></tr><tr><td align="center">A发送帧给E</td><td align="center">不变</td><td align="center">E</td><td align="center">交换机已经知道E连接在接口5</td></tr></tbody></table><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/11/14/cn-exp3/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/11/14/cn-exp3/</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C++    PTA-B   1003 我要通过！</title>
       <link href="/2019/11/13/pta-1003/"/>
       <url>/2019/11/13/pta-1003/</url>
@@ -275,23 +300,25 @@
     
     
     <entry>
-      <title>计算机网络-第三章课后习题</title>
-      <link href="/2019/11/02/cn-exp3/"/>
-      <url>/2019/11/02/cn-exp3/</url>
+      <title>游记·杭州</title>
+      <link href="/2019/11/02/hangzhou/"/>
+      <url>/2019/11/02/hangzhou/</url>
       
-        <content type="html"><![CDATA[<h1 id="计算机网络-第三章课后习题"><a href="#计算机网络-第三章课后习题" class="headerlink" title="计算机网络-第三章课后习题"></a>计算机网络-第三章课后习题</h1><ul><li>要填写的数据为1101011011，CRC，添加余数</li><li>PPP协议使用同步传输技术传送比特串0110111111111100.试问经过零比特填充后编程怎样的字符串？若接收端收到的PPP帧的数据部分是0001110111110111110110.问删除发送端加入的零比特后变成怎样的字符串？</li><li>3-33填写表格</li></ul><h2 id="Page109-3-07"><a href="#Page109-3-07" class="headerlink" title="Page109,3-07"></a>Page109,3-07</h2><p>根据公式，二进制为10011.共五位</p><p>在二进制序列后添加5-1=4个0，为11010110110000，除法后，商为1100001010，余数为1110，即为检验序列</p><p>第一问，现在最后以为为0，变为11010110101110，除数为10011，得到商为1100001011，余数为0011，因余数不为0，所以有差错，可以发现</p><p>第二问，11010110001110除以10011，商为1100001001，余数为0101，可以发现</p><p>第三问，不是。当接收方进行CRC检验时，如果发现有差错，就简单地丢弃这个帧。数据链路层并不能保证接收方接收到的和发送方发送的完全一致。</p><h2 id="Page110-3-10"><a href="#Page110-3-10" class="headerlink" title="Page110,3-10"></a>Page110,3-10</h2><p>第一问，零比特填充即5个1后加0，为011011111 0 11111 0 00</p><p>第二问，删0.为 000111011111 11111 110</p><h2 id="Page111-3-33"><a href="#Page111-3-33" class="headerlink" title="Page111,3-33"></a>Page111,3-33</h2><table><thead><tr><th align="center">动作</th><th align="center">交换表的状态</th><th align="center">向哪些接口转发帧</th><th align="center">说明</th></tr></thead><tbody><tr><td align="center">A发送帧给D</td><td align="center">写入(A,1)</td><td align="center">所有的接口</td><td align="center">开始时交换表是空的，交换机不知道应向何接口转发帧</td></tr><tr><td align="center">D发送帧给A</td><td align="center">写入(D,4)</td><td align="center">A</td><td align="center">交换机已经知道A连接在接口1</td></tr><tr><td align="center">E发送帧给A</td><td align="center">写入(E,5)</td><td align="center">A</td><td align="center">交换机已经知道A连接在接口1</td></tr><tr><td align="center">A发送帧给E</td><td align="center">不变</td><td align="center">E</td><td align="center">交换机已经知道E连接在接口5</td></tr></tbody></table><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/11/02/cn-exp3/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/11/02/cn-exp3/</a></p></blockquote>]]></content>
+        <content type="html"><![CDATA[<h1 id="杭州"><a href="#杭州" class="headerlink" title="杭州"></a>杭州</h1><blockquote><p>这应该是我第三次去杭州了，杭州给我的印象就是到处很美很干净</p></blockquote><h2 id="出行准备"><a href="#出行准备" class="headerlink" title="出行准备"></a>出行准备</h2><p>支付宝(公交/地铁)<br>马蜂窝(本地菜景点)<br>高德(导航/实时公交)<br>电影/书籍(路上消磨时间)<br>身份证/学生证 随身(景点必备)</p><h2 id="出行-2019-10-25-2019-10-27"><a href="#出行-2019-10-25-2019-10-27" class="headerlink" title="出行(2019.10.25-2019.10.27)"></a>出行(2019.10.25-2019.10.27)</h2><h3 id="第一天"><a href="#第一天" class="headerlink" title="第一天"></a>第一天</h3><p>下午出发到了杭州东站，去了君尚大酒店。到了之后就开始赶东西了（心好累）。晚上听了培训</p><h3 id="第二天"><a href="#第二天" class="headerlink" title="第二天"></a>第二天</h3><p>包车去了浙江大学求是大讲堂，貌似这个讲堂是浙大的起始点。也看到互联网+的牌子依旧在这里摆着。中午吃了浙大的食堂。食堂的餐具收拾都是自动化了，虽然浙大的菜也不会便宜，但口味还是不错滴。下午去了考了工程师证书，虽然差了点，不过感觉自己也就是2小时的抱佛脚，足矣，后来逛了逛浙大的校园，好大好漂亮，听说有8000亩地，这羡慕，自己学校才1600，发现学校有医院，邮局，营业厅，啥服务都可以找到的（嘿嘿嘿）。晚饭在君尚吃了自助餐后去了河坊街，买了大兴糕点和老杭邦。感觉这个街也没啥，环境也差……后来刚上地铁，坐上最后一班公交车回到了酒店</p><h3 id="第三天"><a href="#第三天" class="headerlink" title="第三天"></a>第三天</h3><p>继续去浙大。比赛颁奖后坐着队友爸爸的车回到了学校。然后和老师，队友，队友爹地一块吃了饭。结束！</p><h2 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h2><p>浙大好美，高大上！</p><h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><ul><li>和老师说了很多真心话，了解了社会上的凶恶，好好做人！后面也计划写论文。</li><li>大咖的话颇有收获，Apple生态实在很好</li><li>对于AppUI设计，架构有了清晰的认识</li><li>视频也懂了许多</li></ul><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/11/02/hangzhou/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/11/02/hangzhou/</a></p></blockquote>]]></content>
       
       
       <categories>
           
-          <category> 计算机网络 </category>
+          <category> 游记 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 计算机网络 </tag>
+            <tag> 游行 </tag>
+            
+            <tag> 杭州 </tag>
             
         </tags>
       
@@ -2095,9 +2122,9 @@
       
         <tags>
             
-            <tag> 游行 </tag>
-            
             <tag> 北京 </tag>
+            
+            <tag> 游行 </tag>
             
         </tags>
       
@@ -2176,9 +2203,9 @@
       
         <tags>
             
-            <tag> 宁波 </tag>
-            
             <tag> 游行 </tag>
+            
+            <tag> 宁波 </tag>
             
         </tags>
       
@@ -2317,28 +2344,6 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/me/index.html"/>
-      <url>/me/index.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><p>欢迎来到我的博客，你可以叫我一只小白或者一直小白。当前还是上海某高校的本科生哦,现在就任某实验室里<del>实力划水</del></p><p>第一特长: 乒乓球,数学,码<br>第二特长: 羽毛球,跑步<br>兴趣： 斗地主,象棋,摄影,唱歌</p><h1 id="这是哪里呢？"><a href="#这是哪里呢？" class="headerlink" title="这是哪里呢？"></a>这是哪里呢？</h1><p>这里是我的博客，可能很少会更新，不过应该会记录一些学习记录和生活趣事，以后应该看到会很有趣吧。</p><h1 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h1><p>首先，感谢提供这个博客主机的 kookxiang ，谢谢~<br>其次，感谢开发了这个博客程序的开发者们~<br>然后，感谢编写了这套设计模板的人们<del>在网站的右下角可以链接到这个主题的 Github 页上哟</del></p><h1 id="如果你想与我交换友链"><a href="#如果你想与我交换友链" class="headerlink" title="如果你想与我交换友链"></a>如果你想与我交换友链</h1><p>如果你想与我交换友链请在下方评论。<br>我仅接受个人博客申请友链。<br>我的友链信息如下</p><blockquote><p>博客名: 一只小白<br>网址: <a href="https://zyhang8.github.io" target="_blank" rel="noopener">https://zyhang8.github.io</a><br>头像: <a href="https://zyhang8.github.io/img/head_sculpture.png" target="_blank" rel="noopener">https://zyhang8.github.io/img/head_sculpture.png</a><br>描述: 这是一只小白<br>注意：如果你的博客没有 https 支持，在 永远的好伙伴 页面将不会显示绿锁标志。</p></blockquote><h1 id="最后唠叨几句www"><a href="#最后唠叨几句www" class="headerlink" title="最后唠叨几句www"></a>最后唠叨几句www</h1><p>我个人不是很会写文章，所以估计文章都是一些记录或者想法而已<del>而且更新可能很少啦</del>也感谢现在正在看我的博客的你，谢谢你的支持哟~</p><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/me/" target="_blank" rel="noopener">https://zyhang8.github.io/me/</a></p></blockquote>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>links</title>
       <link href="/links/index.html"/>
       <url>/links/index.html</url>
@@ -2355,6 +2360,28 @@
       <url>/timeline/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/me/index.html"/>
+      <url>/me/index.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="我是谁？"><a href="#我是谁？" class="headerlink" title="我是谁？"></a>我是谁？</h1><p>欢迎来到我的博客，你可以叫我一只小白或者一直小白。当前还是上海某高校的本科生哦,现在就任某实验室里<del>实力划水</del></p><p>第一特长: 乒乓球,数学,码<br>第二特长: 羽毛球,跑步<br>兴趣： 斗地主,象棋,摄影,唱歌</p><h1 id="这是哪里呢？"><a href="#这是哪里呢？" class="headerlink" title="这是哪里呢？"></a>这是哪里呢？</h1><p>这里是我的博客，可能很少会更新，不过应该会记录一些学习记录和生活趣事，以后应该看到会很有趣吧。</p><h1 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h1><p>首先，感谢提供这个博客主机的 kookxiang ，谢谢~<br>其次，感谢开发了这个博客程序的开发者们~<br>然后，感谢编写了这套设计模板的人们<del>在网站的右下角可以链接到这个主题的 Github 页上哟</del></p><h1 id="如果你想与我交换友链"><a href="#如果你想与我交换友链" class="headerlink" title="如果你想与我交换友链"></a>如果你想与我交换友链</h1><p>如果你想与我交换友链请在下方评论。<br>我仅接受个人博客申请友链。<br>我的友链信息如下</p><blockquote><p>博客名: 一只小白<br>网址: <a href="https://zyhang8.github.io" target="_blank" rel="noopener">https://zyhang8.github.io</a><br>头像: <a href="https://zyhang8.github.io/img/head_sculpture.png" target="_blank" rel="noopener">https://zyhang8.github.io/img/head_sculpture.png</a><br>描述: 这是一只小白<br>注意：如果你的博客没有 https 支持，在 永远的好伙伴 页面将不会显示绿锁标志。</p></blockquote><h1 id="最后唠叨几句www"><a href="#最后唠叨几句www" class="headerlink" title="最后唠叨几句www"></a>最后唠叨几句www</h1><p>我个人不是很会写文章，所以估计文章都是一些记录或者想法而已<del>而且更新可能很少啦</del>也感谢现在正在看我的博客的你，谢谢你的支持哟~</p><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/me/" target="_blank" rel="noopener">https://zyhang8.github.io/me/</a></p></blockquote>]]></content>
       
     </entry>
     
