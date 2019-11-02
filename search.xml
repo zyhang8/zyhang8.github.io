@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>UML图和命令模式</title>
+      <link href="/2019/11/06/design-exp1/"/>
+      <url>/2019/11/06/design-exp1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="UML图和命令模式"><a href="#UML图和命令模式" class="headerlink" title="UML图和命令模式"></a>UML图和命令模式</h1><h2 id="一-验证命令模式程序一，实现作战场景命令传达的模拟"><a href="#一-验证命令模式程序一，实现作战场景命令传达的模拟" class="headerlink" title="一.验证命令模式程序一，实现作战场景命令传达的模拟"></a>一.验证命令模式程序一，实现作战场景命令传达的模拟</h2><h3 id="1-实验内容和源程序"><a href="#1-实验内容和源程序" class="headerlink" title="1.实验内容和源程序"></a>1.实验内容和源程序</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">CompanyArmy.java</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CompanyArmy</span></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sneakAttack</span><span class="params">()</span></span>&#123; </span><br><span class="line">      System.out.println(<span class="string">"我们知道如何偷袭敌人,保证完成任务"</span>); </span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">Command.java</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Command</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">execute</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line">ConcreteCommand.java</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConcreteCommand</span> <span class="keyword">implements</span> <span class="title">Command</span></span>&#123;</span><br><span class="line">   CompanyArmy army;           <span class="comment">//含有接收者的引用</span></span><br><span class="line">   ConcreteCommand(CompanyArmy army)&#123;</span><br><span class="line">      <span class="keyword">this</span>.army=army;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="function"><span class="keyword">public</span>  <span class="keyword">void</span> <span class="title">execute</span><span class="params">()</span></span>&#123;    <span class="comment">//封装着指挥官的请求</span></span><br><span class="line">      army.sneakAttack();     <span class="comment">//偷袭敌人  </span></span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">ArmySuperior.java</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArmySuperior</span></span>&#123;</span><br><span class="line">  Command command;                     <span class="comment">//用来存放具体命令的引用</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setCommand</span><span class="params">(Command command)</span></span>&#123;</span><br><span class="line">     <span class="keyword">this</span>.command=command;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startExecuteCommand</span><span class="params">()</span></span>&#123;   <span class="comment">//让具体命令执行execute()方法</span></span><br><span class="line">     command.execute();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">Application.java</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Application</span></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">      CompanyArmy 三连=<span class="keyword">new</span> CompanyArmy();         <span class="comment">//创建接收者</span></span><br><span class="line">      Command command=<span class="keyword">new</span> ConcreteCommand(三连);  <span class="comment">//创建具体命令并指定接收者</span></span><br><span class="line">      ArmySuperior 指挥官=<span class="keyword">new</span> ArmySuperior();     <span class="comment">//创建请求者</span></span><br><span class="line">      指挥官.setCommand(command);                 </span><br><span class="line">      指挥官.startExecuteCommand();</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="2-实验执行结果"><a href="#2-实验执行结果" class="headerlink" title="2.实验执行结果"></a>2.实验执行结果</h3><p><img src="https://s2.ax1x.com/2019/11/02/KqyNVS.png" alt="KqyNVS.png"></p><h3 id="3-本次收获体会"><a href="#3-本次收获体会" class="headerlink" title="3.本次收获体会"></a>3.本次收获体会</h3><p>明白了接受者，命令接口，具体命令，请求者的关系，用过三者可以构成一个小框架，然后使用这个小框架中的类编写应用程序</p><h2 id="二-验证命令模式程序二，实现目录建立与撤销的模拟。（第二个实验内容）"><a href="#二-验证命令模式程序二，实现目录建立与撤销的模拟。（第二个实验内容）" class="headerlink" title="二.验证命令模式程序二，实现目录建立与撤销的模拟。（第二个实验内容）"></a>二.验证命令模式程序二，实现目录建立与撤销的模拟。（第二个实验内容）</h2><h3 id="1-实验内容和源程序-1"><a href="#1-实验内容和源程序-1" class="headerlink" title="1. 实验内容和源程序"></a>1. 实验内容和源程序</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">MakeDir.java</span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MakeDir</span></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">createDir</span><span class="params">(String name)</span></span>&#123;</span><br><span class="line">      File dir=<span class="keyword">new</span> File(name);</span><br><span class="line">      dir.mkdir();   </span><br><span class="line">   &#125;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">deleteDir</span><span class="params">(String name)</span></span>&#123;</span><br><span class="line">      File dir=<span class="keyword">new</span> File(name);</span><br><span class="line">      dir.delete();   </span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">Command.java</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Command</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">execute</span><span class="params">(String name)</span></span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">undo</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line">ConcreteCommand.java</span><br><span class="line"><span class="keyword">import</span> java.util.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConcreteCommand</span> <span class="keyword">implements</span> <span class="title">Command</span></span>&#123;</span><br><span class="line">    ArrayList&lt;String&gt; dirNameList;</span><br><span class="line">    MakeDir makeDir;</span><br><span class="line">    ConcreteCommand(MakeDir makeDir)&#123;</span><br><span class="line">        dirNameList=<span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">        <span class="keyword">this</span>.makeDir=makeDir;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span>  <span class="keyword">void</span> <span class="title">execute</span><span class="params">(String name)</span></span>&#123;</span><br><span class="line">       makeDir.createDir(name);</span><br><span class="line">       dirNameList.add(name);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">undo</span><span class="params">()</span></span>&#123;</span><br><span class="line">       <span class="keyword">if</span>(dirNameList.size()&gt;<span class="number">0</span>)&#123;</span><br><span class="line">          <span class="keyword">int</span> m=dirNameList.size();</span><br><span class="line">          String str=dirNameList.get(m-<span class="number">1</span>); </span><br><span class="line">          makeDir.deleteDir(str);</span><br><span class="line">          dirNameList.remove(m-<span class="number">1</span>); </span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">else</span></span><br><span class="line">          System.out.println(<span class="string">"没有需要撤消的操作"</span>);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">RequestMakedir.java</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RequestMakedir</span></span>&#123;</span><br><span class="line">   Command command;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setCommand</span><span class="params">(Command command)</span></span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.command=command;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startExecuteCommand</span><span class="params">(String name)</span></span>&#123;</span><br><span class="line">      command.execute(name);</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">undoCommand</span><span class="params">()</span></span>&#123;</span><br><span class="line">      command.undo();</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">Application.java</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Application</span></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">      MakeDir makeDir=<span class="keyword">new</span> MakeDir();                </span><br><span class="line">      Command command=<span class="keyword">new</span> ConcreteCommand(makeDir); </span><br><span class="line">      RequestMakedir askMakedir=<span class="keyword">new</span> RequestMakedir();</span><br><span class="line">      askMakedir.setCommand(command); </span><br><span class="line">      askMakedir.startExecuteCommand(<span class="string">"jiafei"</span>);      </span><br><span class="line">      askMakedir.startExecuteCommand(<span class="string">"jerry"</span>);     </span><br><span class="line">      askMakedir.startExecuteCommand(<span class="string">"tom"</span>);       </span><br><span class="line">      askMakedir.undoCommand();                 </span><br><span class="line">      askMakedir.undoCommand();                   </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="2-实验执行结果-1"><a href="#2-实验执行结果-1" class="headerlink" title="2.实验执行结果"></a>2.实验执行结果</h3><p><img src="https://s2.ax1x.com/2019/11/02/KqyUUg.png" alt="KqyUUg.png"></p><h3 id="3-本次收获体会-1"><a href="#3-本次收获体会-1" class="headerlink" title="3.本次收获体会"></a>3.本次收获体会</h3><p>明白了命令接口中的撤销方法，可以用来封装“请求”的办法，请求者请求在硬盘建立目录，请求成功后，还可以撤销请求。这要求接受者不仅可以在硬盘上建立目录，也可删除上一次请求所建立的目录。</p><h2 id="三、下载安装Rational-Rose，并用它画UML类图"><a href="#三、下载安装Rational-Rose，并用它画UML类图" class="headerlink" title="三、下载安装Rational Rose，并用它画UML类图"></a>三、下载安装Rational Rose，并用它画UML类图</h2><p><img src="https://s2.ax1x.com/2019/11/02/Kqya5Q.png" alt="Kqya5Q.png"></p><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/11/06/design-exp1/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/11/06/design-exp1/</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 设计模式 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 设计模式 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JSP</title>
       <link href="/2019/11/05/javaweb-exp3/"/>
       <url>/2019/11/05/javaweb-exp3/</url>
@@ -64,9 +89,9 @@
       
         <tags>
             
-            <tag> java </tag>
-            
             <tag> 设计模式 </tag>
+            
+            <tag> java </tag>
             
         </tags>
       
@@ -1807,9 +1832,9 @@
       
         <tags>
             
-            <tag> 北京 </tag>
-            
             <tag> 游行 </tag>
+            
+            <tag> 北京 </tag>
             
         </tags>
       
@@ -1888,9 +1913,9 @@
       
         <tags>
             
-            <tag> 游行 </tag>
-            
             <tag> 宁波 </tag>
+            
+            <tag> 游行 </tag>
             
         </tags>
       
@@ -1996,17 +2021,6 @@
     
     
     <entry>
-      <title>gallery</title>
-      <link href="/gallery/index.html"/>
-      <url>/gallery/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title></title>
       <link href="/PGP/index.html"/>
       <url>/PGP/index.html</url>
@@ -2029,9 +2043,9 @@
     
     
     <entry>
-      <title>links</title>
-      <link href="/links/index.html"/>
-      <url>/links/index.html</url>
+      <title>gallery</title>
+      <link href="/gallery/index.html"/>
+      <url>/gallery/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -2054,6 +2068,17 @@
       <title>tags</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>links</title>
+      <link href="/links/index.html"/>
+      <url>/links/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
