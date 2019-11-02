@@ -300,6 +300,32 @@
     
     
     <entry>
+      <title>cipher-exp6</title>
+      <link href="/2019/11/02/cipher-exp6/"/>
+      <url>/2019/11/02/cipher-exp6/</url>
+      
+        <content type="html"><![CDATA[<blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/07/18/Ningbo/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/07/18/Ningbo/</a></p></blockquote>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>cipher-exp5</title>
+      <link href="/2019/11/02/cipher-exp5/"/>
+      <url>/2019/11/02/cipher-exp5/</url>
+      
+        <content type="html"><![CDATA[<blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/07/18/Ningbo/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/07/18/Ningbo/</a></p></blockquote>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数据存储一：临时存储和文件存储</title>
       <link href="/2019/11/01/android-exp6/"/>
       <url>/2019/11/01/android-exp6/</url>
@@ -1554,6 +1580,31 @@
     
     
     <entry>
+      <title>RSA密码算法</title>
+      <link href="/2019/09/10/cipher-exp4/"/>
+      <url>/2019/09/10/cipher-exp4/</url>
+      
+        <content type="html"><![CDATA[<h1 id="RSA密码算法"><a href="#RSA密码算法" class="headerlink" title="RSA密码算法"></a>RSA密码算法</h1><h2 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h2><p>1） 学习RSA密码算法的原理</p><p>2） 学习RSA密码算法的编程实</p><p>RSA公钥加密算法是1977年由Ron Rivest、Adi Shamirh和LenAdleman在美国麻省理工学院开发的。RSA算法基于一个十分简单的数论事实：将两个大素数相乘十分容易，但那时想要对其乘积进行因式分解却极其困难，因此可以将乘积公开作为加密密钥。</p><h3 id="算法原理"><a href="#算法原理" class="headerlink" title="算法原理"></a>算法原理</h3><p>RSA算法是一种非对称密码算法，所谓非对称，就是指该算法需要一对密钥，使用其中一个加密，则需要用另一个才能解密。</p><p>为了产生RSA公私钥对，需要进行以下几个步骤:</p><p>1.选取两个大素数，p和q（目前两个数的长度都接近512bit是安全的），并计算他们的乘积得n=pq。</p><p>2.根据欧拉函数，不大于n 且与n 互质的整数个数为<img src="http://shou.shiyanbar.com/UploadImage/2016/3/8/20_17848" alt="s11"></p><p>3.随机选择整数<img src="http://shou.shiyanbar.com/UploadImage/2016/3/8/20_38415" alt="2"> 作为公钥，要求满足<img src="http://shou.shiyanbar.com/UploadImage/2016/3/8/20_61677" alt="3"> ，即 <img src="http://shou.shiyanbar.com/UploadImage/2016/3/8/20_67796" alt="4"> 。则e和n是公钥，d是私钥。  </p><h3 id="加密过程"><a href="#加密过程" class="headerlink" title="加密过程"></a>加密过程</h3><p>（1）RSA密钥生成部分代码流程图：</p><p><img src="http://shou.shiyanbar.com/UploadImage/2016/3/8/20_82968" alt="5"></p><p>RSA密钥生成流程图<br>（2）RSA加密部分流程图：</p><p><img src="http://shou.shiyanbar.com/UploadImage/2016/3/8/20_11261" alt="6"></p><p>RSA加密部分流程图</p><p>（3）RSA解密部分流程图：</p><p><img src="http://shou.shiyanbar.com/UploadImage/2016/3/8/20_91551" alt="7"></p><p>RSA解密部分流程</p><h2 id="实验环境"><a href="#实验环境" class="headerlink" title="实验环境"></a>实验环境</h2><p>Windows Server 2012 R2</p><p>实验工具在【C:\tools\RSA密码算法】</p><h2 id="实验步骤"><a href="#实验步骤" class="headerlink" title="实验步骤"></a>实验步骤</h2><p>1.打开C盘,进入工具目录（C:\tools\RSA密码算法），单击【rsa.exe】，运行密码算法。如图1所示</p><p><img src="https://s2.ax1x.com/2019/10/12/uO0076.png" alt="uO0076.png"></p><p>2.输入【1】输入存放公钥和私钥的文件名，即可在程序同级目录下生成相应文件。如图2所示</p><p><img src="https://s2.ax1x.com/2019/10/12/uO0rtO.png" alt="uO0rtO.png"></p><p>3.选择【2】，输入存放公钥的文件名和需要加密的文件【hello.txt】和需要输出的文件名【enhello.txt】。如图3所示</p><p><img src="https://s2.ax1x.com/2019/10/12/uO0w0x.png" alt="uO0w0x.png"></p><p>4.对比明文文件内容和密文文件内容。如图4所示</p><p><img src="https://s2.ax1x.com/2019/10/12/uO0DAK.png" alt="uO0DAK.png"></p><p>5.解密文件，进行类似的操作即可</p><h2 id="实验思考"><a href="#实验思考" class="headerlink" title="实验思考"></a>实验思考</h2><p>1.RSA密码算法的安全性在于什么？</p><p>RSA算法的安全在于，e、p、N，是随机生成的。知道e和N，想寻找p，在计算上是不可行的。问题是，我们使用的软件工具，生成这些随机材料时，真的是“随机”的吗？如果算法的提供者留下什么后门，或者提前做了什么准备工作，人家看到e和n，或许就能有办法得到p呢</p><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/09/10/cipher-exp4/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/09/10/cipher-exp4/</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 信息安全 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 信息安全 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>DES/3DES/AES</title>
       <link href="/2019/09/09/cipher-exp2/"/>
       <url>/2019/09/09/cipher-exp2/</url>
@@ -2032,9 +2083,9 @@
       
         <tags>
             
-            <tag> 北京 </tag>
-            
             <tag> 游行 </tag>
+            
+            <tag> 北京 </tag>
             
         </tags>
       
@@ -2113,9 +2164,9 @@
       
         <tags>
             
-            <tag> 游行 </tag>
-            
             <tag> 宁波 </tag>
+            
+            <tag> 游行 </tag>
             
         </tags>
       
@@ -2232,6 +2283,17 @@
     
     
     <entry>
+      <title>gallery</title>
+      <link href="/gallery/index.html"/>
+      <url>/gallery/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title></title>
       <link href="/agree/index.html"/>
       <url>/agree/index.html</url>
@@ -2243,9 +2305,9 @@
     
     
     <entry>
-      <title>links</title>
-      <link href="/links/index.html"/>
-      <url>/links/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -2265,20 +2327,9 @@
     
     
     <entry>
-      <title>gallery</title>
-      <link href="/gallery/index.html"/>
-      <url>/gallery/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>links</title>
+      <link href="/links/index.html"/>
+      <url>/links/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
