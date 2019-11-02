@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
+
+
+    <link rel="dns-prefetch" href="https://yizhixiaobai.disqus.com">
+
+
+
+    <link rel="dns-prefetch" href="https://hm.baidu.com">
+
+
+
+    <link rel="dns-prefetch" href="https://lib.baomitu.com">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            维吉利亚密码密钥长度怎么确定 | 
+        
+        一直小白的博客
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/head_sculpture.png">
+    <link rel="icon" href="/img/head_sculpture.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content>
+    <meta name="keywords" content="这是一只小白,信息安全">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微锟斤拷锟脚猴拷", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <style>
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: regular;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.svg#Roboto) format('svg')
+        }
+    </style>
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="一直小白的博客">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2019/10/13/cipher-exp1/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="一直小白的博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/head_sculpture.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com/2019/10/13/cipher-exp1/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="维吉利亚密码密钥长度怎么确定 | 一直小白的博客">
+    <meta property="og:image" content="/img/head_sculpture.png">
+    <meta property="og:description" content>
+    <meta property="og:article:tag" content="信息安全"> 
+
+    
+        <meta property="article:published_time" content="Sun Oct 13 2019 19:42:37 GMT+0800">
+        <meta property="article:modified_time" content="Sat Nov 02 2019 16:04:30 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/2019/10/13/cipher-exp1/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2019/10/13/cipher-exp1/index.html",
+    "headline": "维吉利亚密码密钥长度怎么确定",
+    "datePublished": "Sun Oct 13 2019 19:42:37 GMT+0800",
+    "dateModified": "Sat Nov 02 2019 16:04:30 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "一直小白",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/head_sculpture.png"
+        },
+        "description": "求知若饥,谦虚若愚"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "一直小白的博客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/head_sculpture.png"
+        }
+    },
+    "keywords": ",信息安全这是一只小白",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+        <script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?5a42bcc3e66e1db4931abdcca1a9aa74';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#维吉利亚密码密钥长度怎么确定"><span class="post-toc-number">1.</span> <span class="post-toc-text">维吉利亚密码密钥长度怎么确定</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#定义"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">定义</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#描述"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">描述</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#长度确定"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">长度确定</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Kasiski-测试法"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Kasiski 测试法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Friedman-测试法"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">Friedman 测试法</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#字母频度分析"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">字母频度分析</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                维吉利亚密码密钥长度怎么确定
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/head_sculpture.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>一直小白</strong>
+        <span>10月 13, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACXklEQVR42u3ay26DQBAEQP//TyfXSFZw975AVnGKnABbRGLGPfv6+erjhYeHh4eHh4eH9zDeKz7+/v37ue+//e+T689n1oaHh4d3kpfcZv5xXF9h5hHg4eHh3cXLi0H7+k7Ovb5XcU08PDy8h/Haxrptx/Hw8PC+j5e83JOCkTTNeHh4eM/nFV/4L0lJ6JAEvjdkLXh4eHgxb2YAtvvnm+d7eHh4eEs3XY2FC3kbffOeMjw8PLy4pW5fxHms0A7S2mACDw8P7zwvCVjzV/91Uz4z+vrwoPHw8PA28xJMPogaa6Dbq9VhBB4eHt5SXn6DPJJom+a8SCRrw8PDwzvDWzusyjcf5EWoKGZ4eHh4m3n5IsaW2Ea9Y48GDw8P7ySvDU/b5rgdg+XBLh4eHt5dvLXD+xyQj9bqqAIPDw9vM6/dLJUvqG3Qrx90ESvj4eHhHeQNXm6i7c5jiKJxx8PDw9vMGwsCxtjtttR2bXh4eHhneC2jXVA+0GqPZSk1Hh4eXskbKxJjS8lHX21jjYeHh3eSd10A1m4FaDcr5HEzHh4e3nleTp0JavP2vS1FeHh4ePfy8k0D+fBsfqNAsTY8PDy8I7z5iCEfic2HuR/CCzw8PLzNvPZoW/CxcdrYffHw8PDO8GaGWO3S23ChHX3h4eHhneStaoXzoCGJiZcVBjw8PLxtvDZCnXndj4URyT8GDw8P78m8fPA/c/2k2ODh4eE9mddupZo/KylCeHh4eHfxkjCiDRryoVpefvDw8PCewJsZSu3YmDU2+sLDw8M7w/u+Aw8PDw8PDw8P7wHHL/oJH+sRB7TUAAAAAElFTkSuQmCC">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/信息安全/">信息安全</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=维吉利亚密码密钥长度怎么确定&url=http://yoursite.com/2019/10/13/cipher-exp1/index.html&pic=http://yoursite.com/img/head_sculpture.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=维吉利亚密码密钥长度怎么确定&url=http://yoursite.com/2019/10/13/cipher-exp1/index.html&via=一直小白" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/10/13/cipher-exp1/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2019/10/13/cipher-exp1/index.html&title=维吉利亚密码密钥长度怎么确定" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一直小白的博客&title=维吉利亚密码密钥长度怎么确定&summary=&pics=http://yoursite.com/img/head_sculpture.png&url=http://yoursite.com/2019/10/13/cipher-exp1/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="维吉利亚密码密钥长度怎么确定"><a href="#维吉利亚密码密钥长度怎么确定" class="headerlink" title="维吉利亚密码密钥长度怎么确定"></a>维吉利亚密码密钥长度怎么确定</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>维吉尼亚密码（又译维热纳尔密码）是使用一系列凯撒密码组成密码字母表的加密算法，属于多表密码的一种简单形式。</p>
+<h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>在一个凯撒密码中，字母表中的每一字母都会作一定的偏移，例如偏移量为3时，A就转换为了D、B转换为了E……而维吉尼亚密码则是由一些偏移量不同的恺撒密码组成。<br>为了生成密码，需要使用表格法。这一表格（如图1所示）包括了26行字母表，每一行都由前一行向左偏移一位得到。具体使用哪一行字母表进行编译是基于密钥进行的，在过程中会不断地变换。<br>图1.表格<br>图1.表格<br>例如，假设明文为：<br>ATTACKATDAWN<br>选择某一关键词并重复而得到密钥，如关键词为LEMON时，密钥为：<br>LEMONLEMONLE<br>对于明文的第一个字母A，对应密钥的第一个字母L，于是使用表格中L行字母表进行加密，得到密文第一个字母L。类似地，明文第二个字母为T，在表格中使用对应的E行进行加密，得到密文第二个字母X。以此类推，可以得到：<br>明文：ATTACKATDAWN密钥：LEMONLEMONLE密文：LXFOPVEFRNHR<br>解密的过程则与加密相反。例如：根据密钥第一个字母L所对应的L行字母表，发现密文第一个字母L位于A列，因而明文第一个字母为A。密钥第二个字母E对应E行字母表，而密文第二个字母X位于此行T列，因而明文第二个字母为T。以此类推便可得到明文。</p>
+<h2 id="长度确定"><a href="#长度确定" class="headerlink" title="长度确定"></a>长度确定</h2><p>确定密钥长度主要有两种方法，Kasiski 测试法相对简单很多，但Friedman 测试法的效果明显优于Kasiski 测试法。</p>
+<h2 id="Kasiski-测试法"><a href="#Kasiski-测试法" class="headerlink" title="Kasiski 测试法"></a>Kasiski 测试法</h2><p>在英文中，一些常见的单词如the有几率被密钥的相同部分加密，即原文中的the可能在密文中呈现为相同的三个字母。在这种情况下，相同片段的间距就是密文长度的倍数。所以我们可以通过在密文中找到相同的片段，计算出这些相同片段之间的间距，而密钥长度理论上就是这些间距的公约数。</p>
+<p>具体方法：搜索长度至少为3的相同密文段，记录这些相同密文端到起始点之间的距离（d1,d2,d3……），找出（d1,d2,d3……）的所有公因子，同样为了确保秘钥长度的准确性，我们在搜索另一至少长为3的相同密文段，重复上操作，最后找出他们共同的公因子，若公因子不唯一，则在采用下边的重合因子测试法确定密钥长度。</p>
+<h2 id="Friedman-测试法"><a href="#Friedman-测试法" class="headerlink" title="Friedman 测试法"></a>Friedman 测试法</h2><p>首先我们要知道，对于一种特定的自然语言，如果文本足够长，那么各个字母出现的概率是相对稳定的。<br>以下是维基百科给出的英语的字母频率表：</p>
+<table>
+<thead>
+<tr>
+<th align="center">字母</th>
+<th align="center">英语中出现的频率</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">a</td>
+<td align="center">8.167%</td>
+</tr>
+<tr>
+<td align="center">b</td>
+<td align="center">1.492%</td>
+</tr>
+<tr>
+<td align="center">c</td>
+<td align="center">2.782%</td>
+</tr>
+<tr>
+<td align="center">d</td>
+<td align="center">4.253%</td>
+</tr>
+<tr>
+<td align="center">e</td>
+<td align="center">12.702%</td>
+</tr>
+<tr>
+<td align="center">f</td>
+<td align="center">2.228%</td>
+</tr>
+<tr>
+<td align="center">g</td>
+<td align="center">2.015%</td>
+</tr>
+<tr>
+<td align="center">h</td>
+<td align="center">6.094%</td>
+</tr>
+<tr>
+<td align="center">i</td>
+<td align="center">6.966%</td>
+</tr>
+<tr>
+<td align="center">j</td>
+<td align="center">0.153%</td>
+</tr>
+<tr>
+<td align="center">k</td>
+<td align="center">0.772%</td>
+</tr>
+<tr>
+<td align="center">l</td>
+<td align="center">4.025%</td>
+</tr>
+<tr>
+<td align="center">m</td>
+<td align="center">2.406%</td>
+</tr>
+<tr>
+<td align="center">n</td>
+<td align="center">6.749%</td>
+</tr>
+<tr>
+<td align="center">o</td>
+<td align="center">7.507%</td>
+</tr>
+<tr>
+<td align="center">p</td>
+<td align="center">1.929%</td>
+</tr>
+<tr>
+<td align="center">q</td>
+<td align="center">0.095%</td>
+</tr>
+<tr>
+<td align="center">r</td>
+<td align="center">5.987%</td>
+</tr>
+<tr>
+<td align="center">s</td>
+<td align="center">6.327%</td>
+</tr>
+<tr>
+<td align="center">t</td>
+<td align="center">9.056%</td>
+</tr>
+<tr>
+<td align="center">u</td>
+<td align="center">2.758%</td>
+</tr>
+<tr>
+<td align="center">v</td>
+<td align="center">0.978%</td>
+</tr>
+<tr>
+<td align="center">w</td>
+<td align="center">2.360%</td>
+</tr>
+<tr>
+<td align="center">x</td>
+<td align="center">0.150%</td>
+</tr>
+<tr>
+<td align="center">y</td>
+<td align="center">1.974%</td>
+</tr>
+<tr>
+<td align="center">z</td>
+<td align="center">0.074%</td>
+</tr>
+</tbody></table>
+<p>然后我们需要知道重合指数（IC, index of coincidence）的概念。<br>重合指数表示两个随机选出的字母是相同的的概率，即随机选出两个A的概率+随机选出两个B的概率+随机选出两个C的概率+……+随机选出两个Z的概率。<br>对英语而言，根据上述的频率表，我们可以计算出英语文本的重合指数为<br>P(A)^2 + P(B)^2+……+P(Z)^2 = 0.65<br>利用重合指数推测密钥长度的原理在于，对于一个由凯撒密码加密的序列，由于所有字母的位移程度相同，所以密文的重合指数应等于原文语言的重合指数。<br>据此，我们可以逐一计算不同密钥长度下的重合指数，当重合指数接近期望的0.65时，我们就可以推测这是我们所要找的密钥长度。<br>举例来说，对密文ABCDEABCDEABCDEABC<br>首先测试密钥长度=1，对密文ABCDEABCDEABCDEABC统计每个字符出现的次数：<br>A: 4 B: 4 C: 4 D:3 E:3<br>那么对于该序列的重合指数就为：(4/18)^2 + (4/18)^2 + (4/18)^2 +(3/18)^2 +(3/18)^2 != 0.65<br>然后测试密钥长度=2，将密文ABCDEABCDEABCDEABC分解为两组：<br>组1：A C E B D A C E B<br>组2：B D A C E B D A C<br>我们知道如果密钥长度真的是2，那么组1，组2都是一个凯撒密码。对组1组2分别计算重合指数。<br>如果组1的重合指数接近0.65，组2的重合指数也接近0.65，那么基本可以断定密钥长度为2。</p>
+<h2 id="字母频度分析"><a href="#字母频度分析" class="headerlink" title="字母频度分析"></a>字母频度分析</h2><p>在知道了密钥长度n以后，就可将密文分解为n组，每一组都是一个凯撒密码，然后对每一组用字母频度分析进行解密，和在一起就能成功解密凯撒密码。<br>上文已经说到，自然语言的字母频度是一定的。字母频度分析就是将密文的字母频度和自然语言的自然频度排序对比，从而找出可能的原文。<br>理论上文本长度越长，字母频度分析的效果更好。</p>
+<blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/10/13/cipher-exp1/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/10/13/cipher-exp1/</a></p></blockquote>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2019/10/13/cipher-exp1/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/10/13/cipher-exp1/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//yizhixiaobai.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2019/10/15/cv-exp3/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/10/12/eq/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/head_sculpture.png" alt="一直小白's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        zhongyuhang113@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:zhongyuhang113@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2019/11/">十一月 2019<span class="sidebar_archives-count">14</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">29</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">25</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Database/">Database<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/IT项目管理/">IT项目管理<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/android/">android<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/c/">c++<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/j2ee/">j2ee<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/java/">java<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/lua/">lua<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/opencv/">opencv<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/oracle/">oracle<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/书籍/">书籍<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/信息安全/">信息安全<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端/">前端<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/开箱/">开箱<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/心理学/">心理学<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/测试/">测试<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/游记/">游记<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/笔记/">笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机网络/">计算机网络<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/设计模式/">设计模式<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/评测/">评测<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/需求分析/">需求分析<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/鱼的记忆/">鱼的记忆<span class="sidebar_archives-count">9</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">table</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间轴">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                时间轴
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/video" title="目之所及">
+                
+                    <i class="material-icons sidebar-material-icons">movie</i>
+                
+                目之所及
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="图库">
+                
+                    <i class="material-icons sidebar-material-icons">collections</i>
+                
+                图库
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="好朋友">
+                
+                    <i class="material-icons sidebar-material-icons">favorite_border</i>
+                
+                好朋友
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/PGP" title="PGP密钥">
+                
+                    <i class="material-icons sidebar-material-icons">vpn_key</i>
+                
+                PGP密钥
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/agree" title="知识共享协议">
+                
+                    <i class="material-icons sidebar-material-icons">https</i>
+                
+                知识共享协议
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/me" title="关于小白">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于小白
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">88</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/WTOJL7dDTsa8Dcd" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/zyhang8" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https:www.github.com/zyhang8" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;一直小白的博客
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//yizhixiaobai.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2017;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
