@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
+
+
+    <link rel="dns-prefetch" href="https://yizhixiaobai.disqus.com">
+
+
+
+    <link rel="dns-prefetch" href="https://hm.baidu.com">
+
+
+
+    <link rel="dns-prefetch" href="https://lib.baomitu.com">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            c++ | 
+        
+        一直小白的博客
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/head_sculpture.png">
+    <link rel="icon" href="/img/head_sculpture.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content>
+    <meta name="keywords" content="这是一只小白,c++">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微锟斤拷锟脚猴拷", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <style>
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: regular;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.svg#Roboto) format('svg')
+        }
+    </style>
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="一直小白的博客">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2019/09/01/c++/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="一直小白的博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/head_sculpture.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com/2019/09/01/c++/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="c++ | 一直小白的博客">
+    <meta property="og:image" content="/img/head_sculpture.png">
+    <meta property="og:description" content>
+    <meta property="og:article:tag" content="c++"> 
+
+    
+        <meta property="article:published_time" content="Sun Sep 01 2019 16:04:50 GMT+0800">
+        <meta property="article:modified_time" content="Wed Nov 06 2019 12:52:43 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/2019/09/01/c++/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2019/09/01/c++/index.html",
+    "headline": "c++",
+    "datePublished": "Sun Sep 01 2019 16:04:50 GMT+0800",
+    "dateModified": "Wed Nov 06 2019 12:52:43 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "一直小白",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/head_sculpture.png"
+        },
+        "description": "求知若饥,谦虚若愚"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "一直小白的博客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/head_sculpture.png"
+        }
+    },
+    "keywords": ",c++这是一只小白",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+        <script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?5a42bcc3e66e1db4931abdcca1a9aa74';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#C-算法分类"><span class="post-toc-number">1.</span> <span class="post-toc-text">C++算法分类</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基本语法"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">基本语法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#命名"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">命名</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据类型"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">数据类型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#转换说明符"><span class="post-toc-number">1.1.2.1.</span> <span class="post-toc-text">转换说明符</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常用头函数"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">常用头函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#函数"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#cin-getline-get"><span class="post-toc-number">1.1.4.1.</span> <span class="post-toc-text">cin,getline,get</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#setw-int-n"><span class="post-toc-number">1.1.4.2.</span> <span class="post-toc-text">setw(int n)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#四舍五入"><span class="post-toc-number">1.1.4.3.</span> <span class="post-toc-text">四舍五入</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#基本算法"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">基本算法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#遍历"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">遍历</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#枚举"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">枚举</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#贪心"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">贪心</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#递归和分治"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">递归和分治</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#递推"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">递推</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#构造"><span class="post-toc-number">1.2.6.</span> <span class="post-toc-text">构造</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#模拟"><span class="post-toc-number">1.2.7.</span> <span class="post-toc-text">模拟</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#搜索"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">搜索</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#深度优先搜索"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">深度优先搜索</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#广度优先搜索"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">广度优先搜索</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#双向搜索"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">双向搜索</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#启发式搜索"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">启发式搜索</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#记忆化搜索"><span class="post-toc-number">1.3.5.</span> <span class="post-toc-text">记忆化搜索</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#计算几何"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">计算几何</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#几何公式"><span class="post-toc-number">1.4.1.</span> <span class="post-toc-text">几何公式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#叉积和点积的运用"><span class="post-toc-number">1.4.2.</span> <span class="post-toc-text">叉积和点积的运用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#多边形的简单算法"><span class="post-toc-number">1.4.3.</span> <span class="post-toc-text">多边形的简单算法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#凸包"><span class="post-toc-number">1.4.4.</span> <span class="post-toc-text">凸包</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#扫描线算法"><span class="post-toc-number">1.4.5.</span> <span class="post-toc-text">扫描线算法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#多边形的内核"><span class="post-toc-number">1.4.6.</span> <span class="post-toc-text">多边形的内核</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#几何工具的综合应用"><span class="post-toc-number">1.4.7.</span> <span class="post-toc-text">几何工具的综合应用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#半平面求交"><span class="post-toc-number">1.4.8.</span> <span class="post-toc-text">半平面求交</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#可视图的建立"><span class="post-toc-number">1.4.9.</span> <span class="post-toc-text">可视图的建立</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#点集最小圆覆盖"><span class="post-toc-number">1.4.10.</span> <span class="post-toc-text">点集最小圆覆盖</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#对踵点"><span class="post-toc-number">1.4.11.</span> <span class="post-toc-text">对踵点</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数学"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">数学</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#组合数学"><span class="post-toc-number">1.5.1.</span> <span class="post-toc-text">组合数学</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#排列组合"><span class="post-toc-number">1.5.1.1.</span> <span class="post-toc-text">排列组合</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#递推关系"><span class="post-toc-number">1.5.1.2.</span> <span class="post-toc-text">递推关系</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#容斥原理"><span class="post-toc-number">1.5.1.3.</span> <span class="post-toc-text">容斥原理</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#抽屉原理"><span class="post-toc-number">1.5.1.4.</span> <span class="post-toc-text">抽屉原理</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#置换群与Polya定理"><span class="post-toc-number">1.5.1.5.</span> <span class="post-toc-text">置换群与Polya定理</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#母函数"><span class="post-toc-number">1.5.1.6.</span> <span class="post-toc-text">母函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#MoBius反演"><span class="post-toc-number">1.5.1.7.</span> <span class="post-toc-text">MoBius反演</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#偏序关系理论"><span class="post-toc-number">1.5.1.8.</span> <span class="post-toc-text">偏序关系理论</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数论"><span class="post-toc-number">1.5.2.</span> <span class="post-toc-text">数论</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#进制位"><span class="post-toc-number">1.5.2.1.</span> <span class="post-toc-text">进制位</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#同余模运算"><span class="post-toc-number">1.5.2.2.</span> <span class="post-toc-text">同余模运算</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#高斯消元"><span class="post-toc-number">1.5.2.3.</span> <span class="post-toc-text">高斯消元</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#概率问题"><span class="post-toc-number">1.5.2.4.</span> <span class="post-toc-text">概率问题</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#扩展欧几里德"><span class="post-toc-number">1.5.2.5.</span> <span class="post-toc-text">扩展欧几里德</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#博弈论"><span class="post-toc-number">1.5.3.</span> <span class="post-toc-text">博弈论</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#极大极小过程"><span class="post-toc-number">1.5.3.1.</span> <span class="post-toc-text">极大极小过程</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Nim过程"><span class="post-toc-number">1.5.3.2.</span> <span class="post-toc-text">Nim过程</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#图论"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">图论</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#拓扑排序"><span class="post-toc-number">1.6.1.</span> <span class="post-toc-text">拓扑排序</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#最小生成树"><span class="post-toc-number">1.6.2.</span> <span class="post-toc-text">最小生成树</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#最短路"><span class="post-toc-number">1.6.3.</span> <span class="post-toc-text">最短路</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二分图"><span class="post-toc-number">1.6.4.</span> <span class="post-toc-text">二分图</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#匈牙利算法"><span class="post-toc-number">1.6.4.1.</span> <span class="post-toc-text">匈牙利算法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#KM算法"><span class="post-toc-number">1.6.4.2.</span> <span class="post-toc-text">KM算法</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#网络流"><span class="post-toc-number">1.6.5.</span> <span class="post-toc-text">网络流</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#最小费用最大流"><span class="post-toc-number">1.6.5.1.</span> <span class="post-toc-text">最小费用最大流</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#最小割模型、网络流规约"><span class="post-toc-number">1.6.5.2.</span> <span class="post-toc-text">最小割模型、网络流规约</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#差分约束系统建立和求解"><span class="post-toc-number">1.6.6.</span> <span class="post-toc-text">差分约束系统建立和求解</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#双连通分量"><span class="post-toc-number">1.6.7.</span> <span class="post-toc-text">双连通分量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#强连通分支及其缩点"><span class="post-toc-number">1.6.8.</span> <span class="post-toc-text">强连通分支及其缩点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#图的割边与割点"><span class="post-toc-number">1.6.9.</span> <span class="post-toc-text">图的割边与割点</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#动态规划"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">动态规划</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#背包问题"><span class="post-toc-number">1.7.1.</span> <span class="post-toc-text">背包问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#01背包"><span class="post-toc-number">1.7.1.1.</span> <span class="post-toc-text">01背包</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#完全背包"><span class="post-toc-number">1.7.1.2.</span> <span class="post-toc-text">完全背包</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#多维背包"><span class="post-toc-number">1.7.1.3.</span> <span class="post-toc-text">多维背包</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#多里背包"><span class="post-toc-number">1.7.1.4.</span> <span class="post-toc-text">多里背包</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#基本DP"><span class="post-toc-number">1.7.2.</span> <span class="post-toc-text">基本DP</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#区间DP"><span class="post-toc-number">1.7.2.1.</span> <span class="post-toc-text">区间DP</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#环形DP"><span class="post-toc-number">1.7.2.2.</span> <span class="post-toc-text">环形DP</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#判定行DP"><span class="post-toc-number">1.7.2.3.</span> <span class="post-toc-text">判定行DP</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#棋盘分割"><span class="post-toc-number">1.7.2.4.</span> <span class="post-toc-text">棋盘分割</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#最长公共子序列"><span class="post-toc-number">1.7.2.5.</span> <span class="post-toc-text">最长公共子序列</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#最长上升子序列"><span class="post-toc-number">1.7.2.6.</span> <span class="post-toc-text">最长上升子序列</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二分判定型DP"><span class="post-toc-number">1.7.3.</span> <span class="post-toc-text">二分判定型DP</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#树形动态规划"><span class="post-toc-number">1.7.4.</span> <span class="post-toc-text">树形动态规划</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#最大独立集"><span class="post-toc-number">1.7.4.1.</span> <span class="post-toc-text">最大独立集</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#状态压缩DP"><span class="post-toc-number">1.7.5.</span> <span class="post-toc-text">状态压缩DP</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#哈密顿路径问题"><span class="post-toc-number">1.7.5.1.</span> <span class="post-toc-text">哈密顿路径问题</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#四边形不等式理论"><span class="post-toc-number">1.7.5.2.</span> <span class="post-toc-text">四边形不等式理论</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#单调队列优化"><span class="post-toc-number">1.7.5.3.</span> <span class="post-toc-text">单调队列优化</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数据结构"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">数据结构</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#串"><span class="post-toc-number">1.8.1.</span> <span class="post-toc-text">串</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#KMP"><span class="post-toc-number">1.8.1.1.</span> <span class="post-toc-text">KMP</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#排序"><span class="post-toc-number">1.8.2.</span> <span class="post-toc-text">排序</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#冒泡排序"><span class="post-toc-number">1.8.2.1.</span> <span class="post-toc-text">冒泡排序</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#选择排序"><span class="post-toc-number">1.8.2.2.</span> <span class="post-toc-text">选择排序</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#快速排序"><span class="post-toc-number">1.8.2.3.</span> <span class="post-toc-text">快速排序</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#插入排序"><span class="post-toc-number">1.8.2.4.</span> <span class="post-toc-text">插入排序</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#希尔排序"><span class="post-toc-number">1.8.2.5.</span> <span class="post-toc-text">希尔排序</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#基数排序"><span class="post-toc-number">1.8.2.6.</span> <span class="post-toc-text">基数排序</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#归并排序"><span class="post-toc-number">1.8.2.7.</span> <span class="post-toc-text">归并排序</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#堆排序"><span class="post-toc-number">1.8.2.8.</span> <span class="post-toc-text">堆排序</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#哈希表"><span class="post-toc-number">1.8.3.</span> <span class="post-toc-text">哈希表</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二分"><span class="post-toc-number">1.8.4.</span> <span class="post-toc-text">二分</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#并查集"><span class="post-toc-number">1.8.5.</span> <span class="post-toc-text">并查集</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#霍夫曼树"><span class="post-toc-number">1.8.6.</span> <span class="post-toc-text">霍夫曼树</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#堆"><span class="post-toc-number">1.8.7.</span> <span class="post-toc-text">堆</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#线段树"><span class="post-toc-number">1.8.8.</span> <span class="post-toc-text">线段树</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二叉树"><span class="post-toc-number">1.8.9.</span> <span class="post-toc-text">二叉树</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#树的树状数组"><span class="post-toc-number">1.8.10.</span> <span class="post-toc-text">树的树状数组</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#RMQ"><span class="post-toc-number">1.8.11.</span> <span class="post-toc-text">RMQ</span></a></li></ol></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                c++
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/head_sculpture.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>一直小白</strong>
+        <span>9月 01, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACaklEQVR42u3aQU7EMBAEwP3/p+GKBITucWyiVeW0EiFx5WCPeub18dbXCw8PDw8PDw8P72G8V3xd3//1r99//7CIy+fM1oaHh4d3kvfHVvvLi6+XkpCu1zBcGx4eHt5BXv769Q09f069Njw8PLyH8ZLNenZUXG/6eHh4eO/By4+QpFB+3MGAh4eHd1MY0ZbR1895XNaCh4eHF/Pa+ODk73/o7+Hh4eFd8uqRptGG3i76tqErPDw8vA289Qi1bYDNjqWkTMfDw8M7w8sDhXyAoP3f9Q+Nh4eHd5KXb9xtyJvHuO2oQV1S4+Hh4d3Ky+OGPGJInt8OHCTPwcPDwzvDW2k+zYYMZh+0KMHx8PDwNvNmwWseYbTl+6yMxsPDwzvJyxtas8bVSozbNt7w8PDwzvDauLaNCdpgdyVQxsPDwzvPawOFlWJ61lqLSnA8PDy8g7zZi2f3tIMFxXgBHh4e3kFey84bVLPwdzhSgIeHh7eZ1wYH7eExi2KjRlc+dIWHh4d3Ky9fXB5erBTN18dM1K7Dw8PD28zLN+68/d+W2nk5PpzGxcPDw7uVl7SdZiNTszvXxwjw8PDw/ou3EuzeNd46a8Lh4eHh7ebNSt6kgM4BLX7YAMPDw8O7iTdrO81C29k99Z14eHh4m3krxW5efBch7GioCw8PD+88Lz8M2iZWGwG3HysaHcDDw8Pbxps18mfbd76GNpLAw8PDexpvJUqYhcLJ4YSHh4f3fN4spGiXflt/Dw8PD28brx5vKo+BNtRoYXh4eHgneW0DLIlZ2+fnH+KPiBkPDw9vM+/9Ljw8PDw8PDw8vAdcnxaHWNwWuoc1AAAAAElFTkSuQmCC">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/c/">c++</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=c++&url=http://yoursite.com/2019/09/01/c++/index.html&pic=http://yoursite.com/img/head_sculpture.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=c++&url=http://yoursite.com/2019/09/01/c++/index.html&via=一直小白" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/09/01/c++/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2019/09/01/c++/index.html&title=c++" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一直小白的博客&title=c++&summary=&pics=http://yoursite.com/img/head_sculpture.png&url=http://yoursite.com/2019/09/01/c++/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="C-算法分类"><a href="#C-算法分类" class="headerlink" title="C++算法分类"></a>C++算法分类</h1><p><img src="https://s2.ax1x.com/2019/11/04/KxZS5F.jpg" alt="KxZS5F.jpg"></p>
+<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><h3 id="命名"><a href="#命名" class="headerlink" title="命名"></a>命名</h3><ul>
+<li>类的名称都要以大写字母“C”开头，后跟一个或多个单词。为便于界定，每个单词的首字母要大写</li>
+<li>函数名应当使用”动词”或者”动词＋名词”（动宾词组）的形式。例如：”GetName()”, “SetValue()”, “Erase()”, “Reserve()” ….</li>
+<li>函数的名称由一个或多个单词组成。为便于界定，每个单词的首字母要大写。</li>
+<li>保护成员函数的开头应当加上一个下划线“_”以示区别，例如：”_SetState()”</li>
+<li>类似地，私有成员函数的开头应当加上两个下划线“<strong>”，例如：”</strong>DestroyImp()”</li>
+<li>回调和事件处理函数习惯以单词“On”开头。例如：”_OnTimer()”, “OnExit()”</li>
+<li>虚函数习惯以“Do”开头，如：”DoRefresh()”, “_DoEncryption()”</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">前缀</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">无</td>
+<td align="center">局部变量</td>
+</tr>
+<tr>
+<td align="center">m_</td>
+<td align="center">类的成员变量（member）</td>
+</tr>
+<tr>
+<td align="center">sm_</td>
+<td align="center">类的静态成员变量（static member）</td>
+</tr>
+<tr>
+<td align="center">s_</td>
+<td align="center">静态变量（static）</td>
+</tr>
+<tr>
+<td align="center">g_</td>
+<td align="center">外部全局变量（global）</td>
+</tr>
+<tr>
+<td align="center">sg_</td>
+<td align="center">静态全局变量（static global）</td>
+</tr>
+<tr>
+<td align="center">gg_</td>
+<td align="center">进程间共享的共享数据段全局变量（global global）</td>
+</tr>
+</tbody></table>
+<h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><ul>
+<li>int 类型，4Bytes 32位，最小-2147483648 最大 2147483647</li>
+<li>PI=atan(1.0)*4</li>
+</ul>
+<h4 id="转换说明符"><a href="#转换说明符" class="headerlink" title="转换说明符"></a>转换说明符</h4><ul>
+<li>%a(%A) 浮点数、十六进制数字和p-(P-)记数法(C99)</li>
+<li>%d 有符号十进制整数</li>
+<li>%e(%E) 浮点数指数输出[e-(E-)记数法]</li>
+<li>%g(%G) 浮点数不显无意义的零”0”</li>
+<li>%i 有符号十进制整数(与%d相同)</li>
+<li>%u 无符号十进制整数</li>
+<li>%o 八进制整数 e.g. 0123</li>
+<li>%x(%X) 十六进制整数0f(0F) e.g. 0x1234</li>
+<li>%p 指针</li>
+<li>%% “%”</li>
+<li>左对齐：”-“ e.g. “%-20s”</li>
+<li>右对齐：”+” e.g. “%+20s”/“%20s”</li>
+<li>“%m.ns”：输出m位，取字符串(左起)n位，左补空格  e.g. “%7.2s” 输入CHINA   输出” CH”</li>
+</ul>
+<h3 id="常用头函数"><a href="#常用头函数" class="headerlink" title="常用头函数"></a>常用头函数</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iomanip&gt; //流操作符</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;math.h&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h4 id="cin-getline-get"><a href="#cin-getline-get" class="headerlink" title="cin,getline,get"></a>cin,getline,get</h4><ul>
+<li>cin&gt;&gt; == cin.operator&gt;&gt;()</li>
+<li>若缓冲区中第一个字符是空格、tab或换行这些分隔符时，cin&gt;&gt;会将其忽略并清除，继续读取下一个字符，若缓冲区为空，则继续等待。但是如果读取成功，字符后面的分隔符是残留在缓冲区的，cin&gt;&gt;不做处理</li>
+<li>不想略过空白字符，那就使用 noskipws 流控制。比如cin&gt;&gt;noskipws&gt;&gt;input</li>
+<li>istream类重载了get（)方法，分别为get（void）， get(char &amp;, int)， get(char &amp; , int , char)</li>
+<li>getline()读取数据时，并非像cin&gt;&gt;那样忽略第一个换行符，getline()发现cin的缓冲区中有一个残留的换行符，不阻塞请求键盘输入，直接读取</li>
+<li>get(char &amp;, int) 第一个参数用于保存输入字符，第二个参数表示最大输入字符个数，存储个数往往比第二个参数小一</li>
+<li>get（）会将换行符保留在输入序列中，这就导致了二次输入操作时，换行符会直接被读取，输入流会认为输入已经结束.如何解决:cin.get(ch1,20).get()</li>
+<li>getline（）不是类方法。它将cin作为参数，指出到哪里去查找输入</li>
+<li>cin.sync()来清空输入缓冲区；在流中fail()状态值无效的情况下，执行cin.sync(); 清空流是无效的</li>
+<li>cin.clear();  // 将流中的所有状态值都重设为有效值</li>
+<li>cin.fail() //输入错误 ，为1</li>
+<li>cin.sync() 可不一定能清空缓冲区，具体实现跟编译器相关，所以不具备很好的移植性，慎用;vscode 使用cin.ignore(std::numeric_limits<a href="std::streamsize" target="_blank" rel="noopener">std::streamsize</a>::max(), ‘\n’); 代替cin.sync()</li>
+</ul>
+<h4 id="setw-int-n"><a href="#setw-int-n" class="headerlink" title="setw(int n)"></a>setw(int n)</h4><p>用来控制输出间隔</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cout</span>&lt;&lt; setw(<span class="number">4</span>) &lt;&lt;<span class="number">123</span> &lt;&lt;<span class="number">1234</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="number">1</span> &lt;&lt;setw(<span class="number">7</span>) &lt;&lt; <span class="number">1234</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="number">1</span> &lt;&lt; setw(<span class="number">7</span>) &lt;&lt; <span class="number">1234567891234</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="number">1</span> &lt;&lt; <span class="number">1234</span> &lt;&lt; setw(<span class="number">7</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;setfill(<span class="string">'*'</span>)&lt;&lt;setw(<span class="number">5</span>)&lt;&lt;<span class="string">'a'</span>&lt;&lt;<span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> 1231234</span><br><span class="line"></span><br><span class="line">1   1234</span><br><span class="line"></span><br><span class="line">11234567891234</span><br><span class="line"></span><br><span class="line">11234</span><br><span class="line"></span><br><span class="line">****a</span><br></pre></td></tr></table></figure>
+
+<h4 id="四舍五入"><a href="#四舍五入" class="headerlink" title="四舍五入"></a>四舍五入</h4><ul>
+<li>ceil(x)返回不小于x的最小整数值（然后转换为double型）</li>
+<li>floor(x)返回不大于x的最大整数值</li>
+<li>round(x)返回x的四舍五入整数值</li>
+</ul>
+<h2 id="基本算法"><a href="#基本算法" class="headerlink" title="基本算法"></a>基本算法</h2><h3 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h3><p>1+2+3+n:(n+1) * n / 2;</p>
+<h3 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h3><h3 id="贪心"><a href="#贪心" class="headerlink" title="贪心"></a>贪心</h3><h3 id="递归和分治"><a href="#递归和分治" class="headerlink" title="递归和分治"></a>递归和分治</h3><h3 id="递推"><a href="#递推" class="headerlink" title="递推"></a>递推</h3><h3 id="构造"><a href="#构造" class="headerlink" title="构造"></a>构造</h3><h3 id="模拟"><a href="#模拟" class="headerlink" title="模拟"></a>模拟</h3><h2 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h2><h3 id="深度优先搜索"><a href="#深度优先搜索" class="headerlink" title="深度优先搜索"></a>深度优先搜索</h3><h3 id="广度优先搜索"><a href="#广度优先搜索" class="headerlink" title="广度优先搜索"></a>广度优先搜索</h3><h3 id="双向搜索"><a href="#双向搜索" class="headerlink" title="双向搜索"></a>双向搜索</h3><h3 id="启发式搜索"><a href="#启发式搜索" class="headerlink" title="启发式搜索"></a>启发式搜索</h3><h3 id="记忆化搜索"><a href="#记忆化搜索" class="headerlink" title="记忆化搜索"></a>记忆化搜索</h3><h2 id="计算几何"><a href="#计算几何" class="headerlink" title="计算几何"></a>计算几何</h2><h3 id="几何公式"><a href="#几何公式" class="headerlink" title="几何公式"></a>几何公式</h3><h3 id="叉积和点积的运用"><a href="#叉积和点积的运用" class="headerlink" title="叉积和点积的运用"></a>叉积和点积的运用</h3><h3 id="多边形的简单算法"><a href="#多边形的简单算法" class="headerlink" title="多边形的简单算法"></a>多边形的简单算法</h3><h3 id="凸包"><a href="#凸包" class="headerlink" title="凸包"></a>凸包</h3><h3 id="扫描线算法"><a href="#扫描线算法" class="headerlink" title="扫描线算法"></a>扫描线算法</h3><h3 id="多边形的内核"><a href="#多边形的内核" class="headerlink" title="多边形的内核"></a>多边形的内核</h3><h3 id="几何工具的综合应用"><a href="#几何工具的综合应用" class="headerlink" title="几何工具的综合应用"></a>几何工具的综合应用</h3><h3 id="半平面求交"><a href="#半平面求交" class="headerlink" title="半平面求交"></a>半平面求交</h3><h3 id="可视图的建立"><a href="#可视图的建立" class="headerlink" title="可视图的建立"></a>可视图的建立</h3><h3 id="点集最小圆覆盖"><a href="#点集最小圆覆盖" class="headerlink" title="点集最小圆覆盖"></a>点集最小圆覆盖</h3><h3 id="对踵点"><a href="#对踵点" class="headerlink" title="对踵点"></a>对踵点</h3><h2 id="数学"><a href="#数学" class="headerlink" title="数学"></a>数学</h2><h3 id="组合数学"><a href="#组合数学" class="headerlink" title="组合数学"></a>组合数学</h3><h4 id="排列组合"><a href="#排列组合" class="headerlink" title="排列组合"></a>排列组合</h4><h4 id="递推关系"><a href="#递推关系" class="headerlink" title="递推关系"></a>递推关系</h4><h4 id="容斥原理"><a href="#容斥原理" class="headerlink" title="容斥原理"></a>容斥原理</h4><h4 id="抽屉原理"><a href="#抽屉原理" class="headerlink" title="抽屉原理"></a>抽屉原理</h4><h4 id="置换群与Polya定理"><a href="#置换群与Polya定理" class="headerlink" title="置换群与Polya定理"></a>置换群与Polya定理</h4><h4 id="母函数"><a href="#母函数" class="headerlink" title="母函数"></a>母函数</h4><h4 id="MoBius反演"><a href="#MoBius反演" class="headerlink" title="MoBius反演"></a>MoBius反演</h4><h4 id="偏序关系理论"><a href="#偏序关系理论" class="headerlink" title="偏序关系理论"></a>偏序关系理论</h4><h3 id="数论"><a href="#数论" class="headerlink" title="数论"></a>数论</h3><h4 id="进制位"><a href="#进制位" class="headerlink" title="进制位"></a>进制位</h4><h4 id="同余模运算"><a href="#同余模运算" class="headerlink" title="同余模运算"></a>同余模运算</h4><h4 id="高斯消元"><a href="#高斯消元" class="headerlink" title="高斯消元"></a>高斯消元</h4><h4 id="概率问题"><a href="#概率问题" class="headerlink" title="概率问题"></a>概率问题</h4><h4 id="扩展欧几里德"><a href="#扩展欧几里德" class="headerlink" title="扩展欧几里德"></a>扩展欧几里德</h4><h3 id="博弈论"><a href="#博弈论" class="headerlink" title="博弈论"></a>博弈论</h3><h4 id="极大极小过程"><a href="#极大极小过程" class="headerlink" title="极大极小过程"></a>极大极小过程</h4><h4 id="Nim过程"><a href="#Nim过程" class="headerlink" title="Nim过程"></a>Nim过程</h4><h2 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h2><h3 id="拓扑排序"><a href="#拓扑排序" class="headerlink" title="拓扑排序"></a>拓扑排序</h3><h3 id="最小生成树"><a href="#最小生成树" class="headerlink" title="最小生成树"></a>最小生成树</h3><h3 id="最短路"><a href="#最短路" class="headerlink" title="最短路"></a>最短路</h3><h3 id="二分图"><a href="#二分图" class="headerlink" title="二分图"></a>二分图</h3><h4 id="匈牙利算法"><a href="#匈牙利算法" class="headerlink" title="匈牙利算法"></a>匈牙利算法</h4><h4 id="KM算法"><a href="#KM算法" class="headerlink" title="KM算法"></a>KM算法</h4><h3 id="网络流"><a href="#网络流" class="headerlink" title="网络流"></a>网络流</h3><h4 id="最小费用最大流"><a href="#最小费用最大流" class="headerlink" title="最小费用最大流"></a>最小费用最大流</h4><h4 id="最小割模型、网络流规约"><a href="#最小割模型、网络流规约" class="headerlink" title="最小割模型、网络流规约"></a>最小割模型、网络流规约</h4><h3 id="差分约束系统建立和求解"><a href="#差分约束系统建立和求解" class="headerlink" title="差分约束系统建立和求解"></a>差分约束系统建立和求解</h3><h3 id="双连通分量"><a href="#双连通分量" class="headerlink" title="双连通分量"></a>双连通分量</h3><h3 id="强连通分支及其缩点"><a href="#强连通分支及其缩点" class="headerlink" title="强连通分支及其缩点"></a>强连通分支及其缩点</h3><h3 id="图的割边与割点"><a href="#图的割边与割点" class="headerlink" title="图的割边与割点"></a>图的割边与割点</h3><h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><h3 id="背包问题"><a href="#背包问题" class="headerlink" title="背包问题"></a>背包问题</h3><h4 id="01背包"><a href="#01背包" class="headerlink" title="01背包"></a>01背包</h4><h4 id="完全背包"><a href="#完全背包" class="headerlink" title="完全背包"></a>完全背包</h4><h4 id="多维背包"><a href="#多维背包" class="headerlink" title="多维背包"></a>多维背包</h4><h4 id="多里背包"><a href="#多里背包" class="headerlink" title="多里背包"></a>多里背包</h4><h3 id="基本DP"><a href="#基本DP" class="headerlink" title="基本DP"></a>基本DP</h3><h4 id="区间DP"><a href="#区间DP" class="headerlink" title="区间DP"></a>区间DP</h4><h4 id="环形DP"><a href="#环形DP" class="headerlink" title="环形DP"></a>环形DP</h4><h4 id="判定行DP"><a href="#判定行DP" class="headerlink" title="判定行DP"></a>判定行DP</h4><h4 id="棋盘分割"><a href="#棋盘分割" class="headerlink" title="棋盘分割"></a>棋盘分割</h4><h4 id="最长公共子序列"><a href="#最长公共子序列" class="headerlink" title="最长公共子序列"></a>最长公共子序列</h4><h4 id="最长上升子序列"><a href="#最长上升子序列" class="headerlink" title="最长上升子序列"></a>最长上升子序列</h4><h3 id="二分判定型DP"><a href="#二分判定型DP" class="headerlink" title="二分判定型DP"></a>二分判定型DP</h3><h3 id="树形动态规划"><a href="#树形动态规划" class="headerlink" title="树形动态规划"></a>树形动态规划</h3><h4 id="最大独立集"><a href="#最大独立集" class="headerlink" title="最大独立集"></a>最大独立集</h4><h3 id="状态压缩DP"><a href="#状态压缩DP" class="headerlink" title="状态压缩DP"></a>状态压缩DP</h3><h4 id="哈密顿路径问题"><a href="#哈密顿路径问题" class="headerlink" title="哈密顿路径问题"></a>哈密顿路径问题</h4><h4 id="四边形不等式理论"><a href="#四边形不等式理论" class="headerlink" title="四边形不等式理论"></a>四边形不等式理论</h4><h4 id="单调队列优化"><a href="#单调队列优化" class="headerlink" title="单调队列优化"></a>单调队列优化</h4><h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h3 id="串"><a href="#串" class="headerlink" title="串"></a>串</h3><h4 id="KMP"><a href="#KMP" class="headerlink" title="KMP"></a>KMP</h4><h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><p><img src="https://segmentfault.com/img/bVbkOnq?w=966&h=588" alt="1"></p>
+<h4 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h4><p>时间复杂度：O(N2) 　　稳定性：稳定</p>
+<h4 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h4><p>时间复杂度：O(N2) 　　稳定性：不稳定</p>
+<h4 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h4><p>时间复杂度：O(NlogN) 　　稳定性：不稳定</p>
+<p>枢值/基准数，哨兵</p>
+<h4 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h4><p>时间复杂度：O(N2) 　　稳定性：稳定</p>
+<h4 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h4><p>时间复杂度：通常认为是O(N3/2) ，未验证　　稳定性：不稳定</p>
+<h4 id="基数排序"><a href="#基数排序" class="headerlink" title="基数排序"></a>基数排序</h4><p>时间复杂度：O(x*N) 　　稳定性：稳定</p>
+<h4 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h4><p>时间复杂度：O(NlogN) 　　稳定性：稳定</p>
+<h4 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h4><p>时间复杂度：O(NlogN) 　　稳定性：不稳定</p>
+<h3 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h3><h3 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h3><h3 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h3><h3 id="霍夫曼树"><a href="#霍夫曼树" class="headerlink" title="霍夫曼树"></a>霍夫曼树</h3><h3 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h3><h3 id="线段树"><a href="#线段树" class="headerlink" title="线段树"></a>线段树</h3><h3 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h3><h3 id="树的树状数组"><a href="#树的树状数组" class="headerlink" title="树的树状数组"></a>树的树状数组</h3><h3 id="RMQ"><a href="#RMQ" class="headerlink" title="RMQ"></a>RMQ</h3><blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/09/01/c++/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/09/01/c++/</a></p></blockquote>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2019/09/01/c++/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/09/01/c++/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//yizhixiaobai.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2019/09/02/fish-django/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/08/26/nanjing/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/head_sculpture.png" alt="一直小白's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        zhongyuhang113@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:zhongyuhang113@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2019/11/">十一月 2019<span class="sidebar_archives-count">18</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">29</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">28</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Database/">Database<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/IT项目管理/">IT项目管理<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/android/">android<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/c/">c++<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/j2ee/">j2ee<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/java/">java<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/lua/">lua<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/opencv/">opencv<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/oracle/">oracle<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/书籍/">书籍<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/信息安全/">信息安全<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端/">前端<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/开箱/">开箱<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/心理学/">心理学<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/测试/">测试<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/游记/">游记<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/笔记/">笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机网络/">计算机网络<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/设计模式/">设计模式<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/评测/">评测<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/需求分析/">需求分析<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/鱼的记忆/">鱼的记忆<span class="sidebar_archives-count">9</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">table</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间轴">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                时间轴
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/video" title="目之所及">
+                
+                    <i class="material-icons sidebar-material-icons">movie</i>
+                
+                目之所及
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="图库">
+                
+                    <i class="material-icons sidebar-material-icons">collections</i>
+                
+                图库
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="好朋友">
+                
+                    <i class="material-icons sidebar-material-icons">favorite_border</i>
+                
+                好朋友
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/PGP" title="PGP密钥">
+                
+                    <i class="material-icons sidebar-material-icons">vpn_key</i>
+                
+                PGP密钥
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/agree" title="知识共享协议">
+                
+                    <i class="material-icons sidebar-material-icons">https</i>
+                
+                知识共享协议
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/me" title="关于小白">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于小白
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">95</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/WTOJL7dDTsa8Dcd" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/zyhang8" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https:www.github.com/zyhang8" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;一直小白的博客
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//yizhixiaobai.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2017;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
