@@ -272,7 +272,7 @@
 
     
         <meta property="article:published_time" content="Sun Sep 01 2019 16:04:50 GMT+0800">
-        <meta property="article:modified_time" content="Fri Nov 08 2019 22:51:07 GMT+0800">
+        <meta property="article:modified_time" content="Fri Nov 08 2019 22:55:46 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -295,7 +295,7 @@
     "mainEntityOfPage": "http://yoursite.com/2019/09/01/c++/index.html",
     "headline": "c++",
     "datePublished": "Sun Sep 01 2019 16:04:50 GMT+0800",
-    "dateModified": "Fri Nov 08 2019 22:51:07 GMT+0800",
+    "dateModified": "Fri Nov 08 2019 22:55:46 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "一直小白",
@@ -673,6 +673,10 @@
 <p>int i = 1, j = 0x80000000; //设int为32位</p>
 <p>i = i &lt;&lt; 33; // 33 % 32 = 1 左移1位,i变成2</p>
 <p>j = j &lt;&lt; 33; // 33 % 32 = 1 左移1位,j变成0,最高位被丢弃</p>
+<p>左移1位相当于乘以2,那么左移n位就是乘以2的n次方了</p>
+<p>左移就是: 丢弃最高位,0补最低位</p>
+<p>符号位向右移动后,正数的话补0,负数补1</p>
+<p>同样当移动的位数超过类型的长度时,会取余数,然后移动余数个位.</p>
 <h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><h4 id="cin-getline-get"><a href="#cin-getline-get" class="headerlink" title="cin,getline,get"></a>cin,getline,get</h4><ul>
 <li>cin&gt;&gt; == cin.operator&gt;&gt;()</li>
 <li>若缓冲区中第一个字符是空格、tab或换行这些分隔符时，cin&gt;&gt;会将其忽略并清除，继续读取下一个字符，若缓冲区为空，则继续等待。但是如果读取成功，字符后面的分隔符是残留在缓冲区的，cin&gt;&gt;不做处理</li>
@@ -877,7 +881,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2019/11/">十一月 2019<span class="sidebar_archives-count">18</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">29</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">28</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/archives/2019/11/">十一月 2019<span class="sidebar_archives-count">19</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">29</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">28</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -895,7 +899,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Database/">Database<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/IT项目管理/">IT项目管理<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/android/">android<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/c/">c++<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/j2ee/">j2ee<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/java/">java<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/lua/">lua<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/opencv/">opencv<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/oracle/">oracle<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/书籍/">书籍<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/信息安全/">信息安全<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端/">前端<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/开箱/">开箱<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/心理学/">心理学<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/测试/">测试<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/游记/">游记<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/笔记/">笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机网络/">计算机网络<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/设计模式/">设计模式<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/评测/">评测<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/需求分析/">需求分析<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/鱼的记忆/">鱼的记忆<span class="sidebar_archives-count">9</span></a>
+                <a class="sidebar_archives-link" href="/categories/Database/">Database<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/IT项目管理/">IT项目管理<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/android/">android<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/c/">c++<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/j2ee/">j2ee<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/java/">java<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/lua/">lua<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/opencv/">opencv<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/oracle/">oracle<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/书籍/">书籍<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/信息安全/">信息安全<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端/">前端<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/开箱/">开箱<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/心理学/">心理学<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/测试/">测试<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/游记/">游记<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/笔记/">笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机网络/">计算机网络<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/设计模式/">设计模式<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/评测/">评测<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/需求分析/">需求分析<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/鱼的记忆/">鱼的记忆<span class="sidebar_archives-count">9</span></a>
             </ul>
         </li>
         
@@ -989,7 +993,7 @@
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">95</span>
+                <span class="sidebar-badge">96</span>
             </a>
         </li>
         
