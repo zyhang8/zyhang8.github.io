@@ -52,7 +52,7 @@
     
     <title>
         
-            cipher-exp6 | 
+            实验六 SHA-1算法+MD5算法+哈希碰撞 | 
         
         一直小白的博客
     </title>
@@ -63,7 +63,7 @@
 
     <meta name="format-detection" content="telephone=no">
     <meta name="description" itemprop="description" content>
-    <meta name="keywords" content="这是一只小白">
+    <meta name="keywords" content="这是一只小白,信息安全">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -248,7 +248,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="一直小白的博客">
-    <meta name="msapplication-starturl" content="http://yoursite.com/2019/11/02/cipher-exp6/">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2019/11/18/cipher-exp6/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="一直小白的博客">
@@ -263,16 +263,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com/2019/11/02/cipher-exp6/">
+    <meta property="og:url" content="http://yoursite.com/2019/11/18/cipher-exp6/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="cipher-exp6 | 一直小白的博客">
+    <meta property="og:title" content="实验六 SHA-1算法+MD5算法+哈希碰撞 | 一直小白的博客">
     <meta property="og:image" content="/img/head_sculpture.png">
     <meta property="og:description" content>
-    
+    <meta property="og:article:tag" content="信息安全"> 
 
     
-        <meta property="article:published_time" content="Sat Nov 02 2019 16:07:41 GMT+0800">
-        <meta property="article:modified_time" content="Sat Nov 02 2019 16:07:41 GMT+0800">
+        <meta property="article:published_time" content="Mon Nov 18 2019 16:07:41 GMT+0800">
+        <meta property="article:modified_time" content="Thu Nov 21 2019 21:35:36 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -280,7 +280,7 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://yoursite.com/2019/11/02/cipher-exp6/index.html">
+        <link rel="canonical" href="http://yoursite.com/2019/11/18/cipher-exp6/index.html">
     
 
     <!-- Structured-data for SEO -->
@@ -292,10 +292,10 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": "http://yoursite.com/2019/11/02/cipher-exp6/index.html",
-    "headline": "cipher-exp6",
-    "datePublished": "Sat Nov 02 2019 16:07:41 GMT+0800",
-    "dateModified": "Sat Nov 02 2019 16:07:41 GMT+0800",
+    "mainEntityOfPage": "http://yoursite.com/2019/11/18/cipher-exp6/index.html",
+    "headline": "实验六 SHA-1算法+MD5算法+哈希碰撞",
+    "datePublished": "Mon Nov 18 2019 16:07:41 GMT+0800",
+    "dateModified": "Thu Nov 21 2019 21:35:36 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "一直小白",
@@ -313,7 +313,7 @@
             "url": "/img/head_sculpture.png"
         }
     },
-    "keywords": "这是一只小白",
+    "keywords": ",信息安全这是一只小白",
     "description": "",
 }
 </script>
@@ -382,6 +382,15 @@
     <!-- Left aligned menu below button -->
     
     
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#实验六-SHA-1算法-MD5算法-哈希碰撞"><span class="post-toc-number">1.</span> <span class="post-toc-text">实验六 SHA-1算法+MD5算法+哈希碰撞</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#SHA-1算法-MD5算法"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">SHA-1算法+MD5算法</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#h1-sha-1-"><span class="post-toc-number">2.</span> <span class="post-toc-text">SHA-1算法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#h2--"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">【实验目的】</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#h2--"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">【实验原理】</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#h2--"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">【实验环境】</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#h2--"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">【实验步骤】</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#h2--"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">【实验思考】</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#哈希碰撞"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">哈希碰撞</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-开放地址法"><span class="post-toc-number">2.6.1.</span> <span class="post-toc-text">1.开放地址法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-再哈希法"><span class="post-toc-number">2.6.2.</span> <span class="post-toc-text">2.再哈希法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-链地址法（拉链法）"><span class="post-toc-number">2.6.3.</span> <span class="post-toc-text">3.链地址法（拉链法）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-建立一个公共溢出区"><span class="post-toc-number">2.6.4.</span> <span class="post-toc-text">4.建立一个公共溢出区</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#拉链法的优缺点"><span class="post-toc-number">2.6.5.</span> <span class="post-toc-text">拉链法的优缺点</span></a></li></ol></li></ol></li></ol>
+    </ul>
+    
 
 
 
@@ -411,7 +420,7 @@
         
     
             <p class="article-headline-p">
-                cipher-exp6
+                实验六 SHA-1算法+MD5算法+哈希碰撞
             </p>
         </div>
 
@@ -430,7 +439,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>一直小白</strong>
-        <span>11月 02, 2019</span>
+        <span>11月 18, 2019</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -452,13 +461,22 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACb0lEQVR42u3aQXLbMBAEQP3/0841VY6YGSwI0a7myUXT0jYPwHqwr69ffb3w8PDw8PDw8PAexnvF19/P/+NDL59Jfnt9P6kNDw8P7yTvP0vtt+LaV/DumbVXeV0/Hh4e3kleW+71J0xKHNWGh4eH9zBe0doGdybfi4eHh/dTeMlmkDTTefuOh4eH92Re2/Im20B+Pwl8b89a8PDw8GLe2gHYmZ8/dr6Hh4eH94ZXjzTFYwTXRaxtP1GFeHh4eDfzkuOr/H7+ItrIIw9B8PDw8M7w8sOqPGDNw9mi9Ml/DHh4eHibeG0wMVnc2xY8iUXw8PDwzvPW2ui8ad41fFAcieHh4eEd4eWHT5NGeY1aD8Xi4eHh3czLi2iP9tcW97VhBTw8PLxP8fLGetL45rx2+AAPDw/vDC85ZMpLScKFpGUfVYWHh4d3nNcu+u3C3Q4H4OHh4T2NN1ms85BiMjqQNP14eHh4J3n5SGhS9OTJ9lAtinHx8PDwbuO18cHetjvfMKK/wsPDw7uZtzYWMB8UmEcYeHh4eJ/i5V+fLO7zWKEdGqjDCDw8PLwxb74QXxfdRh55U16n1Hh4eHhbebtC1aTVbscF2hYcDw8P725eHsvmwUF+JDZ/WXh4eHjnee21NlLQHpVNYl88PDy8u3lrI1bJnTZ6aOMMPDw8vM/y2hY5b4jzRrkd6opiXDw8PLybebua47WxgMnmhIeHh/dkXj0CVUa3+Rb19g4eHh7e43ltxLAWEOcvAg8PD+8kb205Tr6+HR3IN6TNWQseHh5ezNsVBKwNBLT3640BDw8Pbyvv9114eHh4eHh4eHgPuP4AHW3EcNVSTYkAAAAASUVORK5CYII=">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACZUlEQVR42u3awU5DIRAF0P7/T+vWpGm9MwMUzXkrY56FQxMGL/P4+tfPAw8PDw8PDw8P7zLeI35+vv/LAE/vvP+E51F6c8PDw8M7ycunGw3w9v1k6qOlxMPDwzvIy4fJwb0pjuaGh4eHdxmvtwQJY9m4eHh4eJfx8r96FTS8LxV4eHh4f4u36sibh7M571DWgoeHhxfzehdgZ37+2P0eHh4e3gteuaUp2LiTSeTlZ9R0hYeHh7eBlx+Lk608X4h5EFxuusLDw8NbyusdppPB5ofpasnBw8PD281bFUzkW/lk3HJhwMPDw9vAq175z5sA8jLQvBLDw8PDO8LrRbG9qKJKTeaAh4eHd56XXz41r/OL5aQaXuDh4eF9ipdffVVj3LxFIF+y8n8MeHh4eIt41WggOXCv+oTka8DDw8M7z6u2CKzaxHsBBx4eHt4NvMlVU3UTnyzTss4IPDw8vDEvKQn58XfyZh7a/lKu8PDw8I7weoFptTkgaavKAwg8PDy8T/GSMHdHo8BkKQuFAQ8PD28DL7mmqm7Tk1ihWqgKYQQeHh7eIl4V1rs2S6Le/P1mSo2Hh4e3lFeNa1dNsRrpRk0JeHh4eJt5vcNxHq32woveWHh4eHhneNWn11KQh7zz2BcPDw9vN696xdW79Mo/M2m6wsPDw7uBV41084JRDTvychLFuHh4eHibeasOx704Y16c8PDw8O7klVugitFtXqKipis8PDy8K3nVOKMXEOcLgYeHh3eS19vue1PvHc2jueHh4eEd4fUaAiZH7cnvy4UBDw8Pbynv/z14eHh4eHh4eHgXPN99VBYRN634dQAAAABJRU5ErkJggg==">
     
 </ul>
 
     
 
     <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/信息安全/">信息安全</a>
+    </ul>
     
 
     <!-- Share -->
@@ -485,7 +503,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=cipher-exp6&url=http://yoursite.com/2019/11/02/cipher-exp6/index.html&pic=http://yoursite.com/img/head_sculpture.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=实验六 SHA-1算法+MD5算法+哈希碰撞&url=http://yoursite.com/2019/11/18/cipher-exp6/index.html&pic=http://yoursite.com/img/head_sculpture.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -494,7 +512,7 @@
 
     <!-- Share Twitter -->
     
-        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=cipher-exp6&url=http://yoursite.com/2019/11/02/cipher-exp6/index.html&via=一直小白" target="_blank">
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=实验六 SHA-1算法+MD5算法+哈希碰撞&url=http://yoursite.com/2019/11/18/cipher-exp6/index.html&via=一直小白" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Twitter
             </li>
@@ -503,7 +521,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/11/02/cipher-exp6/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/11/18/cipher-exp6/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -515,7 +533,7 @@
 
     <!-- Share LinkedIn -->
     
-        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2019/11/02/cipher-exp6/index.html&title=cipher-exp6" target="_blank">
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2019/11/18/cipher-exp6/index.html&title=实验六 SHA-1算法+MD5算法+哈希碰撞" target="_blank">
             <li class="mdl-menu__item">
                 分享到 LinkedIn
             </li>
@@ -524,7 +542,7 @@
 
     <!-- Share QQ -->
     
-        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一直小白的博客&title=cipher-exp6&summary=&pics=http://yoursite.com/img/head_sculpture.png&url=http://yoursite.com/2019/11/02/cipher-exp6/index.html" target="_blank">
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一直小白的博客&title=实验六 SHA-1算法+MD5算法+哈希碰撞&summary=&pics=http://yoursite.com/img/head_sculpture.png&url=http://yoursite.com/2019/11/18/cipher-exp6/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 QQ
             </li>
@@ -543,7 +561,78 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/07/18/Ningbo/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/07/18/Ningbo/</a></p></blockquote>
+        <h1 id="实验六-SHA-1算法-MD5算法-哈希碰撞"><a href="#实验六-SHA-1算法-MD5算法-哈希碰撞" class="headerlink" title="实验六 SHA-1算法+MD5算法+哈希碰撞"></a>实验六 SHA-1算法+MD5算法+哈希碰撞</h1><h2 id="SHA-1算法-MD5算法"><a href="#SHA-1算法-MD5算法" class="headerlink" title="SHA-1算法+MD5算法"></a>SHA-1算法+MD5算法</h2><h1 id="h1-sha-1-"><a name="SHA-1算法" class="reference-link"></a><span class="header-link octicon octicon-link"></span>SHA-1算法</h1><h2 id="h2--"><a name="【实验目的】" class="reference-link"></a><span class="header-link octicon octicon-link"></span>【实验目的】</h2><p>1） 学习SHA-1密码算法的原理<br>2） 学习SHA-1密码算法的编程实现</p>
+<h2 id="h2--"><a name="【实验原理】" class="reference-link"></a><span class="header-link octicon octicon-link"></span>【实验原理】</h2><p><strong>算法原理</strong><br>安全散列算法（SHA，Secure Hash Algorithm）是一种常用的数据加密算法，1993年美国国家标准技术研究所（NIST）公布了SHA-0作为联邦信息处理标准，1995年4月17日公布了安全性更高的改进版本SHA-1。SHA-1在设计上很大程度模仿MD4，该算法对长度不超过264的消息产生160 bit的消息摘要输出，输入消息以512 bit分组为单位处理。<br>SHA-1有5个参与运算的32位寄存器字，消息分组和填充方式与MD5相同，主循环也同样是4轮，但每轮进行20词操作，非线性运算、移位和加法运算与MD5类似，但非线性函数、加法常数和循环左移操作的设计有一些区别。<br>1）附加填充位<br>填充一个“1”和若干个“0”使其长度模512与448同余，然后在消息后附加64 bit的无符号整数，其值为原始消息的长度。产生长度为512整数倍的消息串，把消息分成长度为512 bit的消息块M1,M2,…, MN因此填充后的消息程度为512<img src="/UploadImage/2016/4/20/153211936148939101.gif" alt>Nbit。<br>2）初始化链接变量<br>和MD5相似，将5个32 bit 的固定值赋予5个32位的寄存器（A，B，C，D，E）作为第一次迭代的链接变量输入如表1：</p>
+
+<center><img src="http://shou.shiyanbar.com/UploadImage/2016/4/20/153211933801341801.png" alt></center>
+
+<p>3）以512 bit 分组处理消息<br>此算法的核心就是称为压缩函数（compression function）的模块，这个模块包括4次循环，每次循环又包含20个处理步骤。每个循环使用的步函数相同，不同的循环中步函数包含不同的非线性函数（Ch、Parity、Maj、Parity），每一步函数的输入也不同，除了寄存器外，还有额外函数Ki和消息分组相关的Wi（0≤i≤79）。<br>4）输出散列值<br>每一次循环以当前正在处理的512 bit 和160bit的缓存值A、B、C、D、E为输入，然后更新缓存的内容。最后一步的输出模232加上上一循环的输入CVj产生CVj+1。全部512 bit 数据块处理完毕后，最后输出160 bit的消息摘要。</p>
+<center><img src="http://shou.shiyanbar.com/UploadImage/2016/4/20/153211939375983701.png" alt></center><br><center>图1 SHA-1对单个512 bit 分组的处理流程</center>
+
+
+<p><strong>SHA-1压缩函数</strong><br>SHA-1的压缩函数是最关键的部分，其中每一步Stepi(ABCDE,Yi,Ki)的计算(i=0,2,..,79)如下图所示：</p>
+<center><img src="http://shou.shiyanbar.com/UploadImage/2016/4/20/153211942498798101.jpg" alt></center><br><center>图2单轮SHA-1的运算</center>
+
+<p>SHA-1压缩函数的每一循环的形式为:</p>
+<center><img src="http://shou.shiyanbar.com/UploadImage/2016/4/20/153211945658118901.gif" alt></center><br><center><img src="http://shou.shiyanbar.com/UploadImage/2016/4/20/153211946925102501.gif" alt></center><br><center><img src="http://shou.shiyanbar.com/UploadImage/2016/4/20/153211948275860201.gif" alt></center><br><center><img src="http://shou.shiyanbar.com/UploadImage/2016/4/20/153211975764504601.gif" alt></center><br><center><img src="http://shou.shiyanbar.com/UploadImage/2016/4/20/153211976980172501.gif" alt></center>
+
+<p>其中，i是步数，（0≤i≤79）；<code>ROTLn(x)=(x&lt;&lt;n)&lt; span=""&gt;&lt;/n)</code>&lt;&gt;表示对32 bit的变量x循环左移n bit。<br>图中非线性函数均对3个32 bit的变量B、C、D进行操作，结果是产生一个32 bit 的输出；Ki是循环中使用的额外常数，根据步数不同分别取4个不同的值。非线性函数和Ki定义如下表2：</p>
+<center><img src="http://shou.shiyanbar.com/UploadImage/2016/4/20/153211990095806201.png" alt></center>
+
+<p>32bit的字Wi是从512 bit 的消息分组中导出的，其映射过程如下图所示：</p>
+<center><img src="http://shou.shiyanbar.com/UploadImage/2016/4/20/153211992014696001.gif" alt></center><br><center><img src="http://shou.shiyanbar.com/UploadImage/2016/4/20/153211993345742101.jpg" alt></center><br><center>图3 SHA-1处理单个分组而产生的80个输入序列</center>
+
+<p>在前16步中Wi值等于消息分组中的相应字，在剩余的64步中，其值是由前面的4个值相异或得到的，上述操作增加了压缩分组的冗余性和相互依赖性，故对于相同分组的消息找出具有相同压缩结果的消息是困难的。</p>
+<p><strong>算法流程</strong></p>
+<center><img src="http://shou.shiyanbar.com/UploadImage/2016/4/20/153211996026408701.jpg" alt></center><br><center>图4 SHA-1的算法流程图</center>
+
+<h2 id="h2--"><a name="【实验环境】" class="reference-link"></a><span class="header-link octicon octicon-link"></span>【实验环境】</h2><p>Windows Server 2012 R2<br>实验工具在【C:\tools\密码学课程\01密码学算法\06 hash算法\03 SHA-1算法】</p>
+<h2 id="h2--"><a name="【实验步骤】" class="reference-link"></a><span class="header-link octicon octicon-link"></span>【实验步骤】</h2><p>1.运行程序。如图5所示</p>
+<center><img src="http://shou.shiyanbar.com/UploadImage/2018/5/8/159986436637688801.png" alt></center><br><center>图5</center>
+
+
+<p>2.源码如下</p>
+<pre class="prettyprint linenums prettyprinted" style><ol class="linenums"><li class="L0"><code><span class="pln">  </span><span class="kwd">int</span><span class="pln"> main</span><span class="pun">()</span></code></li><li class="L1"><code><span class="pun">{</span></code></li><li class="L2"><code><span class="pln">SHA1Context sha</span><span class="pun">;</span></code></li><li class="L3"><code><span class="kwd">int</span><span class="pln"> i</span><span class="pun">,</span><span class="pln"> err</span><span class="pun">;</span></code></li><li class="L4"><code><span class="typ">uint8_t</span><span class="pln"> </span><span class="typ">Message_Digest</span><span class="pun">[</span><span class="lit">20</span><span class="pun">];</span></code></li><li class="L5"><code></code></li><li class="L6"><code><span class="com">// testing SHA1</span></code></li><li class="L7"><code><span class="kwd">char</span><span class="pln">  </span><span class="pun">*</span><span class="pln">test </span><span class="pun">=</span><span class="pln"> </span><span class="str">"信息    2013-4-10    15:59:14    b57w2k    无    11    N/A    XP-201207101943"</span><span class="pun">;</span></code></li><li class="L8"><code></code></li><li class="L9"><code><span class="pln">printf</span><span class="pun">(</span><span class="pln"> </span><span class="str">"\n测试值:\t“%s”\n"</span><span class="pun">,</span><span class="pln">test</span><span class="pun">);</span></code></li><li class="L0"><code><span class="pln">err </span><span class="pun">=</span><span class="pln"> SHA1Reset</span><span class="pun">(&amp;</span><span class="pln">sha</span><span class="pun">);</span><span class="pln">    </span><span class="com">//erro and return 0</span></code></li><li class="L1"><code></code></li><li class="L2"><code><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">err</span><span class="pun">)</span></code></li><li class="L3"><code><span class="pun">{</span></code></li><li class="L4"><code><span class="pln">    fprintf</span><span class="pun">(</span><span class="pln">stderr</span><span class="pun">,</span><span class="pln"> </span><span class="str">"SHA1重置错误 %d.\n"</span><span class="pun">,</span><span class="pln"> err </span><span class="pun">);</span></code></li><li class="L5"><code><span class="pln">    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span></code></li><li class="L6"><code><span class="pun">}</span></code></li><li class="L7"><code></code></li><li class="L8"><code><span class="pln">err </span><span class="pun">=</span><span class="pln"> ISD_SHA1Input</span><span class="pun">(&amp;</span><span class="pln">sha</span><span class="pun">,</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">unsigned</span><span class="pln"> </span><span class="kwd">char</span><span class="pln"> </span><span class="pun">*)</span><span class="pln">test</span><span class="pun">,</span><span class="pln"> strlen</span><span class="pun">(</span><span class="pln">test</span><span class="pun">));</span></code></li><li class="L9"><code></code></li><li class="L0"><code><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">err</span><span class="pun">)</span></code></li><li class="L1"><code><span class="pun">{</span></code></li><li class="L2"><code><span class="pln">    fprintf</span><span class="pun">(</span><span class="pln">stderr</span><span class="pun">,</span><span class="pln"> </span><span class="str">"SHA1输入错误 %d.\n"</span><span class="pun">,</span><span class="pln"> err </span><span class="pun">);</span></code></li><li class="L3"><code><span class="pln">    </span><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span></code></li><li class="L4"><code><span class="pun">}</span></code></li><li class="L5"><code></code></li><li class="L6"><code><span class="pln">err </span><span class="pun">=</span><span class="pln"> ISD_SHA1Result</span><span class="pun">(&amp;</span><span class="pln">sha</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Message_Digest</span><span class="pun">);</span></code></li><li class="L7"><code></code></li><li class="L8"><code><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">err</span><span class="pun">)</span></code></li><li class="L9"><code><span class="pun">{</span></code></li><li class="L0"><code><span class="pln">    fprintf</span><span class="pun">(</span><span class="pln">stderr</span><span class="pun">,</span></code></li><li class="L1"><code><span class="pln">    </span><span class="str">"SHA1结果错误 %d, 不能计算摘要值.\n"</span><span class="pun">,</span></code></li><li class="L2"><code><span class="pln">    err </span><span class="pun">);</span></code></li><li class="L3"><code><span class="pun">}</span></code></li><li class="L4"><code><span class="kwd">else</span></code></li><li class="L5"><code><span class="pun">{</span></code></li><li class="L6"><code><span class="pln">    printf</span><span class="pun">(</span><span class="str">"摘要值:\t"</span><span class="pun">);</span></code></li><li class="L7"><code><span class="pln">    </span><span class="kwd">for</span><span class="pun">(</span><span class="pln">i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i </span><span class="pun">&lt;</span><span class="pln"> </span><span class="lit">20</span><span class="pln"> </span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">i</span><span class="pun">)</span></code></li><li class="L8"><code><span class="pln">    </span><span class="pun">{</span></code></li><li class="L9"><code><span class="pln">        printf</span><span class="pun">(</span><span class="str">"%02X "</span><span class="pun">,</span><span class="pln"> </span><span class="typ">Message_Digest</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]);</span></code></li><li class="L0"><code><span class="pln">    </span><span class="pun">}</span></code></li><li class="L1"><code><span class="pln">    printf</span><span class="pun">(</span><span class="str">"\n"</span><span class="pun">);</span></code></li><li class="L2"><code><span class="pun">}</span></code></li><li class="L3"><code></code></li><li class="L4"><code><span class="kwd">return</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span></code></li><li class="L5"><code><span class="pun">}</span></code></li></ol></pre><h2 id="h2--"><a name="【实验思考】" class="reference-link"></a><span class="header-link octicon octicon-link"></span>【实验思考】</h2><p>2.SAH-1密码算法与MD5算法有什么不同？</p>
+
+
+<blockquote>
+<p>SHA-1是一种数据加密算法，该算法的思想是接收一段明文，然后以一种不可逆的方式将它转换成一段（通常更小）密文，也可以简单的理解为取一串输入码（称为预映射或信息），并把它们转化为长度较短、位数固定的输出序列即散列值（也称为信息摘要或信息认证代码）的过程。<br>单向散列函数的安全性在于其产生散列值的操作过程具有较强的单向性。如果在输入序列中嵌入密码，那么任何人在不知道密码的情况下都不能产生正确的散列值，从而保证了其安全性。SHA将输入流按照每块512位（64个字节）进行分块，并产生20个字节的被称为信息认证代码或信息摘要的输出。<br>该算法输入报文的长度不限，产生的输出是一个160位的报文摘要。输入是按512 位的分组进行处理的。SHA-1是不可逆的、防冲突，并具有良好的雪崩效应。<br>通过散列算法可实现数字签名实现，数字签名的原理是将要传送的明文通过一种函数运算（Hash）转换成报文摘要（不同的明文对应不同的报文摘要），报文摘要加密后与明文一起传送给接受方，接受方将接受的明文产生新的报文摘要与发送方的发来报文摘要解密比较，比较结果一致表示明文未被改动，如果不一致表示明文已被篡改。<br>MAC （信息认证代码）就是一个散列结果，其中部分输入信息是密码，只有知道这个密码的参与者才能再次计算和验证MAC码的合法性。</p>
+</blockquote>
+<p>因为二者均由MD4导出，SHA-1和MD5彼此很相似。有以下几点不同：</p>
+<ol>
+<li>对强行攻击的安全性：最显著和最重要的区别是SHA-1摘要比MD5摘要长32 位。使用强行技术，产生任何一个报文使其摘要等于给定报摘要的难度对MD5是2^128数量级的操作，而对SHA-1则是2^160数量级的操作。这样，SHA-1对强行攻击有更大的强度。 </li>
+<li>对密码分析的安全性：由于MD5的设计，易受密码分析的攻击，SHA-1显得不易受这样的攻击。</li>
+<li>速度：在相同的硬件上，SHA-1的运行速度比MD5慢。</li>
+</ol>
+<h2 id="哈希碰撞"><a href="#哈希碰撞" class="headerlink" title="哈希碰撞"></a>哈希碰撞</h2><p>一开始还是一脸懵，只能上网查了。</p>
+<p>碰撞的意思是计算得到的Hash值相同，需要放到同一个bucket中。Hashmap里面的bucket出现了单链表的形式，散列表要解决的一个问题就是散列值的冲突问题，通常是两种方法：链表法和开放地址法。</p>
+<p>bucket 类似为存储空间</p>
+<ul>
+<li>HashMap是一个散列桶（数组和链表），它存储的内容是键值对(key-value)映射</li>
+<li>HashMap采用了数组和链表的数据结构，能在查询和修改方便继承了数组的线性查找和链表的寻址修改</li>
+<li>HashMap是非synchronized，所以HashMap很快</li>
+<li>HashMap可以接受null键和值，而Hashtable则不能（原因就是equlas()方法需要对象，因为HashMap是后出的API经过处理才可以）</li>
+</ul>
+<h3 id="1-开放地址法"><a href="#1-开放地址法" class="headerlink" title="1.开放地址法"></a>1.开放地址法</h3><p>开放地执法有一个公式:Hi=(H(key)+di) MOD m i=1,2,…,k(k&lt;=m-1)</p>
+<p>其中，m为哈希表的表长。di 是产生冲突的时候的增量序列。如果di值可能为1,2,3,…m-1，称线性探测再散列。</p>
+<p>如果di取1，则每次冲突之后，向后移动1个位置.如果di取值可能为1,-1,2,-2,4,-4,9,-9,16,-16,…k<em>k,-k</em>k(k&lt;=m/2)，称二次探测再散列。</p>
+<p>如果di取值可能为伪随机数列。称伪随机探测再散列。</p>
+<h3 id="2-再哈希法"><a href="#2-再哈希法" class="headerlink" title="2.再哈希法"></a>2.再哈希法</h3><p>当发生冲突时，使用第二个、第三个、哈希函数计算地址，直到无冲突时。缺点：计算时间增加。</p>
+<p>比如上面第一次按照姓首字母进行哈希，如果产生冲突可以按照姓字母首字母第二位进行哈希，再冲突，第三位，直到不冲突为止</p>
+<h3 id="3-链地址法（拉链法）"><a href="#3-链地址法（拉链法）" class="headerlink" title="3.链地址法（拉链法）"></a>3.链地址法（拉链法）</h3><p>将所有关键字为同义词的记录存储在同一线性链表中。如下：</p>
+<p><img src="http://img.blog.csdn.net/20160918154444663?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="a"></p>
+<p>因此这种方法，可以近似的认为是筒子里面套筒子</p>
+<h3 id="4-建立一个公共溢出区"><a href="#4-建立一个公共溢出区" class="headerlink" title="4.建立一个公共溢出区"></a>4.建立一个公共溢出区</h3><p>假设哈希函数的值域为[0,m-1],则设向量HashTable[0..m-1]为基本表，另外设立存储空间向量OverTable[0..v]用以存储发生冲突的记录。</p>
+<h3 id="拉链法的优缺点"><a href="#拉链法的优缺点" class="headerlink" title="拉链法的优缺点"></a>拉链法的优缺点</h3><p>优点：</p>
+<ul>
+<li>拉链法处理冲突简单，且无堆积现象，即非同义词决不会发生冲突，因此平均查找长度较短；</li>
+<li>由于拉链法中各链表上的结点空间是动态申请的，故它更适合于造表前无法确定表长的情况；</li>
+<li>开放定址法为减少冲突，要求装填因子α较小，故当结点规模较大时会浪费很多空间。而拉链法中可取α≥1，且结点较大时，拉链法中增加的指针域可忽略不计，因此节省空间；</li>
+<li>在用拉链法构造的散列表中，删除结点的操作易于实现。只要简单地删去链表上相应的结点即可。而对开放地址法构造的散列表，删除结点不能简单地将被删结 点的空间置为空，否则将截断在它之后填人散列表的同义词结点的查找路径。这是因为各种开放地址法中，空地址单元(即开放地址)都是查找失败的条件。因此在 用开放地址法处理冲突的散列表上执行删除操作，只能在被删结点上做删除标记，而不能真正删除结点。</li>
+</ul>
+<p>缺点：</p>
+<p>指针需要额外的空间，故当结点规模较小时，开放定址法较为节省空间，而若将节省的指针空间用来扩大散列表的规模，可使装填因子变小，这又减少了开放定址法中的冲突，从而提高平均查找速度。</p>
+<blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/11/18/cipher-exp6/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/11/18/cipher-exp6/</a></p></blockquote>
 
         
     
@@ -562,8 +651,8 @@
     <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_config = function () {
-        this.page.url = 'http://yoursite.com/2019/11/02/cipher-exp6/';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'http://yoursite.com/2019/11/02/cipher-exp6/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://yoursite.com/2019/11/18/cipher-exp6/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/11/18/cipher-exp6/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 </script>
 <script type="text/ls-javascript" id="disqus-thread-script">
@@ -593,7 +682,7 @@
             <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
     <!-- Prev Nav -->
     
-        <a href="/2019/11/02/hangzhou/" id="post_nav-newer" class="prev-content">
+        <a href="/2019/11/19/cipher-exp7/" id="post_nav-newer" class="prev-content">
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                 <i class="material-icons">arrow_back</i>
             </button>
@@ -607,7 +696,7 @@
 
     <!-- Next Nav -->
     
-        <a href="/2019/11/01/android-exp6/" id="post_nav-older" class="next-content">
+        <a href="/2019/11/17/linux-exp4/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
@@ -699,7 +788,7 @@
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2019/11/">十一月 2019<span class="sidebar_archives-count">20</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">29</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">28</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/archives/2019/11/">十一月 2019<span class="sidebar_archives-count">23</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">29</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">28</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
@@ -717,7 +806,7 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Database/">Database<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/IT项目管理/">IT项目管理<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/android/">android<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/c/">c++<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/j2ee/">j2ee<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/java/">java<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/lua/">lua<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/opencv/">opencv<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/oracle/">oracle<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/scrapy/">scrapy<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/书籍/">书籍<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/信息安全/">信息安全<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端/">前端<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/开箱/">开箱<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/心理学/">心理学<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/测试/">测试<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/游记/">游记<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/笔记/">笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机网络/">计算机网络<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/设计模式/">设计模式<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/评测/">评测<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/需求分析/">需求分析<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/鱼的记忆/">鱼的记忆<span class="sidebar_archives-count">9</span></a>
+                <a class="sidebar_archives-link" href="/categories/Database/">Database<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/IT项目管理/">IT项目管理<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/android/">android<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/c/">c++<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/j2ee/">j2ee<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/java/">java<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/lua/">lua<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/opencv/">opencv<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/oracle/">oracle<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/scrapy/">scrapy<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/书籍/">书籍<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/信息安全/">信息安全<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端/">前端<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/开箱/">开箱<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/心理学/">心理学<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/测试/">测试<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/游记/">游记<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/笔记/">笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机网络/">计算机网络<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/设计模式/">设计模式<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/评测/">评测<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/需求分析/">需求分析<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/鱼的记忆/">鱼的记忆<span class="sidebar_archives-count">9</span></a>
             </ul>
         </li>
         
@@ -811,7 +900,7 @@
         <li>
             <a href="/archives">
                 文章总数
-                <span class="sidebar-badge">97</span>
+                <span class="sidebar-badge">100</span>
             </a>
         </li>
         
