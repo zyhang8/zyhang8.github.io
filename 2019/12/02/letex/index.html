@@ -1,0 +1,1373 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
+
+
+    <link rel="dns-prefetch" href="https://yizhixiaobai.disqus.com">
+
+
+
+    <link rel="dns-prefetch" href="https://hm.baidu.com">
+
+
+
+    <link rel="dns-prefetch" href="https://lib.baomitu.com">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            fish|letex | 
+        
+        一直小白的博客
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/head_sculpture.png">
+    <link rel="icon" href="/img/head_sculpture.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content>
+    <meta name="keywords" content="这是一只小白,LETEX">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微锟斤拷锟脚猴拷", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <style>
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: regular;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.svg#Roboto) format('svg')
+        }
+    </style>
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="一直小白的博客">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2019/12/02/letex/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="一直小白的博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/head_sculpture.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com/2019/12/02/letex/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="fish|letex | 一直小白的博客">
+    <meta property="og:image" content="/img/head_sculpture.png">
+    <meta property="og:description" content>
+    <meta property="og:article:tag" content="LETEX"> 
+
+    
+        <meta property="article:published_time" content="Mon Dec 02 2019 16:24:35 GMT+0800">
+        <meta property="article:modified_time" content="Mon Dec 02 2019 18:59:14 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/2019/12/02/letex/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2019/12/02/letex/index.html",
+    "headline": "fish|letex",
+    "datePublished": "Mon Dec 02 2019 16:24:35 GMT+0800",
+    "dateModified": "Mon Dec 02 2019 18:59:14 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "一直小白",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/head_sculpture.png"
+        },
+        "description": "求知若饥,谦虚若愚"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "一直小白的博客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/head_sculpture.png"
+        }
+    },
+    "keywords": ",LETEX这是一只小白",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+        <script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?5a42bcc3e66e1db4931abdcca1a9aa74';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#letex"><span class="post-toc-number">1.</span> <span class="post-toc-text">letex</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#包文件"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">包文件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#字体"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">字体</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#论文字体要求"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">论文字体要求</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#技巧"><span class="post-toc-number">1.2.1.1.</span> <span class="post-toc-text">技巧</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#字体大小"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">字体大小</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#字体加粗"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">字体加粗</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#字体显示形式"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">字体显示形式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#删除字体"><span class="post-toc-number">1.2.4.1.</span> <span class="post-toc-text">删除字体</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#下标线"><span class="post-toc-number">1.2.4.2.</span> <span class="post-toc-text">下标线</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#其他形式"><span class="post-toc-number">1.2.4.3.</span> <span class="post-toc-text">其他形式</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#分段机制"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">分段机制</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自动补全"><span class="post-toc-number">1.2.6.</span> <span class="post-toc-text">自动补全</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数学模式与文本模式"><span class="post-toc-number">1.2.7.</span> <span class="post-toc-text">数学模式与文本模式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#行内公式和行间公式"><span class="post-toc-number">1.2.7.1.</span> <span class="post-toc-text">行内公式和行间公式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#行内公式"><span class="post-toc-number">1.2.7.1.1.</span> <span class="post-toc-text">行内公式</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#行间公式"><span class="post-toc-number">1.2.7.1.2.</span> <span class="post-toc-text">行间公式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#单行不编号"><span class="post-toc-number">1.2.7.1.2.1.</span> <span class="post-toc-text">单行不编号</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#单行编号"><span class="post-toc-number">1.2.7.1.2.2.</span> <span class="post-toc-text">单行编号</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#多行编号"><span class="post-toc-number">1.2.7.1.2.3.</span> <span class="post-toc-text">多行编号</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#多行不编号"><span class="post-toc-number">1.2.7.1.2.4.</span> <span class="post-toc-text">多行不编号</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#数学公式编号"><span class="post-toc-number">1.2.7.2.</span> <span class="post-toc-text">数学公式编号</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#手动编号"><span class="post-toc-number">1.2.7.2.1.</span> <span class="post-toc-text">手动编号</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#Latex"><span class="post-toc-number">1.2.7.2.2.</span> <span class="post-toc-text">Latex</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#为知笔记"><span class="post-toc-number">1.2.7.2.3.</span> <span class="post-toc-text">为知笔记</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#马克飞象"><span class="post-toc-number">1.2.7.2.4.</span> <span class="post-toc-text">马克飞象</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#数学公式对齐"><span class="post-toc-number">1.2.7.3.</span> <span class="post-toc-text">数学公式对齐</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#公式之间空格"><span class="post-toc-number">1.2.7.4.</span> <span class="post-toc-text">公式之间空格</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#输入函数"><span class="post-toc-number">1.2.8.</span> <span class="post-toc-text">输入函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#矩阵和大括号"><span class="post-toc-number">1.2.9.</span> <span class="post-toc-text">矩阵和大括号</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#分段函数"><span class="post-toc-number">1.2.10.</span> <span class="post-toc-text">分段函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#加载宏包doc文档"><span class="post-toc-number">1.2.11.</span> <span class="post-toc-text">加载宏包doc文档</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#输入中文以及宏包安装"><span class="post-toc-number">1.2.12.</span> <span class="post-toc-text">输入中文以及宏包安装</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#插入图片"><span class="post-toc-number">1.2.13.</span> <span class="post-toc-text">插入图片</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#表格"><span class="post-toc-number">1.2.14.</span> <span class="post-toc-text">表格</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#普通表格"><span class="post-toc-number">1.2.14.1.</span> <span class="post-toc-text">普通表格</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#调整表格和标题-标注的距离"><span class="post-toc-number">1.2.14.1.1.</span> <span class="post-toc-text">调整表格和标题/标注的距离</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#多行"><span class="post-toc-number">1.2.14.1.2.</span> <span class="post-toc-text">多行</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#合并行列"><span class="post-toc-number">1.2.14.2.</span> <span class="post-toc-text">合并行列</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#合并行"><span class="post-toc-number">1.2.14.2.1.</span> <span class="post-toc-text">合并行</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#合并列"><span class="post-toc-number">1.2.14.2.2.</span> <span class="post-toc-text">合并列</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#行列都存在"><span class="post-toc-number">1.2.14.2.3.</span> <span class="post-toc-text">行列都存在</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#表格下标注释和字体大小设置"><span class="post-toc-number">1.2.14.3.</span> <span class="post-toc-text">表格下标注释和字体大小设置</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#设置表格（字体）大小"><span class="post-toc-number">1.2.14.3.1.</span> <span class="post-toc-text">设置表格（字体）大小</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#彩色表格和字体"><span class="post-toc-number">1.2.14.3.2.</span> <span class="post-toc-text">彩色表格和字体</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#彩色表格"><span class="post-toc-number">1.2.14.3.2.1.</span> <span class="post-toc-text">彩色表格</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#彩色字体"><span class="post-toc-number">1.2.14.3.2.2.</span> <span class="post-toc-text">彩色字体</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#图片表格并列"><span class="post-toc-number">1.2.14.4.</span> <span class="post-toc-text">图片表格并列</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#图片和图片并列"><span class="post-toc-number">1.2.14.5.</span> <span class="post-toc-text">图片和图片并列</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#表格和表格并列"><span class="post-toc-number">1.2.14.6.</span> <span class="post-toc-text">表格和表格并列</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#两个表格并列"><span class="post-toc-number">1.2.14.6.1.</span> <span class="post-toc-text">两个表格并列</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#多个表格并列"><span class="post-toc-number">1.2.14.6.2.</span> <span class="post-toc-text">多个表格并列</span></a></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#更多关于表格的举例"><span class="post-toc-number">1.2.14.7.</span> <span class="post-toc-text">更多关于表格的举例</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#交叉引用"><span class="post-toc-number">1.2.15.</span> <span class="post-toc-text">交叉引用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#文章布局"><span class="post-toc-number">1.2.15.1.</span> <span class="post-toc-text">文章布局</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#页面大小"><span class="post-toc-number">1.2.15.1.1.</span> <span class="post-toc-text">页面大小</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#页眉页脚"><span class="post-toc-number">1.2.15.1.2.</span> <span class="post-toc-text">页眉页脚</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#列举"><span class="post-toc-number">1.2.15.1.3.</span> <span class="post-toc-text">列举</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#参考文献"><span class="post-toc-number">1.2.15.1.4.</span> <span class="post-toc-text">参考文献</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#手动输入"><span class="post-toc-number">1.2.15.1.4.1.</span> <span class="post-toc-text">手动输入</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#使用Bibtex"><span class="post-toc-number">1.2.15.1.4.2.</span> <span class="post-toc-text">使用Bibtex</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#超链接"><span class="post-toc-number">1.2.16.</span> <span class="post-toc-text">超链接</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#插入代码"><span class="post-toc-number">1.2.17.</span> <span class="post-toc-text">插入代码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#目录生成"><span class="post-toc-number">1.2.18.</span> <span class="post-toc-text">目录生成</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#段落空行-换行和首部缩进"><span class="post-toc-number">1.2.19.</span> <span class="post-toc-text">段落空行, 换行和首部缩进</span></a></li></ol></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                fish|letex
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/head_sculpture.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>一直小白</strong>
+        <span>12月 02, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACZElEQVR42u3bMXLDMAwEQP//00mbIlYOAEVqnFXlcWyRq4KkD8jr66OvFx4eHh4eHh4e3sN4r/j6+fl3r9/99ZdJXH63Nzc8PDy8nbw/ltpg4OuJJt9Kxo3mhoeHh7eRt2r46jZzvTFU54aHh4f3NN71JJJtIF/o8fDw8P4DL8Hn2wweHh7e83m9yDWPJPI4+FjWgoeHhxfzVhXA7nj9oPoeHh4eXq+lqVWsyif9Nb7w8PDw7uYl0500YCUlruq14BcDHh4e3oBXDSbeTe76/d5nkiiksO/h4eHhLeIly30e0faaqCZ3wMPDwzvFS5bdSQPr9YPobVR4eHh4p3jJ8NVYoXD8bQUczTACDw8PbxEvbxSoRrfVLWGCxMPDw9vP68W1+ZI9iXrLsS8eHh7eFt7dxf7CgThmjPY9PDw8vAFvFJjG7yfg3taCh4eHd4rXO0An5f95gFstnuHh4eHt4VWX4GpDavUOo/YFPDw8vC28amyaLP3XyHwLqV54eHh4O3nlJbgYuU6W/sIDxcPDw7uZly/KvYF7Damj1i48PDy8m3m9MlWhHJU3S7X+SQAPDw/vCbzqO/l98pasXgkNDw8Pbw+vOljefjq5Zz5i9IsBDw8PbymvXF6Kh6wexOd3w8PDw9vDW3vYzZu35gUwPDw8vLO8arjQC3CrJbHkW1EYgYeHh3cbLy/e95oM8s8vzlrw8PDwjvKSg28vwqg+1vKRGg8PD+8or3nYLU792MaAh4eHd0POmSzu1VaDSVSBh4eHt5/XK4DlDQS9tqpqwQwPDw9vD+/zLjw8PDw8PDw8vAdc313xbfFM/6G+AAAAAElFTkSuQmCC">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/LETEX/">LETEX</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=fish|letex&url=http://yoursite.com/2019/12/02/letex/index.html&pic=http://yoursite.com/img/head_sculpture.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=fish|letex&url=http://yoursite.com/2019/12/02/letex/index.html&via=一直小白" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/12/02/letex/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2019/12/02/letex/index.html&title=fish|letex" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一直小白的博客&title=fish|letex&summary=&pics=http://yoursite.com/img/head_sculpture.png&url=http://yoursite.com/2019/12/02/letex/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>本文持续更新…</p>
+<h1 id="letex"><a href="#letex" class="headerlink" title="letex"></a>letex</h1><blockquote>
+<p>听说是写论文神器，这次期末需要写小论文，顺便掌握一下</p>
+</blockquote>
+<h2 id="包文件"><a href="#包文件" class="headerlink" title="包文件"></a>包文件</h2><p>这里主要给出本文所有的头文件，即需要使用的包。在运行本文中的事例之前在开头复制以下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">% !Mode::&quot;TeX:UTF-8&quot;</span><br><span class="line">%\documentclass[prd,aps,onecolumn,preprintnumbers,amsmath,amssymb,superscriptaddress]&#123;article&#125;</span><br><span class="line">\documentclass&#123;article&#125;</span><br><span class="line">%\usepackage[UTF8]&#123;ctex&#125;</span><br><span class="line">\usepackage&#123;listings&#125;</span><br><span class="line">\usepackage&#123;amsthm&#125;</span><br><span class="line">\usepackage&#123;amsmath&#125;</span><br><span class="line">\usepackage&#123;amssymb&#125;</span><br><span class="line">\usepackage&#123;subfigure&#125;</span><br><span class="line">\usepackage&#123;graphicx&#125;</span><br><span class="line">\usepackage&#123;hyperref&#125;</span><br><span class="line">\usepackage[table]&#123;xcolor&#125;</span><br><span class="line">\usepackage&#123;fancyhdr&#125;</span><br><span class="line">\usepackage&#123;footnote&#125;</span><br><span class="line">\usepackage&#123;lastpage&#125;</span><br><span class="line">%\usepackage&#123;pythonhighlight&#125;</span><br><span class="line">\usepackage&#123;indentfirst&#125;</span><br><span class="line">\usepackage&#123;multirow&#125;</span><br><span class="line">\usepackage&#123;authblk&#125;</span><br><span class="line">\usepackage&#123;comment&#125;</span><br><span class="line">\usepackage&#123;url&#125;</span><br><span class="line">\usepackage&#123;float&#125;</span><br><span class="line">\usepackage&#123;cite&#125;</span><br><span class="line">\usepackage&#123;caption&#125;</span><br><span class="line">%\usepackage&#123;graphix&#125;</span><br><span class="line">\setlength&#123;\parindent&#125;&#123;1em&#125;</span><br><span class="line">%\pagestyle&#123;fancy&#125;</span><br><span class="line">%设置页面大小</span><br><span class="line">%\chead&#123;LSPE&#125;</span><br><span class="line">%\rhead&#123;\thesection&#125;</span><br><span class="line">%\cfoot&#123;Page \thepage of \pageref&#123;LastPage&#125;&#125;</span><br><span class="line">\usepackage[top=2.54cm, bottom=2.54cm, left=3.18cm,right=3.18cm]&#123;geometry&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><h3 id="论文字体要求"><a href="#论文字体要求" class="headerlink" title="论文字体要求"></a>论文字体要求</h3><p><a href="https://baike.baidu.com/item/%E8%AE%BA%E6%96%87%E6%A0%BC%E5%BC%8F/5969051?fr=aladdin#3_1" target="_blank" rel="noopener">百度百科</a></p>
+<ul>
+<li>论文标题2号黑体加粗、居中。</li>
+<li>论文副标题小2号字，紧挨正标题下居中，文字前加破折号。</li>
+<li>填写姓名、专业、学号等项目时用3号楷体。</li>
+<li>内容提要3号黑体，居中上下各空一行，内容为小4号宋体。</li>
+<li>关键词4号宋体，内容为小4号宋体。</li>
+<li>目录另起页，3号黑体，内容为小4号仿宋，并列出页码。</li>
+<li>正文文字另起页，正文文字一般用小4 号宋体，每段首起空两个格，1.25倍行距。</li>
+<li>正文文中标题</li>
+<li>一级标题：标题序号为“一、”， 4号黑体，独占行，末尾不加标点符号。</li>
+<li>二级标题：标题序号为“（一）”与正文字号相同，独占行，末尾不加标点符号。</li>
+<li>三级标题：标题序号为“ 1. ”与正文字号、字体相同。</li>
+<li>四级标题：标题序号为“（1）”与正文字号、字体相同。</li>
+<li>五级标题：标题序号为“①”与正文字号、字体相同。</li>
+<li>注释：4号黑体，内容为5号宋体。</li>
+<li>附录： 4号黑体，内容为5号宋体。</li>
+<li>参考文献：另起页，4号黑体，内容为5号宋体。</li>
+</ul>
+<p>（参考文献是期刊时，书写格式为：[编号]、作者、文章题目、期刊名（外文可缩写）、年份、卷号、期数、页码。参考文献是图书时，书写格式为：[编号]、作者、书名、出版单位、年份、版次、页码。）</p>
+<p>摘要以300字左右为宜。</p>
+<p>英文摘要应与中文摘要相对应，字体为小四号times new roman。</p>
+<p>“目录”二字采用三号字黑体、居中书写，“目”与“录”之间空两格，第一级层次采用小三号宋体字，其他级层次题目采用四号宋体字。</p>
+<p>正文的全部标题层次应整齐清晰，相同的层次应采用统一的字体表示。第一级为“一”、“二”、“三”、等，第二级为“1.1”、“1.2”、“1.3”等，第三级为“1.1.1”、“1.1.2”等。</p>
+<p>中文摘要及关键词：“摘要”二字采用三号字黑体、居中书写，“摘”与“要”之间空两格，内容采用小四号宋体。“关键词”三字采用小四号字黑体，顶格书写，一般为3—5个。</p>
+<p>引言（或序言）。内容应包括本研究领域的国内外现状，本论文所要解决的问题及这项研究工作在经济建设、科技进步和社会发展等方面的理论意义与实用价值。</p>
+<p>采取a4纸张，页边距一律采取：上2.8cm、下2.5cm，左3cm,右2.5cm，行间距取多倍行距(设置值为1.25);字符间距为默认值(缩放100%，间距：标准)，封面采用教务处统一规定的封面。</p>
+<p>论文各页均加页眉，采用宋体五号宋体居中，打印“xx大学xxxx届x科生毕业论文(设计)”。页码从正文开始在页脚按阿拉伯数字(宋体小五号)连续编排，居中书写。</p>
+<h4 id="技巧"><a href="#技巧" class="headerlink" title="技巧"></a>技巧</h4><ul>
+<li>技巧一：依据学术方向进行选题。论文写作的价值，关键在于能够解决特定行业的特定问题，特别是在学术方面的论文更是如此。因此，论文选择和提炼标题的技巧之一，就是依据学术价值进行选择提炼。</li>
+<li>技巧二：依据兴趣爱好进行选题。论文选择和提炼标题的技巧之二，就是从作者的爱好和兴趣出发，只有选题符合作者兴趣和爱好，作者平日所积累的资料才能得以发挥效用，语言应用等方面也才能熟能生巧。</li>
+<li>技巧三：依据掌握的文献资料进行选题。文献资料是支撑、充实论文的基础，同时更能体现论文所研究的方向和观点，因而，作者从现有文献资料出发，进行选题和提炼标题，即成为第三大技巧。</li>
+<li>技巧四：从小从专进行选题。所谓从小从专，即是指论文撰稿者在进行选择和提炼标题时，要从专业出发，从小处入手进行突破，切忌全而不专，大而空洞。</li>
+</ul>
+<h3 id="字体大小"><a href="#字体大小" class="headerlink" title="字体大小"></a>字体大小</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">\tiny</span><br><span class="line">\scriptsize</span><br><span class="line">\footnotesize</span><br><span class="line">\small</span><br><span class="line">\normalsize</span><br><span class="line">\large</span><br><span class="line">\Large</span><br><span class="line">\LARGE</span><br><span class="line">\huge</span><br><span class="line">\Huge</span><br></pre></td></tr></table></figure>
+
+<h3 id="字体加粗"><a href="#字体加粗" class="headerlink" title="字体加粗"></a>字体加粗</h3><p>文本加粗</p>
+<p>\textbf{这里放文本}</p>
+<p>既要加粗又要变小：（为毛感觉有点邪恶~~ 2333333 认真脸）</p>
+<p>{\textbf{\small Hello word}}</p>
+<p>数学符号加粗</p>
+<p>$\boldsymbol 直接接数学符号 $</p>
+<h3 id="字体显示形式"><a href="#字体显示形式" class="headerlink" title="字体显示形式"></a>字体显示形式</h3><h4 id="删除字体"><a href="#删除字体" class="headerlink" title="删除字体"></a>删除字体</h4><p>\usepackage{cancel}<br>\cancel{abc}</p>
+<h4 id="下标线"><a href="#下标线" class="headerlink" title="下标线"></a>下标线</h4><p>这里解决的问题是下标线导致的问题，如fx:</p>
+<p>f_x</p>
+<p>而我想要的结果是下划线一起输出，我们需要一个转义字符\即可，</p>
+<p>f_x</p>
+<h4 id="其他形式"><a href="#其他形式" class="headerlink" title="其他形式"></a>其他形式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\cancel&#123;abe&#125;</span><br><span class="line">\textbar&#123;abc&#125;</span><br><span class="line">\textcircled&#123;acbd&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20190629164151340." alt="35"></p>
+<h3 id="分段机制"><a href="#分段机制" class="headerlink" title="分段机制"></a>分段机制</h3><p>分段机制</p>
+<ul>
+<li>在原码中空一行，则生成的pdf会换行</li>
+<li>在文后使用双斜杠\</li>
+<li>使用命令<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```latex</span><br><span class="line">Life is too short so that I use python\\</span><br><span class="line">me too.</span><br><span class="line"></span><br><span class="line">Life is too short so that I use python</span><br><span class="line"></span><br><span class="line">me too.</span><br><span class="line"></span><br><span class="line">Life is too short so that I use python</span><br><span class="line">\newparas</span><br><span class="line">me too.</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><img src="https://img-blog.csdnimg.cn/201906241541494.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX0NhdDEyMw==,size_16,color_FFFFFF,t_70" alt="1"></p>
+<h3 id="自动补全"><a href="#自动补全" class="headerlink" title="自动补全"></a>自动补全</h3><p>快捷键：Ctrl+Enter</p>
+<h3 id="数学模式与文本模式"><a href="#数学模式与文本模式" class="headerlink" title="数学模式与文本模式"></a>数学模式与文本模式</h3><h4 id="行内公式和行间公式"><a href="#行内公式和行间公式" class="headerlink" title="行内公式和行间公式"></a>行内公式和行间公式</h4><p><a href="https://www.cnblogs.com/zsgyx/p/10632696.html" target="_blank" rel="noopener">行内公式和行间公式</a></p>
+<h5 id="行内公式"><a href="#行内公式" class="headerlink" title="行内公式"></a>行内公式</h5><p>我是对行内公式的测试$f(x)=1+x+x^2$</p>
+<p><img src="https://img2018.cnblogs.com/blog/1516317/201903/1516317-20190331201035847-1977809048.png" alt="2"></p>
+<h5 id="行间公式"><a href="#行间公式" class="headerlink" title="行间公式"></a>行间公式</h5><h6 id="单行不编号"><a href="#单行不编号" class="headerlink" title="单行不编号"></a>单行不编号</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125;</span><br><span class="line">  \int_0^1(1+x)dx</span><br><span class="line">\end&#123;equation&#125;</span><br></pre></td></tr></table></figure>
+
+<p>结果为：</p>
+<p><img src="https://img2018.cnblogs.com/blog/1516317/201903/1516317-20190331201450102-1393430019.png" alt="3"></p>
+<h6 id="单行编号"><a href="#单行编号" class="headerlink" title="单行编号"></a>单行编号</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125;\label&#123;&#125;</span><br><span class="line">    \int_0^1(1+x)dx</span><br><span class="line">\end&#123;equation&#125;</span><br><span class="line">或者：</span><br><span class="line">\[</span><br><span class="line">\int_0^1(1+x)dx</span><br><span class="line">\]</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img2018.cnblogs.com/blog/1516317/201903/1516317-20190331202018963-1758441535.png" alt="4"></p>
+<h6 id="多行编号"><a href="#多行编号" class="headerlink" title="多行编号"></a>多行编号</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125;\label&#123;&#125;</span><br><span class="line">   \begin&#123;cases&#125;</span><br><span class="line">    f(x)=1+x+x^2\\</span><br><span class="line">    g(x)=a_nx^n+a_&#123;n-1&#125;x^&#123;n-1&#125;+...+a_1x^1</span><br><span class="line">   \end&#123;cases&#125;</span><br><span class="line">\end&#123;equation&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img2018.cnblogs.com/blog/1516317/201903/1516317-20190331202101231-1626010416.png" alt="5"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125;\label&#123;&#125;</span><br><span class="line">   \begin&#123;split&#125;</span><br><span class="line">    f(x)=\cos(x+y)+\sin(x+y)=\cos x \cos y- \sin x \sin y \\</span><br><span class="line">    +\sin x \cos y+\cos x \sin y</span><br><span class="line">   \end&#123;split&#125;</span><br><span class="line">\end&#123;equation&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img2018.cnblogs.com/blog/1516317/201903/1516317-20190331203022567-183520171.png" alt="6"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125;\label&#123;...&#125;</span><br><span class="line">D(x) =</span><br><span class="line">\begin&#123;cases&#125;</span><br><span class="line">1, &amp; \text&#123;if &#125; x \in \mathbb&#123;Q&#125;;\\</span><br><span class="line">0, &amp; \text&#123;if &#125; x \in \mathbb&#123;R&#125;\setminus\mathbb&#123;Q&#125;.</span><br><span class="line">\end&#123;cases&#125;</span><br><span class="line">\end&#123;equation&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img2018.cnblogs.com/blog/1516317/201903/1516317-20190331203410878-1300698317.png" alt="7"></p>
+<h6 id="多行不编号"><a href="#多行不编号" class="headerlink" title="多行不编号"></a>多行不编号</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125;</span><br><span class="line">...</span><br><span class="line">\end&#123;equation&#125;</span><br><span class="line">改成</span><br><span class="line">\begin&#123;equation*&#125;</span><br><span class="line">...</span><br><span class="line">\end&#123;equation*&#125;</span><br><span class="line">或者使用：</span><br><span class="line">\begin&#123;align*&#125;</span><br><span class="line">...</span><br><span class="line">\end&#123;align*&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="数学公式编号"><a href="#数学公式编号" class="headerlink" title="数学公式编号"></a>数学公式编号</h4><h5 id="手动编号"><a href="#手动编号" class="headerlink" title="手动编号"></a>手动编号</h5><p>通过采用\tag来编号，当引用公式时手动输入。缺点是当更改公式里的编号时引用中的编号不能自动更改，其二，不同通过点击引用的编号回到公式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$$y=1+e^x \tag&#123;1.1&#125;$$</span><br><span class="line">我们今天要讨论这个方程$(1.1)$</span><br></pre></td></tr></table></figure>
+
+<p>y=1+e x  (1.1)</p>
+<h5 id="Latex"><a href="#Latex" class="headerlink" title="Latex"></a>Latex</h5><p>对于latex而言，不需要$$这样的符号</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125;\label&#123;time_pixel&#125;</span><br><span class="line">  t_\text&#123;pix&#125;=\frac&#123;\Delta T&#125;&#123;N_\text&#123;pix&#125;&#125;\times N_\text&#123;det&#125;.</span><br><span class="line">\end&#123;equation&#125;</span><br><span class="line"></span><br><span class="line">Substituting \autoref&#123;time_pixel&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20190827180035850.png" alt="8"></p>
+<h5 id="为知笔记"><a href="#为知笔记" class="headerlink" title="为知笔记"></a>为知笔记</h5><h5 id="马克飞象"><a href="#马克飞象" class="headerlink" title="马克飞象"></a>马克飞象</h5><h4 id="数学公式对齐"><a href="#数学公式对齐" class="headerlink" title="数学公式对齐"></a>数学公式对齐</h4><p>采用{aligned}如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125;\label&#123;information gain&#125;</span><br><span class="line">\begin&#123;aligned&#125;</span><br><span class="line">  Gain(X,Y)&amp;=H(Y)-H(Y|X)\\</span><br><span class="line">  &amp;=H(X)-H(X|Y)\\</span><br><span class="line">  &amp;=H(X)+H(Y)-H(X,Y)</span><br><span class="line">\end&#123;aligned&#125;</span><br><span class="line">\end&#123;equation&#125;</span><br></pre></td></tr></table></figure>
+
+<p>结果为：</p>
+<p><img src="https://img-blog.csdn.net/20180911205521329" alt="9"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125;\label&#123;lagrangian&#125;</span><br><span class="line">\begin&#123;aligned&#125;</span><br><span class="line">  w_&#123;ij&#125;&amp;=\frac&#123;1&#125;&#123;(N_i+R_i)(N_j+R_j)\frac&#123;1&#125;&#123;2&#125;(1+\delta_&#123;ij&#125;)&#125;\\</span><br><span class="line">  Var[\mathbb&#123;\hat&#123;C&#125;&#125;_\ell]&amp;=\frac&#123;2&#125;&#123;2\ell+1&#125;\left(\sum_&#123;i,j,j\ge i&#125;\frac&#123;1&#125;&#123;(N_i+R_i)(N_j+R_j)\frac&#123;1&#125;&#123;2&#125;(1+\delta_&#123;ij&#125;)&#125;\right)^&#123;-1&#125;</span><br><span class="line">\end&#123;aligned&#125;</span><br><span class="line">\end&#123;equation&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/2019042820064623." alt="10"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125;\label&#123;lagrangian&#125;</span><br><span class="line">\begin&#123;aligned&#125;</span><br><span class="line">  w_&#123;ij&#125;&amp;=\frac&#123;1&#125;&#123;(N_i+R_i)(N_j+R_j)\frac&#123;1&#125;&#123;2&#125;(1+\delta_&#123;ij&#125;)&#125;\\</span><br><span class="line">  Var[\mathbb&#123;\hat&#123;C&#125;&#125;_\ell]&amp;=\frac&#123;2&#125;&#123;2\ell+1&#125;\left(\sum_&#123;i,j,j\ge i&#125;\frac&#123;1&#125;&#123;(N_i+R_i)(N_j+R_j)\frac&#123;1&#125;&#123;2&#125;(1+\delta_&#123;ij&#125;)&#125;\right)^&#123;-1&#125;</span><br><span class="line">\end&#123;aligned&#125;</span><br><span class="line">\end&#123;equation&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="公式之间空格"><a href="#公式之间空格" class="headerlink" title="公式之间空格"></a>公式之间空格</h4><p>发现上面的公式之间挨得太近了，想要空格，可以使用第3部分提到的空格方法，将上面的代码增加\quad：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125;\label&#123;add_prior&#125;</span><br><span class="line">  \frac&#123;\sigma(A_s^p)&#125;&#123;A_s^p&#125;=0.17,\quad \sigma(\beta_s)=0.17,\quad \frac&#123;\sigma(A_d^p)&#125;&#123;A_d^p&#125;=0.015,\quad \sigma(\beta_d)=0.02</span><br><span class="line">\end&#123;equation&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20190624111749377.png" alt="11"></p>
+<h3 id="输入函数"><a href="#输入函数" class="headerlink" title="输入函数"></a>输入函数</h3><h3 id="矩阵和大括号"><a href="#矩阵和大括号" class="headerlink" title="矩阵和大括号"></a>矩阵和大括号</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125;</span><br><span class="line">    \left(</span><br><span class="line">    \begin&#123;array&#125;&#123;ccc&#125;</span><br><span class="line">    a_&#123;11&#125;&amp; a_&#123;12&#125; &amp; a_&#123;13&#125; \\</span><br><span class="line">    a_&#123;21&#125; &amp; a_&#123;22&#125; &amp; a_&#123;23&#125; \\</span><br><span class="line">    a_&#123;31&#125; &amp; a_&#123;32&#125; &amp; a_&#123;33&#125;</span><br><span class="line">    \end&#123;array&#125;</span><br><span class="line">    \right)</span><br><span class="line">  \end&#123;equation&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="分段函数"><a href="#分段函数" class="headerlink" title="分段函数"></a>分段函数</h3><p>分段函数是在矩阵的基础之上的，比如如下的分段函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125;</span><br><span class="line">  f(x)=</span><br><span class="line">  \left\&#123;</span><br><span class="line">  \begin&#123;array&#125;&#123;cc&#125;</span><br><span class="line">  \int \mathrm&#123;d&#125;^3p\int_&#123;0&#125;^&#123;\infty&#125;\mathrm&#123;d&#125;x x^2 \frac&#123;\delta(E-\sqrt&#123;p^2+m^2&#125;)&#125;&#123;2E&#125; , &amp; x \geq 0 \\</span><br><span class="line">  0,&amp; x &lt; 0</span><br><span class="line">  \end&#123;array&#125;</span><br><span class="line">  \right.</span><br><span class="line">\end&#123;equation&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdn.net/2018050621470868" alt="12"></p>
+<h3 id="加载宏包doc文档"><a href="#加载宏包doc文档" class="headerlink" title="加载宏包doc文档"></a>加载宏包doc文档</h3><h3 id="输入中文以及宏包安装"><a href="#输入中文以及宏包安装" class="headerlink" title="输入中文以及宏包安装"></a>输入中文以及宏包安装</h3><p>输入中文需要用到ctex包，这是专门针对中文而设计的包，使用时在前面将</p>
+<p>\document{article}</p>
+<p>改为</p>
+<p>\document[UTF8]{ctexart}</p>
+<p>即可,（有的不需要加方括号中的内容），或者\document{article}不变，在其下加入一个宏包为</p>
+<p>\usepackage[UTF8]{ctex}</p>
+<p>此外，中文包还可以使用</p>
+<p>\usepackage{CJK}</p>
+<h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><h4 id="普通表格"><a href="#普通表格" class="headerlink" title="普通表格"></a>普通表格</h4><p>表格制作可以使用tabular，简单一个图如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;tabular&#125;&#123;|c|c|&#125;</span><br><span class="line">    \hline</span><br><span class="line">    % after \\: \hline or \cline&#123;col1-col2&#125; \cline&#123;col3-col4&#125; ...</span><br><span class="line">    Name &amp; score \\</span><br><span class="line">    \hline</span><br><span class="line">    小明 &amp; 50 \\</span><br><span class="line">    小华 &amp; 45 \\</span><br><span class="line">    \hline</span><br><span class="line">  \end&#123;tabular&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdn.net/20180507145926877" alt="13"></p>
+<p>讲解：</p>
+<ul>
+<li>第一句是tabular表格的开始，参数{|c|c|}中的第一个|表示表格中的左边竖，第二、三个分别是中间和右边的竖。而c表示表格中的字体居中，l(left)和r(right)表示表格中字体靠左和靠右。可以尝试将｛|c|c|｝改为{c|c}即不要两边的竖线。</li>
+<li>\hline（horizontal line）表示画一条水平线</li>
+<li>%是注释，\是换行，\hline可以紧接在\后，如下表示：</li>
+</ul>
+<p>\ \hline</p>
+<p>会显得更紧凑。</p>
+<p>当然，这个表格是不浮动的，和图片一样，如果想加入\caption的话，可以构成浮动的图片（但毕竟可以写标题了呀，想想还是赚的）。这个时候需要用到table环境。如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;table&#125;</span><br><span class="line">\centering</span><br><span class="line">\begin&#123;tabular&#125;&#123;|c|c|&#125;</span><br><span class="line">  \hline</span><br><span class="line">  % after \\: \hline or \cline&#123;col1-col2&#125; \cline&#123;col3-col4&#125; ...</span><br><span class="line">  Name &amp; score \\</span><br><span class="line">  \hline</span><br><span class="line">  小明 &amp; 50 \\</span><br><span class="line">  小华 &amp; 45 \\</span><br><span class="line">  \hline</span><br><span class="line">\end&#123;tabular&#125;</span><br><span class="line">  \caption&#123;这是一个表格&#125;</span><br><span class="line">\end&#123;table&#125;</span><br></pre></td></tr></table></figure>
+
+<p>同样的\centering是表格居中，否则居左。其他都讲过了，很easy.最后可以使用caption宏包，这个需要自行google。</p>
+<p>在表格中换行</p>
+<p>比如两个表格(table)是要构成一个table的，想统一做一个说明，而不是每个table单独说明，此时需要将两个表格分开，这个时候可以用命令：</p>
+<p>\vspace{0.35cm}   #表示上下空0.35cm的空间</p>
+<p>比如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;table&#125;</span><br><span class="line">  \centering</span><br><span class="line">  %\footnotesize</span><br><span class="line">  Case 0: 95+150</span><br><span class="line">  </span><br><span class="line">  \begin&#123;tabular&#125;&#123;|c|c|c|c|c|c|&#125;</span><br><span class="line">  \hline</span><br><span class="line">  $r$ &amp; $\sigma_r(\sigma_F=1)$ &amp; $\sigma_r(\sigma_F=0.1)$ &amp; $\sigma_r(\sigma_F=0.01)$ &amp; $N_&#123;95&#125;$ &amp; $N_&#123;150&#125;$\\</span><br><span class="line">  \hline</span><br><span class="line">  0.01 &amp; 0.01094 &amp; 0.00228 &amp; 0.00106 &amp; 8701 &amp; 1299 \\</span><br><span class="line">  0 &amp; 0.01084 &amp; 0.00216 &amp; 0.00091 &amp; 8701 &amp; 1299 \\</span><br><span class="line">  \hline</span><br><span class="line">  \end&#123;tabular&#125; </span><br><span class="line">  \vspace&#123;0.35cm&#125;    #空0.35cm</span><br><span class="line">  </span><br><span class="line"> Case 1: 41+95+150</span><br><span class="line"></span><br><span class="line">  \begin&#123;tabular&#125;&#123;|c|c|c|c|c|c|&#125;</span><br><span class="line">  \hline</span><br><span class="line">  $r$ &amp; $\sigma_r(\sigma_F=1)$ &amp; $\sigma_r(\sigma_F=0.1)$ &amp; $\sigma_r(\sigma_F=0.01)$ &amp; $N_&#123;95&#125;$ &amp; $N_&#123;150&#125;$\\</span><br><span class="line">  \hline</span><br><span class="line">  0.01 &amp; 0.00787 &amp; 0.00203 &amp; 0.00106 &amp; 8701 &amp; 1299 \\</span><br><span class="line">  0 &amp; 0.01084 &amp; 0.00216 &amp; 0.00091 &amp; 8701 &amp; 1299 \\</span><br><span class="line">  \hline</span><br><span class="line">  \end&#123;tabular&#125;</span><br><span class="line">  \caption&#123;table 1&#125;\label&#123;anser1&#125;</span><br><span class="line">\end&#123;table&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdn.net/20180918172510135" alt="36"></p>
+<p>如果要改变字体大小，只要在第二行即\centering下加入改变字体大小的代码即可，（如我已经注释掉的\footnotesize），更多字体大小的代码见第一部分。</p>
+<h5 id="调整表格和标题-标注的距离"><a href="#调整表格和标题-标注的距离" class="headerlink" title="调整表格和标题/标注的距离"></a>调整表格和标题/标注的距离</h5><p>可以使用以下两个命令，关于调节距离多少，可以尝试调节里面的数字</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\setlength&#123;\abovecaptionskip&#125;&#123;0.cm&#125;</span><br><span class="line"></span><br><span class="line">\setlength&#123;\belowcaptionskip&#125;&#123;-0.9cm&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="多行"><a href="#多行" class="headerlink" title="多行"></a>多行</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;table&#125;</span><br><span class="line">  \centering</span><br><span class="line">  \footnotesize</span><br><span class="line">  Case 0: 95+150</span><br><span class="line"></span><br><span class="line">  \begin&#123;tabular&#125;&#123;|c|c|c|c|c|c|c|&#125;</span><br><span class="line">  \hline</span><br><span class="line">  \multirow&#123;2&#125;&#123;0.25cm&#125;&#123;\centering $r$&#125; &amp; \multirow&#123;2&#125;&#123;1.2cm&#125;&#123;\centering $\sigma_r$\\$(\sigma_F=1)$&#125; &amp; \multirow&#123;2&#125;&#123;1.4cm&#125;&#123;\centering $\sigma_r$\\$(\sigma_F=0.1)$&#125; &amp; \multirow&#123;2&#125;&#123;1.6cm&#125;&#123;\centering $\sigma_r$\\$(\sigma_F=0.01)$&#125; &amp; \multirow&#123;2&#125;&#123;1cm&#125;&#123;\centering $N_&#123;95&#125;$&#125; &amp; \multirow&#123;2&#125;&#123;1cm&#125;&#123;\centering $N_&#123;150&#125;$&#125;\\</span><br><span class="line">  &amp; &amp; &amp; &amp; &amp; \\</span><br><span class="line">  \hline</span><br><span class="line">  \multirow&#123;2&#125;*&#123;0.01&#125; &amp; 0.01279 &amp; &amp; &amp; 8601 &amp; 1399 \\</span><br><span class="line">    &amp; &amp; 0.00329 &amp; &amp; 8701 &amp; 1299 \\</span><br><span class="line">    &amp; &amp; &amp; 0.00180 &amp; 9201 &amp; 1299 \\</span><br><span class="line">  \hline</span><br><span class="line">  \multirow&#123;2&#125;*&#123;0&#125; &amp; 0.01268 &amp; &amp; &amp; 8701 &amp; 1299 \\</span><br><span class="line">   &amp; &amp; 0.00315 &amp; &amp;8701 &amp; 1299\\</span><br><span class="line">   &amp; &amp; &amp; 0.00164 &amp; 9201 &amp; 799 \\</span><br><span class="line">   \hline</span><br><span class="line">  \end&#123;tabular&#125;</span><br><span class="line">  \vspace&#123;0.35cm&#125;</span><br><span class="line"></span><br><span class="line">  Case 1: 41+95+150</span><br><span class="line"></span><br><span class="line">  \begin&#123;tabular&#125;&#123;|c|c|c|c|c|c|c|&#125;</span><br><span class="line">  \hline</span><br><span class="line">  $r$ &amp; $\sigma_r(\sigma_F=1)$ &amp; $\sigma_r(\sigma_F=0.1)$ &amp; $\sigma_r(\sigma_F=0.01)$ &amp; $N_&#123;41&#125;$ &amp; $N_&#123;95&#125;$ &amp; $N_&#123;150&#125;$\\</span><br><span class="line">  \hline</span><br><span class="line">   &amp; 0.01057 &amp;  &amp;  &amp; 4001 &amp; 5201 &amp; 798 \\</span><br><span class="line">  0.01 &amp;  &amp; 0.00323 &amp; &amp; 1101 &amp; 7801 &amp; 1098 \\</span><br><span class="line">   &amp; &amp; &amp; 0.00180 &amp; 1 &amp; 9201 &amp; 798 \\</span><br><span class="line">  \hline</span><br><span class="line">   &amp; 0.01045 &amp; &amp; &amp; 4001 &amp; 5201 &amp; 798 \\</span><br><span class="line">   0 &amp; &amp; 0.00310 &amp; &amp; 1201 &amp; 7701 &amp; 1098 \\</span><br><span class="line">    &amp; &amp; &amp; 0.00164 &amp; 1 &amp; 9101 &amp; 898 \\</span><br><span class="line">  \hline</span><br><span class="line">  \end&#123;tabular&#125;</span><br><span class="line">  \caption&#123;table 1&#125;\label&#123;anser1&#125;</span><br><span class="line">\end&#123;table&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/2019061623022749.?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX0NhdDEyMw==,size_16,color_FFFFFF,t_70" alt="14"></p>
+<h4 id="合并行列"><a href="#合并行列" class="headerlink" title="合并行列"></a>合并行列</h4><h5 id="合并行"><a href="#合并行" class="headerlink" title="合并行"></a>合并行</h5><p>\multirow{n}<em>{text}   #n表示要合并的行数，</em>是必须的，否则无法编译成功，text是此行中要输入的内容</p>
+<p>注意，使用\multirow一定要在导言区，也就是在最开头使用包\usepackage{multirow}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">% !Mode::&quot;TeX:UTF-8&quot;</span><br><span class="line">\documentclass&#123;article&#125;</span><br><span class="line">\usepackage[UTF8]&#123;ctex&#125;</span><br><span class="line">\usepackage&#123;listings&#125;</span><br><span class="line">\usepackage&#123;amsthm&#125;</span><br><span class="line">\usepackage&#123;amsmath&#125;</span><br><span class="line">\usepackage&#123;amssymb&#125;</span><br><span class="line">\usepackage&#123;graphicx&#125;</span><br><span class="line">\usepackage&#123;hyperref&#125;</span><br><span class="line">\usepackage[table]&#123;xcolor&#125;</span><br><span class="line">\usepackage&#123;fancyhdr&#125;</span><br><span class="line">\usepackage&#123;lastpage&#125;</span><br><span class="line">\usepackage&#123;pythonhighlight&#125;</span><br><span class="line">\pagestyle&#123;fancy&#125;</span><br><span class="line">\usepackage&#123;enumitem&#125;</span><br><span class="line">\setlist[trivlist]&#123;topsep=\baselineskip&#125;</span><br><span class="line">\usepackage&#123;multirow&#125;</span><br><span class="line"></span><br><span class="line">%这里以上都是导言区</span><br><span class="line"></span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">\begin&#123;tabular&#125;&#123;|c|c|c|&#125;</span><br><span class="line">  \hline</span><br><span class="line">  \multirow&#123;3&#125;*&#123;朕&#125; &amp; 尚书省 &amp; 工部  刑部  兵部  礼部  户部  吏部 \\</span><br><span class="line">  \cline&#123;2-3&#125;</span><br><span class="line">    &amp; 中书省 &amp; ... \\</span><br><span class="line">  \cline&#123;2-3&#125;</span><br><span class="line">    &amp; 门下省 &amp; ... \\ </span><br><span class="line">  \hline</span><br><span class="line">\end&#123;tabular&#125;</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdn.net/20180918205859136" alt="15"></p>
+<p>上面中 \cline{a-b}表示从第a列画一条到第b列的线，与\hline的区别在于可以指定线的起始位置。</p>
+<h5 id="合并列"><a href="#合并列" class="headerlink" title="合并列"></a>合并列</h5><p>\multicolumn{n}{x}{text}  #n为合并列的数量，x为字体的排版样式，比如r,l,c分别表示右对齐，左对齐，居中，text为内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;document&#125;</span><br><span class="line">\begin&#123;tabular&#125;&#123;|c|c|&#125;</span><br><span class="line">  \hline </span><br><span class="line">  \multicolumn&#123;2&#125;&#123;|c|&#125;&#123;成绩&#125; \\</span><br><span class="line">  \hline</span><br><span class="line">  语文 &amp; 数学 \\ </span><br><span class="line">  98 &amp; 100 \\</span><br><span class="line">  \hline</span><br><span class="line">\end&#123;tabular&#125;</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdn.net/20180918210605893" alt="16"></p>
+<h5 id="行列都存在"><a href="#行列都存在" class="headerlink" title="行列都存在"></a>行列都存在</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;document&#125;</span><br><span class="line">\begin&#123;tabular&#125;&#123;|c|r|r|&#125;</span><br><span class="line">\hline</span><br><span class="line">\multirow&#123;2&#125;*&#123;姓名&#125; &amp; \multicolumn&#123;2&#125;&#123;c|&#125;&#123;成绩&#125;  \\</span><br><span class="line">\cline&#123;2-3&#125;</span><br><span class="line">  &amp; 语文 &amp; 数学 \\</span><br><span class="line">\hline</span><br><span class="line"> 小明 &amp; 60 &amp;  55 \\</span><br><span class="line">\hline</span><br><span class="line">\end&#123;tabular&#125;</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdn.net/20180918210853201" alt="17"></p>
+<h4 id="表格下标注释和字体大小设置"><a href="#表格下标注释和字体大小设置" class="headerlink" title="表格下标注释和字体大小设置"></a>表格下标注释和字体大小设置</h4><p>给定一个表格后，表下可能会有表格的介绍，而介绍的字体通常比文章字体小，可以用</p>
+<p>\small{}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;table&#125;</span><br><span class="line">\centering</span><br><span class="line">\rowcolors[\hline]&#123;2&#125;&#123;orange&#125;&#123;red!30!yellow&#125;</span><br><span class="line">\begin&#123;tabular&#125;&#123;|c|c|&#125;</span><br><span class="line">  \rowcolor&#123;red!20&#125;</span><br><span class="line">  Name &amp; score \\</span><br><span class="line">  小明 &amp; 50 \\</span><br><span class="line">  小华 &amp; 45 \\</span><br><span class="line">  \hline</span><br><span class="line">\end&#123;tabular&#125;</span><br><span class="line">  \caption&#123;\small&#123;This is a simple table for testing&#125;&#125;</span><br><span class="line">\end&#123;table&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdn.net/20180920160812723" alt="18"></p>
+<h5 id="设置表格（字体）大小"><a href="#设置表格（字体）大小" class="headerlink" title="设置表格（字体）大小"></a>设置表格（字体）大小</h5><p>同样，可以通过\small来修改，但是放置的位置和上面不同，而是放在\begin{table}之后，如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;table&#125;</span><br><span class="line">\centering</span><br><span class="line">\small    #改变表格字体大小，同时表格大小也会变</span><br><span class="line">\rowcolors[\hline]&#123;2&#125;&#123;orange&#125;&#123;red!30!yellow&#125;</span><br><span class="line">\begin&#123;tabular&#125;&#123;|c|c|&#125;</span><br><span class="line">  \rowcolor&#123;red!20&#125;</span><br><span class="line">  Name &amp; score \\</span><br><span class="line">  小明 &amp; 50 \\</span><br><span class="line">  小华 &amp; 45 \\</span><br><span class="line">  \hline</span><br><span class="line">\end&#123;tabular&#125;</span><br><span class="line">  \caption&#123;\small&#123;This is a simple table for testing&#125;&#125;</span><br><span class="line">\end&#123;table&#125;</span><br></pre></td></tr></table></figure>
+
+<p>此外还有</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">\tiny</span><br><span class="line">\scriptsize</span><br><span class="line">\footnotesize</span><br><span class="line">\small</span><br><span class="line">\normalsize</span><br><span class="line">\large</span><br><span class="line">\Large</span><br><span class="line">\LARGE</span><br><span class="line">\huge</span><br><span class="line">\Huge</span><br></pre></td></tr></table></figure>
+
+<h5 id="彩色表格和字体"><a href="#彩色表格和字体" class="headerlink" title="彩色表格和字体"></a>彩色表格和字体</h5><h6 id="彩色表格"><a href="#彩色表格" class="headerlink" title="彩色表格"></a>彩色表格</h6><h6 id="彩色字体"><a href="#彩色字体" class="headerlink" title="彩色字体"></a>彩色字体</h6><h4 id="图片表格并列"><a href="#图片表格并列" class="headerlink" title="图片表格并列"></a>图片表格并列</h4><p><a href="https://tex.stackexchange.com/questions/377998/how-to-make-table-and-figure-side-by-side-appear-at-the-same-height" target="_blank" rel="noopener">https://tex.stackexchange.com/questions/377998/how-to-make-table-and-figure-side-by-side-appear-at-the-same-height</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;figure&#125;   %开始图片（图片和表格合成一个大的图片，这里指的是整体的大图片）</span><br><span class="line">\begin&#123;minipage&#125;[b]&#123;.5\linewidth&#125;     %开辟一个小页面，即用来放第一个图片</span><br><span class="line">\centering</span><br><span class="line">\includegraphics[width=6cm]&#123;Figure_1.eps&#125;</span><br><span class="line">\caption&#123;Image&#125;</span><br><span class="line">\end&#123;minipage&#125;%</span><br><span class="line">\begin&#123;minipage&#125;[b]&#123;.5\linewidth&#125;    %开辟第二个小页面，用来放表格</span><br><span class="line">\centering</span><br><span class="line">\begin&#123;tabular&#125;&#123;|c|c|&#125;</span><br><span class="line">\hline</span><br><span class="line">aa &amp; bb \\ \hline</span><br><span class="line">cc &amp; dd \\ \hline</span><br><span class="line">\end&#123;tabular&#125;</span><br><span class="line">\captionof&#123;table&#125;&#123;Table&#125;</span><br><span class="line">\end&#123;minipage&#125;</span><br><span class="line">%\caption&#123;pic and table side by side&#125;</span><br><span class="line">\end&#123;figure&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20190618164331769.?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX0NhdDEyMw==,size_16,color_FFFFFF,t_70" alt="19"></p>
+<h4 id="图片和图片并列"><a href="#图片和图片并列" class="headerlink" title="图片和图片并列"></a>图片和图片并列</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;document&#125;</span><br><span class="line"></span><br><span class="line">\begin&#123;figure&#125;</span><br><span class="line">\begin&#123;minipage&#125;[b]&#123;.5\linewidth&#125;</span><br><span class="line">\centering</span><br><span class="line">\includegraphics[width=6cm]&#123;large_full.eps&#125;</span><br><span class="line">\caption&#123;Image&#125;</span><br><span class="line">\end&#123;minipage&#125;%</span><br><span class="line">\begin&#123;minipage&#125;[b]&#123;.5\linewidth&#125;</span><br><span class="line">\centering</span><br><span class="line">\includegraphics[width=6cm]&#123;large_part&#125;</span><br><span class="line">\caption&#123;image2&#125;</span><br><span class="line">\end&#123;minipage&#125;</span><br><span class="line">\end&#123;figure&#125;</span><br><span class="line"></span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20190618174245488.?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX0NhdDEyMw==,size_16,color_FFFFFF,t_70" alt="20"></p>
+<p>除此之外，也可以使用另一种方法，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;figure&#125;[htb]</span><br><span class="line">  \centering</span><br><span class="line">  \subfigure[]&#123;\includegraphics[width=6.5cm]&#123;large_part.eps&#125;&#125;  %[ ]里面不填就会默认为(a)</span><br><span class="line">  \quad</span><br><span class="line">  \subfigure[]&#123;\includegraphics[width=6.5cm]&#123;large_full.eps&#125;&#125;    %[ ]里面不填默认为(b)</span><br><span class="line">  \caption&#123;\small&#123;The changing of uncertainty $\sigma_r$ on tensor-to-scalar ratio $r$ with the distribution of detectors on focal plane for different frequency combinations with $r$=0.01 and $\sigma_F$=0.1. Contour (a), (b) and (c) correspond to the case 0, case 1 and case 1*, respectively. &#125;&#125;\label&#123;large_fig1&#125;</span><br><span class="line">\end&#123;figure&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20190618230533959.?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX0NhdDEyMw==,size_16,color_FFFFFF,t_70" alt="21"></p>
+<h4 id="表格和表格并列"><a href="#表格和表格并列" class="headerlink" title="表格和表格并列"></a>表格和表格并列</h4><h5 id="两个表格并列"><a href="#两个表格并列" class="headerlink" title="两个表格并列"></a>两个表格并列</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;figure&#125;   %开始图片（表格和表格合成一个大的图片，这里指的是整体的大图片）</span><br><span class="line">\begin&#123;minipage&#125;[b]&#123;.5\linewidth&#125;    %开辟第一个小页面，用来放第一个表格</span><br><span class="line">\centering</span><br><span class="line">  \begin&#123;tabular&#125;&#123;|c|c|c|c|c|&#125;</span><br><span class="line">  \hline</span><br><span class="line">  $r$ &amp; $\sigma_r$ &amp; $N_&#123;95&#125;$ &amp; $N_&#123;150&#125;$ &amp; $N_&#123;220&#125;$\\</span><br><span class="line">  \hline</span><br><span class="line">  \multirow&#123;1&#125;*&#123;0&#125; &amp; 0.00765 &amp; 4200 &amp; 3000 &amp; 2800 \\</span><br><span class="line">  \hline</span><br><span class="line">  \multirow&#123;1&#125;*&#123;0.01&#125; &amp; 0.00778 &amp; 4200 &amp; 3000 &amp; 2800 \\</span><br><span class="line">  \hline</span><br><span class="line">  \end&#123;tabular&#125;</span><br><span class="line">\captionof&#123;table&#125;&#123;Table&#125;</span><br><span class="line">\end&#123;minipage&#125;</span><br><span class="line">\begin&#123;minipage&#125;[b]&#123;.5\linewidth&#125;    %开辟第二个小页面，用来放表格</span><br><span class="line">\centering</span><br><span class="line">\begin&#123;tabular&#125;&#123;|c|c|&#125;</span><br><span class="line">\hline</span><br><span class="line">aa &amp; bb \\ \hline</span><br><span class="line">cc &amp; dd \\ \hline</span><br><span class="line">\end&#123;tabular&#125;</span><br><span class="line">\captionof&#123;table&#125;&#123;Table&#125;</span><br><span class="line">\end&#123;minipage&#125;</span><br><span class="line">\caption&#123;table and table side by side&#125;</span><br><span class="line">\end&#123;figure&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20190625204957238.png" alt="22"></p>
+<p>可以看到有三个标注，可以通过加%去掉。另外，上面图中最后标注是figure 1 xxx, 然而我们是图表，所以只要将begin{figure}和end{figure}括号改为table即可，我就不再改了。</p>
+<h5 id="多个表格并列"><a href="#多个表格并列" class="headerlink" title="多个表格并列"></a>多个表格并列</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;table&#125;   %开始图表</span><br><span class="line">\begin&#123;minipage&#125;[b]&#123;.5\linewidth&#125;    %开辟第一个小页面，用来放第一个表格</span><br><span class="line">\centering</span><br><span class="line">Case I, $f_\text&#123;sky&#125;=0.7$</span><br><span class="line">  \begin&#123;tabular&#125;&#123;|c|c|c|c|c|&#125;</span><br><span class="line">  \hline</span><br><span class="line">  $r$ &amp; $\sigma_r$ &amp; $N_&#123;41&#125;$ &amp; $N_&#123;95&#125;$ &amp; $N_&#123;220&#125;$\\</span><br><span class="line">  \hline</span><br><span class="line">  \multirow&#123;1&#125;*&#123;0&#125; &amp; 0.00405 &amp; 800 &amp; 7200 &amp; 2000 \\</span><br><span class="line">  \hline</span><br><span class="line">  \multirow&#123;1&#125;*&#123;0.01&#125; &amp; 0.00422 &amp; 800 &amp; 7200 &amp; 2000 \\</span><br><span class="line">  \hline</span><br><span class="line">  \end&#123;tabular&#125;</span><br><span class="line">\end&#123;minipage&#125;</span><br><span class="line">\vspace&#123;0.35cm&#125;     %调节表格间距</span><br><span class="line">\begin&#123;minipage&#125;[b]&#123;.5\linewidth&#125;    %开辟第二个小页面，用来放第二个表格</span><br><span class="line">\centering</span><br><span class="line">Case II, $f_\text&#123;sky&#125;=0.7$</span><br><span class="line">  \begin&#123;tabular&#125;&#123;|c|c|c|c|c|c|c|&#125;</span><br><span class="line">  \hline</span><br><span class="line">%  \caption&#123;The first table&#125;</span><br><span class="line">  $r$ &amp; $\sigma_r$ &amp; $N_&#123;30&#125;$ &amp; $N_&#123;41&#125;$ &amp; $N_&#123;95&#125;$ &amp; $N_&#123;220&#125;$ &amp; $N_&#123;270&#125;$\\</span><br><span class="line">  \hline</span><br><span class="line">  \multirow&#123;1&#125;*&#123;0&#125; &amp; 0.00765 &amp; 400 &amp; 400 &amp; 7200 &amp; 1000 &amp; 1000 \\</span><br><span class="line">  \hline</span><br><span class="line">  \multirow&#123;1&#125;*&#123;0.01&#125; &amp; 0.00778 &amp; 400 &amp; 400 &amp; 7200 &amp; 1000 &amp; 1000 \\</span><br><span class="line">  \hline</span><br><span class="line">  \end&#123;tabular&#125;</span><br><span class="line">\end&#123;minipage&#125;</span><br><span class="line">\begin&#123;minipage&#125;[b]&#123;.5\linewidth&#125;    %开辟第三个小页面，用来放第三个表格</span><br><span class="line">\centering</span><br><span class="line">Case III, $f_\text&#123;sky&#125;=0.05$</span><br><span class="line">  \begin&#123;tabular&#125;&#123;|c|c|c|c|c|&#125;</span><br><span class="line">  \hline</span><br><span class="line">  $r$ &amp; $\sigma_r$ &amp; $N_&#123;41&#125;$ &amp; $N_&#123;95&#125;$ &amp; $N_&#123;220&#125;$\\</span><br><span class="line">  \hline</span><br><span class="line">  \multirow&#123;1&#125;*&#123;0&#125; &amp; 0.00256 &amp; 600 &amp; 7400 &amp; 2000 \\</span><br><span class="line">  \hline</span><br><span class="line">  \multirow&#123;1&#125;*&#123;0.01&#125; &amp; 0.00319 &amp; 600 &amp; 7400 &amp; 2000 \\</span><br><span class="line">  \hline</span><br><span class="line">  \end&#123;tabular&#125;</span><br><span class="line">  \end&#123;minipage&#125;</span><br><span class="line">  \vspace&#123;0.35cm&#125;</span><br><span class="line">\begin&#123;minipage&#125;[b]&#123;.5\linewidth&#125;    %开辟第四个小页面，用来放第四个表格</span><br><span class="line">\centering</span><br><span class="line">Case IV, $f_\text&#123;sky&#125;=0.05$</span><br><span class="line">  \begin&#123;tabular&#125;&#123;|c|c|c|c|c|c|c|&#125;</span><br><span class="line">  \hline</span><br><span class="line">%  \caption&#123;The first table&#125;</span><br><span class="line">  $r$ &amp; $\sigma_r$ &amp; $N_&#123;30&#125;$ &amp; $N_&#123;41&#125;$ &amp; $N_&#123;95&#125;$ &amp; $N_&#123;220&#125;$ &amp; $N_&#123;270&#125;$\\</span><br><span class="line">  \hline</span><br><span class="line">  \multirow&#123;1&#125;*&#123;0&#125; &amp; 0.00765 &amp; 400 &amp; 400 &amp; 7200 &amp; 1000 &amp; 1000 \\</span><br><span class="line">  \hline</span><br><span class="line">  \multirow&#123;1&#125;*&#123;0.01&#125; &amp; 0.00778 &amp; 400 &amp; 400 &amp; 7200 &amp; 1000 &amp; 1000 \\</span><br><span class="line">  \hline</span><br><span class="line">  \end&#123;tabular&#125;</span><br><span class="line">\end&#123;minipage&#125;</span><br><span class="line">\caption&#123;table and table side by side&#125;</span><br><span class="line">\end&#123;table&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20190625212244243.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX0NhdDEyMw==,size_16,color_FFFFFF,t_70" alt="23"></p>
+<h4 id="更多关于表格的举例"><a href="#更多关于表格的举例" class="headerlink" title="更多关于表格的举例"></a>更多关于表格的举例</h4><p>这个内容可以参考<a href="https://blog.csdn.net/ch1209498273/article/details/78848464" target="_blank" rel="noopener">Latex各种表格</a></p>
+<p>先在开始加入两个包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;xcolor&#125;</span><br><span class="line">\usepackage&#123;colortbl,booktabs&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;table&#125;</span><br><span class="line">\centering</span><br><span class="line">\caption&#123;long&#125;  </span><br><span class="line">\begin&#123;tabular*&#125;&#123;13cm&#125;&#123;lllllll&#125;</span><br><span class="line">\hline</span><br><span class="line">Parameter &amp; $A_s$ &amp; $\alpha_s$ &amp; $\beta_s$ &amp; $A_d$&amp; $\alpha_d$&amp; $\beta_d$ \\</span><br><span class="line">\hline</span><br><span class="line">95+150 &amp; 0.15302 &amp; 0.86156 &amp; 0.16135 &amp; 2.09115 &amp; 0.01381 &amp; 0.00763\\</span><br><span class="line">41+95+150 &amp; 0.05307 &amp; 0.16478 &amp; 0.06017 &amp; 2.08459 &amp; 0.01368 &amp; 0.00726\\</span><br><span class="line">95+150+220 &amp; 0.14988 &amp; 0.85729 &amp; 0.14835 &amp; 1.66287 &amp; 0.00820 &amp; 0.00435\\</span><br><span class="line">41+95+220 &amp; 0.04459 &amp; 0.14222 &amp;  0.04750 &amp; 1.81426 &amp; 0.01406 &amp; 0.00448\\</span><br><span class="line">85+105+135+155 &amp; 0.15213 &amp; 0.95646 &amp;  0.16026 &amp; 2.06439 &amp; 0.01259 &amp; 0.00756\\</span><br><span class="line">\hline</span><br><span class="line">\end&#123;tabular*&#125;</span><br><span class="line">  \caption&#123;Foreground model parameters. Here only polarized BB spectral parameters are considered.&#125;\label&#123;foreground parameters&#125;</span><br><span class="line">\end&#123;table&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdnimg.cn/20191120173603731.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L01yX0NhdDEyMw==,size_16,color_FFFFFF,t_70" alt="24"></p>
+<h3 id="交叉引用"><a href="#交叉引用" class="headerlink" title="交叉引用"></a>交叉引用</h3><p>关于引用部分上面已经提及了一些，上面11的（4）我们用的是\ref {xxx}这个命令。这个命令有一个缺点是它只给出图、定理等的序号，比如“如图2所示”当我们使用\ref时需要写成：</p>
+<p>如图\ref{xxx}所示  </p>
+<p>当我们并不知道这个\ref｛xxx｝是图还是表格还是定理等等的时候就比较麻烦，或者我们不想输入“图”，“表格”这样的字眼，这时可以使用宏包（同样，如果没有宏包先按照上面的方法安装）</p>
+<p>\usepackage{hyperref}</p>
+<p>然后将\ref {xxx}改为\autoref{xxx},e.g.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">......</span><br><span class="line">  \usepackage&#123;hyperref&#125;</span><br><span class="line">  ...</span><br><span class="line">  ...</span><br><span class="line">  \begin&#123;equation&#125;</span><br><span class="line">    f(x)=</span><br><span class="line">    \left\&#123;</span><br><span class="line">    \begin&#123;array&#125;&#123;cc&#125;</span><br><span class="line">    \int \mathrm&#123;d&#125;^3p\int_&#123;0&#125;^&#123;\infty&#125;\mathrm&#123;d&#125;x x^2 \frac&#123;\delta(E-\sqrt&#123;p^2+m^2&#125;)&#125;&#123;2E&#125; , &amp; x \geq 0 \\</span><br><span class="line">    0,&amp; x &lt; 0</span><br><span class="line">    \end&#123;array&#125;</span><br><span class="line">    \right.</span><br><span class="line">    \label&#123;myequation&#125;</span><br><span class="line">  \end&#123;equation&#125;</span><br><span class="line">  We all know \autoref&#123;myequation&#125; is a important equation</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdn.net/20180507155227958" alt="25"></p>
+<h4 id="文章布局"><a href="#文章布局" class="headerlink" title="文章布局"></a>文章布局</h4><h5 id="页面大小"><a href="#页面大小" class="headerlink" title="页面大小"></a>页面大小</h5><p>使用tex得到的pdf很窄，左右空的地方很大，如果我们想让它跟微软中的word一样的页面，可以在导言部分加入以下命令</p>
+<p>\usepackage[top=2.54cm, bottom=2.54cm, left=3.18cm,right=3.18cm]{geometry}</p>
+<h5 id="页眉页脚"><a href="#页眉页脚" class="headerlink" title="页眉页脚"></a>页眉页脚</h5><p>参考文献见<a href="http://www.ctex.org/documents/packages/layout/fancyhdr.htm" target="_blank" rel="noopener">这里</a></p>
+<p>使用宏包</p>
+<p>\usepackage{fancyhdr}</p>
+<p>在导言部分加入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;fancyhdr&#125;</span><br><span class="line">\pagestyle&#123;fancy&#125;</span><br><span class="line">\lhead&#123;wudl&#125;</span><br><span class="line">\chead&#123;$wudl&apos;s$ $tutorial article$&#125;</span><br><span class="line">\rhead&#123;\thesection&#125;</span><br><span class="line">\cfoot&#123;\thepage&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面的结果是，页眉左上边是wudl，中间是chead中的句子，右上边是章节，页脚是页码。实际还有很多可选参数，自行查找需要的。当然上面的页码是“1”“2”“3”这样的数，如果想要A of B,即第A页共B页，则要使用lastpage宏包。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;fancyhdr&#125;</span><br><span class="line">\usepackage&#123;lastpage&#125;</span><br><span class="line">\pagestyle&#123;fancy&#125;</span><br><span class="line">\lhead&#123;wudl&#125;</span><br><span class="line">\chead&#123;$wudl&apos;s$ $tutorial article$&#125;</span><br><span class="line">\rhead&#123;\thesection&#125;</span><br><span class="line">\cfoot&#123;Page \thepage of \pageref&#123;LastPage&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdn.net/20180507181625580" alt="26"></p>
+<h5 id="列举"><a href="#列举" class="headerlink" title="列举"></a>列举</h5><p><img src="https://img-blog.csdn.net/20180507182154780" alt="27"></p>
+<h5 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h5><h6 id="手动输入"><a href="#手动输入" class="headerlink" title="手动输入"></a>手动输入</h6><p>手动输入采用thebibliography环境，手动输入适合参考文献比较少的情况</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">  As is stated in \cite&#123;bibitem1&#125; blahblah\dots</span><br><span class="line">  \begin&#123;thebibliography&#125;&#123;9&#125;</span><br><span class="line"></span><br><span class="line">  \bibitem&#123;bibitem1&#125;</span><br><span class="line">天朝. 朕的江山和子民[M]. 朕的天朝：天朝出版社. 2018</span><br><span class="line"></span><br><span class="line">  \bibitem&#123;bibitem2&#125;</span><br><span class="line">blahblah(ditto)</span><br></pre></td></tr></table></figure>
+
+<p>这里\bibitem跟上面的列举中\item是一样的，上面的9表示最多可能有9条参考文献。结果为：</p>
+<p><img src="https://img-blog.csdn.net/20180507183908528" alt="28"></p>
+<h6 id="使用Bibtex"><a href="#使用Bibtex" class="headerlink" title="使用Bibtex"></a>使用Bibtex</h6><p>这个比较复杂，以后再补充</p>
+<h3 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h3><p>使用</p>
+<p>hyperref</p>
+<p>实际上面都用过这个了。</p>
+<h3 id="插入代码"><a href="#插入代码" class="headerlink" title="插入代码"></a>插入代码</h3><p>参考<a href="https://zhidao.baidu.com/question/378313970.html" target="_blank" rel="noopener">百度知道</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">%导言部分</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">\usepackage&#123;listings&#125;              %加入宏包</span><br><span class="line">\lstset&#123;language=Python&#125;           %Python语言</span><br><span class="line">\lstset&#123;breaklines&#125;                %自动将长的代码换行排版</span><br><span class="line">\lstset&#123;extendedchars=false&#125;       %解决代码跨页时，章节标题，页眉等汉字不显示的问题</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">%需要插入代码的地方</span><br><span class="line">\begin&#123;lstlisting&#125;</span><br><span class="line">放入代码</span><br><span class="line">\end&#123;lstlisting&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样的方法是代码是没有彩色的，结果如下</p>
+<p><img src="https://img-blog.csdn.net/20180507194004521" alt="29"></p>
+<p>解决彩色问题可以到网上找到已经修改彩色的代码，放入导言部分即可，实际上就是使用上文讲过的xcolor宏包自定义颜色。</p>
+<p>例：自定义颜色（参考<a href="https://blog.csdn.net/u012675539/article/details/49131567" target="_blank" rel="noopener">conding算子</a>）</p>
+<p>自定义颜色使用了listings和color两个宏包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">\usepackage&#123;listings&#125;</span><br><span class="line">\usepackage&#123;color&#125;</span><br><span class="line"></span><br><span class="line">\definecolor&#123;dkgreen&#125;&#123;rgb&#125;&#123;0,0.6,0&#125;</span><br><span class="line">\definecolor&#123;gray&#125;&#123;rgb&#125;&#123;0.5,0.5,0.5&#125;</span><br><span class="line">\definecolor&#123;mauve&#125;&#123;rgb&#125;&#123;0.58,0,0.82&#125;</span><br><span class="line"></span><br><span class="line">\lstset&#123; %</span><br><span class="line">  language=Octave,                % the language of the code</span><br><span class="line">  basicstyle=\footnotesize,           % the size of the fonts that are used for the code</span><br><span class="line">  numbers=left,                   % where to put the line-numbers</span><br><span class="line">  numberstyle=\tiny\color&#123;gray&#125;,  % the style that is used for the line-numbers</span><br><span class="line">  stepnumber=2,                   % the step between two line-numbers. If it&apos;s 1, each line </span><br><span class="line">                                  % will be numbered</span><br><span class="line">  numbersep=5pt,                  % how far the line-numbers are from the code</span><br><span class="line">  backgroundcolor=\color&#123;white&#125;,      % choose the background color. You must add \usepackage&#123;color&#125;</span><br><span class="line">  showspaces=false,               % show spaces adding particular underscores</span><br><span class="line">  showstringspaces=false,         % underline spaces within strings</span><br><span class="line">  showtabs=false,                 % show tabs within strings adding particular underscores</span><br><span class="line">  frame=single,                   % adds a frame around the code</span><br><span class="line">  rulecolor=\color&#123;black&#125;,        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))</span><br><span class="line">  tabsize=2,                      % sets default tabsize to 2 spaces</span><br><span class="line">  captionpos=b,                   % sets the caption-position to bottom</span><br><span class="line">  breaklines=true,                % sets automatic line breaking</span><br><span class="line">  breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace</span><br><span class="line">  title=\lstname,                   % show the filename of files included with \lstinputlisting;</span><br><span class="line">                                  % also try caption instead of title</span><br><span class="line">  keywordstyle=\color&#123;blue&#125;,          % keyword style</span><br><span class="line">  commentstyle=\color&#123;dkgreen&#125;,       % comment style</span><br><span class="line">  stringstyle=\color&#123;mauve&#125;,         % string literal style</span><br><span class="line">  escapeinside=&#123;\%*&#125;&#123;*)&#125;,            % if you want to add LaTeX within your code</span><br><span class="line">  morekeywords=&#123;*,...&#125;               % if you want to add more keywords to the set</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>导入模块</p>
+<p>参考gaojiaxing 和 instant以python为例，下载python版本的hightlighting,地址点这里。下载完成要将pythonhighlight.sty和放在工作目录下。</p>
+<p>可以有两种方法来加载自己写的python代码。其一是将python代码在python自己的编辑器中写完保存为.py文件放到工作目录下（如test.py）,之后加载的时候只需要\inputpython…即可，这种方法可以节省大量的WinEdt书写空间</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">...</span><br><span class="line">\usepackage&#123;graphicx&#125;</span><br><span class="line">\usepackage&#123;pythonhighlight&#125;</span><br><span class="line">...</span><br><span class="line">...</span><br><span class="line">\inputpython&#123;test.py&#125;&#123;1&#125;&#123;41&#125;#导入python文件test.py第一行到第41行</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdn.net/20180507201114149" alt="30"></p>
+<p>其二，可以通过</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;xxx&#125;</span><br><span class="line">代码</span><br><span class="line">\end&#123;xxx&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;python&#125;</span><br><span class="line">#</span><br><span class="line">from pyx import *</span><br><span class="line">def f():</span><br><span class="line">g = graph.graphxy(width=8)</span><br><span class="line">g.plot(graph.data.function(&quot;y(x)=sin(x)/x&quot;, min=-15, max=15))</span><br><span class="line">g.writePDFfile(&quot;function&quot;)</span><br><span class="line">print r&apos;\includegraphics&#123;function&#125;&apos;</span><br><span class="line">return f</span><br><span class="line">\end&#123;python&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdn.net/20180507201357513" alt="31"></p>
+<h3 id="目录生成"><a href="#目录生成" class="headerlink" title="目录生成"></a>目录生成</h3><p>插入目录使用</p>
+<p>\tableofcontents</p>
+<p>注意这句话要在\begin{document}之后，end之前，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">\documentclass&#123;article&#125;</span><br><span class="line">\usepackage&#123;hyperref&#125;</span><br><span class="line">\begin&#123;document&#125;</span><br><span class="line">\tableofcontents</span><br><span class="line">\section&#123;A section&#125;</span><br><span class="line">This is a section</span><br><span class="line">\paragraph&#123;A paragraph&#125;</span><br><span class="line">This is a paragraph</span><br><span class="line">\subsection&#123;A subsection&#125;</span><br><span class="line">This is a subsection</span><br><span class="line">\end&#123;document&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img-blog.csdn.net/20180507203909395" alt="32"></p>
+<p>注意上面的代码使用了超链接</p>
+<p>\usepackage{hyerref}</p>
+<p>如果没有这个超链接是不会有红色部分的。</p>
+<h3 id="段落空行-换行和首部缩进"><a href="#段落空行-换行和首部缩进" class="headerlink" title="段落空行, 换行和首部缩进"></a>段落空行, 换行和首部缩进</h3><p>在latex中，默认回车是不换行的，比如在latex中输入</p>
+<p>A： Hello, how are you?\<br>B： Hi, i’m fine.</p>
+<p><img src="https://img-blog.csdnimg.cn/20190326111112653." alt="33"></p>
+<p>另外，如果我们希望B换行之后行首缩进，比如写段落的时候希望前面缩进两个字符等，可以直接在latex中空一行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">A： Hello, how are you?</span><br><span class="line"></span><br><span class="line">B： Hi, i&apos;m fine.</span><br></pre></td></tr></table></figure>
+
+<p>如果我们希望段落之间空的行数比较多，可以使用如下两种方法<a href="https://tex.stackexchange.com/questions/135134/how-to-add-an-empty-line-between-paragraphs" target="_blank" rel="noopener">https://tex.stackexchange.com/questions/135134/how-to-add-an-empty-line-between-paragraphs</a></p>
+<p>这里需要提到的是：在定义\newcommad的时候，可以将下面的\newcommand{…}…这几行代码放在\begin{document}之前或者之后，但是笔者习惯放之前，看着比较整洁易识别。另外就是newpara是自定义的名字，你可以把它定义成任何你想要的名字。最后，使用\newcommand的时候里面的\vskip 1cm默认单位是cm，而不是inch，而第1种方法是inch.</p>
+<p><img src="https://img-blog.csdnimg.cn/20190326111444636.?x" alt="34"></p>
+<blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/07/18/Ningbo/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/12/02/letex/</a></p></blockquote>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2019/12/02/letex/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/12/02/letex/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//yizhixiaobai.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/11/28/cn-exp5/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/head_sculpture.png" alt="一直小白's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        zhongyuhang113@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:zhongyuhang113@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2019/12/">十二月 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/11/">十一月 2019<span class="sidebar_archives-count">26</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">29</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">28</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Database/">Database<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/IT项目管理/">IT项目管理<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/android/">android<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/c/">c++<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/j2ee/">j2ee<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/java/">java<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/letex/">letex<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/lua/">lua<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/opencv/">opencv<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/oracle/">oracle<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/scrapy/">scrapy<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/书籍/">书籍<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/信息安全/">信息安全<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端/">前端<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/开箱/">开箱<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/心理学/">心理学<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/测试/">测试<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/游记/">游记<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/笔记/">笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机网络/">计算机网络<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/设计模式/">设计模式<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/评测/">评测<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/需求分析/">需求分析<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/鱼的记忆/">鱼的记忆<span class="sidebar_archives-count">9</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">table</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间轴">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                时间轴
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/video" title="目之所及">
+                
+                    <i class="material-icons sidebar-material-icons">movie</i>
+                
+                目之所及
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="图库">
+                
+                    <i class="material-icons sidebar-material-icons">collections</i>
+                
+                图库
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="好朋友">
+                
+                    <i class="material-icons sidebar-material-icons">favorite_border</i>
+                
+                好朋友
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/PGP" title="PGP密钥">
+                
+                    <i class="material-icons sidebar-material-icons">vpn_key</i>
+                
+                PGP密钥
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/agree" title="知识共享协议">
+                
+                    <i class="material-icons sidebar-material-icons">https</i>
+                
+                知识共享协议
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/me" title="关于小白">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于小白
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">104</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/WTOJL7dDTsa8Dcd" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/zyhang8" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https:www.github.com/zyhang8" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;一直小白的博客
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//yizhixiaobai.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2017;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
