@@ -1,0 +1,1791 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
+
+
+    <link rel="dns-prefetch" href="https://yizhixiaobai.disqus.com">
+
+
+
+    <link rel="dns-prefetch" href="https://hm.baidu.com">
+
+
+
+    <link rel="dns-prefetch" href="https://lib.baomitu.com">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            数据库管理与开发期末作业 | 
+        
+        一直小白的博客
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/head_sculpture.png">
+    <link rel="icon" href="/img/head_sculpture.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content="数据库管理与开发期末作业">
+    <meta name="keywords" content="这是一只小白">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微锟斤拷锟脚猴拷", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <style>
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: regular;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.svg#Roboto) format('svg')
+        }
+    </style>
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="一直小白的博客">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2019/09/18/amazon-oracle/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="一直小白的博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/head_sculpture.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com/2019/09/18/amazon-oracle/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="数据库管理与开发期末作业 | 一直小白的博客">
+    <meta property="og:image" content="/img/head_sculpture.png">
+    <meta property="og:description" content="数据库管理与开发期末作业">
+    
+
+    
+        <meta property="article:published_time" content="Wed Sep 18 2019 11:16:09 GMT+0800">
+        <meta property="article:modified_time" content="Wed Sep 18 2019 11:19:13 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/2019/09/18/amazon-oracle/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2019/09/18/amazon-oracle/index.html",
+    "headline": "数据库管理与开发期末作业",
+    "datePublished": "Wed Sep 18 2019 11:16:09 GMT+0800",
+    "dateModified": "Wed Sep 18 2019 11:19:13 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "一直小白",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/head_sculpture.png"
+        },
+        "description": "求知若饥,谦虚若愚"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "一直小白的博客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/head_sculpture.png"
+        }
+    },
+    "keywords": "这是一只小白",
+    "description": "数据库管理与开发期末作业",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+        <script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?5a42bcc3e66e1db4931abdcca1a9aa74';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#为亚马逊设计一个数据库-从一下5点入手"><span class="post-toc-number">1.</span> <span class="post-toc-text">为亚马逊设计一个数据库,从一下5点入手</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-1完成需求分析"><span class="post-toc-number">2.</span> <span class="post-toc-text">1.1完成需求分析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#引言"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">引言</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#项目背景"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">项目背景</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#系统业务需求"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">系统业务需求</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#系统功能需求"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">系统功能需求</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#店铺管理功能"><span class="post-toc-number">2.4.1.</span> <span class="post-toc-text">店铺管理功能</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#商品管理功能"><span class="post-toc-number">2.4.2.</span> <span class="post-toc-text">商品管理功能</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#订单管理功能"><span class="post-toc-number">2.4.3.</span> <span class="post-toc-text">订单管理功能</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#物流发货功能"><span class="post-toc-number">2.4.4.</span> <span class="post-toc-text">物流发货功能</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#系统非功能性需求"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">系统非功能性需求</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#用例需求小结"><span class="post-toc-number">2.5.1.</span> <span class="post-toc-text">用例需求小结</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-2概念模型-ER图"><span class="post-toc-number">3.</span> <span class="post-toc-text">1.2概念模型(ER图)</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-1概念模型映射为关系模型"><span class="post-toc-number">4.</span> <span class="post-toc-text">2.1概念模型映射为关系模型</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-2-将关系模型的范式优化到3NF-通过模式分解算法消除非主属性对主属性的部分函数依赖，传递函数依赖"><span class="post-toc-number">5.</span> <span class="post-toc-text">2.2 将关系模型的范式优化到3NF(通过模式分解算法消除非主属性对主属性的部分函数依赖，传递函数依赖)</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第一范式（1NF）：数据表中的每一列（每个字段）必须是不可拆分的最小单元，也就是确保每一列的原子性"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">第一范式（1NF）：数据表中的每一列（每个字段）必须是不可拆分的最小单元，也就是确保每一列的原子性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第二范式（2NF）：满足1NF后，要求表中的所有列，都必须依赖于主键，而不能有任何一列与主键没有关系，也就是说一个表只描述一件事情"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">第二范式（2NF）：满足1NF后，要求表中的所有列，都必须依赖于主键，而不能有任何一列与主键没有关系，也就是说一个表只描述一件事情</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第三范式（3NF）：必须先满足第二范式（2NF），要求：表中的每一列只与主键直接相关而不是间接相关（表中的每一列只能依赖于主键）"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">第三范式（3NF）：必须先满足第二范式（2NF），要求：表中的每一列只与主键直接相关而不是间接相关（表中的每一列只能依赖于主键）</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-根据优化后的关系模型建表（按ORACLE的语法），重点利用DBMS提供的约束和触发器来保证数据库的完整性。"><span class="post-toc-number">6.</span> <span class="post-toc-text">3.根据优化后的关系模型建表（按ORACLE的语法），重点利用DBMS提供的约束和触发器来保证数据库的完整性。</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#建表-约束"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">建表+约束</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建触发器"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">创建触发器</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#分析数据库面对的用户的种类，完成数据库用户的权限授权（建议确定合理的角色来完成权限的分配和回收）"><span class="post-toc-number">7.</span> <span class="post-toc-text">分析数据库面对的用户的种类，完成数据库用户的权限授权（建议确定合理的角色来完成权限的分配和回收）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#分析过程"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">分析过程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#角色设计"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">角色设计</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#制定合理的数据库备份恢复策略。"><span class="post-toc-number">8.</span> <span class="post-toc-text">制定合理的数据库备份恢复策略。</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#备份策略确立"><span class="post-toc-number">8.1.</span> <span class="post-toc-text">备份策略确立</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#备份需求分析"><span class="post-toc-number">8.1.1.</span> <span class="post-toc-text">备份需求分析</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#备份设备选型"><span class="post-toc-number">8.1.2.</span> <span class="post-toc-text">备份设备选型</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#备份策略制定"><span class="post-toc-number">8.1.3.</span> <span class="post-toc-text">备份策略制定</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考文献"><span class="post-toc-number">9.</span> <span class="post-toc-text">参考文献</span></a></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                数据库管理与开发期末作业
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/head_sculpture.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>一直小白</strong>
+        <span>9月 18, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACVElEQVR42u3aQXLDIBAEQP//08kDUpZnFoHtVHNKSQbRHFiy7OPnX7cHHh4eHh4eHh7eh/Eecfvb69mTv2+TvtfPi7nh4eHhHeG92GrL6V5Puh2h7YuHh4d3kvdsw002/WfjXIPzbyVzw8PDw/tk3vWhNlmU9e/i4eHhfRcv2ehX3uLh4eF9Cy/5hz+Z1noC9225Fjw8PLyYl18ynf/76P0eHh4eXsCrS5qCzXqWkrir4eHh4e3m5Rtxm8LIx5wFBjw8PLx38drpzsLG7uIDPDw8vPfyZht0u4m3b/PEMR4eHt5J3ixpmy9Tm5wdFnvh4eHhbea1x9aVYqk2CCVLX1dG4OHh4d3Euws5Cwn1oXlWGYGHh4e3mdci24CRj5/D8PDw8M7w8oPyyqVXHh5WYHh4eHhneLPNPfpM2SsPPy8WAg8PD28zLz9et4FhpehqljLGw8PDO8/LL6hmF2PtmPklGR4eHt5JXnsszkPISolAmzLGw8PDO8+bIWcJ37uKruo0Lh4eHt6tvPWJPso2S0ZEvfDw8PAO8pJr/pUJzWD51/Hw8PDO81ZSDC2pTTfkYQYPDw/vJK+9AJulEvIRtsQ9PDw8vGVe21pePum7Sg3w8PDwdvNmide8tLRNN8wKvPDw8PDO8/JgMLvQ2hEYhskIPDw8vFt57QadH6PbELKyHHh4eHifz7suOJgFhvY5Hh4e3nfx2mndlZ54urh4eHh4B3krl14JKVmU5Jcvfo+Hh4d3hLeeAlhP+NZH5x33e3h4eHgB7/81PDw8PDw8PDy8D2i/l2jtOctBj6sAAAAASUVORK5CYII=">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=数据库管理与开发期末作业&url=http://yoursite.com/2019/09/18/amazon-oracle/index.html&pic=http://yoursite.com/img/head_sculpture.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=数据库管理与开发期末作业&url=http://yoursite.com/2019/09/18/amazon-oracle/index.html&via=一直小白" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/09/18/amazon-oracle/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2019/09/18/amazon-oracle/index.html&title=数据库管理与开发期末作业" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一直小白的博客&title=数据库管理与开发期末作业&summary=&pics=http://yoursite.com/img/head_sculpture.png&url=http://yoursite.com/2019/09/18/amazon-oracle/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <!-- TOC -->
+
+<ul>
+<li><a href="#为亚马逊设计一个数据库从一下5点入手">为亚马逊设计一个数据库,从一下5点入手</a></li>
+<li><a href="#11完成需求分析">1.1完成需求分析</a><ul>
+<li><a href="#引言">引言</a></li>
+<li><a href="#项目背景">项目背景</a></li>
+<li><a href="#系统业务需求">系统业务需求</a></li>
+<li><a href="#系统功能需求">系统功能需求</a><ul>
+<li><a href="#店铺管理功能">店铺管理功能</a></li>
+<li><a href="#商品管理功能">商品管理功能</a></li>
+<li><a href="#订单管理功能">订单管理功能</a></li>
+<li><a href="#物流发货功能">物流发货功能</a></li>
+</ul>
+</li>
+<li><a href="#系统非功能性需求">系统非功能性需求</a><ul>
+<li><a href="#用例需求小结">用例需求小结</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#12概念模型er图">1.2概念模型(ER图)</a></li>
+<li><a href="#21概念模型映射为关系模型">2.1概念模型映射为关系模型</a></li>
+<li><a href="#22-将关系模型的范式优化到3nf通过模式分解算法消除非主属性对主属性的部分函数依赖传递函数依赖">2.2 将关系模型的范式优化到3NF(通过模式分解算法消除非主属性对主属性的部分函数依赖，传递函数依赖)</a><ul>
+<li><a href="#第一范式1nf数据表中的每一列每个字段必须是不可拆分的最小单元也就是确保每一列的原子性">第一范式（1NF）：数据表中的每一列（每个字段）必须是不可拆分的最小单元，也就是确保每一列的原子性</a></li>
+<li><a href="#第二范式2nf满足1nf后要求表中的所有列都必须依赖于主键而不能有任何一列与主键没有关系也就是说一个表只描述一件事情">第二范式（2NF）：满足1NF后，要求表中的所有列，都必须依赖于主键，而不能有任何一列与主键没有关系，也就是说一个表只描述一件事情</a></li>
+<li><a href="#第三范式3nf必须先满足第二范式2nf要求表中的每一列只与主键直接相关而不是间接相关表中的每一列只能依赖于主键">第三范式（3NF）：必须先满足第二范式（2NF），要求：表中的每一列只与主键直接相关而不是间接相关（表中的每一列只能依赖于主键）</a></li>
+</ul>
+</li>
+<li><a href="#3根据优化后的关系模型建表按oracle的语法重点利用dbms提供的约束和触发器来保证数据库的完整性">3.根据优化后的关系模型建表（按ORACLE的语法），重点利用DBMS提供的约束和触发器来保证数据库的完整性。</a><ul>
+<li><a href="#建表约束">建表+约束</a></li>
+<li><a href="#创建触发器">创建触发器</a></li>
+</ul>
+</li>
+<li><a href="#分析数据库面对的用户的种类完成数据库用户的权限授权建议确定合理的角色来完成权限的分配和回收">分析数据库面对的用户的种类，完成数据库用户的权限授权（建议确定合理的角色来完成权限的分配和回收）</a><ul>
+<li><a href="#分析过程">分析过程</a></li>
+<li><a href="#角色设计">角色设计</a></li>
+</ul>
+</li>
+<li><a href="#制定合理的数据库备份恢复策略">制定合理的数据库备份恢复策略。</a><ul>
+<li><a href="#备份策略确立">备份策略确立</a><ul>
+<li><a href="#备份需求分析">备份需求分析</a></li>
+<li><a href="#备份设备选型">备份设备选型</a></li>
+<li><a href="#备份策略制定">备份策略制定</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#参考文献">参考文献</a></li>
+</ul>
+<!-- /TOC -->
+
+<h2 id="为亚马逊设计一个数据库-从一下5点入手"><a href="#为亚马逊设计一个数据库-从一下5点入手" class="headerlink" title="为亚马逊设计一个数据库,从一下5点入手"></a>为亚马逊设计一个数据库,从一下5点入手</h2><blockquote>
+<p>1.完成需求分析，给出概念模型(ER模型 )，认真讨论实体之间联系（1:1；1：n; m :n ）<br>2.将概念模型映射为关系模型，{ 例如： Customer( id  ,name, phone,……..)}，并将关系模型的范式优化到3NF ( 通过模式分解算法消除非主属性对主属性的部分函数依赖，传递函数依赖 )。<br>3.根据优化后的关系模型建表（按ORACLE的语法），重点利用DBMS提供的约束和触发器来保证数据库的完整性。<br>4.分析数据库面对的用户的种类，完成数据库用户的权限授权（建议确定合理的角色来完成权限的分配和回收）<br>5.制定合理的数据库备份恢复策略。</p>
+</blockquote>
+<h2 id="1-1完成需求分析"><a href="#1-1完成需求分析" class="headerlink" title="1.1完成需求分析"></a>1.1完成需求分析</h2><h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>在软件工程中需求分析是极为重要的一个环节，需求分析的工作是分析系统的业务需求，确定系统的目的、功能范围和定义。先介绍项目的需求背景，接着分析系统的业务需求和定义系统的体系结构,然后依据系统结构将系统分成多个业务模块，最后着重说明主要功能模块的用例。</p>
+<h3 id="项目背景"><a href="#项目背景" class="headerlink" title="项目背景"></a>项目背景</h3><ol>
+<li><p>现代社会正处在高速信息化的进程,人类生活在互联网的推动下正发生着超乎往常任何时代的变革，电子商务作为商业领域最先进的交易方式，已对传统经营理念和经营方式产生了巨大冲击。来自于中国电子商务协会数字服务中心(CECA)的数据显示，早在2011年世界各国电子商务市场规模总和已经突破40. 6万亿美元。目前，西方发达国家如美国、德国等，依然占据世界电子商务的主导地位,而中国等发展中国家的电子商务正处在蓬勃发展阶段，将在国际电子商务市场占据有力的地位”。近些年我国的电子商务能够快速发展，是因为中小企业在传统商业领域的生存和发展存在着资金短缺、技术落后、管理无序和人才素质不高等方面的障碍,而电子商务的出现很大程度地降低了中小企业的采购、营销和库存成本，帮助中小企业拓展市场、提升业务机会，提高运营效率,进一步优化企业服务，提升企业形象。</p>
+</li>
+<li><p>跨境电子商务作为电子商务发展的生力军,也是推动经济全球–体化的技术基础，具有极为重要的战略意义。发展跨境电子商务是国内企业缩小国外企业差距的一一个有效途径,对我国中小企业进入国际市场、充分利用整合国外各种有利资源是- - 个难得的机会，同时这也利于国外电子商务企业努力开拓中国市场。跨境电子商务构建的立体、开放的多边经贸合作模式，极大促进了企业优化整合多边资源以及企业间的互利共赢;同时跨境电商的发展和普及也使分散在全球各地的消费者能够容易地购买到其他国家和地区物美价廉的商品闻。</p>
+</li>
+<li><p>在众多的跨境电子商务平台中，亚马逊是全球用户数最多的网上零售平台，其规模远远超过了沃尔玛、苹果、eBay以及国内的阿里巴巴。来自ComScore的数据显示，早在2011年6月，亚马逊的独立用户数就已经位居全球首位，达到2.8亿人。越来越多的国内电商企业转战亚马逊平台，他们急切希望有基于亚马逊平台的电商系统，帮助他们整合生产厂家、IT 运营商、银行、物流公司形成的供应链，为企业在整个产业链上下游运作提供了创造新价值的驱动途径。</p>
+</li>
+</ol>
+<h3 id="系统业务需求"><a href="#系统业务需求" class="headerlink" title="系统业务需求"></a>系统业务需求</h3><p>基于亚马逊平台的电商ERP系统是为了提高商品上架速度、加快订单处理和物流派送、降低外贸电商操作人员的从业门槛，优化电商供应链。作者在开发系统前详细阅读、熟悉亚马逊平台经营管理政策、规定,深入考察亚马逊平台的多个运营商，详细了解他们生产运营过程和遇到的困难，确定系统的基本业务。通过不断深入交流以及结合亚马逊提供的商城服务API接口确定基于亚马逊平台电商ERP系统的基本功能，包括店铺管理、商品管理、订单管理和物流发货等核心业务功能。</p>
+<h3 id="系统功能需求"><a href="#系统功能需求" class="headerlink" title="系统功能需求"></a>系统功能需求</h3><h4 id="店铺管理功能"><a href="#店铺管理功能" class="headerlink" title="店铺管理功能"></a>店铺管理功能</h4><p>为了给消费者提供更好的本地化服务,亚马逊在全球多个国家和地区创建有独立运营的电商网站，如中国、德国、日本、加拿大、澳大利亚等，这些网站有独立的域名，在用户体验和商品类目上也存在一些差异。电商企业为了拥有更广泛的销售渠道和消费者群体,大多会入驻亚马逊的多个分站平台进行经营，为此系统需要支持接入多家店铺和管理多家店铺的商品、订单等。</p>
+<p>店铺管理的功能包括:</p>
+<ol>
+<li>添加店铺<br>可以添加不同国家或地区的多个店铺,但不允许添加同名的店铺以便于区分管理。新增店铺时须调用亚马逊商城服务的API检验AppKey和AppSecret等信息是否有效,只有通过API验证的店铺才能成功添加到系统中。仅系统管理员才有权限添加店铺。</li>
+<li>编辑店铺信息<br>编辑店铺信息页面可用于修改店铺的名称和AppSecret,而AppKey由于是店铺的唯一标识，一经绑定并添加成功不允许修改。出于安全考虑商家会定期更改店铺的AppSecret,如果AppSecret有修改，在保存店铺信息时须再次校验店铺API账号的有效性，只有账号信息通过API验证的修改才能成功保存。仅系统管理员才有权限修改店铺信息。</li>
+<li>锁定店铺<br>商家在开启多家亚马逊店铺后，有可能由于在某些地区的经营状况不如预期，会做出暂停在该地区亚马逊平台上店铺的经营,譬如在西班牙亚马逊平台的店铺经营效益不佳，暂停该店铺的经营可节省西班牙语工作人员的投入。通过锁定店铺可以暂停店铺的经营活动,锁定店铺即停止该店铺同亚马逊商城服务的数据交换，只是更改店铺的状态，不影响店铺原有数据。仅系统管理员才有权限锁<br>定店铺。店铺管理的用例图如图3-1所示。</li>
+</ol>
+<p>根据亚马逊电商ERP系统的使用对象可以挖掘出店铺管理功能用例所涉及的参与者以及用例的前置条件、后置条件和具体操作的基本事件流店铺管理用</p>
+<p><img src="https://s2.ax1x.com/2019/06/08/VD08CF.png" alt="VD08CF.png"></p>
+<table>
+<thead>
+<tr>
+<th>店铺管理用例说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>用例名:店铺操作的用例</td>
+</tr>
+<tr>
+<td>用例的标识符: StoreManageCase001</td>
+</tr>
+<tr>
+<td>参与者:系统管理员</td>
+</tr>
+<tr>
+<td>店铺管理用例简要的描述:系统管理员进入系统管理店铺信息</td>
+</tr>
+<tr>
+<td>前置条件:系统管理员登录系统并进入店铺管理页面</td>
+</tr>
+<tr>
+<td>基本事件流:</td>
+</tr>
+<tr>
+<td>1.系统管理员进入店铺管理页面</td>
+</tr>
+<tr>
+<td>2.管理员点击新增店铺按钮</td>
+</tr>
+<tr>
+<td>3.按照页面上提示信息逐个填写店铺配置数据4.点击完成按钮，系统进行验证并添加店铺5.店铺添加成功，用例终止</td>
+</tr>
+<tr>
+<td>后置条件:新添加的店铺显示在店铺列表页面，用户可修改店铺信息</td>
+</tr>
+</tbody></table>
+<h4 id="商品管理功能"><a href="#商品管理功能" class="headerlink" title="商品管理功能"></a>商品管理功能</h4><p>电商吸引消费者的一个因素是款式全、选择多,所以电商店铺要频繁发布新款、更新商品。如此，商品管理就成了电商运营中既重要又繁琐的一项工作。对于有上千个单品在销售的商家，平均每天会上5-10个的新款，而在节假日或者平台活动大促到来之前还会大批量上新款。另外，根据销售情况和营销策略修改商品的标题、关键字、价格和库存也是商品操作人员每天需要重复进行的工作，商品管理涉及的业务比较多，为明确业务需求范围和功能定义，将商品管理划分为五个子功能:</p>
+<ol>
+<li>商品分类管理<br>用于管理商品的类目，合理的分类管理可以简化商品的其他操作，而且对生成销售报表并制定生产、营销策略有很大帮助。同时商品分类中也将作为商品名称在报关时使用。</li>
+<li>商品规格管理<br>商品规格是指同一款式的商品拥有不同的颜色、尺寸或某方面属性等，通常会使用商品的规格和商品的类目、款式等组成商品编码。商品编码在商品的生产、销售和运输中都会使用到，而且商品编码生成条形码并借助扫描器进行捡货将大大提高这些环节的效率。</li>
+<li>商品档案管理<br>商品的档案管理是指维护商品的标题、图片、价格、商品描述和搜索关键字等信息。消费者是否购买一款商品与商品档案的设置有着紧密的关系，另外合理地设置商品标题和搜索关键字等对商品的排名和曝光度也有很大的影响。</li>
+<li>商品库存管理<br>商品的库存管理主要管理商品在各个仓库的可售商品数量,同时也维护仓库所支持的物流公司和物流服务方式，以及派送商品的物流运费等信息。</li>
+<li>商品上架。<br>在系统中设置好商品的类目、规格、详细信息和库存之后，需要能够批量、快,速地将商品信息上传到亚马逊平台，从而取代手工在亚马逊后台逐个录入或者修改Excel文件上传。</li>
+</ol>
+<p><img src="https://s2.ax1x.com/2019/06/08/VDgj9x.png" alt="VDgj9x.png"></p>
+<table>
+<thead>
+<tr>
+<th>商品类别管理用例说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>用例名:商品类别管理用例</td>
+</tr>
+<tr>
+<td>用例的标识符: ProductManageCase001</td>
+</tr>
+<tr>
+<td>参与者:系统管理员</td>
+</tr>
+<tr>
+<td>商品类别管理用例简要的描述:系统管理员进入商品类别管理页面，可进行商品类别的新增、修改、维护</td>
+</tr>
+<tr>
+<td>店铺管理用例简要的描述:系统管理员进入系统管理店铺信息</td>
+</tr>
+<tr>
+<td>前置条件:系统管理员登录系统并进入商品类别管理页面</td>
+</tr>
+<tr>
+<td>基本事件流:</td>
+</tr>
+<tr>
+<td>1.系统管理员进入商品类别管理页面</td>
+</tr>
+<tr>
+<td>2.管理员点击“新增”商品类别按钮</td>
+</tr>
+<tr>
+<td>3.按照页面上提示信息逐个填写类别信息</td>
+</tr>
+<tr>
+<td>4.点击“保存”按钮，新添加到类别显示在类目列表中</td>
+</tr>
+<tr>
+<td>5.系统管理员选择刚新增的类目，点击“编辑”按钮</td>
+</tr>
+<tr>
+<td>6.修改商品类别的名称</td>
+</tr>
+<tr>
+<td>7.点击“保存”按钮</td>
+</tr>
+<tr>
+<td>8.类别列表中显示修改后类别的名称</td>
+</tr>
+<tr>
+<td>9.商品类别添加和修改完成，用例终止。</td>
+</tr>
+<tr>
+<td>后置条件:管理员可在商品列表页面中删除指定类别</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>商品档案用例说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>用例名:商品档案操作用例</td>
+</tr>
+<tr>
+<td>用例的标识符: ProductManageCase002</td>
+</tr>
+<tr>
+<td>参与者:商品操作员</td>
+</tr>
+<tr>
+<td>商品类别管理用例简要的描述:商品操作员站商品档案页面新增、管理商品档案信息</td>
+</tr>
+<tr>
+<td>前置条件:商品所属类别已经创建</td>
+</tr>
+<tr>
+<td>基本事件流:</td>
+</tr>
+<tr>
+<td>1.系统管理员进入商品类别管理页面</td>
+</tr>
+<tr>
+<td>2.商品操作员进入系统访问商品档案管理页面</td>
+</tr>
+<tr>
+<td>3.设置所属类别</td>
+</tr>
+<tr>
+<td>4.设置商品标题</td>
+</tr>
+<tr>
+<td>5.填写UPC或ean</td>
+</tr>
+<tr>
+<td>6.填写商品品牌</td>
+</tr>
+<tr>
+<td>7.填写制造商规格编码</td>
+</tr>
+<tr>
+<td>8.设置商品价格</td>
+</tr>
+<tr>
+<td>9.上传商品图片</td>
+</tr>
+<tr>
+<td>10.填写商品关键字</td>
+</tr>
+<tr>
+<td>11.设置商品详细描述</td>
+</tr>
+<tr>
+<td>12. 设置运费信息</td>
+</tr>
+<tr>
+<td>13.点击“保存”按钮</td>
+</tr>
+<tr>
+<td>14.返回商品档案列表页面，在页面中可以查看到新增的商品档案</td>
+</tr>
+<tr>
+<td>15. 商品档案添加成功，用例终止</td>
+</tr>
+<tr>
+<td>后置条件:商品操作员可修改商品档案信息、删除商品档案信息、修改商品库存、商品上架</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>商品库存操作用例说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>用例名:商品库存操作用例</td>
+</tr>
+<tr>
+<td>用例的标识符: ProductManageCase003</td>
+</tr>
+<tr>
+<td>参与者:商品操作员</td>
+</tr>
+<tr>
+<td>商品类别管理用例简要的描述:商品操作员进入商品库存管理页面，可进行商品库存的修改</td>
+</tr>
+<tr>
+<td>店铺管理用例简要的描述:系统管理员进入系统管理店铺信息</td>
+</tr>
+<tr>
+<td>前置条件:商品档案已经创建</td>
+</tr>
+<tr>
+<td>基本事件流:</td>
+</tr>
+<tr>
+<td>1.商品操作员登录系统，访问商品库存管理页面</td>
+</tr>
+<tr>
+<td>2.查找需要设置库存的商品</td>
+</tr>
+<tr>
+<td>3.在查找到的商品列表中选择要设置库存的商品</td>
+</tr>
+<tr>
+<td>4.设置商品库存</td>
+</tr>
+<tr>
+<td>5.点击“保存”按钮</td>
+</tr>
+<tr>
+<td>6.列表中商品的库存为更新后的库存</td>
+</tr>
+<tr>
+<td>7.用例终止</td>
+</tr>
+<tr>
+<td>后置条件:商品操作员可将商品的库存同步到亚马逊平台上</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>商品上架的用例说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>用例名:商品上架的用例</td>
+</tr>
+<tr>
+<td>用例的标识符: ProductManageCase004</td>
+</tr>
+<tr>
+<td>参与者:商品操作员</td>
+</tr>
+<tr>
+<td>商品上架用例简要的描述:商品操作员进入商品管理页面，将已经配置好的商品上传到亚马逊平台</td>
+</tr>
+<tr>
+<td>前置条件:商品档案已经创建，商品库存己设置</td>
+</tr>
+<tr>
+<td>基本事件流:</td>
+</tr>
+<tr>
+<td>1.商品操作 员登录系统，访问商品上传管理页面</td>
+</tr>
+<tr>
+<td>2.查找并选中需要设置库存的商品</td>
+</tr>
+<tr>
+<td>3.点击“上传商品到亚马逊”按钮</td>
+</tr>
+<tr>
+<td>4.选中上传的商品添加到待上传商品列表</td>
+</tr>
+<tr>
+<td>5.在上传商品页面中可以看到刚选中上传的商品，状态为“待上传”</td>
+</tr>
+<tr>
+<td>6.后台任务调度程序定期将需要上传的商品上传到亚马逊平台</td>
+</tr>
+<tr>
+<td>7.间隔几分钟后刷新上传商品页面，商品状态更新为“已上传”</td>
+</tr>
+<tr>
+<td>8.间隔几分钟后在亚马逊商品管理后台检查商品是否上传成功</td>
+</tr>
+<tr>
+<td>9.上传用例终止</td>
+</tr>
+<tr>
+<td>后置条件:商品操作员可将商品的库存同步到亚马逊平台上</td>
+</tr>
+</tbody></table>
+<h4 id="订单管理功能"><a href="#订单管理功能" class="headerlink" title="订单管理功能"></a>订单管理功能</h4><p>订单管理是从亚马逊平台获取最新的订单信息并保存到系统中，然后由操作人员进行订单审核和订单确认操作;订单在确认可以发货后将由仓储人员为订单进行捡货和打包装箱操作;在发货完成后将物流单号上传到亚马逊平台完成订单发货操作。个别情况下，如果有些订单所填写的收货地址物流无法送达或者所购买的商品在仓库中货源不足，在同买家沟通后需要对这些订单做取消操作。:<br>订单管理包含如下几个子功能:</p>
+<ol>
+<li>订单下载<br>由任务调度程序定时执行，将执行间隔期间亚马逊平台上买家新购买或者有修改的订单下载到系统中。下载订单的信息包括订单的付款时间、购买商品的编码和数量、买家账号、收货人姓名、收货人电话、收货人地址以及所选择的物流方式。新下载的订单须进行审核操作才能确定是否需要发货。</li>
+<li>订单审核<br>审单人员的工作是检查订单信息是否准确、商品库存是否充足、收货地址是否物流可以到达，当出现特殊情况无法按预期给买家发货时，则发出订单报警，由客服人员联系买家协商处理。通过审核的订单将进入订单确认操作，出现异常的订单会由买家修改订单或者取消订单。</li>
+<li>订单确认<br>订单审核通过后，将会从仓库中锁定该订单购买的商品，然后由仓储人员根据订单的商品清单从仓库捡货打包，并在发货成功后从库存中扣除相应商品数量。如果订单被取消，被锁定的商品将被解锁，订单回退到订单审核步骤。</li>
+<li>取消订单<br>若出现仓库中没有买家所选定商品的足够库存，或者买家填写的收货地址不在物流派送范围内等客户，客服人员会同买家沟通协商，取得同意后将取消订单。只有当订单处于审核环节时才能执行取消订单操作,取消后的订单不会出现在订单审核页面中，只能在订单查询页面中查看。</li>
+<li>订单同步<br>订单同步是将被取消的订单、已经发货或者有添加卖家备注的订单信息同步到亚马逊平台。该操作由任务调度系统定时检查系统中订单的状态，并调用亚马逊商城服务接口将有操作改动的订单同步到亚马逊平台。</li>
+<li>订单查询<br>订单查询是与订单处理流程相独立的操作，可用于查询整个系统中的订单信息，包括己取消的订单。订单查询功能有丰富的查询条件，可以根据店铺、订单状态、订单日期、订单编号、买家名称、订单收货信息、物流方式、订单商品等条件中的-一个或多个进行组合查询。</li>
+</ol>
+<p><img src="https://s2.ax1x.com/2019/06/08/VD2puD.png" alt="VD2puD.png"></p>
+<table>
+<thead>
+<tr>
+<th>订单审核用例说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>用例名:订单审核用例</td>
+</tr>
+<tr>
+<td>用例的标识符: OrderManageCase001</td>
+</tr>
+<tr>
+<td>参与者:订单操作员</td>
+</tr>
+<tr>
+<td>订单审核用例简要的描述:订单操作员登录系统，访问“待审核订单”页面，对订单是否可进行后续流程进行审核</td>
+</tr>
+<tr>
+<td>前置条件:订单从亚马逊平台下载到系统</td>
+</tr>
+<tr>
+<td>基本事件流:</td>
+</tr>
+<tr>
+<td>1.订单操作员登录系统，进入待审订单页面!</td>
+</tr>
+<tr>
+<td>2.在订单列表中选择要审核的订单3.检查订单支付状态和付款金额</td>
+</tr>
+<tr>
+<td>4.检查订单购买商品在仓库中的数量是否满足购买数量</td>
+</tr>
+<tr>
+<td>5.检查订单收货地址信息，用户选择的物流方式是否提供指定收货地区的派送服务、收货人姓名清晰、联系电话符合规范</td>
+</tr>
+<tr>
+<td>6.如果#3、#4、#5均满足，则该订单审核通过</td>
+</tr>
+<tr>
+<td>7.如果#3、#4、#5有-项不满足，则审核不通过</td>
+</tr>
+<tr>
+<td>8.订单审核完毕，用例终止</td>
+</tr>
+<tr>
+<td>后置条件:订单取消，订单确认</td>
+</tr>
+</tbody></table>
+<h4 id="物流发货功能"><a href="#物流发货功能" class="headerlink" title="物流发货功能"></a>物流发货功能</h4><p>订单经过前面的审核、确认之后，流程将进入仓储部门的操作。仓储部门的主要工作根据订单内的商品信息和数量从仓库中捡货并送到包装区,在包装区对商品进行打包、物流面单打印和报税等操作。</p>
+<p>订单发货功能包含如下几个子功能:<br>1。 捡货扫描<br>仓储人员根据前面订单处理流程中订单确认流程生成的出货单,在仓库中挑拣订单指定数量的商品，并连同出库单运送到打包区等待打包。</p>
+<ol start="2">
+<li>打包称重<br>打包人员依据商品数量和商品大小，选择合适的包装箱将商品打包装箱，并对打包后的箱子称重和量体积，供后面申请国际物流快递单使用。</li>
+<li>打印快递单<br>物流操作人员根据出库单中商品的类目生成报关单和收据,并使用打包称重流程中记录的重量和体积等信息向物流服务提供商申请物流单号,再使用热敏打印机打印报关单和物流单。打印的报关单和物流单粘贴在包装箱上，等待物流人员上门收货。生成的物流单号将会填写到订单的发货信息中并由调度系统同步到亚马逊平台。;</li>
+<li>线上物流填单<br>将生成的物流单号录入到订单的发货信息,然后更改订单在系统中的状态为“已发货”，该订单将会由任务调度系统同步到亚马逊平台。</li>
+</ol>
+<p><img src="https://s2.ax1x.com/2019/06/08/VDgv36.png" alt="VDgv36.png"></p>
+<table>
+<thead>
+<tr>
+<th>打印快递单用例说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>用例名:打印快递单用例</td>
+</tr>
+<tr>
+<td>用例的标识符: LogsticsManageCase001</td>
+</tr>
+<tr>
+<td>参与者:仓储操作员</td>
+</tr>
+<tr>
+<td>打印快递单用例简要的描述:</td>
+</tr>
+<tr>
+<td>前置条件:订单已经完成“扫描捡货”和打包操作</td>
+</tr>
+<tr>
+<td>基本事件流:</td>
+</tr>
+<tr>
+<td>1.仓储操作员进入系统，并访问打印快递单页面</td>
+</tr>
+<tr>
+<td>2.在待打印快递单的订单列表中选择-一个订单</td>
+</tr>
+<tr>
+<td>3.点击“打印快递单”，在弹出的窗口中会显示订单商品详情</td>
+</tr>
+<tr>
+<td>4.确认、修改商品的出入关商品名称，过海关时只需显示商品的核心信息，且长度有限制</td>
+</tr>
+<tr>
+<td>5.依据订单买家给定的收货地址和物流服务，选择物流方式(如UPS、DHL等)</td>
+</tr>
+<tr>
+<td>6.点击“打印快递单”，系统会将商品信息、买家地址信息、卖家地址信息等发送给物流公司，并返回物流电子面单</td>
+</tr>
+<tr>
+<td>7.点击“打印发票”打印发票</td>
+</tr>
+<tr>
+<td>8.将快2份递单贴在商品包装上</td>
+</tr>
+<tr>
+<td>9.打印快递单操作完毕，用例终止</td>
+</tr>
+<tr>
+<td>后置条件:线上发货，修改订单中亚马逊上的状态</td>
+</tr>
+</tbody></table>
+<h3 id="系统非功能性需求"><a href="#系统非功能性需求" class="headerlink" title="系统非功能性需求"></a>系统非功能性需求</h3><p>除了对基于亚马逊平台电商ERP系统的业务功能进行确定外,在需求阶段还要考虑软件的安全性、易用性和性能等非功能性需求。</p>
+<ol>
+<li>安全性<br>基于亚马逊平台的电商ERP系统的数据涉及商业机密和客户隐私,保护数据安全性及其重要;<br>另外系统被广泛用于电商企业的日常工作,确保系统的安全和稳定运行才能确保企业正常有序运营;<br>使用B/S模式，服务器暴露在互联网中,且客户端的请求和操作容易被模拟和纂改，为了确保安全性须在服务器端设置网络防火墙;<br>对服务器收到的每条请求做有效性验证和权限验证:在代码编写时做好防范SQL注入和跨域攻击的工作和代码审查涉及商业账号、密码等重要信息或用户敏感信息的页面使用https加密,确保页面在传输过程中的数据安全;<br>另外，重要数据的操作步骤要有记录，当出现重大操作失误时可快速排除错误根源,这类操作账号登录、商品价格修改、收货信息修改、订单操作等。</li>
+<li>易用性<br>该系统的直接使用人员包含电商运营过程中各环节的参与者,其计算机操作水平差异较大，且熟练程度也各有不同。因此要求系统的界面良好，信息简明易懂、可操作性强，商品管理和订单管理等流程操作要准确、清晰、不容易出错。</li>
+<li>高性能<br>电商平台在全年的运营中会有-些如节假日、电商促销活动等时间段出现井喷似的高成交量，此时系统将可能承载数倍于平时的订单处理负荷。为确保高订单情况下系统能稳定顺畅运行,要求系统在性能方面能够支持每秒500次以上请求的响应能力，核心业务功能如订单处理功能的响应请求数不低于每秒300次。在保证服务器响应速度的同时，使用多服务器集群的部署方式，可以在业务量暴增时通过扩展服务器集群提升服务器端的响应能力。</li>
+</ol>
+<h4 id="用例需求小结"><a href="#用例需求小结" class="headerlink" title="用例需求小结"></a>用例需求小结</h4><p>本章主要阐述了基于亚马逊电商系统需求的主要内容，包括系统研发的总体流程、系统各业务模块的功能需求以及系统数据库模型等，为后面的系统设计提供了准确的需求信息。</p>
+<h2 id="1-2概念模型-ER图"><a href="#1-2概念模型-ER图" class="headerlink" title="1.2概念模型(ER图)"></a>1.2概念模型(ER图)</h2><ol>
+<li>看了一下<a href="https://www.amazon.cn/ap/signin" target="_blank" rel="noopener">亚马逊的官网注册界面</a>如下<br><img src="https://s2.ax1x.com/2019/06/07/Vwuj6s.png" alt="Vwuj6s.png"><br><img src="https://s2.ax1x.com/2019/06/07/VwuvXn.png" alt="VwuvXn.png"></li>
+</ol>
+<p>为此设计用户实体 customer</p>
+<ol start="2">
+<li>顾客根据购买力分为不同等级<br>用户等级 customer_level<br><img src="https://s2.ax1x.com/2019/06/08/VDeiBq.png" alt="VDeiBq.png"></li>
+<li>用户地址 customer_address<br><img src="https://s2.ax1x.com/2019/06/08/VDePun.png" alt="VDePun.png"></li>
+<li>用户积分 customer_point<br><img src="https://s2.ax1x.com/2019/06/08/VDepcj.png" alt="VDepcj.png"></li>
+<li>用户登陆 costomer_login<br><img src="https://s2.ax1x.com/2019/06/08/VDe9js.png" alt="VDe9js.png"></li>
+<li>用户余额 customer_account_balance<br><img src="https://s2.ax1x.com/2019/06/08/VDeENT.png" alt="VDeENT.png"></li>
+<li>用户权限 costomer_auths<br><img src="https://s2.ax1x.com/2019/06/08/VDZz9g.png" alt="VDZz9g.png"></li>
+</ol>
+<p><img src="https://s2.ax1x.com/2019/06/07/VwMY24.png" alt="VwMY24.png"><br><img src="https://s2.ax1x.com/2019/06/07/VwM7Rg.png" alt="VwM7Rg.png"></p>
+<ol start="8">
+<li>店铺基本信息 shop_basic_info<br><img src="https://s2.ax1x.com/2019/06/08/VDeFH0.png" alt="VDeFH0.png"></li>
+<li>用户店铺权限 costomer_shop_premission<br><img src="https://s2.ax1x.com/2019/06/08/VDeAEV.png" alt="VDeAEV.png"></li>
+</ol>
+<p><img src="https://s2.ax1x.com/2019/06/07/Vwt3Is.png" alt="Vwt3Is.png"></p>
+<ol start="10">
+<li>商品类别 commodity_catory<br><img src="https://s2.ax1x.com/2019/06/08/VD8AsO.png" alt="VD8AsO.png"></li>
+<li>商品规格信息 commodity_type_info<br><img src="https://s2.ax1x.com/2019/06/08/VDZI9e.png" alt="VDZI9e.png"></li>
+</ol>
+<p><img src="https://s2.ax1x.com/2019/06/07/VwtAIA.png" alt="VwtAIA.png"></p>
+<ol start="12">
+<li>商品档案 commodity_archives<br><img src="https://s2.ax1x.com/2019/06/08/VDZI9e.png" alt="VDZI9e.png"></li>
+<li>品牌信息 brand_info<br><img src="https://s2.ax1x.com/2019/06/08/VDZ4hD.png" alt="VDZ4hD.png"></li>
+<li>商品图片 commodity_picture<br><img src="https://s2.ax1x.com/2019/06/08/VDZo1H.png" alt="VDZo1H.png"></li>
+<li>商品评论 commodity_comment<br><img src="https://s2.ax1x.com/2019/06/08/VDZbnI.png" alt="VDZbnI.png"></li>
+<li>供应商信息 supplier_info<br><img src="https://s2.ax1x.com/2019/06/08/VDZTcd.png" alt="VDZTcd.png"></li>
+<li>订单信息 order_note_info<br><img src="https://s2.ax1x.com/2019/06/08/VDZ7jA.png" alt="VDZ7jA.png"></li>
+<li>子订单信息 child_order_note_info<br><img src="https://s2.ax1x.com/2019/06/08/VDZLHP.png" alt="VDZLHP.png"></li>
+<li>购物车 shopping_cart<br><img src="https://s2.ax1x.com/2019/06/08/VDZqBt.png" alt="VDZqBt.png"></li>
+<li>订单物流信息 order_logistics_info<br><img src="https://s2.ax1x.com/2019/06/08/VDZXAf.png" alt="VDZXAf.png"></li>
+<li>仓库信息 warehouse_info<br><img src="https://s2.ax1x.com/2019/06/08/VDeeCF.png" alt="VDeeCF.png"></li>
+<li>商品库存commodity_stock<br><img src="https://s2.ax1x.com/2019/06/08/VDZfAK.png" alt="VDZfAK.png"></li>
+<li>物流信息 shipping_info<br><img src="https://s2.ax1x.com/2019/06/08/VDZhtO.png" alt="VDZhtO.png"></li>
+</ol>
+<p>最终ER图 各实体之间的关系<br><img src="https://s2.ax1x.com/2019/06/08/VDGYjK.png" alt="VDGYjK.png"></p>
+<h2 id="2-1概念模型映射为关系模型"><a href="#2-1概念模型映射为关系模型" class="headerlink" title="2.1概念模型映射为关系模型"></a>2.1概念模型映射为关系模型</h2><blockquote>
+<p>由于找了好久语法才知道md的波浪线怎么打，而且还是调用Latex公式进行编辑，不太美观</p>
+</blockquote>
+<ol>
+<li>customer(<u>customer_id</u>,costomer_name,role,level,customer_create_time)</li>
+<li>customer_level(<u>level</u>,level_name,min_point,max_point,create_time)</li>
+<li>customer_address(<u>address_id</u>,customer_id,consignee_zipcode,country,province,city,district,address,default_or,create_time)</li>
+<li>customer_point(<u>point_id</u>,customer_id,point_source,point_source_id,chang_point,create_time)</li>
+<li>costomer_login(<u>login_id</u>,login_time,customer_id,login_ip,login_type,create_time)</li>
+<li>customer_account_balance(<u>balance_id</u>,customer_id,source,source_bill_id,amount,create_time)</li>
+<li>costomer_auths(<u>wechat_id</u>,access_token,head_sculptre,wechat_name,customer_id,identity_type(phone,password,email),create_time)</li>
+<li>shop_basic_info(<u>shop_id</u>,shop_name,App_key,App_Secret,merchant_id,marketplaced,sale_sites,create_time)</li>
+<li>costomer_shop_premission(<u>premission_id</u>,customer_id,shop_id,permission,create_time)</li>
+<li>commodity_catory(<u>category_id</u>,category_name,category_code,parent_category_id,category_level,category_status,create_time)</li>
+<li>commodity_type_info(<u>type_id</u>,type_name,type_parameter,commodity_id,weigh,length,width,color,production_date,expriy_date,create_time)</li>
+<li>commodity_archives(<u>commodity_id</u>,commodity_core,shop_id,brand_id,publish_status,audit_status,category_id,business_id,UPC,leadtime,logistics_template,commodity_stock,price,keywords,commodity_describe,commodity_title,create_time)</li>
+<li>brand_info(<u>brand_id</u>,brand_name,telephone,brand_web,brand_logo,brand_description,brand_status,brand_order,create_time)</li>
+<li>commodity_picture(<u>commodity_pic</u>,commodity_id,pic_describe,pic_url,master_or,pic_status,create_time)</li>
+<li>commodity_comment(<u>comment_id</u>,commodity_id,order_id,customer_id,comment_title,comment_content,audit_status,audit_time,create_time)</li>
+<li>supplier_info(<u>supplier_id</u>,supplier_code,supplier_name,supplier_type,supplier_persion,phone_number,bank_name,bank_account,address,supplier_status,create_time)</li>
+<li>order_note_info(<u>order_id</u>,order_code,customer_id,country,province,city,district,shop_id,consignee_name,consignee_phone,consignee_address,buyer_remark,order_system_state,order_online_state,pay_way,discount_amount,pay_money,pay_time,order_time,pay_amount,order_amount,platform_order_id,create_time,freight_amount,receive_time,order_point,invoice_time)</li>
+<li>child_order_note_info(<u>child_order_id</u>,commodity_num,commodity_title,commodity_price,average_cost,order_id,commodity_id,weigh,free_money,warehouse_id,create_time)</li>
+<li>shopping_cart(<u>cart_id</u>customer_id,commodity_id,commodity_num,commodity_price,create_time)</li>
+<li>order_logistics_info(<u>logistics_id</u>,order_id,consignee_name,consignee_phone,consignee_zipcode,consignee_address,duty,logistics_code,package_num,logistics_state,logistics_way,logistics_company,create_time)</li>
+<li>warehouse_info(<u>warehouse_id</u>,warehouse_code,warehouse_name,warehouse_phone,contact,country,province,city,distract,address,warehouse_status,warehouse_persion,create_time)</li>
+<li>commodity_stock(<u>commodity_stock_id</u>,commodity_id,warehouse_id,commodity_stock,create_time)</li>
+<li>shipping_info(<u>ship_id</u>,logistics_id,ship_persion,telephone,ship_price,create_time)</li>
+</ol>
+<h2 id="2-2-将关系模型的范式优化到3NF-通过模式分解算法消除非主属性对主属性的部分函数依赖，传递函数依赖"><a href="#2-2-将关系模型的范式优化到3NF-通过模式分解算法消除非主属性对主属性的部分函数依赖，传递函数依赖" class="headerlink" title="2.2 将关系模型的范式优化到3NF(通过模式分解算法消除非主属性对主属性的部分函数依赖，传递函数依赖)"></a>2.2 将关系模型的范式优化到3NF(通过模式分解算法消除非主属性对主属性的部分函数依赖，传递函数依赖)</h2><h3 id="第一范式（1NF）：数据表中的每一列（每个字段）必须是不可拆分的最小单元，也就是确保每一列的原子性"><a href="#第一范式（1NF）：数据表中的每一列（每个字段）必须是不可拆分的最小单元，也就是确保每一列的原子性" class="headerlink" title="第一范式（1NF）：数据表中的每一列（每个字段）必须是不可拆分的最小单元，也就是确保每一列的原子性"></a>第一范式（1NF）：数据表中的每一列（每个字段）必须是不可拆分的最小单元，也就是确保每一列的原子性</h3><blockquote>
+<p>由于之前设计了主键，且设计过程中保证每一个数据都是最小单元，所以为第一范式<br>例如：之前是把用户登陆作为一个表，但是由于用户可以通过微信等其他方式进行登陆，所以需要划分出微信登陆的表，即costomer_auths，且customer_level,customer_address,customer_point,costomer_login,customer_account_balance均为用户表拆分出来，保证了字段的原子性<br>后来又翻了MYSQL深入浅出对范式优化知识进行了解，里面秒速通过拆分提高表的访问效率，其中包括垂直拆分和竖直拆分，对其他冗余数据表进行拆分，而本次数据库设计就是基于这种原则进行竖直拆分，把用户表字段等进行一范式优化</p>
+</blockquote>
+<ol>
+<li>customer(<u>customer_id</u>,costomer_name,role,level,customer_create_time)</li>
+<li>customer_level(<u>level</u>,level_name,min_point,max_point,create_time)</li>
+<li>customer_address(<u>address_id</u>,customer_id,consignee_zipcode,country,province,city,district,address,default_or,create_time)</li>
+<li>customer_point(<u>point_id</u>,customer_id,point_source,point_source_id,chang_point,create_time)</li>
+<li>costomer_login(<u>login_id</u>,login_time,customer_id,login_ip,login_type,create_time)</li>
+<li>customer_account_balance(<u>balance_id</u>,customer_id,source,source_bill_id,amount,create_time)</li>
+<li>costomer_auths(<u>wechat_id</u>,access_token,head_sculptre,wechat_name,customer_id,phone,password,email,create_time)</li>
+<li>shop_basic_info(<u>shop_id</u>,shop_name,App_key,App_Secret,merchant_id,marketplaced,sale_sites,create_time)</li>
+<li>costomer_shop_premission(<u>premission_id</u>,customer_id,shop_id,permission,create_time)</li>
+<li>commodity_catory(<u>category_id</u>,category_name,category_code,parent_category_id,category_level,category_status,create_time)</li>
+<li>commodity_type_info(<u>type_id</u>,type_name,type_parameter,commodity_id,weigh,length,width,color,production_date,expriy_date,create_time)</li>
+<li>commodity_archives(<u>commodity_id</u>,commodity_core,shop_id,brand_id,publish_status,audit_status,category_id,business_id,UPC,leadtime,logistics_template,commodity_stock,price,keywords,commodity_describe,commodity_title,create_time)</li>
+<li>brand_info(<u>brand_id</u>,brand_name,telephone,brand_web,brand_logo,brand_description,brand_status,brand_order,create_time)</li>
+<li>commodity_picture(<u>commodity_pic</u>,commodity_id,pic_describe,pic_url,master_or,pic_status,create_time)</li>
+<li>commodity_comment(<u>comment_id</u>,commodity_id,order_id,customer_id,comment_title,comment_content,audit_status,audit_time,create_time)</li>
+<li>supplier_info(<u>supplier_id</u>,supplier_code,supplier_name,supplier_type,supplier_persion,phone_number,bank_name,bank_account,address,supplier_status,create_time)</li>
+<li>order_note_info(<u>order_id</u>,order_code,customer_id,country,province,city,district,shop_id,consignee_name,consignee_phone,consignee_address,buyer_remark,order_system_state,order_online_state,pay_way,discount_amount,pay_money,pay_time,order_time,pay_amount,order_amount,platform_order_id,create_time,freight_amount,receive_time,order_point,invoice_time)</li>
+<li>child_order_note_info(<u>child_order_id</u>,commodity_num,commodity_title,commodity_price,average_cost,order_id,commodity_id,weigh,free_money,warehouse_id,create_time)</li>
+<li>shopping_cart(<u>cart_id</u>customer_id,commodity_id,commodity_num,commodity_price,create_time)</li>
+<li>order_logistics_info(<u>logistics_id</u>,order_id,consignee_name,consignee_phone,consignee_zipcode,consignee_address,duty,logistics_code,package_num,logistics_state,logistics_way,logistics_company,create_time)</li>
+<li>warehouse_info(<u>warehouse_id</u>,warehouse_code,warehouse_name,warehouse_phone,contact,country,province,city,distract,address,warehouse_status,warehouse_persion,create_time)</li>
+<li>commodity_stock(<u>commodity_stock_id</u>,commodity_id,warehouse_id,commodity_stock,create_time)</li>
+<li>shipping_info(<u>ship_id</u>,logistics_id,ship_persion,telephone,ship_price,create_time)</li>
+</ol>
+<h3 id="第二范式（2NF）：满足1NF后，要求表中的所有列，都必须依赖于主键，而不能有任何一列与主键没有关系，也就是说一个表只描述一件事情"><a href="#第二范式（2NF）：满足1NF后，要求表中的所有列，都必须依赖于主键，而不能有任何一列与主键没有关系，也就是说一个表只描述一件事情" class="headerlink" title="第二范式（2NF）：满足1NF后，要求表中的所有列，都必须依赖于主键，而不能有任何一列与主键没有关系，也就是说一个表只描述一件事情"></a>第二范式（2NF）：满足1NF后，要求表中的所有列，都必须依赖于主键，而不能有任何一列与主键没有关系，也就是说一个表只描述一件事情</h3><blockquote>
+<p>翻开上学期的数据库系统概念，查找相关概念<br>设R(U)是一个属性集U上的一个关系模式，X和Y是U的子集。若对于R(U)的任意两个可能的具体关系r1、r2，若r1[x] == r2[x]则r1[y] == r2[y]，或者若r1[x] != r2[x]则r1[y] != r2[y]，称X决定Y，或者Y函数依赖于X，记作X→Y。就像函数一样，给一个确定的输入（属性集X），有一个确定的输出（属性集Y）。<br>通俗的讲就是：存在主键（具有唯一性）</p>
+</blockquote>
+<p>设计过程中已自动把主键标志出来，并且对与主键完全依赖</p>
+<ol>
+<li>customer(<u>customer_id</u>,costomer_name,role,level,customer_create_time)</li>
+<li>customer_level(<u>level</u>,level_name,min_point,max_point,create_time)</li>
+<li>customer_address(<u>address_id</u>,customer_id,consignee_zipcode,country,province,city,district,address,default_or,create_time)</li>
+</ol>
+<p>在customer_point表中，发现存在point_source和point_source_id字段,point_source对id为唯一标识,所以需要继续垂直拆分,</p>
+<ol start="4">
+<li>customer_point(<u>point_id</u>,customer_id,point_source_id,chang_point,create_time)</li>
+<li>point_source(<u>point_source_id</u>,point_source)</li>
+<li>costomer_login(<u>login_id</u>,login_time,customer_id,login_ip,login_type,create_time)</li>
+<li>customer_account_balance(<u>balance_id</u>,customer_id,source,source_bill_id,amount,create_time)<br>8 costomer_auths(<u>wechat_id</u>,access_token,head_sculptre,wechat_name,customer_id,phone,password,email,create_time)</li>
+<li>shop_basic_info(<u>shop_id</u>,shop_name,App_key,App_Secret,merchant_id,marketplaced,sale_sites,create_time)</li>
+<li>costomer_shop_premission(<u>premission_id</u>,customer_id,shop_id,permission,create_time)</li>
+<li>commodity_catory(<u>category_id</u>,category_name,category_code,parent_category_id,category_level,category_status,create_time)</li>
+<li>commodity_type_info(<u>type_id</u>,type_name,type_parameter,commodity_id,weigh,length,width,color,production_date,expriy_date,create_time)</li>
+<li>commodity_archives(<u>commodity_id</u>,commodity_core,shop_id,brand_id,publish_status,audit_status,category_id,business_id,UPC,leadtime,logistics_template,commodity_stock,price,keywords,commodity_describe,commodity_title,create_time)</li>
+<li>brand_info(<u>brand_id</u>,brand_name,telephone,brand_web,brand_logo,brand_description,brand_status,brand_order,create_time)</li>
+<li>commodity_picture(<u>commodity_pic</u>,commodity_id,pic_describe,pic_url,master_or,pic_status,create_time)</li>
+<li>commodity_comment(<u>comment_id</u>,commodity_id,order_id,customer_id,comment_title,comment_content,audit_status,audit_time,create_time)</li>
+<li>supplier_info(<u>supplier_id</u>,supplier_code,supplier_name,supplier_type,supplier_persion,phone_number,bank_name,bank_account,address,supplier_status,create_time)</li>
+<li>order_note_info(<u>order_id</u>,order_code,customer_id,country,province,city,district,shop_id,consignee_name,consignee_phone,consignee_address,buyer_remark,order_system_state,order_online_state,pay_way,discount_amount,pay_money,pay_time,order_time,pay_amount,order_amount,platform_order_id,create_time,freight_amount,receive_time,order_point,invoice_time)</li>
+<li>child_order_note_info(<u>child_order_id</u>,commodity_num,commodity_title,commodity_price,average_cost,order_id,commodity_id,weigh,free_money,warehouse_id,create_time)</li>
+<li>shopping_cart(<u>cart_id</u>customer_id,commodity_id,commodity_num,commodity_price,create_time)</li>
+<li>order_logistics_info(<u>logistics_id</u>,order_id,consignee_name,consignee_phone,consignee_zipcode,consignee_address,duty,logistics_code,package_num,logistics_state,logistics_way,logistics_company,create_time)</li>
+<li>warehouse_info(<u>warehouse_id</u>,warehouse_code,warehouse_name,warehouse_phone,contact,country,province,city,distract,address,warehouse_status,warehouse_persion,create_time)</li>
+<li>commodity_stock(<u>commodity_stock_id</u>,commodity_id,warehouse_id,commodity_stock,create_time)</li>
+<li>shipping_info(<u>ship_id</u>,logistics_id,ship_persion,telephone,ship_price,create_time)</li>
+</ol>
+<h3 id="第三范式（3NF）：必须先满足第二范式（2NF），要求：表中的每一列只与主键直接相关而不是间接相关（表中的每一列只能依赖于主键）"><a href="#第三范式（3NF）：必须先满足第二范式（2NF），要求：表中的每一列只与主键直接相关而不是间接相关（表中的每一列只能依赖于主键）" class="headerlink" title="第三范式（3NF）：必须先满足第二范式（2NF），要求：表中的每一列只与主键直接相关而不是间接相关（表中的每一列只能依赖于主键）"></a>第三范式（3NF）：必须先满足第二范式（2NF），要求：表中的每一列只与主键直接相关而不是间接相关（表中的每一列只能依赖于主键）</h3><blockquote>
+<p>波浪线可能只有md格式的文件才可以看到</p>
+</blockquote>
+<ol>
+<li>customer(<u>customer_id</u>,costomer_name,role,$\underset{\sim}{level}$,customer_create_time)</li>
+<li>customer_level(<u>level</u>,level_name,min_point,max_point,create_time)</li>
+<li>customer_address(<u>address_id</u>,$\underset{\sim}{customer_id}$,consignee_zipcode,country,province,city,district,address,default_or,create_time)</li>
+<li>customer_point(<u>point_id</u>,$\underset{\sim}{customer_id}$,$\underset{\sim}{point_source_id}$,chang_point,create_time)</li>
+<li>costomer_login(<u>login_id</u>,login_time,$\underset{\sim}{customer_id}$,login_ip,login_type,create_time)</li>
+<li>customer_account_balance(<u>balance_id</u>,$\underset{\sim}{customer_id}$,source,source_bill_id,amount,create_time)</li>
+<li>costomer_auths(<u>wechat_id</u>,$\underset{\sim}{shop_id}$,access_token,head_sculptre,wechat_name,$\underset{\sim}{customer_id}$,phone,password,email,create_time)</li>
+<li>shop_basic_info(<u>shop_id</u>,shop_name,App_key,App_Secret,merchant_id,marketplaced,sale_sites,create_time)</li>
+<li>costomer_shop_premission(<u>premission_id</u>,$\underset{\sim}{customer_id}$,$\underset{\sim}{shop_id}$,permission,create_time)</li>
+<li>commodity_catory(<u>category_id</u>,category_name,category_code,parent_category_id,category_level,category_status,create_time)</li>
+<li>commodity_type_info(<u>type_id</u>,type_name,type_parameter,$\underset{\sim}{commodity_id}$,weigh,length,width,color,production_date,expriy_date,create_time)</li>
+<li>commodity_archives(<u>commodity_id</u>,commodity_core,$\underset{\sim}{shop_id}$,$\underset{\sim}{brand_id}$,publish_status,audit_status,$\underset{\sim}{category_id}$,business_id,UPC,leadtime,logistics_template,commodity_stock,price,keywords,commodity_describe,commodity_title,create_time)</li>
+<li>brand_info(<u>brand_id</u>,brand_name,telephone,brand_web,brand_logo,brand_description,brand_status,brand_order,create_time)</li>
+<li>commodity_picture(<u>commodity_pic</u>,$\underset{\sim}{commodity_id}$,pic_describe,pic_url,master_or,pic_status,create_time)</li>
+<li>commodity_comment(<u>comment_id</u>,$\underset{\sim}{commodity_id}$,$\underset{\sim}{order_id}$,$\underset{\sim}{customer_id}$,comment_title,comment_content,audit_status,audit_time,create_time)</li>
+<li>supplier_info(<u>supplier_id</u>,supplier_code,supplier_name,supplier_type,supplier_persion,phone_number,bank_name,bank_account,address,supplier_status,create_time)</li>
+<li>order_note_info(<u>order_id</u>,order_code,$\underset{\sim}{customer_id}$,country,province,city,district,$\underset{\sim}{shop_id}$,consignee_name,consignee_phone,consignee_address,buyer_remark,order_system_state,order_online_state,pay_way,discount_amount,pay_money,pay_time,order_time,pay_amount,order_amount,platform_order_id,create_time,freight_amount,receive_time,order_point,invoice_time)</li>
+<li>child_order_note_info(<u>child_order_id</u>,commodity_num,commodity_title,commodity_price,average_cost,$\underset{\sim}{order_id}$,$\underset{\sim}{commodity_id}$,weigh,free_money,warehouse_id,create_time)</li>
+<li>shopping_cart(<u>cart_id</u>,$\underset{\sim}{customer_id}$,$\underset{\sim}{commodity_id}$,commodity_num,commodity_price,create_time)</li>
+<li>order_logistics_info(<u>logistics_id</u>,$\underset{\sim}{order_id}$,consignee_name,consignee_phone,consignee_zipcode,consignee_address,duty,logistics_code,package_num,logistics_state,logistics_way,logistics_company,create_time)</li>
+<li>warehouse_info(<u>warehouse_id</u>,warehouse_code,warehouse_name,warehouse_phone,contact,country,province,city,distract,address,warehouse_status,warehouse_persion,create_time)</li>
+<li>commodity_stock(<u>commodity_stock_id</u>,$\underset{\sim}{commodity_id}$,$\underset{\sim}{warehouse_id}$,commodity_stock,create_time)</li>
+<li>shipping_info(<u>ship_id</u>,$\underset{\sim}{logistics_id}$,ship_persion,telephone,ship_price,create_time)</li>
+<li>point_source(<u>point_source_id</u>,point_source)</li>
+</ol>
+<h2 id="3-根据优化后的关系模型建表（按ORACLE的语法），重点利用DBMS提供的约束和触发器来保证数据库的完整性。"><a href="#3-根据优化后的关系模型建表（按ORACLE的语法），重点利用DBMS提供的约束和触发器来保证数据库的完整性。" class="headerlink" title="3.根据优化后的关系模型建表（按ORACLE的语法），重点利用DBMS提供的约束和触发器来保证数据库的完整性。"></a>3.根据优化后的关系模型建表（按ORACLE的语法），重点利用DBMS提供的约束和触发器来保证数据库的完整性。</h2><h3 id="建表-约束"><a href="#建表-约束" class="headerlink" title="建表+约束"></a>建表+约束</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> customer_table</span><br><span class="line">(</span><br><span class="line">customer_id <span class="built_in">NUMBER</span> PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">customer_name VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">customer_level VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">costomer_create_time <span class="built_in">DATE</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line"><span class="keyword">constraint</span>  fk_customer_level <span class="keyword">foreign</span> <span class="keyword">key</span>(customer_level) <span class="keyword">references</span> customer_level(customer_level)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> customer_level_table</span><br><span class="line">(</span><br><span class="line">customer_level <span class="built_in">NUMBER</span> PRIMARY <span class="keyword">KEY</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">level_name VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">max_point <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">create_time <span class="built_in">DATE</span> <span class="keyword">not</span> <span class="literal">null</span></span><br><span class="line">);</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> customer_address_table</span><br><span class="line">(</span><br><span class="line">address_id <span class="built_in">NUMBER</span> PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">customer_id <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">consignee_zipcode  <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">country VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">province VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">city VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">district VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">concrete_address VARCHAR2(<span class="number">100</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">default_or <span class="built_in">NUMBER</span>(<span class="number">1</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">create_time <span class="built_in">DATE</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line"><span class="keyword">constraint</span>  fk_customer_id <span class="keyword">foreign</span> <span class="keyword">key</span>(customer_id) <span class="keyword">references</span> customer_table(customer_id)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> customer_point_table</span><br><span class="line">(</span><br><span class="line">address_id <span class="built_in">NUMBER</span> PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">customer_id <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">point_source  VARCHAR2(<span class="number">20</span>),</span><br><span class="line">point_source_id <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">chang_point <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">create_time <span class="built_in">DATE</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line"><span class="keyword">constraint</span>  fk_customer_id <span class="keyword">foreign</span> <span class="keyword">key</span>(customer_id) <span class="keyword">references</span> customer_table(customer_id)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> costomer_login_table</span><br><span class="line">(</span><br><span class="line">login_id <span class="built_in">NUMBER</span> PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">login_time <span class="built_in">DATE</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">customer_id <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">login_ip  VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">logintype VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">create_time <span class="built_in">DATE</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line"><span class="keyword">constraint</span>  fk_customer_id <span class="keyword">foreign</span> <span class="keyword">key</span>(customer_id) <span class="keyword">references</span> customer_table(customer_id)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> customer_account_balance_table</span><br><span class="line">(</span><br><span class="line">balance_id <span class="built_in">NUMBER</span> PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">customer_id  <span class="keyword">not</span> nullNUMBER,</span><br><span class="line"><span class="keyword">source</span>  VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">source_bill_id  <span class="keyword">not</span> nullNUMBER,</span><br><span class="line">amount <span class="built_in">NUMBER</span>,</span><br><span class="line">create_time <span class="built_in">DATE</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line"><span class="keyword">constraint</span>  fk_customer_id <span class="keyword">foreign</span> <span class="keyword">key</span>(customer_id) <span class="keyword">references</span> customer_table(customer_id)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> costomer_auths_table</span><br><span class="line">(</span><br><span class="line">wechat_id <span class="built_in">NUMBER</span> PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">customer_id <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">shop_id  <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">access_token <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">head_sculptre <span class="built_in">NUMBER</span>,</span><br><span class="line">phone <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">customer_id <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">login_password  VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">email VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">create_time <span class="built_in">DATE</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line"><span class="keyword">constraint</span>  fk_customer_id <span class="keyword">foreign</span> <span class="keyword">key</span>(customer_id) <span class="keyword">references</span> customer_table(customer_id),</span><br><span class="line"><span class="keyword">constraint</span>  fk_shop_id <span class="keyword">foreign</span> <span class="keyword">key</span>(shop_id) <span class="keyword">references</span> shop_basic_info_table(shop_id)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> shop_basic_info_table</span><br><span class="line">(</span><br><span class="line">shop_id <span class="built_in">NUMBER</span> PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">shop_name VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">app_key  VARCHAR2(<span class="number">50</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">app_Secret VARCHAR2(<span class="number">50</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">merchant_id <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">marketplaced VARCHAR2(<span class="number">10</span>), <span class="keyword">not</span> <span class="literal">null</span></span><br><span class="line">sale_sites VARCHAR2(<span class="number">10</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">create_time <span class="built_in">DATE</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">);</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> costomer_shop_premission_table</span><br><span class="line">(</span><br><span class="line">premission_id <span class="built_in">NUMBER</span> PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">customer_id <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">shop_id  <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">permission VARCHAR2(<span class="number">20</span>), <span class="keyword">not</span> <span class="literal">null</span></span><br><span class="line">create_time <span class="built_in">DATE</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line"><span class="keyword">constraint</span>  fk_customer_id <span class="keyword">foreign</span> <span class="keyword">key</span>(customer_id) <span class="keyword">references</span> customer_table(customer_id),</span><br><span class="line"><span class="keyword">constraint</span>  fk_shop_id <span class="keyword">foreign</span> <span class="keyword">key</span>(shop_id) <span class="keyword">references</span> shop_basic_info_table(shop_id)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> commodity_catory_table</span><br><span class="line">(</span><br><span class="line">category_id <span class="built_in">NUMBER</span> PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">category_name VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">category_code  <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">category_level VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">category_status VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">create_time <span class="built_in">DATE</span>,</span><br><span class="line">);</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> commodity_type_info_table</span><br><span class="line">(</span><br><span class="line">commodity_type_id <span class="built_in">NUMBER</span> PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">commodity_type_name VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">type_parameter  VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">commodity_id <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">weigh <span class="built_in">NUMBER</span>,</span><br><span class="line">commodity_length <span class="built_in">NUMBER</span>,</span><br><span class="line">width  <span class="built_in">NUMBER</span>,</span><br><span class="line">color VARCHAR2(<span class="number">10</span>),</span><br><span class="line">production_date <span class="built_in">DATE</span>,</span><br><span class="line">expriy_date <span class="built_in">DATE</span>,</span><br><span class="line">create_time <span class="built_in">DATE</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line"><span class="keyword">constraint</span>  fk_customer_id <span class="keyword">foreign</span> <span class="keyword">key</span>(customer_id) <span class="keyword">references</span> customer_table(customer_id),</span><br><span class="line">);</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> commodity_archives_table</span><br><span class="line">(</span><br><span class="line">commodity_id <span class="built_in">NUMBER</span> PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">customer_id <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">commodity_core  <span class="built_in">NUMBER</span>, <span class="keyword">not</span> <span class="literal">null</span></span><br><span class="line">shop_id <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">brand_id <span class="built_in">NUMBER</span>, <span class="keyword">not</span> <span class="literal">null</span></span><br><span class="line">publish_status <span class="built_in">NUMBER</span>(<span class="number">1</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">audit_status <span class="built_in">NUMBER</span>(<span class="number">1</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">category_id <span class="built_in">NUMBER</span>, <span class="keyword">not</span> <span class="literal">null</span></span><br><span class="line">business_id  <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">UPC VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">leadtime <span class="built_in">DATE</span>, <span class="keyword">not</span> <span class="literal">null</span></span><br><span class="line">logistics_template VARCHAR2(<span class="number">20</span>),</span><br><span class="line">commodity_stock  <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">price <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">keywords VARCHAR2(<span class="number">20</span>),</span><br><span class="line">commodity_describe VARCHAR2(<span class="number">50</span>),</span><br><span class="line">commodity_title VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">create_time <span class="built_in">DATE</span>,</span><br><span class="line"><span class="keyword">constraint</span>  fk_customer_id <span class="keyword">foreign</span> <span class="keyword">key</span>(customer_id) <span class="keyword">references</span> customer_table(customer_id),</span><br><span class="line"><span class="keyword">constraint</span>  fk_shop_id <span class="keyword">foreign</span> <span class="keyword">key</span>(shop_id) <span class="keyword">references</span> shop_basic_info_table(shop_id),</span><br><span class="line"><span class="keyword">constraint</span>  fk_category_id <span class="keyword">foreign</span> <span class="keyword">key</span>(category_id) <span class="keyword">references</span> commodity_catory_table(category_id)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> brand_info_table</span><br><span class="line">(</span><br><span class="line">brand_id <span class="built_in">NUMBER</span> PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">brand_name VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">telephone  VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">brand_web <span class="built_in">NUMBER</span>,</span><br><span class="line">brand_logo <span class="built_in">NUMBER</span>,</span><br><span class="line">brand_description <span class="built_in">NUMBER</span>,</span><br><span class="line">brand_status  <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">brand_order VARCHAR2(<span class="number">10</span>),</span><br><span class="line">create_time <span class="built_in">DATE</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">);</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> commodity_picture_table</span><br><span class="line">(</span><br><span class="line">commodity_pic <span class="built_in">NUMBER</span> PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">commodity_id <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">pic_url VARCHAR2(<span class="number">50</span>),</span><br><span class="line">pic_describe VARCHAR2(<span class="number">50</span>),</span><br><span class="line">master_or  <span class="built_in">NUMBER</span>(<span class="number">1</span>), <span class="keyword">not</span> <span class="literal">null</span></span><br><span class="line">pic_status <span class="built_in">NUMBER</span>(<span class="number">1</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">create_time <span class="built_in">DATE</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line"><span class="keyword">constraint</span>  fk_commodity_id <span class="keyword">foreign</span> <span class="keyword">key</span>(commodity_id) <span class="keyword">references</span> commodity_archives_table(commodity_id)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> commodity_comment_table</span><br><span class="line">(</span><br><span class="line">comment_id <span class="built_in">NUMBER</span> PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">order_id <span class="built_in">NUMBER</span>,</span><br><span class="line">customer_id  <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">commodity_id <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">comment_title VARCHAR2(<span class="number">20</span>), <span class="keyword">not</span> <span class="literal">null</span></span><br><span class="line">comment_content VARCHAR2(<span class="number">50</span>),</span><br><span class="line">audit_status  <span class="built_in">NUMBER</span>(<span class="number">1</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">audit_time <span class="built_in">DATE</span>(<span class="number">10</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">create_time <span class="built_in">DATE</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line"><span class="keyword">constraint</span>  fk_commodity_id <span class="keyword">foreign</span> <span class="keyword">key</span>(commodity_id) <span class="keyword">references</span> commodity_archives_table(commodity_id),</span><br><span class="line"><span class="keyword">constraint</span>  fk_corder_id <span class="keyword">foreign</span> <span class="keyword">key</span>(order_id) <span class="keyword">references</span> order_note_info_table(order_id),</span><br><span class="line"><span class="keyword">constraint</span>  fk_customer_id <span class="keyword">foreign</span> <span class="keyword">key</span>(customer_id) <span class="keyword">references</span> customer_table(customer_id)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> supplier_info_table</span><br><span class="line">(</span><br><span class="line">supplier_id <span class="built_in">NUMBER</span> PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">supplier_code <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">phone_number  <span class="built_in">NUMBER</span>,</span><br><span class="line">supplier_persion VARCHAR2(<span class="number">20</span>), <span class="keyword">not</span> <span class="literal">null</span></span><br><span class="line">supplier_name VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">supplier_type VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">bank_name  VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">bank_account VARCHAR2(<span class="number">50</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">supplier_status  <span class="built_in">NUMBER</span>(<span class="number">1</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">create_time <span class="built_in">DATE</span>, <span class="keyword">not</span> <span class="literal">null</span></span><br><span class="line"><span class="keyword">constraint</span>  fk_customer_id <span class="keyword">foreign</span> <span class="keyword">key</span>(customer_id) <span class="keyword">references</span> customer_table(customer_id),</span><br><span class="line">);</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> order_note_info_table</span><br><span class="line">(</span><br><span class="line">order_id <span class="built_in">NUMBER</span> PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">order_code <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">customer_id  <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">country VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">province VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">city VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">district VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">shop_id <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">consignee_name VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">consignee_phone <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">consignee_address  VARCHAR2(<span class="number">100</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">buyer_remark VARCHAR2(<span class="number">50</span>),</span><br><span class="line">order_system_state  <span class="built_in">NUMBER</span>(<span class="number">1</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">pay_way VARCHAR2(<span class="number">10</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">discount_amount  <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">pay_money <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">pay_time  <span class="built_in">DATE</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">order_time <span class="built_in">DATE</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">pay_amount <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">order_amount <span class="built_in">NUMBER</span>, <span class="keyword">not</span> <span class="literal">null</span></span><br><span class="line">platform_order_id <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">freight_amount <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">receive_time <span class="built_in">DATE</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">order_point <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">create_time <span class="built_in">DATE</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">invoice_time <span class="built_in">DATE</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line"><span class="keyword">constraint</span>  fk_customer_id <span class="keyword">foreign</span> <span class="keyword">key</span>(customer_id) <span class="keyword">references</span> customer_table(customer_id),</span><br><span class="line"><span class="keyword">constraint</span>  fk_shop_id <span class="keyword">foreign</span> <span class="keyword">key</span>(shop_id) <span class="keyword">references</span> shop_basic_info_table(shop_id),</span><br><span class="line">);</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> child_order_note_info_table</span><br><span class="line">(</span><br><span class="line">child_order_id <span class="built_in">NUMBER</span> PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">commodity_num <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">commodity_price  <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">commodity_title VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">average_cost <span class="built_in">NUMBER</span>,</span><br><span class="line">order_id <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">commodity_id  <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">commodity_num <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">commodity_price  <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">create_time <span class="built_in">DATE</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line"><span class="keyword">constraint</span>  fk_customer_id <span class="keyword">foreign</span> <span class="keyword">key</span>(customer_id) <span class="keyword">references</span> customer_table(customer_id),</span><br><span class="line"><span class="keyword">constraint</span>  fk_commodity_id <span class="keyword">foreign</span> <span class="keyword">key</span>(commodity_id) <span class="keyword">references</span> commodity_archives_table(commodity_id)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> shopping_cart_table</span><br><span class="line">(</span><br><span class="line">cart_id <span class="built_in">NUMBER</span> PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">customer_id <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">commodity_id  <span class="built_in">NUMBER</span>, <span class="keyword">not</span> <span class="literal">null</span></span><br><span class="line">commodity_num <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">commodity_price  <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">create_time <span class="built_in">DATE</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line"><span class="keyword">constraint</span>  fk_customer_id <span class="keyword">foreign</span> <span class="keyword">key</span>(customer_id) <span class="keyword">references</span> customer_table(customer_id),</span><br><span class="line"><span class="keyword">constraint</span>  fk_commodity_id <span class="keyword">foreign</span> <span class="keyword">key</span>(commodity_id) <span class="keyword">references</span> commodity_archives_table(commodity_id)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> order_logistics_info_table</span><br><span class="line">(</span><br><span class="line">logistics_id <span class="built_in">NUMBER</span> PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">consignee_phone <span class="built_in">NUMBER</span>,</span><br><span class="line">consignee_zipcode  <span class="built_in">NUMBER</span>,</span><br><span class="line">consignee_name VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">consignee_address VARCHAR2(<span class="number">20</span>),</span><br><span class="line">order_id <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">duty  <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">logistics_code <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">package_num  <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">logistics_state <span class="built_in">NUMBER</span>(<span class="number">1</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">logistics_way  VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">logistics_company VARCHAR2(<span class="number">20</span>), <span class="keyword">not</span> <span class="literal">null</span></span><br><span class="line">consignee_address VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">create_time <span class="built_in">DATE</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line"><span class="keyword">constraint</span>  fk_order_id <span class="keyword">foreign</span> <span class="keyword">key</span>(order_id) <span class="keyword">references</span> order_note_info_table(order_id)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> warehouse_info_table</span><br><span class="line">(</span><br><span class="line">warehouse_id <span class="built_in">NUMBER</span> PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">warehouse_code <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">warehouse_phone  <span class="built_in">NUMBER</span>,</span><br><span class="line">warehouse_name VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">contact VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">country VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">province VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">city VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">district VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">concrete_address  VARCHAR2(<span class="number">100</span>),</span><br><span class="line">warehouse_persion  <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">warehouse_status <span class="built_in">NUMBER</span>(<span class="number">1</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">create_time <span class="built_in">DATE</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">);</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> commodity_stock_table</span><br><span class="line">(</span><br><span class="line">commodity_stock_id <span class="built_in">NUMBER</span> PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">commodity_id <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">warehouse_id  <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">commodity_stock <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">create_time <span class="built_in">DATE</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line"><span class="keyword">constraint</span>  fk_commodity_id <span class="keyword">foreign</span> <span class="keyword">key</span>(commodity_id) <span class="keyword">references</span> commodity_archives_table(commodity_id),</span><br><span class="line"><span class="keyword">constraint</span>  fk_warehouse_id <span class="keyword">foreign</span> <span class="keyword">key</span>(warehouse_id) <span class="keyword">references</span> warehouse_info_table(warehouse_id)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> shipping_info_table</span><br><span class="line">(</span><br><span class="line">ship_id <span class="built_in">NUMBER</span> PRIMARY <span class="keyword">KEY</span>,</span><br><span class="line">logistics_id <span class="built_in">NUMBER</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">ship_persion  VARCHAR2(<span class="number">20</span>) <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line">telephone <span class="built_in">NUMBER</span>,</span><br><span class="line">ship_price  <span class="built_in">NUMBER</span>,</span><br><span class="line">create_time <span class="built_in">DATE</span> <span class="keyword">not</span> <span class="literal">null</span>,</span><br><span class="line"><span class="keyword">constraint</span>  fk_logistics_id <span class="keyword">foreign</span> <span class="keyword">key</span>(logistics_id) <span class="keyword">references</span> order_logistics_info_table(logistics_id)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建触发器"><a href="#创建触发器" class="headerlink" title="创建触发器"></a>创建触发器</h3><p>首先对建立的表进行分析，对需要的触发器进行设计</p>
+<ol>
+<li>每个表创建后都自动生成修改时间并且存储<br>这里只对最后一个表shipping_info_table进行创建，其他表的原理一样。</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">or</span> <span class="keyword">replace</span> <span class="keyword">trigger</span> <span class="string">"TR_CREATE_TIME"</span></span><br><span class="line"><span class="keyword">before</span> <span class="keyword">update</span> <span class="keyword">on</span> shipping_info_table</span><br><span class="line"><span class="keyword">for</span> <span class="keyword">each</span> <span class="keyword">row</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">      <span class="keyword">if</span> :ship_id.facescore&lt;&gt;:new.facescore <span class="keyword">then</span></span><br><span class="line">          <span class="keyword">insert</span> <span class="keyword">into</span> shipping_info_table <span class="keyword">values</span>(shipping_info_table.ship_id,:old.ship_persion,:old.telephone,:old.ship_price,:new.createuser,<span class="keyword">sysdate</span>);</span><br><span class="line">      <span class="keyword">end</span> <span class="keyword">if</span>;</span><br><span class="line">      if :logistics_id.writerscore&lt;&gt;:new.writerscore then</span><br><span class="line">          <span class="keyword">insert</span> <span class="keyword">into</span> shipping_info_table <span class="keyword">values</span>(shipping_info_table.logistics_id,:old.ship_id,:old.telephone,:old.ship_price,:new.createuser,<span class="keyword">sysdate</span>);</span><br><span class="line">      <span class="keyword">end</span> <span class="keyword">if</span>;</span><br><span class="line">      if :ship_persion.facescore&lt;&gt;:new.facescore then</span><br><span class="line">          <span class="keyword">insert</span> <span class="keyword">into</span> shipping_info_table <span class="keyword">values</span>(shipping_info_table.ship_persion,:old.logistics_id,:old.telephone,:old.ship_price,:new.createuser,<span class="keyword">sysdate</span>);</span><br><span class="line">      <span class="keyword">end</span> <span class="keyword">if</span>;</span><br><span class="line">      if :telephone.writerscore&lt;&gt;:new.writerscore then</span><br><span class="line">          <span class="keyword">insert</span> <span class="keyword">into</span> shipping_info_table <span class="keyword">values</span>(shipping_info_table.telephone,:old.ship_id,:old.logistics_id,:old.ship_price,:new.createuser,<span class="keyword">sysdate</span>);</span><br><span class="line">      <span class="keyword">end</span> <span class="keyword">if</span>;</span><br><span class="line">      if :ship_price.facescore&lt;&gt;:new.facescore then</span><br><span class="line">          <span class="keyword">insert</span> <span class="keyword">into</span> shipping_info_table <span class="keyword">values</span>(shipping_info_table.ship_price,:old.ship_persion,:old.telephone,:old.logistics_id,:new.createuser,<span class="keyword">sysdate</span>);</span><br><span class="line">      <span class="keyword">end</span> <span class="keyword">if</span>;</span><br><span class="line"><span class="keyword">end</span>;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>订单完成后status变为1[number(1)]类型</p>
+</li>
+<li><p>物流成功后status变成1</p>
+</li>
+<li><p>订单完成后status变为1</p>
+</li>
+<li><p>对运行成功通过触发器进行检验，打印出相应的语句再日志表中</p>
+</li>
+</ol>
+<h2 id="分析数据库面对的用户的种类，完成数据库用户的权限授权（建议确定合理的角色来完成权限的分配和回收）"><a href="#分析数据库面对的用户的种类，完成数据库用户的权限授权（建议确定合理的角色来完成权限的分配和回收）" class="headerlink" title="分析数据库面对的用户的种类，完成数据库用户的权限授权（建议确定合理的角色来完成权限的分配和回收）"></a>分析数据库面对的用户的种类，完成数据库用户的权限授权（建议确定合理的角色来完成权限的分配和回收）</h2><blockquote>
+<p>DBA:拥有全部特权,是系统最高权限,只有DBA才可以创建数据库结构。RESOURCE:拥有Resource权限的用户只可以创建实体,不可以创建数据库结构。CONNECT:拥有Connect权限的用户只可以登录Oracle,不可以创建实体,不可以创建数据库结构。系统权限授权命令的使用语法:GRANT权限名TO用户 角色 PUBLIC其中,PUBLIC表示将权限赋给数据库中所有</p>
+</blockquote>
+<h3 id="分析过程"><a href="#分析过程" class="headerlink" title="分析过程"></a>分析过程</h3><p>以亚马逊网商系统为背景进行Oracle数据库设计,首先以工领域中的用户操作人员分析出角色并为角色分配初始权限,然后针对具体岗位设置创建具体用户账号,最后根据该岗位的职能进行用户权限的具体配制。</p>
+<h3 id="角色设计"><a href="#角色设计" class="headerlink" title="角色设计"></a>角色设计</h3><p>根据图书管的行政编制和岗位行政职能,分析出图书管理系统的角色包括master,开发者,测试员,管理员,普通用户，Primer用户六个角色。<br>master能够操作整个数据库的对象,并且具有创建和修改权限的权利。<br>开发者具有对表的修改权限。<br>测试员具有对表的修改权限。<br>普通用户具有普通权限。<br>Primer用户具有会员权限。</p>
+<p>master:sys(超级管理员)</p>
+<p>开发者:增删查改等开发权限<br>grant [grant_develop_privileges] to developer;<br>REVOKE[grant_develop_privileges] from developer;<br>测试员:增删查改等开发权限<br>grant [grant_develop_privileges] to developer;<br>REVOKE[grant_develop_privileges] from developer;<br>管理员:增删查改等管理权限<br>grant [grant_develop_privileges] to developer;<br>REVOKE[grant_develop_privileges] from developer;<br>普通用户:系统普通使用权限<br>grant [grant_develop_privileges] to developer;<br>REVOKE[grant_develop_privileges] from developer;<br>Primer用户:系统会员使用权限<br>grant [grant_develop_privileges] to developer;<br>REVOKE[grant_develop_privileges] from developer;</p>
+<h2 id="制定合理的数据库备份恢复策略。"><a href="#制定合理的数据库备份恢复策略。" class="headerlink" title="制定合理的数据库备份恢复策略。"></a>制定合理的数据库备份恢复策略。</h2><h3 id="备份策略确立"><a href="#备份策略确立" class="headerlink" title="备份策略确立"></a>备份策略确立</h3><h4 id="备份需求分析"><a href="#备份需求分析" class="headerlink" title="备份需求分析"></a>备份需求分析</h4><p>根据亚马逊公司网商系统数据建设现状，分析威胁数据安全的主要因素，得出数据备份系统应该满足如下要求:</p>
+<ol>
+<li>具备灵活方便的可扩展能力。 数据库日益增长的数据量要求数据备份系统能在现有设备和运行环境的基础上顺利进行升级和扩容。</li>
+<li>备份数据具备良好的可恢复性。 可以实现数据库统一、集中、安全的备份和管理，确保备份数据的可靠性和可恢复性，为进行数据恢复操作奠定 基础。</li>
+<li>保持业务连续性。 在满足油田勘探系统业务连续性要求的前提下实施数据备份，避免数据存储设备长时间中断对应用系统的使用造成严重的影响。</li>
+</ol>
+<h4 id="备份设备选型"><a href="#备份设备选型" class="headerlink" title="备份设备选型"></a>备份设备选型</h4><p>根据对数据库进行备份需求分析，IBM TSM作为备份管理软件系统，用于支持备份数据管理。TSM 软件是为解决企业级的数据及系统安全而设计的备份解决方案，而亚马逊作为全球领先电商企业，该设备可以解决困扰信息技术部门的备份管理问题。TSM 的管理架构以其高度的扩展性和广泛的操作平台支持、集中式的自动存储管理等优势，为企业提供高效、自动、可扩展的备份管理体系。 TSM 的数据传输格式为经过加密处理的 TSM 独有的二进制格式，在每次数据备份和恢复时，TSM 自动进行 CRC数据校验，从而保证数据在备份和恢复过程中的完整性和安全性。</p>
+<h4 id="备份策略制定"><a href="#备份策略制定" class="headerlink" title="备份策略制定"></a>备份策略制定</h4><p>通过详细分析亚马逊Oracle数据库存储结构、数据库运行方式、数据存储文件、数据增长速度和数据增长密度时段等实际情况，结合 Oracle 数据库几种备份方式的优缺点，本文制定了以下备份策略：</p>
+<ol>
+<li>由于该数据库复杂,采用Oracle提供的备份工具RMAN与冷备份、逻辑备份相结合的方式，其中，RMAN备份为主要备份方式，冷备份、逻辑备份为辅助备份方式。</li>
+<li>RMAN 备份包括全备份和增量备份2种方式。本文采用了备份数据量小、存储空间要求较低的Differential增量备份方式。在进行一次级别n的Differential增量备份时，RMAN只会对那些与最近一次级别等于或小于n的增量备份相比发生变化的数据块进行备份。Differential 方式 RMAN 增量备份策略的实施，设定在每周日、周三进行 0 级数据库备份(相当于全备份)及归档日志备份；周一、周二、周四、周五、周六进行1级增量备份及归档日志备份。</li>
+<li>备份触发方式：Unix 计划任务定时启动。建立系统CRON 任务，按照备份策略编辑命令，定时启动系统的计划任务(crontab)进程，调用 RMAN 备份或逻辑备份启动文件。</li>
+<li>数据库归档方式：在 Archivelog(归档)模式下，数据库不仅可以进行一致备份，还可以在数据库打开的情况下进行联机备份。将所有使用 RMAN 备份的目标数据库全部切换为 Archivelog 模式，建立归档文件系统/oraarch，各 Oracle实例的归档目录统一设置为：/oraarch/$ORACLE_SID。</li>
+</ol>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>[1]刘意凡.基于Spring MVC的亚马逊物流信息平台的设计与实现[D].北京:北京交通大学,2017.</p>
+<p>[2]刘锦木.基于亚马逊平台电商管理信息系统的设计与实现[D].厦门:厦门大学,2015.</p>
+<p>[3]骆斌,丁二玉.需求工程[M].第二版.北京:高等教育出版社,2015.</p>
+<p>[4]孙风栋,王澜.Oracle 11g数据库基础教程[M].第二版.北京:电子工业出版社,2015.</p>
+<p>[5]王珊,萨师煊.数据库系统概论[M].第五版.北京:高等教育出版社,2014.</p>
+<p>[6]张云帆.Oracle数据库备份与恢复策略浅析[C].计算机工程,2009</p>
+<p>[7]赵晓娟.基于角色的ORACLE用户权限管理设计[D].湘潭:湖南城建职业技术学院信息工程系,2009</p>
+<p>[8]王立新.Oracle 数据库备份与恢复策略浅析[D]长春.汽车工业高等专科学校</p>
+<p>[8]唐汉明,翟振兴,关宝军,王洪权.深入浅出MySQL[M].北京:人民邮电出版社,2014</p>
+<blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/09/18/amazon-oracle/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/09/18/amazon-oracle/</a></p></blockquote>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2019/09/18/amazon-oracle/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/09/18/amazon-oracle/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//yizhixiaobai.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2019/09/19/it-exp4/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/09/17/cv-exp2/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/head_sculpture.png" alt="一直小白's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        zhongyuhang113@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:zhongyuhang113@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2019/12/">十二月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/11/">十一月 2019<span class="sidebar_archives-count">26</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">29</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">28</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Database/">Database<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/IT项目管理/">IT项目管理<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/android/">android<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/c/">c++<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/j2ee/">j2ee<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/java/">java<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/letex/">letex<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/lua/">lua<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/opencv/">opencv<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/oracle/">oracle<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/scrapy/">scrapy<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/书籍/">书籍<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/企业/">企业<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/信息安全/">信息安全<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端/">前端<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/开箱/">开箱<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/心理学/">心理学<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/测试/">测试<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/游记/">游记<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/笔记/">笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机网络/">计算机网络<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/设计模式/">设计模式<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/评测/">评测<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/需求分析/">需求分析<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/鱼的记忆/">鱼的记忆<span class="sidebar_archives-count">9</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">table</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间轴">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                时间轴
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/video" title="目之所及">
+                
+                    <i class="material-icons sidebar-material-icons">movie</i>
+                
+                目之所及
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="图库">
+                
+                    <i class="material-icons sidebar-material-icons">collections</i>
+                
+                图库
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="好朋友">
+                
+                    <i class="material-icons sidebar-material-icons">favorite_border</i>
+                
+                好朋友
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/PGP" title="PGP密钥">
+                
+                    <i class="material-icons sidebar-material-icons">vpn_key</i>
+                
+                PGP密钥
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/agree" title="知识共享协议">
+                
+                    <i class="material-icons sidebar-material-icons">https</i>
+                
+                知识共享协议
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/me" title="关于小白">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于小白
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">112</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/WTOJL7dDTsa8Dcd" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/zyhang8" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https:www.github.com/zyhang8" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;一直小白的博客
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//yizhixiaobai.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2017;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
+
+
+    <link rel="dns-prefetch" href="https://yizhixiaobai.disqus.com">
+
+
+
+    <link rel="dns-prefetch" href="https://hm.baidu.com">
+
+
+
+    <link rel="dns-prefetch" href="https://lib.baomitu.com">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            构建之法 -源代码管理 | 
+        
+        一直小白的博客
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/head_sculpture.png">
+    <link rel="icon" href="/img/head_sculpture.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content>
+    <meta name="keywords" content="这是一只小白,IT项目管理">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微锟斤拷锟脚猴拷", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <style>
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: regular;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.svg#Roboto) format('svg')
+        }
+    </style>
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="一直小白的博客">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2019/09/19/it-exp4/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="一直小白的博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/head_sculpture.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com/2019/09/19/it-exp4/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="构建之法 -源代码管理 | 一直小白的博客">
+    <meta property="og:image" content="/img/head_sculpture.png">
+    <meta property="og:description" content>
+    <meta property="og:article:tag" content="IT项目管理"> 
+
+    
+        <meta property="article:published_time" content="Thu Sep 19 2019 12:45:42 GMT+0800">
+        <meta property="article:modified_time" content="Fri Nov 01 2019 12:53:56 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/2019/09/19/it-exp4/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2019/09/19/it-exp4/index.html",
+    "headline": "构建之法 -源代码管理",
+    "datePublished": "Thu Sep 19 2019 12:45:42 GMT+0800",
+    "dateModified": "Fri Nov 01 2019 12:53:56 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "一直小白",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/head_sculpture.png"
+        },
+        "description": "求知若饥,谦虚若愚"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "一直小白的博客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/head_sculpture.png"
+        }
+    },
+    "keywords": ",IT项目管理这是一只小白",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+        <script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?5a42bcc3e66e1db4931abdcca1a9aa74';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#构建之法-源代码管理"><span class="post-toc-number">1.</span> <span class="post-toc-text">构建之法 -源代码管理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#源代码管理"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">源代码管理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#源代码管理的10-个实践问题"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">源代码管理的10 个实践问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#列出现有标签"><span class="post-toc-number">1.1.1.1.</span> <span class="post-toc-text">列出现有标签</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#参数说明"><span class="post-toc-number">1.1.1.2.</span> <span class="post-toc-text">参数说明</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#新建标签"><span class="post-toc-number">1.1.1.3.</span> <span class="post-toc-text">新建标签</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#上传标签"><span class="post-toc-number">1.1.1.4.</span> <span class="post-toc-text">上传标签</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#心得体会"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">心得体会</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                构建之法 -源代码管理
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/head_sculpture.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>一直小白</strong>
+        <span>9月 19, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACZ0lEQVR42u3aUY6rQAwEwNz/0u8dYBfU9hgHrYqvKCIwxQeetP3596ePDx4eHh4eHh4e3st4n/i4Ov/n1a6uf3/mLwstrg0PDw9vk5fc5uqbq9sk1796fEdrw8PDw1vk3ReDKiYpIUkRyteGh4eH905e/sqOgoN4g46Hh4f3N3jVIpGUmRcVBjw8PLyhMOI8qD058/GsBQ8PDy/mVRtgm5+/0N/Dw8PDu+VNRQnViGEqzvhlVXh4eHgP85JWfXU4YHiLHMS7eHh4ePu85PV9vvmuntNrxeHh4eFt8u5J+Td5eUgaaflq8fDw8DZ5+fa39yCqjyMPbQthBB4eHt4Qr/eH/540G0Pc/zZqgOHh4eE9wMvjifw2vUZadUwWDw8Pb5+XR6t5Calur5PPyZl4eHh4m7werFokqsFuvrnHw8PD+y6vurWdKg+9u+Dh4eF9i5ffsjp2kMeyJ9t3PDw8vE1evr3ujRdUw4iBR4CHh4e3wusNUVWHoqov/epGHw8PD2+H1xs5zWPcqYCjUJbw8PDwHublf/Kbjfw47KiGEeUtNR4eHt4Q7yR+7Q2Yzt4FDw8Pb5+XtLUKzaegJZYXnjywwMPDw9vk5QvqBbLVX+UBcXMyAg8PD++YVz0S8ElDqzemgIeHh7fJqw4E5Fvh86LSbKTh4eHhrfDyUYBqXDs1oHD0jwEPDw/vMd55s+oksDgZhMXDw8N7Py9H9spPXloeKQx4eHh4o7zeGGt+5kBjDA8PD2+R1wsj8o1vQuq1x/Dw8PD2edUG2Mkw61SBebC/h4eHhzc6dPX+Aw8PDw8PDw8P7wXHf1DX3nI3N/5GAAAAAElFTkSuQmCC">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/IT项目管理/">IT项目管理</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=构建之法 -源代码管理&url=http://yoursite.com/2019/09/19/it-exp4/index.html&pic=http://yoursite.com/img/head_sculpture.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=构建之法 -源代码管理&url=http://yoursite.com/2019/09/19/it-exp4/index.html&via=一直小白" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/09/19/it-exp4/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2019/09/19/it-exp4/index.html&title=构建之法 -源代码管理" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一直小白的博客&title=构建之法 -源代码管理&summary=&pics=http://yoursite.com/img/head_sculpture.png&url=http://yoursite.com/2019/09/19/it-exp4/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="构建之法-源代码管理"><a href="#构建之法-源代码管理" class="headerlink" title="构建之法 -源代码管理"></a>构建之法 -源代码管理</h1><h2 id="源代码管理"><a href="#源代码管理" class="headerlink" title="源代码管理"></a>源代码管理</h2><p>在第十四周的团队博客作业上，王老师让我们针对团队项目源代码管理提出了是个问题并进行了解析，我们根据自己的实际情况，给出了这十个问题的答案，并整理成了团队博客发布。</p>
+<p>作为一个程序猿，源码的管理是一个头等大事来的，想象一下，修改完成却发现文件丢失了，该怎么办？有了源代码管理工具，能够帮助我们查看某个代码文件的修改内存及历史修改记录。</p>
+<p>软件工程中，也有类似脚手架，塔吊这样的工程系统，工具和流程。 软件的源代码管理工具（source code control system），加上构建系统 （build system）, 能保证一个复杂软件能在多个角色，多个团队的合作下，按时以合适的质量发布。 如果你写一个Hello World 程序， 当然不需要这些工具， 就像你用儿童积木搭房子过家家，你自己高兴，但这不是建筑工程。在经过（实际不到）一年的学习（入坑），我使用过Gitlab，GitHub，Gitee作为源代码管理器</p>
+<h3 id="源代码管理的10-个实践问题"><a href="#源代码管理的10-个实践问题" class="headerlink" title="源代码管理的10 个实践问题"></a>源代码管理的10 个实践问题</h3><p>1.你的团队的源代码控制在哪里？用的是什么系统？如何处理文件的锁定问题？</p>
+<p>场景：程序员1正在对几个文件进行修改，实现一个大的功能，这时候，程序员2也要改其中一个文件，快速修复一个问题，该怎么办？</p>
+<p>一个代码文件被签出后，另一个团队成员可以签出这个文件，并修改，然后签入吗？</p>
+<p>有几种设计？各有什么优缺点？</p>
+<p>答：源代码的控制在github上，当一个人签出一个文件后，另一个人不可以签出这个文件，这样的优点是保证文件不会混乱，如果两个人修改了同一个地方，就不知道最后采取谁的方法，缺点是可能会影响程序开发的效率，因为如果两个人同时修改这个文件不同的地方便会加快开发的效率。 </p>
+<ol start="2">
+<li>如何看到这个文件和之前版本的差异？如何看到代码修改和工作项（work item），缺陷修复 （bug fix) 的关系。</li>
+</ol>
+<p>答：每次push时在commit中的message部分注明修改内容，这样本次checkin做了什么改动一目了然；也可以在coding.net代码详情中查看具体做了哪些修改。另外我们小组的开发工具也支持版本控制，可查看具体的修改。</p>
+<p>例如：</p>
+<p><img src="https://img2018.cnblogs.com/blog/1612169/201905/1612169-20190527164837232-760480827.png" alt="1"></p>
+<p><img src="https://img2018.cnblogs.com/blog/1612169/201905/1612169-20190527161251228-1636045783.png" alt="2"></p>
+<p><img src="https://img2018.cnblogs.com/blog/1612169/201905/1612169-20190527161304842-185523394.png" alt="3"></p>
+<p>假设场景，例如当某团队程序员看到某个文件被修改了，并且想要阅读到这个文件在最近的修改酒精改动了哪些地方，或者说看到某个文件在最新版本被改动了几百行，那么这几百行对应的其他修改在何处文件中，这些修改所要解决的问题以及工作项，如何找寻到这些bug或是问题来源呢？</p>
+<p>1、本团队发现很多开发工具都有show history（查看历史）的功能，那么我们点击此功能，就可以查询到历史改动痕迹或者是历史版本，就像一个时光穿梭机，对于文件的提交历史和提交修改也可以轻松的阅览到，例如由我们安卓开发软件Android studio我们就可以看到有的history查看功能：</p>
+<p><img src="https://img2018.cnblogs.com/blog/1612169/201905/1612169-20190527161451798-679718942.png" alt="4"></p>
+<p><img src="https://img2018.cnblogs.com/blog/1612169/201905/1612169-20190527161457215-1740213874.png" alt="5"></p>
+<p>2、当我们打开github的时候，我们也可以看到在github网页版主页中，当我们选中我们的其中一个项目之后，进入code界面，点击comparing changes，就会看到你的项目的改动</p>
+<p><img src="https://img2018.cnblogs.com/blog/1612169/201905/1612169-20190527161527967-786014834.png" alt="6"></p>
+<p><img src="https://img2018.cnblogs.com/blog/1612169/201905/1612169-20190527161538610-2136781800.png" alt="7"></p>
+<p>3、对于查询历史改动在何处的场景问题，基本是通过查看提交时候的comment来确定这次提交的修改原因是什么。Bug和功能列表通常在另外一个系统记录，比如：Excel，在Excel里面对Bug和功能进行标记（已完成，未完成，进行中），一般开会的时候大家对近期修复的Bug和功能按照这个Excel表的内容一起来过一遍。对于和这个几百多行的修改一起签入的其他修改，在Eclipse+SVN下可以查看相关修改的文件以及修改原因：</p>
+<p>在某个文件上点击右键：Team-&gt;显示资源历史纪录：</p>
+<p><img src="https://img2018.cnblogs.com/blog/1612169/201905/1612169-20190527161558529-1584948265.png" alt="8"></p>
+<p>也可以自动关联bug/issue和每次签入的修改之间的关系，用户可以提交Issue，并把Issue标记为bug，开发人员提交代码的时候，加上以下描述信息，对应的Issue就会被Close，fix #+Issue编号，如：fix #1 对应编号为1的Issue被关闭  </p>
+<p><img src="https://img2018.cnblogs.com/blog/1612169/201905/1612169-20190527161701662-1726581351.png" alt="9"></p>
+<p><img src="https://img2018.cnblogs.com/blog/1612169/201905/1612169-20190527161645056-1558602309.png" alt="10"></p>
+<ol start="3">
+<li>如果某个文件在你签出之后已经被别人修改，并且签入了，那么你在签入你的修改的时候， 如何合并不同的修改（merge)? 你用了什么工具来帮助你？</li>
+</ol>
+<p>本团队想到可以使用GitBash工具更新本地仓库，有冲突时对比解决冲突，然后签入代码。又或者备份本地自己开发的一份代码，先把别人签入的代码更新到本地，然后在本地手动合并修改，用的工具是Beyond Compare。 </p>
+<p><img src="https://img2018.cnblogs.com/blog/1612169/201905/1612169-20190527161715584-1194087577.png" alt="11"></p>
+<p>4.你有20个文件都是关于同一个功能的修改，你要如何保证这些文件都同时签入成功，或者同时签入不成功？</p>
+<p>场景：程序员1要签入20 个文件，他一个一个地签入， 在签入完5 个 .h 文件之后， 他发现一些 .cpp 文件和最新的版本有冲突，他正在花时间琢磨如何合并… 这时候， 程序员2从客户端同步了所有最新代码，开始编译，但是编译不成功- 因为有不同步的 .h 文件和 .cpp 文件！  这时候， 别的程序员也来抱怨同样的问题，程序员1应该怎么办？</p>
+<p>答：在签入之前，一定要先对比处理有冲突的文件，这样可以方便他人使用修改</p>
+<p>在签入的时候，先把冲突文件更新下来，与本地自己要签入的文件进行一轮合并。再去签入。</p>
+<p>5、你的PC 上有关于三个功能的修改， 但是都没有完成，有很多文件处于半完工的状态，这时你要紧急修改一个新的 bug，如何把本地修改放一边，保证在干净的环境中修改这个 bug, 并成功地签入你的修改 — changelist management。 </p>
+<p>答：1)在new分支上的时候在命令行输入：</p>
+<p>git stash</p>
+<p>或者</p>
+<p>git stash save “修改的信息”。</p>
+<p>这样以后你的代码就回到自己上一个commit了，直接git stash的话git stash的栈会直接给你一个hash值作为版本的说明，如果用git stash save “修改的信息”，git stash的栈会把你填写的“修改的信息”作为版本的说明。</p>
+<p>2)接下来你回到old分支修改代码完成，你又再回到new分支，输入：</p>
+<p>git stash pop</p>
+<p>或者</p>
+<p>git stash list</p>
+<p>git stash apply stash@{0}</p>
+<p>就可以回到保存的版本了。git stash pop的作用是将git stash栈中最后一个版本取出来，git stash apply stash@{0}的作用是可以指定栈中的一个版本</p>
+<p>3)通过git stash list可以看到所有的版本信息：</p>
+<p>stash@{0}: On order-master-bugfix: 22222</p>
+<p>stash@{1}: On order-master-bugfix: 22222</p>
+<p>4)然后你可以选择一个你需要的版本执行：</p>
+<p>git stash apply stash@{0}</p>
+<p>这时候你搁置的代码就回来了。</p>
+<p>6、规范操作和自动化</p>
+<pre><code>你的团队规定开发者签入的时候要做这些事情：
+
+- 运行单元测试，相关的代码质量测试。
+
+- 代码复审 （要有别的员工的名字）
+
+- 和这次签入相关的issue 编号， 任务/task， 缺陷/bug 编号，等等， 以备查询。
+
+请问你的团队有这样的自动化工具让开发者方便地一次性填入所有信息然后提交么？  （高级功能， 代码提交之后， 相关bug 的状态会改动为  “fixed”， 并且有链接指向这次签入。）</code></pre><p>答：暂时没有。</p>
+<ol start="8">
+<li><p>一个源文件，如何知道它的每一行都是什么时候签入的，为了什么目的签入的 （解决了哪个任务，或者哪个bug）？</p>
+<p>场景： 一个重要的软件历经几年，几个团队的开发和维护，忽然出现在某个条件下崩溃的事故， 程序员果冻经过各种debug手段，发现问题是在某一个文件中有一行代码似乎显然出了问题， 但是这个模块被很多其他模块调用，  这行代码是什么时候，为了什么目的，经过谁签入的呢？  如果贸然修改， 会不会导致其他问题呢？  怎么办？</p>
+</li>
+</ol>
+<p>成员在Gitlab上提交修改过的代码，都会要求添加备注，比如修改的地方，还有修改的原因。这样，当代码出现问题之后，就可以很容易的找到当时的修改人，查看原因，有助于代码的修改。</p>
+<p><img src="https://img2018.cnblogs.com/blog/1612169/201905/1612169-20190527164447367-1397794011.png" alt="12"></p>
+<p>下面的commit可以填写该项目需要备注的信息，比如可以编辑 人员/update/时间等信息 方便对项目进行管理</p>
+<ol start="8">
+<li><p>一个源文件，如何知道它的每一行都是什么时候签入的，为了什么目的签入的 （解决了哪个任务，或者哪个bug）？</p>
+<p>场景： 一个重要的软件历经几年，几个团队的开发和维护，忽然出现在某个条件下崩溃的事故， 程序员果冻经过各种debug手段，发现问题是在某一个文件中有一行代码似乎显然出了问题， 但是这个模块被很多其他模块调用，  这行代码是什么时候，为了什么目的，经过谁签入的呢？  如果贸然修改， 会不会导致其他问题呢？  怎么办？</p>
+</li>
+</ol>
+<p>1)查看分支</p>
+<p>git branch    查看本地仓库</p>
+<p>git branch -r 查看远程仓库</p>
+<p>2)创建分支</p>
+<p>git checkout -b feature-A</p>
+<p>3)切换分支</p>
+<pre><code>git checkout master 切换到master分支
+
+git checkout -    切换回上一个分支</code></pre><p>4)获取仓库代码</p>
+<p>git pull origin master</p>
+<p>5)修改代码提交到feature-A分支上</p>
+<pre><code>git add .    添加文件
+
+git commit -m &apos;add branch&apos; 提交代码
+
+git push -u origin feature-A 推送至远程仓库master以外的分支</code></pre><p>6)合并代码到master分支</p>
+<p>   假设分支feature-A已经实现完成，想要将它合并到主干分支master中。首先切换到master分支</p>
+<p>git checkout master</p>
+<p>git merge –no-ff feature-A</p>
+<p>7)以图表形式查看分支</p>
+<p>git log –graph</p>
+<p>也可以通过可视化工具进行创建分支</p>
+<p><img src="https://img2018.cnblogs.com/blog/1612169/201905/1612169-20190527235909410-1692973782.png" alt="13"></p>
+<ol start="9">
+<li><p>如何给一个系统的所有源文件都打上标签，这样别人可以同步所有有这个标签的文件版本？</p>
+<p>代码每天都在变， 有时质量变好，有时变差，我们需要一个 Last Known Good （最后稳定的好版本） 版本， 这样新员工就可以同步这个版本， 我们如果需要发布，也是从这个版本开始。  那么如何标记这个 Last Known Good 版本呢？ </p>
+</li>
+</ol>
+<p>用户手册</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">meel@YLIN-VPC MINGW64 /t/Desktop/scrap_bilibili (master)</span><br><span class="line">$ git tag -h</span><br><span class="line">usage: git tag [-a | -s | -u &lt;key-id&gt;] [-f] [-m &lt;msg&gt; | -F &lt;file&gt;] &lt;tagname&gt; [&lt;head&gt;]</span><br><span class="line">   or: git tag -d &lt;tagname&gt;...</span><br><span class="line">   or: git tag -l [-n[&lt;num&gt;]] [--contains &lt;commit&gt;] [--no-contains &lt;commit&gt;] [--points-at &lt;object&gt;]</span><br><span class="line">                [--format=&lt;format&gt;] [--[no-]merged [&lt;commit&gt;]] [&lt;pattern&gt;...]</span><br><span class="line">   or: git tag -v [--format=&lt;format&gt;] &lt;tagname&gt;...</span><br><span class="line"></span><br><span class="line">    -l, --list            list tag names</span><br><span class="line">    -n[&lt;n&gt;]               <span class="built_in">print</span> &lt;n&gt; lines of each tag message</span><br><span class="line">    -d, --delete          delete tags</span><br><span class="line">    -v, --verify          verify tags</span><br><span class="line"></span><br><span class="line">Tag creation options</span><br><span class="line">    -a, --annotate        annotated tag, needs a message</span><br><span class="line">    -m, --message &lt;message&gt;</span><br><span class="line">                          tag message</span><br><span class="line">    -F, --file &lt;file&gt;     <span class="built_in">read</span> message from file</span><br><span class="line">    -e, --edit            force edit of tag message</span><br><span class="line">    -s, --sign            annotated and GPG-signed tag</span><br><span class="line">    --cleanup &lt;mode&gt;      how to strip spaces and <span class="comment">#comments from message</span></span><br><span class="line">    -u, --<span class="built_in">local</span>-user &lt;key-id&gt;</span><br><span class="line">                          use another key to sign the tag</span><br><span class="line">    -f, --force           replace the tag <span class="keyword">if</span> exists</span><br><span class="line">    --create-reflog       create a reflog</span><br><span class="line"></span><br><span class="line">Tag listing options</span><br><span class="line">    --column[=&lt;style&gt;]    show tag list <span class="keyword">in</span> columns</span><br><span class="line">    --contains &lt;commit&gt;   <span class="built_in">print</span> only tags that contain the commit</span><br><span class="line">    --no-contains &lt;commit&gt;</span><br><span class="line">                          <span class="built_in">print</span> only tags that don\<span class="string">'t contain the commit</span></span><br><span class="line"><span class="string">    --merged &lt;commit&gt;     print only tags that are merged</span></span><br><span class="line"><span class="string">    --no-merged &lt;commit&gt;  print only tags that are not merged</span></span><br><span class="line"><span class="string">    --sort &lt;key&gt;          field name to sort on</span></span><br><span class="line"><span class="string">    --points-at &lt;object&gt;  print only tags of the object</span></span><br><span class="line"><span class="string">    --format &lt;format&gt;     format to use for the output</span></span><br><span class="line"><span class="string">    --color[=&lt;when&gt;]      respect format colors</span></span><br><span class="line"><span class="string">    -i, --ignore-case     sorting and filtering are case insensitive</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="列出现有标签"><a href="#列出现有标签" class="headerlink" title="列出现有标签"></a>列出现有标签</h4><p>命令:git tag</p>
+<h4 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h4><p>-l:接通配符表达式实现筛选</p>
+<p>例子:</p>
+<p>刚开始进入项目，发现没有标签,后面会逐一补充</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">meel@YLIN-VPC MINGW64 /t/Desktop/scrap_bilibili (master)</span><br><span class="line">$ git tag</span><br></pre></td></tr></table></figure>
+
+<h4 id="新建标签"><a href="#新建标签" class="headerlink" title="新建标签"></a>新建标签</h4><p>命令:git tag -a v0.1.0 -m ‘init’</p>
+<p>参数说明:</p>
+<p>-a/–annotated:注释，后接标签名，不需要引号</p>
+<p>-m/–message:信息，后接注释说明文字，需带引号</p>
+<p>结果:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">meel@YLIN-VPC MINGW64 /t/Desktop/scrap_bilibili (master)</span><br><span class="line">$ git tag -a v0.1.0 -m <span class="string">'init'</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">meel@YLIN-VPC MINGW64 /t/Desktop/scrap_bilibili (master)</span><br><span class="line">$ git tag</span><br><span class="line">v0.1.0</span><br><span class="line"></span><br><span class="line">meel@YLIN-VPC MINGW64 /t/Desktop/scrap_bilibili (master)</span><br><span class="line">$ git show v0.1.0</span><br><span class="line">tag v0.1.0</span><br><span class="line">Tagger: unknown &lt;545641826@qq.com&gt;</span><br><span class="line">Date:   Mon May 27 04:58:08 2019 +0800</span><br><span class="line"></span><br><span class="line">init</span><br><span class="line"></span><br><span class="line">commit b30d3b3e00a93e43d8219ca584b4ce380c6f6be8 (HEAD -&gt; master, tag: v0.1.0, origin/master, origin/HEAD)</span><br><span class="line">Author: ylin &lt;545641826@qq.com&gt;</span><br><span class="line">Date:   Tue Dec 11 11:46:10 2018 +0800</span><br><span class="line"></span><br><span class="line">    first commit</span><br><span class="line"></span><br><span class="line">diff --git a/.gitignore b/.gitignore</span><br><span class="line">index 871bb87..8fbdcbe 100644</span><br><span class="line">--- a/.gitignore</span><br><span class="line">+++ b/.gitignore</span><br><span class="line">@@ -1 +1,2 @@</span><br><span class="line"> cookie</span><br><span class="line">+.idea*</span><br></pre></td></tr></table></figure>
+
+<p>注:git show 接标签名可查看当前项目指定标签具体信息</p>
+<h4 id="上传标签"><a href="#上传标签" class="headerlink" title="上传标签"></a>上传标签</h4><p>命令:git push origin v0.1.0</p>
+<p>参数说明:</p>
+<p>需要在push时指定远程仓库（默认当前分支）,后加标签名.</p>
+<p>例子:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">meel@YLIN-VPC MINGW64 /t/Desktop/scrap_bilibili (master)</span><br><span class="line">$ touch <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">meel@YLIN-VPC MINGW64 /t/Desktop/scrap_bilibili (master)</span><br><span class="line">$ ls</span><br><span class="line">headers  memorandom.txt  rename.py*  scrap.py*  <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">meel@YLIN-VPC MINGW64 /t/Desktop/scrap_bilibili (master)</span><br><span class="line">$ git add .</span><br><span class="line"></span><br><span class="line">meel@YLIN-VPC MINGW64 /t/Desktop/scrap_bilibili (master)</span><br><span class="line">$ git commit -m<span class="string">'test'</span></span><br><span class="line">[master b57b583] <span class="built_in">test</span></span><br><span class="line"> 1 file changed, 0 insertions(+), 0 deletions(-)</span><br><span class="line"> create mode 100644 <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">meel@YLIN-VPC MINGW64 /t/Desktop/scrap_bilibili (master)</span><br><span class="line">$ git push</span><br><span class="line">Enumerating objects: 4, <span class="keyword">done</span>.</span><br><span class="line">Counting objects: 100% (4/4), <span class="keyword">done</span>.</span><br><span class="line">Delta compression using up to 32 threads</span><br><span class="line">Compressing objects: 100% (2/2), <span class="keyword">done</span>.</span><br><span class="line">Writing objects: 100% (3/3), 255 bytes | 255.00 KiB/s, <span class="keyword">done</span>.</span><br><span class="line">Total 3 (delta 1), reused 0 (delta 0)</span><br><span class="line">remote: Resolving deltas: 100% (1/1), completed with 1 <span class="built_in">local</span> object.</span><br><span class="line">To https://github.com/545641826/scrap_bilibili.git</span><br><span class="line">   b30d3b3..b57b583  master -&gt; master</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img2018.cnblogs.com/blog/1612169/201905/1612169-20190527163225263-1407758990.jpg" alt="14"></p>
+<p>此时可在git上看到如图所示标签<br>回退到标签版本</p>
+<p>新建文件模拟bug</p>
+<p><img src="https://img2018.cnblogs.com/blog/1612169/201905/1612169-20190527163216423-1849533307.jpg" alt="15"></p>
+<p>此时远程仓库如图:</p>
+<p>回退:</p>
+<p>首先通过标签查看提交id</p>
+<p>然后通过reset –hard 回退到指定提交版本.</p>
+<p>最后提交</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">meel@YLIN-VPC MINGW64 /t/Desktop/scrap_bilibili (master)</span><br><span class="line">$ git show v0.1.0</span><br><span class="line">tag v0.1.0</span><br><span class="line">Tagger: unknown &lt;545641826@qq.com&gt;</span><br><span class="line">Date:   Mon May 27 04:58:08 2019 +0800</span><br><span class="line"></span><br><span class="line">init</span><br><span class="line"></span><br><span class="line">commit b30d3b3e00a93e43d8219ca584b4ce380c6f6be8 (tag: v0.1.0)</span><br><span class="line">Author: ylin &lt;545641826@qq.com&gt;</span><br><span class="line">Date:   Tue Dec 11 11:46:10 2018 +0800</span><br><span class="line"></span><br><span class="line">    first commit</span><br><span class="line"></span><br><span class="line">diff --git a/.gitignore b/.gitignore</span><br><span class="line">index 871bb87..8fbdcbe 100644</span><br><span class="line">--- a/.gitignore</span><br><span class="line">+++ b/.gitignore</span><br><span class="line">@@ -1 +1,2 @@</span><br><span class="line"> cookie</span><br><span class="line">+.idea*</span><br><span class="line"></span><br><span class="line">meel@YLIN-VPC MINGW64 /t/Desktop/scrap_bilibili (master)</span><br><span class="line">$ git reset --hard b30d</span><br><span class="line">HEAD is now at b30d3b3 first commit</span><br><span class="line"></span><br><span class="line">meel@YLIN-VPC MINGW64 /t/Desktop/scrap_bilibili (master)</span><br><span class="line">$ ls</span><br><span class="line">headers  memorandom.txt  rename.py*  scrap.py*</span><br></pre></td></tr></table></figure>
+
+<ol start="10">
+<li>你的项目的源代码和测试这些代码的单元测试，以及其他测试脚本都是放在一起的么？ 修改源代码会确保相应的测试也更新么？你的团队是否能部署自动构建的任务？<br>在签入之前，程序员能否自动在自己的机器上运行自动测试，以保证本地修改不会影响整个软件的质量？<br>在程序员提交签入之后，服务器上是否有自动测试程序， 完成编译，测试，如果成功，就签入，否则，就取消签入？<br>团队是否配置了服务器，它自动同步所有文件，自动构建，自动运行相关的单元测试，碰到错误能自动发邮件给团队</li>
+</ol>
+<p>1：测试相关代码和源代码都在同一个项目的同一个文件夹下，相当于是放在一起了。 修改了源代码，相关测试会自动更新。团队暂时没有部署自动构建任务</p>
+<p>2：自动测试暂时还没有去做，所以这一步可能还未涉及到</p>
+<p>3：还未涉及到服务器以及自动测试相关，所以这一步暂时没有</p>
+<p>4：暂未配置服务器，所以暂时没有自动同步以及相关功能</p>
+<h2 id="心得体会"><a href="#心得体会" class="headerlink" title="心得体会"></a>心得体会</h2><p>在做这项作业的时候，我们团队一开始很多人都针对这些问题有许多不理解的点，和不理解的专业术语专业问题等等，但在我们探索的过程中和团队间的互相交流中我们了解了许多其他的辅助我们团队开发的软件，以及对于协助团队更改更新代码的软件，通过解答问题，我们团队对于这些软件的操作也愈加熟练起来，针对源文件签入，bug修改，查找历史修改文件，为所有源文件打上标签，同步所有有这个标签的文件版本，自动运行单元测试，从一开始的需求分析，到软件制作，到软件技术层面上的代码bug修改，到最后的测试环节，在本报告中所提及的问题中都有所涉及，我们在思考探索如果自动同步所有文件，自动构建，自动运行单元测试，碰到错误如何能够自动发邮件给团队，等等我们以往从未考虑到的问题，或者考虑到但从未想过该如何解决的问题时，通过这项作业我们每一个成员都有了新的思考和结果，我们也学会了如何运用软件协助我们完成一个新的项目，并监督每个成员期间的过程和操作，推动整项项目的顺利进展。</p>
+<blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/09/19/it-exp4/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/09/19/it-exp4/</a></p></blockquote>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2019/09/19/it-exp4/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/09/19/it-exp4/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//yizhixiaobai.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2019/09/20/requirement-exp1/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/09/18/amazon-oracle/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/head_sculpture.png" alt="一直小白's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        zhongyuhang113@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:zhongyuhang113@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2019/12/">十二月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/11/">十一月 2019<span class="sidebar_archives-count">26</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">29</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">28</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Database/">Database<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/IT项目管理/">IT项目管理<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/android/">android<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/c/">c++<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/j2ee/">j2ee<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/java/">java<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/letex/">letex<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/lua/">lua<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/opencv/">opencv<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/oracle/">oracle<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/scrapy/">scrapy<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/书籍/">书籍<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/企业/">企业<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/信息安全/">信息安全<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端/">前端<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/开箱/">开箱<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/心理学/">心理学<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/测试/">测试<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/游记/">游记<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/笔记/">笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机网络/">计算机网络<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/设计模式/">设计模式<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/评测/">评测<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/需求分析/">需求分析<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/鱼的记忆/">鱼的记忆<span class="sidebar_archives-count">9</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">table</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间轴">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                时间轴
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/video" title="目之所及">
+                
+                    <i class="material-icons sidebar-material-icons">movie</i>
+                
+                目之所及
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="图库">
+                
+                    <i class="material-icons sidebar-material-icons">collections</i>
+                
+                图库
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="好朋友">
+                
+                    <i class="material-icons sidebar-material-icons">favorite_border</i>
+                
+                好朋友
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/PGP" title="PGP密钥">
+                
+                    <i class="material-icons sidebar-material-icons">vpn_key</i>
+                
+                PGP密钥
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/agree" title="知识共享协议">
+                
+                    <i class="material-icons sidebar-material-icons">https</i>
+                
+                知识共享协议
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/me" title="关于小白">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于小白
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">112</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/WTOJL7dDTsa8Dcd" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/zyhang8" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https:www.github.com/zyhang8" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;一直小白的博客
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//yizhixiaobai.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2017;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

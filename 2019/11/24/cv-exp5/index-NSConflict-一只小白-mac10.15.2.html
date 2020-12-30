@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
+
+
+    <link rel="dns-prefetch" href="https://yizhixiaobai.disqus.com">
+
+
+
+    <link rel="dns-prefetch" href="https://hm.baidu.com">
+
+
+
+    <link rel="dns-prefetch" href="https://lib.baomitu.com">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            频域图像处理 | 
+        
+        一直小白的博客
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/head_sculpture.png">
+    <link rel="icon" href="/img/head_sculpture.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content>
+    <meta name="keywords" content="这是一只小白,opencv">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微锟斤拷锟脚猴拷", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <style>
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: regular;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.svg#Roboto) format('svg')
+        }
+    </style>
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="一直小白的博客">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2019/11/24/cv-exp5/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="一直小白的博客">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/head_sculpture.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com/2019/11/24/cv-exp5/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="频域图像处理 | 一直小白的博客">
+    <meta property="og:image" content="/img/head_sculpture.png">
+    <meta property="og:description" content>
+    <meta property="og:article:tag" content="opencv"> 
+
+    
+        <meta property="article:published_time" content="Sun Nov 24 2019 19:36:07 GMT+0800">
+        <meta property="article:modified_time" content="Sun Nov 24 2019 19:52:33 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/2019/11/24/cv-exp5/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2019/11/24/cv-exp5/index.html",
+    "headline": "频域图像处理",
+    "datePublished": "Sun Nov 24 2019 19:36:07 GMT+0800",
+    "dateModified": "Sun Nov 24 2019 19:52:33 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "一直小白",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/head_sculpture.png"
+        },
+        "description": "求知若饥,谦虚若愚"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "一直小白的博客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/head_sculpture.png"
+        }
+    },
+    "keywords": ",opencv这是一只小白",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+        <script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?5a42bcc3e66e1db4931abdcca1a9aa74';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#频域图像处理"><span class="post-toc-number">1.</span> <span class="post-toc-text">频域图像处理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#实验目的"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">实验目的</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#实验原理"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">实验原理</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#实验内容或步骤"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">实验内容或步骤</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#参考"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">参考</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#实验报告"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">实验报告</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#图像平移"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">图像平移</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#傅里叶变换，分析原图傅里叶频谱与平移后图像频谱的对应关系"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">傅里叶变换，分析原图傅里叶频谱与平移后图像频谱的对应关系</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是DFT，和傅立叶变换有什么联系"><span class="post-toc-number">1.7.1.</span> <span class="post-toc-text">什么是DFT，和傅立叶变换有什么联系</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#void-dft-InputArray-src-OutputArray-dst-int-flags-0-int-nonzeroRows-0"><span class="post-toc-number">1.7.2.</span> <span class="post-toc-text">void dft(InputArray src, OutputArray dst, int flags=0, int nonzeroRows=0);</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#对rectangular-jpg及其旋转图rectangular-rotation-jpg分别进行傅里叶变换"><span class="post-toc-number">1.7.3.</span> <span class="post-toc-text">对rectangular.jpg及其旋转图rectangular-rotation.jpg分别进行傅里叶变换</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#源代码"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">源代码</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                频域图像处理
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/head_sculpture.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>一直小白</strong>
+        <span>11月 24, 2019</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACY0lEQVR42u3awY7qMAwFUP7/p9/bzoZybTemQicrxFCS05Fwep3Xv58eLzw8PDw8PDw8vIfxXvH4+/l3r/++k7z/YaHFteHh4eFt8pJpen/NAde3L58dDw8Pb5OXF4N3n6kWhmoRuv4MHh4e3jN510ucFIbrbTceHh7eL/Gqm+PJVXh4eHhP4yUP/NEEl6Uij3S/kLXg4eHhxby7GmAnXj+ov4eHh4c3Hr3yMAkvolXh4eHhHeZV49rk2pu3yPG8eHh4eDu8ZHt9F7h6OCAPPvDw8PA2eb0Yt9r4r7bcJv8APDw8vB3efMpqMagescpvIh4eHt4OrxoiTIpBNYa4vhYPDw/vu7w8zM1ji7yRVj3O1XxiwMPDwxvz8umrYW4vxq02vfDw8PD2ecnPcbIt7m1/r2OIfNOPh4eH9y1e70vvKg/5N3y4WXh4eHiHedVgIlli74h/9YhVOYzAw8PDO8ybHIfKv606Y3QL8PDw8A7zqscCJpHEJKgtbMTx8PDwDvPmsOSq6rGAUQiCh4eHt8jrtbvyACJpdOXFY3QyAg8PD2/Ay3/0Jy2rXmHotcHw8PDwTvMmxaAaalSD2jywwMPDw9vkveLRiwyqMW5vs46Hh4e3yauOasw6b2h9KAN4eHh467xeYcgDi50DBHh4eHj7vGozbNKmmoQUzScGPDw8vGO86k98dRudLzcJI96uAQ8PD++RvHlkMN9qHywMeHh4eLfyeocGkiMFtzXG8PDw8BZ5eRjxIQ4oBrjz9hgeHh7ePq936KoXvFZvWX5AAQ8PD2+H93sDDw8PDw8PDw/vAeM/xHOrz40+9SIAAAAASUVORK5CYII=">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/opencv/">opencv</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=频域图像处理&url=http://yoursite.com/2019/11/24/cv-exp5/index.html&pic=http://yoursite.com/img/head_sculpture.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=频域图像处理&url=http://yoursite.com/2019/11/24/cv-exp5/index.html&via=一直小白" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2019/11/24/cv-exp5/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2019/11/24/cv-exp5/index.html&title=频域图像处理" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=一直小白的博客&title=频域图像处理&summary=&pics=http://yoursite.com/img/head_sculpture.png&url=http://yoursite.com/2019/11/24/cv-exp5/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="频域图像处理"><a href="#频域图像处理" class="headerlink" title="频域图像处理"></a>频域图像处理</h1><h2 id="实验目的"><a href="#实验目的" class="headerlink" title="实验目的"></a>实验目的</h2><ol>
+<li>掌握图像快速傅里叶变换及其实现</li>
+<li>掌握图像二维频谱的分布特点</li>
+</ol>
+<h2 id="实验原理"><a href="#实验原理" class="headerlink" title="实验原理"></a>实验原理</h2><p>图像的快速傅里叶变换</p>
+<p>傅里叶变换频谱图像</p>
+<h2 id="实验内容或步骤"><a href="#实验内容或步骤" class="headerlink" title="实验内容或步骤"></a>实验内容或步骤</h2><ul>
+<li>对一张图像进行平移，显示原始图像和处理后的图像；</li>
+<li>分别对两幅图像进行傅里叶变换，显示变换后的结果，分析原图傅里叶频谱与平移后图像频谱的对应关系；</li>
+<li>对rectangular.jpg及其旋转图rectangular-rotation.jpg分别进行傅里叶变换，显示变换后的结果，分析原图傅里叶频谱与旋转后图像频谱的对应关系。</li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://blog.csdn.net/Cool2Feel/article/details/90443429" target="_blank" rel="noopener">图像平移</a></li>
+<li>傅里叶变换cv.dft (src, dst, flags = 0, nonzeroRows = 0)</li>
+<li><a href="https://docs.opencv.org/3.4.1/dd/d02/tutorial_js_fourier_transform.html" target="_blank" rel="noopener">https://docs.opencv.org/3.4.1/dd/d02/tutorial_js_fourier_transform.html</a></li>
+<li><a href="https://docs.opencv.org/3.4.1/d2/de8/group__core__array.html#gadd6cf9baf2b8b704a11b5f04aaf4f39d" target="_blank" rel="noopener">https://docs.opencv.org/3.4.1/d2/de8/group__core__array.html#gadd6cf9baf2b8b704a11b5f04aaf4f39d</a></li>
+<li><a href="https://blog.csdn.net/qq_19655645/article/details/77295987" target="_blank" rel="noopener">https://blog.csdn.net/qq_19655645/article/details/77295987</a></li>
+</ul>
+<p>注意几个图像傅里叶变换的步骤：</p>
+<ol>
+<li>需要先获取最佳DFT变换的大小（cv.getOptimalDFTSize），然后以这个大小对原图进行扩充( padding，cv.copyMakeBorder)</li>
+<li>需要DFT变换后的矩阵进行分解（cv.split），从中提取谱分量（cv.magnitude）</li>
+<li>如果谱分量行列为奇数，需要对其进行裁剪成偶数（cv.Rect）</li>
+<li>如果谱分量太大，需要对其进行对数变换（log），以便更好的显示</li>
+<li>将傅里叶变换后图像的原点调整到中心</li>
+</ol>
+<h2 id="实验报告"><a href="#实验报告" class="headerlink" title="实验报告"></a>实验报告</h2><ul>
+<li>描述实验的基本原理和步骤</li>
+<li>用数据和图片给出各个步骤中取得的实验结果 ，包括原始图像及其处理后的图像，并进行必要的讨论</li>
+<li>完整的源代码</li>
+</ul>
+<h2 id="图像平移"><a href="#图像平移" class="headerlink" title="图像平移"></a>图像平移</h2><p>代码流程如下：</p>
+<p>读取图像→显示原图像→调用自定义的函数translateTransform，作平移后图像大小不变的平移处理并显示处理结果→调用自定义的函数translateTransformSize，作平移后图像大小变化的平移处理并显示处理结果。</p>
+<p>dst_window显示的是平移时图像尺寸不变的平移结果，可以看见，损失了部分原图；而dst_wind</p>
+<h2 id="傅里叶变换，分析原图傅里叶频谱与平移后图像频谱的对应关系"><a href="#傅里叶变换，分析原图傅里叶频谱与平移后图像频谱的对应关系" class="headerlink" title="傅里叶变换，分析原图傅里叶频谱与平移后图像频谱的对应关系"></a>傅里叶变换，分析原图傅里叶频谱与平移后图像频谱的对应关系</h2><p>傅立叶变换的步骤</p>
+<p>1．需要先获取最佳DFT变换的大小（cv.getOptimalDFTSize），然后以这个大小对原图进行扩充( padding，cv.copyMakeBorder)<br>2．需要DFT变换后的矩阵进行分解（cv.split），从中提取谱分量（cv.magnitude）<br>3．如果谱分量行列为奇数，需要对其进行裁剪成偶数（cv.Rect）<br>4．如果谱分量太大，需要对其进行对数变换（log），以便更好的显示<br>5．将傅里叶变换后图像的原点调整到中心</p>
+<h3 id="什么是DFT，和傅立叶变换有什么联系"><a href="#什么是DFT，和傅立叶变换有什么联系" class="headerlink" title="什么是DFT，和傅立叶变换有什么联系"></a>什么是DFT，和傅立叶变换有什么联系</h3><p>根据信号的不同类型，可以把傅立叶变换分为四类：</p>
+<p>1) 非周期性连续信号： 傅立叶变换(Fourier Transform，FT)</p>
+<p>2) 周期性连续信号： 傅立叶级数(Fourier Series，FS)</p>
+<p>3) 非周期性离散信号： 离散时域傅立叶变换(Discrete Time Fourier Transform ,DTFT)</p>
+<p>4)周期性离散信号： 离散傅立叶变换(Discrete Fourier Series，DFS)</p>
+<p><img src="https://images2017.cnblogs.com/blog/583428/201712/583428-20171222102648396-227701292.png" alt="3"></p>
+<p>根据时域与频域的对应关系，我们可以知道，周期&lt;—-&gt;离散，是一对对偶关系，即周期信号的傅里叶变换一定是离散的，离散信号的傅里叶变换一定是周期的，反之也成立。</p>
+<p>所以针对上述四种傅里叶变换，我们知道，FT的结果具有连续非周期性质，FS的结果具有离散非周期性质，DTFT结果具有连续周期性质，DFT结果具有离散周期性质。</p>
+<p>非周期连续信号的傅里叶变换(FT)为：</p>
+<p>𝐹(𝜔)=∫−∞∞𝑥(𝑡)𝑒−𝑖𝜔𝑡𝑑𝑡</p>
+<p>非周期离散序列的傅里叶变换(DTFT)为：</p>
+<p>𝐹(𝜔)=∑𝑛=−∞∞𝑥(𝑛)𝑒−𝑖𝜔𝑛𝑇𝑠</p>
+<p>周期连续信号的傅里叶变换(FS)为：</p>
+<p>𝐹(𝜔𝑘)=1𝑇∫0𝑇𝑥(𝑡)𝑒−𝑖𝜔𝑘𝑡𝑑𝑡=1𝑇∫0𝑇𝑥(𝑡)𝑒−𝑖2𝜋𝑘𝑡/𝑇𝑑𝑡</p>
+<p>周期离散信号的傅里叶变换(DFS)为：</p>
+<p>𝐹(𝜔𝑘)=∑𝑛=0𝑁−1𝑥(𝑛)𝑒−𝑖𝜔𝑘𝑛=∑𝑛=0𝑁−1𝑥(𝑛)𝑒−𝑖2𝜋𝑘𝑁𝑛</p>
+<p>假定x(n)为Ts区域上x(t)的均值，且Ts（抽样间隔）足够小，如下图所示：</p>
+<p><img src="http://images2017.cnblogs.com/blog/583428/201712/583428-20171222102648693-2130985384.png" alt="2"></p>
+<p>则有</p>
+<p>𝐹𝐹𝑇(𝜔)=∫−∞∞𝑥(𝑡)𝑒𝑖𝜔𝑡𝑑𝑡=∑𝑛=−∞∞∫(𝑛+1)𝑇𝑠𝑛𝑇𝑠𝑥(𝑡)𝑒𝑖𝜔𝑡𝑑𝑡=𝑇𝑠∑𝑛=−∞∞𝑥(𝑛)𝑒𝑖𝜔𝑛𝑇𝑠=𝑇𝑠𝐹𝐷𝑇𝐹𝑇(𝜔)</p>
+<p>其中</p>
+<p>𝑥(𝑛)=1𝑇𝑠∫(𝑛+1)𝑇𝑠𝑛𝑇𝑠𝑥(𝑡)𝑑𝑡</p>
+<p>所以非周期连续信号与非周期离散信号之间频谱关系为：</p>
+<p>FFT(ω)=Ts·FDTFT(ω) （ω&lt;2πfs）</p>
+<p>同样可以推导周期连续信号与周期离散信号之间频谱关系为：</p>
+<p>FFS(ωk)=Ts/T·FDFS(ωk)=1/N·FDFS(ωk) （k&lt;N）</p>
+<p>上述等式所加的限定是由于离散信号的频谱具有周期性，等价于原连续信号频谱以fs为周期进行平移。这是由于离散信号的傅里叶变换的核函数具有周期性,例如DTFT的核函数为𝑒−𝑖𝜔𝑛𝑇𝑠，当ω增加2πfs时，其值仍然不变。</p>
+<p>假若连续信号为一个波包，最高频率为fH,只在有限时间内幅值不为0，则连续信号按周期T延拓后周期信号的傅里叶级数是原连续信号的频域抽样，抽样周期为1/T，其中T为周期信号的周期。公式表示为：</p>
+<p>FFS(ωk)=1/T·FFT(ω=ωk)</p>
+<p>上述四种傅里叶变换的关系由下图可以对比看出：</p>
+<p><img src="http://images2017.cnblogs.com/blog/583428/201712/583428-20171222102649271-588005997.png" alt="1"></p>
+<p>上图中，离散信号的采样周期fs&gt;2fH；FS变换的频谱分辨率为1/T.</p>
+<p>在实际使用用计算机处理数据时，要求数据都是有限长度，而上述四种傅立叶变换都是针对无穷长度的信号。</p>
+<p>针对有限长度的离散信号，定义了DFT：设x(n)是一个长度为N的有限长序列，则定义x(n)的N点离散傅里叶变换为：</p>
+<p>𝑋(𝑘)=𝐷𝐹𝑇[𝑥(𝑛)]=∑𝑛=0𝑁−1𝑥(𝑛)𝑊𝑘𝑛𝑁, k = 0, 1, …, N - 1</p>
+<p>其中WN=exp(-j2π/N).</p>
+<p><img src="https://s2.ax1x.com/2019/11/24/MOhSsI.png" alt="MOhSsI.png"></p>
+<p>三张图片分别为平移大小不变，平移大小变化，原图，第一张图片把窗口和图片同时增大相应的图片变量，第一张图片只把图片平移导致部分缺失</p>
+<h3 id="void-dft-InputArray-src-OutputArray-dst-int-flags-0-int-nonzeroRows-0"><a href="#void-dft-InputArray-src-OutputArray-dst-int-flags-0-int-nonzeroRows-0" class="headerlink" title="void dft(InputArray src, OutputArray dst, int flags=0, int nonzeroRows=0);"></a>void dft(InputArray src, OutputArray dst, int flags=0, int nonzeroRows=0);</h3><p>参数解释：</p>
+<ul>
+<li>InputArray src: 输入图像，可以是实数或虚数</li>
+<li>OutputArray dst: 输出图像，其大小和类型取决于第三个参数flags</li>
+<li>int flags = 0: 转换的标识符，有默认值0.其可取的值如下所示：</li>
+<li>DFT_INVERSE: 用一维或二维逆变换取代默认的正向变换</li>
+<li>DFT_SCALE: 缩放比例标识符，根据数据元素个数平均求出其缩放结果，如有N个元素，则输出结果以1/N缩放输出，常与DFT_INVERSE搭配使用。</li>
+<li>DFT_ROWS: 对输入矩阵的每行进行正向或反向的傅里叶变换；此标识符可在处理多种适量的的时候用于减小资源的开销，这些处理常常是三维或高维变换等复杂操作。</li>
+<li>DFT_COMPLEX_OUTPUT: 对一维或二维的实数数组进行正向变换，这样的结果虽然是复数阵列，但拥有复数的共轭对称性（CCS），可以以一个和原数组尺寸大小相同的实数数组进行填充，这是最快的选择也是函数默认的方法。你可能想要得到一个全尺寸的复数数组（像简单光谱分析等等），通过设置标志位可以使函数生成一个全尺寸的复数输出数组。</li>
+<li>DFT_REAL_OUTPUT: 对一维二维复数数组进行逆向变换，这样的结果通常是一个尺寸相同的复数矩阵，但是如果输入矩阵有复数的共轭对称性（比如是一个带有DFT_COMPLEX_OUTPUT标识符的正变换结果），便会输出实数矩阵。</li>
+<li>int nonzeroRows = 0: 当这个参数不为0，函数会假设只有输入数组（没有设置DFT_INVERSE）的第一行或第一个输出数组（设置了DFT_INVERSE）包含非零值。这样的话函数就可以对其他的行进行更高效的处理节省一些时间，这项技术尤其是在采用DFT计算矩阵卷积时非常有效。</li>
+</ul>
+<p><img src="https://s2.ax1x.com/2019/11/24/MOfl2d.png" alt="MOfl2d.png"></p>
+<p>从原图傅里叶频谱与平移后图像频谱可以看出，平移后四条线不会特别的明显，原点也不会很明显</p>
+<h3 id="对rectangular-jpg及其旋转图rectangular-rotation-jpg分别进行傅里叶变换"><a href="#对rectangular-jpg及其旋转图rectangular-rotation-jpg分别进行傅里叶变换" class="headerlink" title="对rectangular.jpg及其旋转图rectangular-rotation.jpg分别进行傅里叶变换"></a>对rectangular.jpg及其旋转图rectangular-rotation.jpg分别进行傅里叶变换</h3><p><img src="https://s2.ax1x.com/2019/11/24/MOfQ8H.png" alt="MOfQ8H.png"></p>
+<p>旋转前的图片频谱分布为十字架型，旋转后的图片的频谱与图片旋转的角度相似，但显然旋转后的频谱有些地方模糊，并且有很多噪点，个人觉得频谱还跟图片的形状有关，如果该图片包括白色的部分也一块旋转，那旋转后就不会那么模糊了</p>
+<h2 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/opencv.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> cv;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">translateTransform</span><span class="params">(cv::Mat <span class="keyword">const</span>&amp; src, cv::Mat&amp; dst, <span class="keyword">int</span> dx, <span class="keyword">int</span> dy)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	CV_Assert(src.depth() == CV_8U);</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span> rows = src.rows;</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span> cols = src.cols;</span><br><span class="line">	dst.create(rows, cols, src.type());</span><br><span class="line">	Vec3b* p;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; rows; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		p = dst.ptr&lt;Vec3b&gt;(i);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; cols; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="comment">//平移后坐标映射到原图像  </span></span><br><span class="line">			<span class="keyword">int</span> x = j - dx;</span><br><span class="line">			<span class="keyword">int</span> y = i - dy;</span><br><span class="line">			<span class="comment">//保证映射后的坐标在原图像范围内  </span></span><br><span class="line">			<span class="keyword">if</span> (x &gt;= <span class="number">0</span> &amp;&amp; y &gt;= <span class="number">0</span> &amp;&amp; x &lt; cols &amp;&amp; y &lt; rows)</span><br><span class="line">				p[j] = src.ptr&lt;Vec3b&gt;(y)[x];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//平移后大小变化  </span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">translateTransformSize</span><span class="params">(cv::Mat <span class="keyword">const</span>&amp; src, cv::Mat&amp; dst, <span class="keyword">int</span> dx, <span class="keyword">int</span> dy)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	CV_Assert(src.depth() == CV_8U);</span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span> rows = src.rows + <span class="built_in">abs</span>(dy); <span class="comment">//输出图像的大小  </span></span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">int</span> cols = src.cols + <span class="built_in">abs</span>(dx);</span><br><span class="line">	dst.create(rows, cols, src.type());</span><br><span class="line">	Vec3b* p;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; rows; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		p = dst.ptr&lt;Vec3b&gt;(i);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; cols; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">int</span> x = j - dx;</span><br><span class="line">			<span class="keyword">int</span> y = i - dy;</span><br><span class="line">			<span class="keyword">if</span> (x &gt;= <span class="number">0</span> &amp;&amp; y &gt;= <span class="number">0</span> &amp;&amp; x &lt; src.cols &amp;&amp; y &lt; src.rows)</span><br><span class="line">				p[j] = src.ptr&lt;Vec3b&gt;(y)[x];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Mat <span class="title">my_f</span><span class="params">(Mat&amp; mImage)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> m = getOptimalDFTSize(mImage.rows);<span class="comment">//获取最佳DFT变换的大小</span></span><br><span class="line">	<span class="keyword">int</span> n = getOptimalDFTSize(mImage.cols);</span><br><span class="line">	copyMakeBorder(mImage, mImage, <span class="number">0</span>, m - mImage.rows, <span class="number">0</span>, n - mImage.cols, BORDER_CONSTANT, Scalar(<span class="number">0</span>));<span class="comment">//扩充</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="function">Mat <span class="title">mFourier</span><span class="params">(mImage.rows + m, mImage.cols + n, CV_32FC2, Scalar(<span class="number">0</span>, <span class="number">0</span>))</span></span>;</span><br><span class="line">	Mat mForFourier[] = &#123; Mat_&lt;<span class="keyword">float</span>&gt;(mImage), Mat::zeros(mImage.size(), CV_32F) &#125;;</span><br><span class="line">	Mat mSrc;</span><br><span class="line">	merge(mForFourier, <span class="number">2</span>, mSrc);<span class="comment">//合并</span></span><br><span class="line">	dft(mSrc, mFourier);<span class="comment">//傅里叶</span></span><br><span class="line"></span><br><span class="line">	<span class="built_in">vector</span>&lt;Mat&gt; channels;</span><br><span class="line">	split(mFourier, channels);<span class="comment">//矩阵分解</span></span><br><span class="line">	Mat mRe = channels[<span class="number">0</span>];</span><br><span class="line">	Mat mIm = channels[<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">	Mat mAmplitude;</span><br><span class="line">	magnitude(mRe, mIm, mAmplitude);<span class="comment">//提取谱分量</span></span><br><span class="line"></span><br><span class="line">	mAmplitude += Scalar(<span class="number">1</span>);</span><br><span class="line">	<span class="built_in">log</span>(mAmplitude, mAmplitude);<span class="comment">//进行对数变换</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//将傅里叶变换后图像的原点调整到中心</span></span><br><span class="line">	normalize(mAmplitude, mAmplitude, <span class="number">0</span>, <span class="number">255</span>, NORM_MINMAX);</span><br><span class="line">	<span class="comment">//如果谱分量行列为奇数，需要对其进行裁剪成偶数</span></span><br><span class="line">	<span class="function">Mat <span class="title">mResult</span><span class="params">(mImage.rows, mImage.cols, CV_8UC1, Scalar(<span class="number">0</span>))</span></span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; mImage.rows; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		uchar* pResult = mResult.ptr&lt;uchar&gt;(i);</span><br><span class="line">		<span class="keyword">float</span>* pAmplitude = mAmplitude.ptr&lt;<span class="keyword">float</span>&gt;(i);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; mImage.cols; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			pResult[j] = (uchar)pAmplitude[j];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	Mat mQuadrant1 = mResult(Rect(mResult.cols / <span class="number">2</span>, <span class="number">0</span>, mResult.cols / <span class="number">2</span>, mResult.rows / <span class="number">2</span>));</span><br><span class="line">	Mat mQuadrant2 = mResult(Rect(<span class="number">0</span>, <span class="number">0</span>, mResult.cols / <span class="number">2</span>, mResult.rows / <span class="number">2</span>));</span><br><span class="line">	Mat mQuadrant3 = mResult(Rect(<span class="number">0</span>, mResult.rows / <span class="number">2</span>, mResult.cols / <span class="number">2</span>, mResult.rows / <span class="number">2</span>));</span><br><span class="line">	Mat mQuadrant4 = mResult(Rect(mResult.cols / <span class="number">2</span>, mResult.rows / <span class="number">2</span>, mResult.cols / <span class="number">2</span>, mResult.rows / <span class="number">2</span>));</span><br><span class="line"></span><br><span class="line">	Mat mChange1 = mQuadrant1.clone();</span><br><span class="line">	<span class="comment">//mQuadrant1 = mQuadrant3.clone();</span></span><br><span class="line">	<span class="comment">//mQuadrant3 = mChange1.clone();</span></span><br><span class="line">	mQuadrant3.copyTo(mQuadrant1);</span><br><span class="line">	mChange1.copyTo(mQuadrant3);</span><br><span class="line"></span><br><span class="line">	Mat mChange2 = mQuadrant2.clone();</span><br><span class="line">	<span class="comment">//mQuadrant2 = mQuadrant4.clone();</span></span><br><span class="line">	<span class="comment">//mQuadrant4 = mChange2.clone();</span></span><br><span class="line">	mQuadrant4.copyTo(mQuadrant2);</span><br><span class="line">	mChange2.copyTo(mQuadrant4);</span><br><span class="line">	<span class="keyword">return</span> mResult;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Mat mImage = imread(<span class="string">"lena_gray.png"</span>, <span class="number">0</span>);</span><br><span class="line">	Mat mImage1 = imread(<span class="string">"dst1.png"</span>, <span class="number">0</span>);</span><br><span class="line">	<span class="keyword">if</span> (mImage.data == <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cerr</span> &lt;&lt; <span class="string">"Image reading error"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">		system(<span class="string">"pause"</span>);</span><br><span class="line">		<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	namedWindow(<span class="string">"original"</span>, WINDOW_NORMAL);</span><br><span class="line">	imshow(<span class="string">"original"</span>, mImage);</span><br><span class="line">	namedWindow(<span class="string">"original1"</span>, WINDOW_NORMAL);</span><br><span class="line">	imshow(<span class="string">"original1"</span>, mImage1);</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	Mat dst, dst1;</span></span><br><span class="line"><span class="comment">	translateTransform(mImage, dst, 50, 50);</span></span><br><span class="line"><span class="comment">	namedWindow("dst_window");</span></span><br><span class="line"><span class="comment">	imshow("dst_window", dst);</span></span><br><span class="line"><span class="comment">	imwrite("dst.png", dst);</span></span><br><span class="line"><span class="comment">	translateTransformSize(mImage, dst1, 50, 50);</span></span><br><span class="line"><span class="comment">	namedWindow("dst_window1");</span></span><br><span class="line"><span class="comment">	imshow("dst_window1", dst1);</span></span><br><span class="line"><span class="comment">	imwrite("dst1.png", dst1);</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	</span><br><span class="line">	Mat mresult,mresult1;</span><br><span class="line">	mresult = my_f(mImage);</span><br><span class="line">	mresult1 = my_f(mImage1);</span><br><span class="line">	namedWindow(<span class="string">"Fourier1"</span>, WINDOW_NORMAL);</span><br><span class="line">	imshow(<span class="string">"Fourier1"</span>, mresult);</span><br><span class="line">	namedWindow(<span class="string">"Fourier"</span>, WINDOW_NORMAL);</span><br><span class="line">	imshow(<span class="string">"Fourier"</span>, mresult1);</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line">	Mat rImage = imread(<span class="string">"rectangular.jpg"</span>, <span class="number">0</span>);</span><br><span class="line">	Mat rrImage = imread(<span class="string">"rectangular-rotation.jpg"</span>, <span class="number">0</span>);</span><br><span class="line">	namedWindow(<span class="string">"roriginal"</span>, WINDOW_NORMAL);</span><br><span class="line">	imshow(<span class="string">"roriginal"</span>, rImage);</span><br><span class="line">	namedWindow(<span class="string">"rroriginal"</span>, WINDOW_NORMAL);</span><br><span class="line">	imshow(<span class="string">"rroriginal"</span>, rrImage);</span><br><span class="line">	Mat rresult, rrresult;</span><br><span class="line">	rresult = my_f(rImage);</span><br><span class="line">	rrresult = my_f(rrImage);</span><br><span class="line">	namedWindow(<span class="string">"rFourier"</span>, WINDOW_NORMAL);</span><br><span class="line">	imshow(<span class="string">"rFourier"</span>, rresult);</span><br><span class="line">	namedWindow(<span class="string">"rrFourier"</span>, WINDOW_NORMAL);</span><br><span class="line">	imshow(<span class="string">"rrFourier"</span>, rrresult);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	waitKey();</span><br><span class="line">	destroyAllWindows();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2019/11/24/cv-exp5/" target="_blank" rel="noopener">https://zyhang8.github.io/2019/11/24/cv-exp5/</a></p></blockquote>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2019/11/24/cv-exp5/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2019/11/24/cv-exp5/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//yizhixiaobai.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2019/11/27/ssm/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2019/11/21/cv-exp4/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/head_sculpture.png" alt="一直小白's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        zhongyuhang113@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:zhongyuhang113@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2019/12/">十二月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/11/">十一月 2019<span class="sidebar_archives-count">26</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">29</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">28</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Database/">Database<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/IT项目管理/">IT项目管理<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/android/">android<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/c/">c++<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/j2ee/">j2ee<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/java/">java<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/letex/">letex<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/lua/">lua<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/opencv/">opencv<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/oracle/">oracle<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/scrapy/">scrapy<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/书籍/">书籍<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/企业/">企业<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/信息安全/">信息安全<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端/">前端<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/开箱/">开箱<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/心理学/">心理学<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/测试/">测试<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/游记/">游记<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/笔记/">笔记<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机网络/">计算机网络<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/设计模式/">设计模式<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/评测/">评测<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/需求分析/">需求分析<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/鱼的记忆/">鱼的记忆<span class="sidebar_archives-count">9</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">table</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间轴">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                时间轴
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/video" title="目之所及">
+                
+                    <i class="material-icons sidebar-material-icons">movie</i>
+                
+                目之所及
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="图库">
+                
+                    <i class="material-icons sidebar-material-icons">collections</i>
+                
+                图库
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="好朋友">
+                
+                    <i class="material-icons sidebar-material-icons">favorite_border</i>
+                
+                好朋友
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/PGP" title="PGP密钥">
+                
+                    <i class="material-icons sidebar-material-icons">vpn_key</i>
+                
+                PGP密钥
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/agree" title="知识共享协议">
+                
+                    <i class="material-icons sidebar-material-icons">https</i>
+                
+                知识共享协议
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/me" title="关于小白">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于小白
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">112</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+        <a href="https://twitter.com/WTOJL7dDTsa8Dcd" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-twitter">
+                <span class="visuallyhidden">Twitter</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Facebook -->
+    
+        <a href="https://www.facebook.com/zyhang8" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-facebook">
+                <span class="visuallyhidden">Facebook</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https:www.github.com/zyhang8" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;一直小白的博客
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//yizhixiaobai.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2017;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
