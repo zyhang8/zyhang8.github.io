@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
+
+
+    <link rel="dns-prefetch" href="https://Roy Z..disqus.com">
+
+
+
+    <link rel="dns-prefetch" href="https://hm.baidu.com">
+
+
+
+    <link rel="dns-prefetch" href="https://lib.baomitu.com">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            genertic-algorithm | 
+        
+        Euan&#39;s Blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/head_sculpture.png">
+    <link rel="icon" href="/img/head_sculpture.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content="人工智能导论第二次实验">
+    <meta name="keywords" content="求知若饥 谦虚若愚,人工智能">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微锟斤拷锟脚猴拷", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <style>
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: regular;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.svg#Roboto) format('svg')
+        }
+    </style>
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Euan&#39;s Blog">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2021/01/04/genertic-algorithm/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Euan&#39;s Blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/head_sculpture.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com/2021/01/04/genertic-algorithm/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="genertic-algorithm | Euan&#39;s Blog">
+    <meta property="og:image" content="/img/head_sculpture.png">
+    <meta property="og:description" content="人工智能导论第二次实验">
+    <meta property="og:article:tag" content="人工智能"> 
+
+    
+        <meta property="article:published_time" content="Mon Jan 04 2021 20:14:42 GMT+0800">
+        <meta property="article:modified_time" content="Mon Jan 04 2021 20:16:47 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/2021/01/04/genertic-algorithm/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2021/01/04/genertic-algorithm/index.html",
+    "headline": "genertic-algorithm",
+    "datePublished": "Mon Jan 04 2021 20:14:42 GMT+0800",
+    "dateModified": "Mon Jan 04 2021 20:16:47 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Euan",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/head_sculpture.png"
+        },
+        "description": "求知若饥,谦虚若愚"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Euan&#39;s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/head_sculpture.png"
+        }
+    },
+    "keywords": ",人工智能求知若饥 谦虚若愚",
+    "description": "人工智能导论第二次实验",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+        <script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?5a42bcc3e66e1db4931abdcca1a9aa74';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#遗传算法"><span class="post-toc-number">1.</span> <span class="post-toc-text">遗传算法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#算法简介"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">算法简介</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#算法描述"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">算法描述</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#算法参数"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">算法参数</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#算法特点"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">算法特点</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#部分交叉匹配PMX-amp-顺序交叉OX"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">部分交叉匹配PMX &amp; 顺序交叉OX</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#两点互换、相邻互换、区间逆换、单点移动"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">两点互换、相邻互换、区间逆换、单点移动</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#遗传算法演示"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">遗传算法演示</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#特点"><span class="post-toc-number">1.7.1.</span> <span class="post-toc-text">特点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#代码演示"><span class="post-toc-number">1.7.2.</span> <span class="post-toc-text">代码演示</span></a></li></ol></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                genertic-algorithm
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/head_sculpture.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Euan</strong>
+        <span>1月 04, 2021</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACa0lEQVR42u3aQVIDMQwEwPz/03ClCrIZybKzpHpPKTCL2wfbGenx9dHPAw8PDw8PDw8P72a8R/z88aJfv70e/3PMs/++Pjc8PDy8M7wXW+0l73pCS1t8a254eHh4J3nPJne99Sefk79N3ha9AQ8PD++WvOsLdDKJ6/F4eHh4n8e7nkp+4a4eEnh4eHh34+XBa87ojXxb1oKHh4cX8/Ii0/nPR+t7eHh4eAGvV5RabyyoBhaFGeLh4eFt5uUb8cqFO4Hly/FiPnh4eHibedVooNqcmkcMU6U1PDw8vN28XihQPRKqS9nD4+Hh4Z3h5ZPb0bRajY+jEAQPDw/vCK8XTMwGFvlyvLia4+Hh4R3h9bb4PLCoBrv5QkRZCx4eHt4oL9nQ84B19lDJDxs8PDy8k7ypYlg1sKgGxAOtA3h4eHijvHwTT5YjZwyUu/JvDHh4eHijvGr8uh4i9JoPlnrK8PDw8IZ4Ky/ND4N8gaqX7HLWgoeHh3eEtxLUVqOK/FLeLIDh4eHhLfN64UL1Yt0bmR8VeHh4eCd5+ebeC2enIoylMAIPDw9vA2+9rNU7AKqNAtGC4uHh4d2AV718r7cR5AuKh4eHdwde3nTVK5JVI9pqKxgeHh7ebl71yePUPPKIGgLyiAQPDw9vM6+6Hfcu0yutXckhhIeHh3eel2zreSG/enXuHQzNbwx4eHh4o7yVBoJeO0JeABvIWvDw8PDeyqtehatvrgbEeHh4eP+F12NUj5Pk0o+Hh4f3Ll7eetX7SbX1Ki+e4eHh4Z3nDUQArei2Gu8mLQt4eHh4u3mf9+Dh4eHh4eHh4d3g+Qbvt2ejYhABZQAAAABJRU5ErkJggg==">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/人工智能/">人工智能</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=genertic-algorithm&url=http://yoursite.com/2021/01/04/genertic-algorithm/index.html&pic=http://yoursite.com/img/head_sculpture.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=genertic-algorithm&url=http://yoursite.com/2021/01/04/genertic-algorithm/index.html&via=Euan" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2021/01/04/genertic-algorithm/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2021/01/04/genertic-algorithm/index.html&title=genertic-algorithm" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Euan&#39;s Blog&title=genertic-algorithm&summary=&pics=http://yoursite.com/img/head_sculpture.png&url=http://yoursite.com/2021/01/04/genertic-algorithm/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="遗传算法"><a href="#遗传算法" class="headerlink" title="遗传算法"></a>遗传算法</h1><h2 id="算法简介"><a href="#算法简介" class="headerlink" title="算法简介"></a>算法简介</h2><p>遗传算法 ( Genetic Algorithms, GA )是基于生物界自然选择和基因遗传学原理的一种广为应用的、高效的随机搜索算法，20世纪60年代由美国的密执根大学的Holland教授首先提出。该算法将优化问题看作是自然界中生物的进化过程，通过模拟大自然中生物进化过程中的遗传规律，来达到寻优的目的。近年来，遗传算法已广泛地应用于作业调度与排序、可靠性设计、车辆路径选择与调度、成组技术、设备布置与分配、交通问题等等。</p>
+<p>用遗传算法求解优化问题时，一定数量的候选解（称为个体）的抽象表示（称为染色体）的种群向更好的解进化。传统上，解用二进制表示（即0和1的串），但也可以用其他表示方法。进化从完全随机个体的种群开始，之后一代一代发生。在每一代中，整个种群的适应度被评价，从当前种群中随机地选择多个个体（基于它们的适应度），通过自然选择和突变产生新的生命种群，该种群在算法的下一次迭代中成为当前种群。</p>
+<h2 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h2><p>选择初始生命种群</p>
+<p>循环</p>
+<ul>
+<li><p>评价种群中的个体适应度</p>
+</li>
+<li><p>以比例原则（分数高的挑中机率也较高）选择产生下一个种群（轮盘法 en:roulette wheel selection、竞争法 en:tournament selection 及等级轮盘法 Rank Based Wheel Selection）。不仅仅挑分数最高的的原因是这么做可能收敛到 local 的最佳点，而非 globe 的。</p>
+</li>
+<li><p>改变该种群（交叉和变异）</p>
+</li>
+<li><p>直到停止循环的条件满足</p>
+</li>
+<li><h2 id="算法参数"><a href="#算法参数" class="headerlink" title="算法参数"></a>算法参数</h2></li>
+<li><p>种群规模(P,population size)：即种群中染色体个体的数目。 </p>
+</li>
+<li><p>字串长度(l, string length) </p>
+</li>
+<li><p>交叉概率(pc, probability of performing crossover)：控制着交叉算子的使用频率。交叉操作可以加快收敛，使解达到最有希望的最优解区域，因此一般取较大的交叉概率，但交叉概率太高也可能导致过早收敛。 </p>
+</li>
+<li><p>变异概率(pm, probability of mutation)：控制着变异算子的使用频率。 </p>
+</li>
+<li><p>中止条件(termination criteria) </p>
+</li>
+</ul>
+<h2 id="算法特点"><a href="#算法特点" class="headerlink" title="算法特点"></a>算法特点</h2><p>遗传算法在适应度函数选择不当的情况下有可能收敛于局部最优，而不能达到全局最优。 </p>
+<p>初始种群的数量很重要，如果初始种群数量过多，算法会占用大量系统资源；如果初始种群数量过少，算法很可能忽略掉最优解。 </p>
+<p>对于每个解，一般根据实际情况进行编码，这样有利于编写变异函数和合适方程(Fitness Function)。 </p>
+<p>在编码过的遗传算法中，每次变异的编码长度也影响到遗传算法的效率。如果变异代码长度过长，变异的多样性会受到限制；如果变异代码过短，变异的效率会非常低下，选择适当的变异长度是提高效率的关键。 </p>
+<p>变异率也是一个重要的参数。 </p>
+<p>对于动态数据，用遗传算法求最优解比较困难，因为染色体种群很可能过早地收敛，而对以后变化了的数据不再产生变化。对于这个问题，研究者提出了一些方法增加基因的多样性，从而防止过早的收敛。其中一种是所谓触发式超级变异，就是当染色体群体的质量下降（彼此的区别减少）时增加变异概率；另一种叫随机外来染色体，是偶尔加入一些全新的随机生成的染色体个体，从而增加染色体多样性。 </p>
+<p>选择过程很重要，但交叉和变异的重要性存在争议。一种观点认为交叉比变异更重要，因为变异仅仅是保证不丢失某些可能的解；而另一种观点则认为交叉过程的作用只不过是在种群中推广变异过程所造成的更新，对于初期的种群来说，交叉几乎等效于一个非常大的变异率，而这么大的变异很可能影响进化过程。 </p>
+<p>遗传算法很快就能找到良好的解，即使是在很复杂的解空间中。 </p>
+<p>遗传算法并不一定总是最好的优化策略，优化问题要具体情况具体分析。所以在使用遗传算法的同时，也可以尝试其他算法，互相补充，甚至根本不用遗传算法。 </p>
+<p>遗传算法不能解决那些“大海捞针”的问题，所谓“大海捞针”问题就是没有一个确切的适应度函数表征个体好坏的问题，遗传算法对这类问题无法找到收敛的路。 </p>
+<p>对于任何一个具体的优化问题，调节遗传算法的参数可能会有利于更好的更快的收敛，这些参数包括个体数目、交叉律和变异律。例如太大的变异律会导致丢失最优解，而过小的变异律会导致算法过早的收敛于局部最优点。对于这些参数的选择，现在还没有实用的上下限。 </p>
+<p>适应度函数对于算法的速度和效果也很重要。 </p>
+<h2 id="部分交叉匹配PMX-amp-顺序交叉OX"><a href="#部分交叉匹配PMX-amp-顺序交叉OX" class="headerlink" title="部分交叉匹配PMX &amp; 顺序交叉OX"></a>部分交叉匹配PMX &amp; 顺序交叉OX</h2><p><a href="https://imgchr.com/i/siY43R" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2021/01/04/siY43R.png" alt="siY43R.png"></a></p>
+<ul>
+<li>部分交叉匹配PMX异同点：中间部分若有重复则直接替换，若无重复，则在其他地方寻找该数并替换</li>
+<li>顺序交叉OX异同点：本质与部分匹配相同</li>
+</ul>
+<h2 id="两点互换、相邻互换、区间逆换、单点移动"><a href="#两点互换、相邻互换、区间逆换、单点移动" class="headerlink" title="两点互换、相邻互换、区间逆换、单点移动"></a>两点互换、相邻互换、区间逆换、单点移动</h2><p><a href="https://imgchr.com/i/siJMQ0" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2021/01/04/siJMQ0.png" alt="siJMQ0.png"></a></p>
+<p>特点：字面意思。。。</p>
+<h2 id="遗传算法演示"><a href="#遗传算法演示" class="headerlink" title="遗传算法演示"></a>遗传算法演示</h2><h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><ol>
+<li>与问题领域无关切快速随机的搜索能力。</li>
+<li>搜索从群体出发，具有潜在的并行性，可以进行多个个体的同时比较，robust</li>
+<li>搜索使用评价函数启发，过程简单</li>
+<li>使用概率机制进行迭代，具有随机性。</li>
+<li>具有可扩展性，容易与其他算法结合。</li>
+</ol>
+<p><a href="https://imgchr.com/i/siJuzq" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2021/01/04/siJuzq.png" alt="siJuzq.png"></a></p>
+<h3 id="代码演示"><a href="#代码演示" class="headerlink" title="代码演示"></a>代码演示</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">// Created by thinkpad on 2021/1/4.</span></span><br><span class="line"><span class="comment">//遗传算法求解TSP问题</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ctime&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; VI;</span><br><span class="line"><span class="keyword">typedef</span> <span class="built_in">vector</span>&lt;VI&gt; VVI;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PB push_back</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MP make_pair</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">next_int</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> rand()*(RAND_MAX+<span class="number">1</span>)+rand();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">next_double</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (<span class="keyword">double</span>(rand()*(RAND_MAX+<span class="number">1</span>)+rand()))/((RAND_MAX+<span class="number">1</span>)*RAND_MAX+RAND_MAX);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pmx</span><span class="params">(VI&amp; a,VI&amp; b,<span class="keyword">int</span> pointcnt)</span><span class="comment">//PMX交叉</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> sa=next_int()%pointcnt,sb=next_int()%pointcnt;<span class="comment">//随机选择两交叉位</span></span><br><span class="line">    <span class="keyword">int</span> temp;</span><br><span class="line">    <span class="keyword">if</span> (sa&gt;sb)</span><br><span class="line">    &#123;</span><br><span class="line">        temp=sa;</span><br><span class="line">        sa=sb;</span><br><span class="line">        sb=temp;</span><br><span class="line">    &#125;<span class="comment">//保证交叉位sa&lt;=sb</span></span><br><span class="line">    VI aa(pointcnt),bb(pointcnt);</span><br><span class="line">    <span class="keyword">int</span> i;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;pointcnt;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        aa[i]=a[i],bb[i]=b[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function">VI <span class="title">m1</span><span class="params">(pointcnt,<span class="number">-1</span>)</span></span>;</span><br><span class="line">    <span class="function">VI <span class="title">m2</span><span class="params">(pointcnt,<span class="number">-1</span>)</span></span>;</span><br><span class="line">    <span class="function">VI <span class="title">v1tov2</span><span class="params">(pointcnt,<span class="number">-1</span>)</span></span>;</span><br><span class="line">    <span class="keyword">for</span>(i=sa;i&lt;=sb;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        m1[aa[i]]=<span class="number">-2</span>;	<span class="comment">//m1存放aa非交叉段可代换的基因</span></span><br><span class="line">        m2[bb[i]]=<span class="number">-2</span>;	<span class="comment">//m2存放aa非交叉段可代换的基因</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;pointcnt;i++)	&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(m2[i]==m1[i])<span class="comment">//去掉m1和m2中重复代换的基因</span></span><br><span class="line">        &#123;</span><br><span class="line">            m2[i]=<span class="number">-1</span>;</span><br><span class="line">            m1[i]=<span class="number">-1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> aaa=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(i=sa;i&lt;=sb;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> ((m1[aa[i]]==<span class="number">-2</span>)&amp;&amp;(m2[bb[i]]==<span class="number">-2</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            v1tov2[aa[i]]=bb[i];<span class="comment">//v1tov2存放首先可以确定的互换基因</span></span><br><span class="line">            m1[aa[i]]=<span class="number">-1</span>;</span><br><span class="line">            m2[bb[i]]=<span class="number">-1</span>;</span><br><span class="line">            aaa++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(aaa!=(sb-sa+<span class="number">1</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;pointcnt;i++)</span><br><span class="line">            <span class="keyword">if</span> (m1[i]==<span class="number">-2</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">int</span> aflag=<span class="number">0</span>;</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;pointcnt;j++)</span><br><span class="line">                    <span class="keyword">if</span>( (m2[j]==<span class="number">-2</span>) &amp;&amp; (aflag==<span class="number">0</span>))<span class="comment">//寻找并确定可以互换的基因</span></span><br><span class="line">                    &#123;</span><br><span class="line">                        v1tov2[i]=j;</span><br><span class="line">                        aflag=<span class="number">1</span>;</span><br><span class="line">                        aaa++;</span><br><span class="line">                        m2[j]=<span class="number">-1</span>;</span><br><span class="line">                        m1[i]=<span class="number">-1</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(i=sa;i&lt;=sb;i++)	&#123;</span><br><span class="line"></span><br><span class="line">        swap(aa[i],bb[i]);	<span class="comment">//交换sa到sb之间的基因串</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;pointcnt;i++)<span class="comment">//查找染色体aa中sa之前和sb之后的基因是否有重复</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> ((i&lt;sa)||(i&gt;sb))</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j=sa;j&lt;=sb;j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(aa[i]==aa[j])  <span class="comment">//有重复基因</span></span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;pointcnt;k++)</span><br><span class="line">                        <span class="keyword">if</span>(aa[i]==v1tov2[k])</span><br><span class="line">                            aa[i]=k;	<span class="comment">//进行互换</span></span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;pointcnt;i++)<span class="comment">//查找染色体bb中sa之前和sb之后的基因是否有重复</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> ((i&lt;sa)||(i&gt;sb))</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j=sa;j&lt;=sb;j++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(bb[i]==bb[j]) <span class="comment">//有重复基因</span></span><br><span class="line">                    bb[i]=v1tov2[bb[i]];	<span class="comment">//进行互换</span></span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    a=aa;</span><br><span class="line">    b=bb;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">double</span>&gt; x,y;</span><br><span class="line"><span class="function"><span class="keyword">double</span> <span class="title">fitness</span><span class="params">(<span class="keyword">const</span> VI&amp; v,<span class="keyword">int</span> pointcnt)</span><span class="comment">//计算适应度</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">double</span> r=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;pointcnt;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">double</span> dx=x[v[i]]-x[v[(i+<span class="number">1</span>)%pointcnt]];</span><br><span class="line">        <span class="keyword">double</span> dy=y[v[i]]-y[v[(i+<span class="number">1</span>)%pointcnt]];</span><br><span class="line">        r+=<span class="built_in">sqrt</span>(dx*dx+dy*dy);<span class="comment">//个体的适应度为相邻两城市之间的距离平方的平方根和</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1.0</span>/r;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">change0</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; K,<span class="keyword">int</span> N)</span><span class="comment">//变异策略:两点互换</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i=next_int()%N;</span><br><span class="line">    <span class="keyword">int</span> d=next_int()%(N<span class="number">-1</span>);</span><br><span class="line">    <span class="keyword">int</span> j=(i+<span class="number">1</span>+d)%N;</span><br><span class="line">    swap(K[i],K[j]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">mutate</span><span class="params">(VI&amp; route,<span class="keyword">int</span> mutate_type,<span class="keyword">int</span> pointcnt)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(mutate_type==<span class="number">0</span>)<span class="comment">//两点互换</span></span><br><span class="line">        change0(route,pointcnt);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">pair_dec</span><span class="params">(<span class="keyword">const</span> pair&lt;<span class="keyword">double</span>,VI*&gt;&amp; a,<span class="keyword">const</span> pair&lt;<span class="keyword">double</span>,VI*&gt;&amp; b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a&gt;b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">other_population</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="keyword">int</span> popsize,pointcnt;<span class="comment">//种群规模,染色体长度</span></span><br><span class="line">    <span class="keyword">double</span> pc,pm;<span class="comment">//交叉概率,变异概率</span></span><br><span class="line">    <span class="built_in">vector</span>&lt;pair&lt;<span class="keyword">double</span>,VI*&gt; &gt;pop;<span class="comment">//种群</span></span><br><span class="line">    pair&lt;<span class="keyword">double</span>,VI*&gt; bestofpop;<span class="comment">//最好个体</span></span><br><span class="line">    <span class="keyword">int</span> cross_type;<span class="comment">//交叉类型</span></span><br><span class="line">    <span class="keyword">int</span> mutate_type;<span class="comment">//变异类型</span></span><br><span class="line">    <span class="keyword">int</span> make_p;<span class="comment">//个体概率分配策略类型</span></span><br><span class="line">    <span class="keyword">int</span> select_type;<span class="comment">//个体选择类型</span></span><br><span class="line">    <span class="keyword">int</span> toursize;<span class="comment">//竞赛规模</span></span><br><span class="line">    <span class="keyword">double</span> bestp;<span class="comment">//最好个体选择概率</span></span><br><span class="line">    other_population(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> c,<span class="keyword">int</span> f,<span class="keyword">int</span> g,<span class="keyword">double</span> d,<span class="keyword">double</span> e,<span class="keyword">int</span> h,<span class="keyword">double</span> j,<span class="keyword">int</span> m)</span><br><span class="line">    &#123;</span><br><span class="line">        popsize=a,pointcnt=b,cross_type=c,mutate_type=f,make_p=g,pc=d,pm=e,toursize=h,bestp=j,select_type=m;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;popsize;i++)<span class="comment">//初始化种群</span></span><br><span class="line">        &#123;</span><br><span class="line">            VI* v=<span class="keyword">new</span> VI(pointcnt);</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;pointcnt;j++)</span><br><span class="line">                (*v)[j]=j;</span><br><span class="line">            random_shuffle(v-&gt;begin(),v-&gt;end());</span><br><span class="line">            pop.PB(MP(fitness(*v,pointcnt),v));</span><br><span class="line">        &#125;</span><br><span class="line">        sort(pop.begin(),pop.end(),pair_dec);</span><br><span class="line">        bestofpop.first=pop[<span class="number">0</span>].first;<span class="comment">//初始时最好个体的适应度</span></span><br><span class="line">        bestofpop.second=<span class="keyword">new</span> VI(*pop[<span class="number">0</span>].second);<span class="comment">//初始时最好个体的染色体</span></span><br><span class="line">    &#125;</span><br><span class="line">    ~other_population()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;pop.size();i++)</span><br><span class="line">            <span class="keyword">delete</span> pop[i].second;</span><br><span class="line">        <span class="keyword">delete</span> bestofpop.second;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">next</span><span class="params">()</span><span class="comment">//产生下一代种群</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">double</span>&gt; ps(popsize);</span><br><span class="line">        <span class="keyword">if</span>(make_p==<span class="number">0</span>) <span class="comment">//按适应度比例分配个体的选择概率</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">double</span> sum=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;popsize;i++)</span><br><span class="line">                sum+=pop[i].first;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;popsize;i++)</span><br><span class="line">                ps[i]=pop[i].first/sum;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(select_type==<span class="number">0</span>)<span class="comment">//轮盘赌选择个体</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">vector</span>&lt;pair&lt;<span class="keyword">double</span>,VI*&gt; &gt; select_res;</span><br><span class="line">            <span class="built_in">vector</span>&lt;<span class="keyword">double</span>&gt; addsum(popsize);</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;popsize<span class="number">-1</span>;i++)<span class="comment">//计算个体的累计概率</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(i==<span class="number">0</span>)</span><br><span class="line">                    addsum[i]=ps[<span class="number">0</span>];</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    addsum[i]=addsum[i<span class="number">-1</span>]+ps[i];</span><br><span class="line">            &#125;</span><br><span class="line">            addsum[popsize<span class="number">-1</span>]=<span class="number">1.5</span>;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;popsize;i++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">double</span> rd=next_double();</span><br><span class="line">                <span class="keyword">int</span> r=lower_bound(addsum.begin(),addsum.end(),rd)-addsum.begin();</span><br><span class="line">                VI* v=<span class="keyword">new</span> VI(*pop[r].second);</span><br><span class="line">                select_res.PB(MP(fitness(*v,pointcnt),v));</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;popsize;i++)</span><br><span class="line">                <span class="keyword">delete</span> pop[i].second;</span><br><span class="line">            pop=select_res;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> cc=<span class="number">0</span>;cc&lt;popsize/<span class="number">2</span>;cc++)<span class="comment">//随机选择两个个体,然后进行交叉</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">int</span> a=next_int()%popsize;</span><br><span class="line">            <span class="keyword">int</span> b=(a+<span class="number">1</span>+(next_int()%(popsize<span class="number">-1</span>)))%popsize;</span><br><span class="line">            <span class="keyword">if</span>(next_double()&lt;pc)<span class="comment">//随机数小于交叉概率,进行交叉</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(cross_type==<span class="number">0</span>)<span class="comment">//pmx交叉</span></span><br><span class="line">                    pmx(*pop[a].second,*pop[b].second,pointcnt);</span><br><span class="line"></span><br><span class="line">                pop[a].first=fitness(*pop[a].second,pointcnt);<span class="comment">//计算交叉后个体a的适应度</span></span><br><span class="line">                <span class="keyword">if</span>(bestofpop.first&lt;pop[a].first)<span class="comment">//更新最好个体</span></span><br><span class="line">                &#123;</span><br><span class="line">                    bestofpop.first=pop[a].first;</span><br><span class="line">                    <span class="keyword">delete</span> bestofpop.second;</span><br><span class="line">                    bestofpop.second=<span class="keyword">new</span> VI(*pop[a].second);</span><br><span class="line">                &#125;</span><br><span class="line">                pop[b].first=fitness(*pop[b].second,pointcnt);<span class="comment">//计算交叉后个体b的适应度</span></span><br><span class="line">                <span class="keyword">if</span>(bestofpop.first&lt;pop[b].first)<span class="comment">//更新最好个体</span></span><br><span class="line">                &#123;</span><br><span class="line">                    bestofpop.first=pop[b].first;</span><br><span class="line">                    <span class="keyword">delete</span> bestofpop.second;</span><br><span class="line">                    bestofpop.second=<span class="keyword">new</span> VI(*pop[b].second);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=pop.size()<span class="number">-1</span>;i&gt;=<span class="number">0</span>;i--)<span class="comment">//进行变异</span></span><br><span class="line">            <span class="keyword">if</span>(next_double()&lt;pm)<span class="comment">//随机数小于变异概率,进行变异</span></span><br><span class="line">            &#123;</span><br><span class="line">                mutate(*pop[i].second,mutate_type,pointcnt);<span class="comment">//变异</span></span><br><span class="line">                pop[i].first=fitness(*pop[i].second,pointcnt);<span class="comment">//计算变异后个体的适应度</span></span><br><span class="line">            &#125;</span><br><span class="line">        sort(pop.begin(),pop.end(),pair_dec);<span class="comment">//从大到小排序</span></span><br><span class="line">        <span class="keyword">if</span>(bestofpop.first&lt;pop[<span class="number">0</span>].first)<span class="comment">//更新最好个体</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">delete</span> bestofpop.second;</span><br><span class="line">            bestofpop.first=pop[<span class="number">0</span>].first;</span><br><span class="line">            bestofpop.second=<span class="keyword">new</span> VI(*pop[<span class="number">0</span>].second);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    srand((<span class="keyword">unsigned</span>)time(<span class="literal">NULL</span>));</span><br><span class="line">    <span class="keyword">int</span> CASNUM,POINTCNT,POPSIZE,GENERATIONS;</span><br><span class="line">    <span class="comment">//scanf("%d",&amp;CASNUM);//输入实验次数</span></span><br><span class="line">    CASNUM=<span class="number">10</span>;<span class="comment">//输入实验次数</span></span><br><span class="line">    <span class="comment">//scanf("%d%d%d",&amp;POINTCNT,&amp;POPSIZE,&amp;GENERATIONS);//输入染色体长度（城市数），种群规模，最大迭代步数</span></span><br><span class="line">    POINTCNT=<span class="number">10</span>, POPSIZE=<span class="number">100</span>,GENERATIONS=<span class="number">100</span>;<span class="comment">//输入染色体长度（城市数），种群规模，最大迭代步数</span></span><br><span class="line">    x.resize(POINTCNT);</span><br><span class="line">    y.resize(POINTCNT);</span><br><span class="line">    x[<span class="number">0</span>]=<span class="number">0</span>, x[<span class="number">1</span>]=<span class="number">1.1</span>,x[<span class="number">2</span>]=<span class="number">3.5</span>,x[<span class="number">3</span>]=<span class="number">3</span>,x[<span class="number">4</span>]=<span class="number">7</span>,x[<span class="number">5</span>]=<span class="number">8</span>,x[<span class="number">6</span>]=<span class="number">4</span>,x[<span class="number">7</span>]=<span class="number">4.5</span>,x[<span class="number">8</span>]=<span class="number">9</span>,x[<span class="number">9</span>]=<span class="number">2</span>;</span><br><span class="line">    y[<span class="number">0</span>]=<span class="number">1.1</span>,y[<span class="number">1</span>]=<span class="number">3</span>,y[<span class="number">2</span>]=<span class="number">2</span>,y[<span class="number">3</span>]=<span class="number">4</span>,y[<span class="number">4</span>]=<span class="number">5.1</span>,y[<span class="number">5</span>]=<span class="number">8</span>,y[<span class="number">6</span>]=<span class="number">4</span>,y[<span class="number">7</span>]=<span class="number">4.5</span>,y[<span class="number">8</span>]=<span class="number">9</span>,y[<span class="number">9</span>]=<span class="number">2</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"城市数="</span>&lt;&lt;POINTCNT&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"各城市坐标:"</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;POINTCNT;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//scanf("%lf%lf",&amp;x[i],&amp;y[i]);//输入各个城市的坐标</span></span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="string">"["</span>&lt;&lt;x[i]&lt;&lt;<span class="string">", "</span>&lt;&lt;y[i]&lt;&lt;<span class="string">"]"</span>&lt;&lt;<span class="built_in">endl</span>;<span class="comment">//输出各个城市的坐标</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> select_type,make_p_type,k,cross_type,mutate_type;</span><br><span class="line">    <span class="keyword">double</span> q,pc,pm;</span><br><span class="line">    <span class="comment">//scanf("%d%d%d",&amp;select_type,&amp;make_p_type,&amp;k);//输入个体选择方法类型，个体选择概率分配类型，竞赛规模</span></span><br><span class="line">    <span class="comment">//scanf("%lf%lf%lf",&amp;q,&amp;pc,&amp;pm);//输入最好个体选择概率，交叉概率，变异概率</span></span><br><span class="line">    <span class="comment">//scanf("%d%d",&amp;cross_type,&amp;mutate_type);//输入交叉类型，变异类型</span></span><br><span class="line">    select_type=<span class="number">0</span>,make_p_type=<span class="number">0</span>,k=<span class="number">5</span>;<span class="comment">//输入个体选择方法类型，个体选择概率分配类型，竞赛规模</span></span><br><span class="line">    q=<span class="number">0.5</span>,pc=<span class="number">0.85</span>,pm=<span class="number">0.15</span>;<span class="comment">//输入最好个体选择概率，交叉概率，变异概率</span></span><br><span class="line">    cross_type=<span class="number">0</span>,mutate_type=<span class="number">0</span>;<span class="comment">//输入交叉类型，变异类型</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">double</span> best=<span class="number">1e9</span>,worst=<span class="number">0</span>,sum=<span class="number">0</span>;</span><br><span class="line">    VI res;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> cas=<span class="number">0</span>;cas&lt;CASNUM;cas++)<span class="comment">//</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="function">other_population <span class="title">gen</span><span class="params">(POPSIZE,POINTCNT,cross_type,mutate_type,make_p_type,pc,pm,k,q,select_type)</span></span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> g=<span class="number">0</span>;g&lt;GENERATIONS;g++)<span class="comment">//进行迭代进化</span></span><br><span class="line">            gen.next();</span><br><span class="line">        <span class="keyword">if</span>(best&gt;<span class="number">1.0</span>/gen.bestofpop.first)<span class="comment">//更新历次最好适应度</span></span><br><span class="line">        &#123;</span><br><span class="line">            best=<span class="number">1.0</span>/gen.bestofpop.first;</span><br><span class="line">            res=*gen.bestofpop.second;<span class="comment">//存放最好个体的染色体</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(worst&lt;<span class="number">1.0</span>/gen.bestofpop.first)<span class="comment">//更新历次最差适应度</span></span><br><span class="line">            worst=<span class="number">1.0</span>/gen.bestofpop.first;</span><br><span class="line">        sum+=<span class="number">1.0</span>/gen.bestofpop.first;<span class="comment">//计算各次最好个体的适应度之和</span></span><br><span class="line">    &#125;</span><br><span class="line">    sum/=CASNUM;<span class="comment">//计算平均适应度</span></span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"历次最好适应度："</span>&lt;&lt;best&lt;&lt;<span class="string">"\n"</span>&lt;&lt;<span class="string">"历次最差适应度："</span>&lt;&lt;worst&lt;&lt;<span class="string">"\n"</span>&lt;&lt;<span class="string">"平均适应度："</span>&lt;&lt;sum&lt;&lt;<span class="string">"\n"</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">"输出最好解："</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;POINTCNT;i++)<span class="comment">//输出解</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;res[i];<span class="comment">//输出各城市</span></span><br><span class="line">        <span class="keyword">if</span> (i&lt;POINTCNT<span class="number">-1</span>)</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;<span class="string">"-"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://imgchr.com/i/si33ee" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2021/01/04/si33ee.png" alt="si33ee.png"></a></p>
+<blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2021/01/04/genertic-algorithm/" target="_blank" rel="noopener">https://zyhang8.github.io/2021/01/04/genertic-algorithm/</a></p></blockquote>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2021/01/04/genertic-algorithm/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2021/01/04/genertic-algorithm/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//Roy Z..disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2021/01/04/astar-algorithm/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/head_sculpture.png" alt="Euan's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        ruadhan@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:ruadhan@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2021/01/">一月 2021<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/12/">十二月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/11/">十一月 2019<span class="sidebar_archives-count">26</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">29</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">28</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/Database/">Database<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/IT项目管理/">IT项目管理<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/android/">android<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/c/">c++<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/j2ee/">j2ee<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/java/">java<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/letex/">letex<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/lua/">lua<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/opencv/">opencv<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/oracle/">oracle<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/scrapy/">scrapy<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/书籍/">书籍<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/企业/">企业<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/信息安全/">信息安全<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端/">前端<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/开箱/">开箱<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/心理学/">心理学<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/测试/">测试<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/游记/">游记<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/笔记/">笔记<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机网络/">计算机网络<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/设计模式/">设计模式<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/评测/">评测<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/需求分析/">需求分析<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/鱼的记忆/">鱼的记忆<span class="sidebar_archives-count">9</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">table</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间轴">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                时间轴
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/video" title="目之所及">
+                
+                    <i class="material-icons sidebar-material-icons">movie</i>
+                
+                目之所及
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="图库">
+                
+                    <i class="material-icons sidebar-material-icons">collections</i>
+                
+                图库
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="好朋友">
+                
+                    <i class="material-icons sidebar-material-icons">favorite_border</i>
+                
+                好朋友
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/PGP" title="PGP密钥">
+                
+                    <i class="material-icons sidebar-material-icons">vpn_key</i>
+                
+                PGP密钥
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/agree" title="知识共享协议">
+                
+                    <i class="material-icons sidebar-material-icons">https</i>
+                
+                知识共享协议
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/me" title="关于Euan">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于Euan
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">115</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https:www.github.com/zyhang8" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Euan's Blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//Roy Z..disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2017;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
