@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.5.6 -->
+    <script>
+        window.materialVersion = "1.5.6"
+        // Delete localstorage with these tags
+        window.oldVersion = [
+            'codestartv1',
+            '1.3.4',
+            '1.4.0',
+            '1.4.0b1',
+            '1.5.0',
+            '1.5.2',
+            '1.5.5'
+        ]
+    </script>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+
+
+
+    <link rel="dns-prefetch" href="https://busuanzi.ibruce.info">
+
+
+
+    <link rel="dns-prefetch" href="https://Roy Z..disqus.com">
+
+
+
+    <link rel="dns-prefetch" href="https://hm.baidu.com">
+
+
+
+    <link rel="dns-prefetch" href="https://lib.baomitu.com">
+
+
+
+
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!-- Title -->
+    
+    <title>
+        
+            5GC学习报告2 | 
+        
+        Euan&#39;s Blog
+    </title>
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/head_sculpture.png">
+    <link rel="icon" href="/img/head_sculpture.png">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" itemprop="description" content>
+    <meta name="keywords" content="求知若饥 谦虚若愚,5GC">
+    <meta name="theme-color" content="#0097A7">
+
+    <!-- Disable Fucking Bloody Baidu Tranformation -->
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(a){try{localStorage.removeItem(a)}catch(b){}};lsloader.setLS=function(a,c){try{localStorage.setItem(a,c)}catch(b){}};lsloader.getLS=function(a){var c="";try{c=localStorage.getItem(a)}catch(b){c=""}return c};versionString="/*"+(window.materialVersion||"unknownVersion")+"*/";lsloader.clean=function(){try{var b=[];for(var a=0;a<localStorage.length;a++){b.push(localStorage.key(a))}b.forEach(function(e){var f=lsloader.getLS(e);if(window.oldVersion){var d=window.oldVersion.reduce(function(g,h){return g||f.indexOf("/*"+h+"*/")!==-1},false);if(d){lsloader.removeLS(e)}}})}catch(c){}};lsloader.clean();lsloader.load=function(f,a,b,d){if(typeof b==="boolean"){d=b;b=undefined}d=d||false;b=b||function(){};var e;e=this.getLS(f);if(e&&e.indexOf(versionString)===-1){this.removeLS(f);this.requestResource(f,a,b,d);return}if(e){var c=e.split(versionString)[0];if(c!=a){console.log("reload:"+a);this.removeLS(f);this.requestResource(f,a,b,d);return}e=e.split(versionString)[1];if(d){this.jsRunSequence.push({name:f,code:e});this.runjs(a,f,e)}else{document.getElementById(f).appendChild(document.createTextNode(e));b()}}else{this.requestResource(f,a,b,d)}};lsloader.requestResource=function(b,e,a,c){var d=this;if(c){this.iojs(e,b,function(h,f,g){d.setLS(f,h+versionString+g);d.runjs(h,f,g)})}else{this.iocss(e,b,function(f){document.getElementById(b).appendChild(document.createTextNode(f));d.setLS(b,e+versionString+f)},a)}};lsloader.iojs=function(d,b,g){var a=this;a.jsRunSequence.push({name:b,code:""});try{var f=new XMLHttpRequest();f.open("get",d,true);f.onreadystatechange=function(){if(f.readyState==4){if((f.status>=200&&f.status<300)||f.status==304){if(f.response!=""){g(d,b,f.response);return}}a.jsfallback(d,b)}};f.send(null)}catch(c){a.jsfallback(d,b)}};lsloader.iocss=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.iofonts=function(f,c,h,a){var b=this;try{var g=new XMLHttpRequest();g.open("get",f,true);g.onreadystatechange=function(){if(g.readyState==4){if((g.status>=200&&g.status<300)||g.status==304){if(g.response!=""){h(g.response);a();return}}b.cssfallback(f,c,a)}};g.send(null)}catch(d){b.cssfallback(f,c,a)}};lsloader.runjs=function(f,c,e){if(!!c&&!!e){for(var b in this.jsRunSequence){if(this.jsRunSequence[b].name==c){this.jsRunSequence[b].code=e}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var a=document.createElement("script");a.appendChild(document.createTextNode(this.jsRunSequence[0].code));a.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(a);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else{if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var d=this;var a=document.createElement("script");a.src=this.jsRunSequence[0].path;a.type="text/javascript";this.jsRunSequence[0].status="loading";a.onload=function(){d.jsRunSequence.shift();if(d.jsRunSequence.length>0){d.runjs()}};document.body.appendChild(a)}}};lsloader.tagLoad=function(b,a){this.jsRunSequence.push({name:a,code:"",path:b,status:"failed"});this.runjs()};lsloader.jsfallback=function(c,b){if(!!this.jsnamemap[b]){return}else{this.jsnamemap[b]=b}for(var a in this.jsRunSequence){if(this.jsRunSequence[a].name==b){this.jsRunSequence[a].code="";this.jsRunSequence[a].status="failed";this.jsRunSequence[a].path=c}}this.runjs()};lsloader.cssfallback=function(e,c,b){if(!!this.cssnamemap[c]){return}else{this.cssnamemap[c]=1}var d=document.createElement("link");d.type="text/css";d.href=e;d.rel="stylesheet";d.onload=d.onerror=b;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(d,a)};lsloader.runInlineScript=function(c,b){var a=document.getElementById(b).innerText;this.jsRunSequence.push({name:c,code:a});this.runjs()}})();</script>
+
+    <!-- Import queue -->
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Import CSS -->
+    
+        <style id="material_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_css","/css/material.min.css?Z7a72R1E4SxzBKR/WGctOA==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+        <style id="style_css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("style_css","/css/style.min.css?NKhlKQkXw/c66TR5p4wO+w==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+        
+
+    
+
+    
+
+    <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微锟斤拷锟脚猴拷", Arial, sans-serif;
+    overflow-x: hidden !important;
+  }
+  
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+<!-- Import Roboto -->
+
+    <style>
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-300.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: regular;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-regular.svg#Roboto) format('svg')
+        }
+
+        @font-face {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot);
+            src: local('Roboto'),local('Roboto-Normal'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.eot?#iefix) format('embedded-opentype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff2) format('woff2'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.woff) format('woff'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.ttf) format('truetype'),url(https://lib.baomitu.com/fonts/roboto/roboto-v15-latin-500.svg#Roboto) format('svg')
+        }
+    </style>
+
+
+<!-- Import Material Icons -->
+
+
+    <style id="material_icons"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("material_icons","/css/material-icons.css?pqhB/Rd/ab0H2+kZp0RDmw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";}, false)</script>
+
+
+
+
+    <!-- Import jQuery -->
+    
+        <script>lsloader.load("jq_js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==", true)</script>
+    
+
+    <!-- WebAPP Icons -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Euan&#39;s Blog">
+    <meta name="msapplication-starturl" content="http://yoursite.com/2022/04/20/report2/">
+    <meta name="msapplication-navbutton-color" content="#0097A7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Euan&#39;s Blog">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon" href="/img/head_sculpture.png">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- RSS -->
+    
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com/2022/04/20/report2/">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="5GC学习报告2 | Euan&#39;s Blog">
+    <meta property="og:image" content="/img/head_sculpture.png">
+    <meta property="og:description" content>
+    <meta property="og:article:tag" content="5GC"> 
+
+    
+        <meta property="article:published_time" content="Wed Apr 20 2022 23:48:02 GMT+0800">
+        <meta property="article:modified_time" content="Wed Apr 27 2022 23:53:47 GMT+0800">
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://yoursite.com/2022/04/20/report2/index.html">
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://yoursite.com/2022/04/20/report2/index.html",
+    "headline": "5GC学习报告2",
+    "datePublished": "Wed Apr 20 2022 23:48:02 GMT+0800",
+    "dateModified": "Wed Apr 27 2022 23:53:47 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Euan",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/head_sculpture.png"
+        },
+        "description": "求知若饥,谦虚若愚"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Euan&#39;s Blog",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/head_sculpture.png"
+        }
+    },
+    "keywords": ",5GC求知若饥 谦虚若愚",
+    "description": "",
+}
+</script>
+
+
+    
+
+    <!-- Analytics -->
+    
+    
+        <script>
+    var _hmt = _hmt || [];
+    (function() {var hm = document.createElement('script');
+    hm.src = 'https://hm.baidu.com/hm.js?5a42bcc3e66e1db4931abdcca1a9aa74';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+    
+    
+
+    <!-- Custom Head -->
+    
+
+</head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span id="MD-burger-id" class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#5GC学习报告2"><span class="post-toc-number">1.</span> <span class="post-toc-text">5GC学习报告2</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-云原生"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1.云原生</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-1Cloud-Native由来"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">1.1Cloud Native由来</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-1-1定义演化-来自CNCF-1"><span class="post-toc-number">1.1.1.1.</span> <span class="post-toc-text">1.1.1定义演化(来自CNCF[1])</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-1-2总结"><span class="post-toc-number">1.1.1.2.</span> <span class="post-toc-text">1.1.2总结</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-2容器化封装"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">1.2容器化封装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-3-Pod"><span class="post-toc-number">1.1.2.1.</span> <span class="post-toc-text">1.3 Pod</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-4-服务编排"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">1.4 服务编排</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-5-Kubernetes在仓库中移除Docker的两个原因"><span class="post-toc-number">1.1.3.1.</span> <span class="post-toc-text">1.5 Kubernetes在仓库中移除Docker的两个原因</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-6-微服务"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">1.6 微服务</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-7-服务网格"><span class="post-toc-number">1.1.5.</span> <span class="post-toc-text">1.7 服务网格</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-7-1-理解服务网格"><span class="post-toc-number">1.1.5.1.</span> <span class="post-toc-text">1.7.1 理解服务网格</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-8-DevOps"><span class="post-toc-number">1.1.6.</span> <span class="post-toc-text">1.8 DevOps</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-9-落实具体的工具"><span class="post-toc-number">1.1.7.</span> <span class="post-toc-text">1.9 落实具体的工具</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-5G核心网络-5GC-（主要参考华为5GC的PPT介绍）"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2 5G核心网络(5GC)（主要参考华为5GC的PPT介绍）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-1-定义"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">2.1 定义</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-2-目的（Rel-16版本）"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">2.2 目的（Rel-16版本）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-3-解决方案"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">2.3 解决方案</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-3-1-Cloud-Native"><span class="post-toc-number">1.2.3.1.</span> <span class="post-toc-text">2.3.1 Cloud Native</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-3-2-微服务业务架构"><span class="post-toc-number">1.2.3.2.</span> <span class="post-toc-text">2.3.2 微服务业务架构</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-云服务"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">3 云服务</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-1-IaaS"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">3.1 IaaS</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-2-PaaS"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">3.2 PaaS</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-3-FaaS"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">3.3 FaaS</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-4-SaaS"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">3.4 SaaS</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-5-MicroService"><span class="post-toc-number">1.3.5.</span> <span class="post-toc-text">3.5 MicroService</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-6-Serverless"><span class="post-toc-number">1.3.6.</span> <span class="post-toc-text">3.6 Serverless</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-7-Serverless的历史"><span class="post-toc-number">1.3.7.</span> <span class="post-toc-text">3.7 Serverless的历史</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-8-Serverless-与-PaaS"><span class="post-toc-number">1.3.8.</span> <span class="post-toc-text">3.8 Serverless 与 PaaS</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-9-Serverless-与-SaaS"><span class="post-toc-number">1.3.9.</span> <span class="post-toc-text">3.9 Serverless 与 SaaS</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-10-Serverless-与-FaaS"><span class="post-toc-number">1.3.10.</span> <span class="post-toc-text">3.10 Serverless 与 FaaS</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-11-Serverless-与-MicroService"><span class="post-toc-number">1.3.11.</span> <span class="post-toc-text">3.11 Serverless 与 MicroService</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-参考文献"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">4 参考文献</span></a></li></ol></li></ol>
+    </ul>
+    
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                5GC学习报告2
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/head_sculpture.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Euan</strong>
+        <span>4月 20, 2022</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACaUlEQVR42u3aSXLDMAwEQP3/08kDEtMDcJHsap1cFS1sHggEwPXz1deFh4eHh4eHh4f3MN4VX6/u//u2V+8f3/nPQotrw8PDwzvJSz4z88nk2fF3k7Xh4eHhneeNg0Fy0I+fHYNffav6fjw8PLyn8cbIZIljGB4eHt738arlhmrSjIeHh/dZvPwf/uSvM6WK22oteHh4eDGv2gA7+fuG/h4eHh7ekLdgyKm1Nb0gVB66wsPDw9vAS4oI80uvloaTIkVz6AoPDw9vES9/uBcY8kS5mlhHgQEPDw9vA2/t0pPxgrwkUUXi4eHh7ebljfxqopwnzUkYSIYV8PDw8O7i5Ydy4ZO9IYBiaMHDw8M7w8uLDtWNSBL0vMhbCFd4eHh4m3kzx/ra0m2vGYaHh4d3F2+mzFpt+c+UOaIRBDw8PLwjvOSAnj++kyJvL5Dg4eHhneTlafGqZeUpch6W8PDw8M7zeknz7rHUPNXGw8PDO8+rpq3zAwG9AkS0BXh4eHibefvS4upAQHVoAA8PD+8uXq99lSfBCSYfS11QxsXDw8NbxKuWUPOSRIKpBqExGA8PD+8kr9cASxLovODbux8PDw/vPK8aBvLSwEyCnmx0oQGGh4eHt4jXKx/kKfKbpeTHfbyVeHh4eLt5V3wVWlDFYay1QQgPDw/vDK+XCueHeG8UtRlC8PDw8A7yqsFgvt3VC05vNhcPDw/vwbz5sa35LZsaHcDDw8M7wustutpy6wUYPDw8vPO8pBiRp8752/KnpgIDHh4e3lJetQFWbVMl+Gr7bWN/Dw8PD2/I+74LDw8PDw8PDw/vAdcvbsylgeH8epkAAAAASUVORK5CYII=">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/5GC/">5GC</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+        
+            <!-- Busuanzi Views -->
+            <a class="post_share-link" href="#">
+                <li class="mdl-menu__item">
+                    <span id="busuanzi_container_page_pv">
+                        <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+                    </span>
+                </li>
+            </a>
+        
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=5GC学习报告2&url=http://yoursite.com/2022/04/20/report2/index.html&pic=http://yoursite.com/img/head_sculpture.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=5GC学习报告2&url=http://yoursite.com/2022/04/20/report2/index.html&via=Euan" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2022/04/20/report2/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2022/04/20/report2/index.html&title=5GC学习报告2" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=Euan&#39;s Blog&title=5GC学习报告2&summary=&pics=http://yoursite.com/img/head_sculpture.png&url=http://yoursite.com/2022/04/20/report2/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="5GC学习报告2"><a href="#5GC学习报告2" class="headerlink" title="5GC学习报告2"></a>5GC学习报告2</h1><p>本周报告主要对云原生和5GC中相关概念、应用特性、关键技术进行了初步了解，由于学基于云原生的5GC经常使用服务化网络架构(SBA)，因此对云服务的相关概念进行了解。</p>
+<p>[toc]</p>
+<h2 id="1-云原生"><a href="#1-云原生" class="headerlink" title="1.云原生"></a>1.云原生</h2><h3 id="1-1Cloud-Native由来"><a href="#1-1Cloud-Native由来" class="headerlink" title="1.1Cloud Native由来"></a>1.1<a href="https://mp.weixin.qq.com/s/Q_o3ZLgF3Yu1CXymezZIHw" target="_blank" rel="noopener">Cloud Native由来</a></h3><p>最早开始于 2010 年,提出是为了能构建一种符合云计算特性的标准来指导云计算应用的编写</p>
+<p>云原生架构本质上也是一种软件架构，最大的特点是在云环境下运行，也算是微服务的一种延伸</p>
+<h4 id="1-1-1定义演化-来自CNCF-1"><a href="#1-1-1定义演化-来自CNCF-1" class="headerlink" title="1.1.1定义演化(来自CNCF[1])"></a>1.1.1定义演化(<a href="https://github.com/cncf/toc/blob/main/DEFINITION.md#%E4%B8%AD%E6%96%87%E7%89%88%E6%9C%AC" target="_blank" rel="noopener">来自CNCF</a>[1])</h4><p>2017DevOps、持续交付、微服务、容器四大特征</p>
+<p>云原生技术有利于各组织在公有云、私有云和混合云等新型动态环境中，构建和运行可弹性扩展的应用。云原生的代表技术包括容器、服务网格、微服务、不可变基础设施和声明式API。</p>
+<h4 id="1-1-2总结"><a href="#1-1-2总结" class="headerlink" title="1.1.2总结"></a>1.1.2总结</h4><p>第一阶段：容器化封装+自动化管理+面向微服务<br>第二阶段：DevOps、持续交付、微服务、容器<br>第三阶段：DevOps、持续交付、容器、服务网格、微服务、声明式API</p>
+<p>这些技术能够构建容错性好、易于管理和便于观察的松耦合系统。结合可靠的自动化手段，云原生技术使工程师能够轻松地对系统作出频繁和可预测的重大变更。</p>
+<p>服务网格（Service Mesh）是一个专门处理服务通讯的基础设施层。它的职责是在由云原生应用组成服务的复杂拓扑结构下进行可靠的请求传送。在实践中，它是一组和应用服务部署在一起的轻量级的网络代理，并且对应用服务透明。</p>
+<h3 id="1-2容器化封装"><a href="#1-2容器化封装" class="headerlink" title="1.2容器化封装"></a>1.2容器化封装</h3><p>容器：一种应用的包装形式，介于进程和虚拟机之间的一种计算单元</p>
+<p>我曾使用过docker容器部署过爬虫项目，现在docker也很火，Docker可以将应用和依赖封装到一个可移植的容器中。Docker背后的想法是创建软件程序可移植的轻量容器，让其可以在任何安装了Docker的机器上运行，而不用关心底层操作系统。</p>
+<p>容器生态图如下，该生态涵盖了容器应用中从镜像仓库、服务编排、安全管理、持续集成与发布、存储和网络管理等各个方面<br><img src="/img/report2/container-ecosystem.png" alt="1"></p>
+<blockquote>
+<p>CI/CD：持续集成、持续交付和持续部署<br>1.持续集成（CI，Continuous integration）：多名开发者在开发不同功能代码的过程当中，可以频繁的将代码行合并到一起并切相互不影响工作（之前实验室做过，用的gitalb）<br>2.持续部署（CD，continuous deployment）：是基于某种工具或平台实现代码自动化的构建、测试和部署到线上环境以实现交付高质量的产品。是持续交付的下一步，指的是代码通过评审以后，自动部署到生产环境<br>3.持续交付（CD，Continuous Delivery）：持续交付是在持续部署的基础之上，将产品交付到线上环境。github上传<br>Docker Registry是用来存储及管理Docker镜像的服务器。在每个Docker Registry中，镜像会被规整到仓库（repository）中，每个仓库包含不同应用程序（比如httpd、nginx、WordPress）对应的各种镜像。仓库也可以保存同个应用的多个版本，使用不同的标签来标识不同的版本。因此，Docker Registry类似于适用于容器化应用的版本控制存储方案。Docker Registry主要支持3种操作（push镜像、pull镜像以及delete镜像），这些操作都有对应的Registry API。</p>
+</blockquote>
+<h4 id="1-3-Pod"><a href="#1-3-Pod" class="headerlink" title="1.3 Pod"></a>1.3 Pod</h4><p>定义：是一种组合的多容器运行单元，也是Kubernetes里的一个基础单元。可以看作是一种容器的扩展或者增强型的容器</p>
+<p>Pod的意义在于，它可以既保持主容器和辅助容器的的密切关系，又保持主容器的独立性。由于主容器和辅助容器的生命周期相同，可以同时被创建和销毁，因此把它们放在一个Pod中，可以使他们的交互更加高效。</p>
+<h3 id="1-4-服务编排"><a href="#1-4-服务编排" class="headerlink" title="1.4 服务编排"></a>1.4 服务编排</h3><p>在单机上运行容器，无法发挥它的最大效能，只有形成集群，才能最大程度发挥容器的良好隔离、资源分配与编排管理的优势，而对于容器的编排管理，Swarm、Mesos和Kubernetes的大战已经基本宣告结束，kubernetes[kubə’netis]成为了无可争议的赢家，包括AliCloud、Tencent Clouf、ByteDance、Amazon、Intel都使用k8s</p>
+<p>下面这张图是Kubernetes的架构图，其中显示了组件之间交互的接口CNI、CRI、OCI等，这些将Kubernetes与某款具体产品解耦，给用户最大的定制程度，使得Kubernetes有机会成为跨云的真正的云原生应用的操作系统。这张图也有点老了，现在k8s直接使用containerd作为容器运行时</p>
+<p><img src="/img/report2/kubernetes-high-level-component-archtecture.jpg" alt="2"></p>
+<blockquote>
+<p>Kubelet 是 kubernetes 工作节点上的一个代理组件，运行在每个节点上<br>CRI:容器运行时接口（Container Runtime Interface),用来隔离不同容器运行时的实现机制</p>
+</blockquote>
+<h4 id="1-5-Kubernetes在仓库中移除Docker的两个原因"><a href="#1-5-Kubernetes在仓库中移除Docker的两个原因" class="headerlink" title="1.5 Kubernetes在仓库中移除Docker的两个原因"></a>1.5 Kubernetes在仓库中移除Docker的两个原因</h4><p>Kubernetes 在早期版本中引入 CRI 摆脱依赖某个具体的容器运行时依赖，屏蔽底层的诸多实现细节，让 Kubernetes 能够更关注容器的编排。</p>
+<p>Docker 本身不兼容 CRI 接口，而且官方并没有实现 CRI 的打算，所以 Dockershim 的维护成为了社区的想要摆脱负担。现在有很多实现CRI接口的运行时可用，Kubernetes保持对Docker的特殊支持就不再有意义。</p>
+<blockquote>
+<p>看了相关博客后我了解了容器(container)和编排系统(k8s)的传统处理流程和新型处理流程</p>
+</blockquote>
+<h3 id="1-6-微服务"><a href="#1-6-微服务" class="headerlink" title="1.6 微服务"></a>1.6 微服务</h3><p>微服务是指系统的不同单元或功能运行不同的容器，每一个服务的容器数量可以根据自己的负载进行调整。</p>
+<p>微服务中应该关心的主题：<br><img src="/img/report2/microservices-concerns.jpg" alt="3"></p>
+<p>微服务带给我们很多开发和部署上的灵活性和技术多样性，但是也增加了服务调用的开销、分布式系统管理、调试与服务治理方面的难题。</p>
+<h3 id="1-7-服务网格"><a href="#1-7-服务网格" class="headerlink" title="1.7 服务网格"></a>1.7 服务网格</h3><p>依存于MicroService微服务架构存在的，因为微服务之间需要通信，需要数据交换同步等操作。在没有ServiceMesh之前微服务的通信，数据交换同步也存在，也有比较好的解决方案，如Spring Clould，OSS，Double这些，但他们有个最大的特点就是需要你写入代码中，而且需要深度的写很多逻辑操作代码，这就是侵入式。而ServiceMesh最大的特点是非侵入式，不需要你写特定代码，只是在云服务的层面即可享受微服务之间的通信，数据交换同步等操作，这里的代表如，docker+K8s，istio，linkerd等。</p>
+<h4 id="1-7-1-理解服务网格"><a href="#1-7-1-理解服务网格" class="headerlink" title="1.7.1 理解服务网格"></a>1.7.1 理解服务网格</h4><p>如果用一句话来解释什么是服务网格，可以将它比作是应用程序或者说微服务间的 TCP/IP，负责服务之间的网络调用、限流、熔断和监控。对于编写应用程序来说一般无须关心 TCP/IP 这一层（比如通过 HTTP 协议的 RESTful 应用），同样使用服务网格也就无须关系服务之间的那些原来是通过应用程序或者其他框架实现的事情，比如 Spring Cloud、OSS，现在只要交给服务网格就可以了。</p>
+<p><img src="/img/report2/serivce-mesh-control-plane.png" alt="5"></p>
+<h3 id="1-8-DevOps"><a href="#1-8-DevOps" class="headerlink" title="1.8 DevOps"></a>1.8 DevOps</h3><p>DevOps是指开发者、测试、生产过程流水线化。包括自动化发布管道、CI工具；快速部署到生产环境；开发、运维协同合作。</p>
+<h3 id="1-9-落实具体的工具"><a href="#1-9-落实具体的工具" class="headerlink" title="1.9 落实具体的工具"></a>1.9 落实具体的工具</h3><p>如图，使用Kubernetes构建云原生架构</p>
+<p><img src="/img/report2/building-cloud-native-architecture-with-kubernetes.png" alt="3"></p>
+<p>合这12因素对开发或者改造后的应用适合部署到Kubernetes之上，基本流程如下图所示：</p>
+<p><img src="/img/report2/creating-kubernetes-native-app.jpg" alt="4"></p>
+<h2 id="2-5G核心网络-5GC-（主要参考华为5GC的PPT介绍）"><a href="#2-5G核心网络-5GC-（主要参考华为5GC的PPT介绍）" class="headerlink" title="2 5G核心网络(5GC)（主要参考华为5GC的PPT介绍）"></a>2 5G核心网络(5GC)（主要参考华为5GC的PPT介绍）</h2><h3 id="2-1-定义"><a href="#2-1-定义" class="headerlink" title="2.1 定义"></a>2.1 定义</h3><p>随着 5G 的出现，行业专家定义了核心网络应如何演进以支持 5G 新无线电 (NR) 的需求及其支持的高级用例。他们共同为核心网络开发了新的 3GPP 标准，称为 5G 核心网 (5GC)。</p>
+<blockquote>
+<p>区别：5G NR讲述的是从移动设备到RAN之间的无线网络，而5GC讲述的则是从基站到网络运营商/事业单位的内部网络结构（UPF），当然有时候5GC也可以描述为设备到网络运营商。<br>无线接入网（RAN）：如基站；</p>
+</blockquote>
+<p>5G 核心网 (5GC) 是 5G 移动网络的核心。5G 核心网络功能完全基于软件并设计为云原生，这意味着它们与底层云基础设施无关，从而实现更高的部署敏捷性和灵活性。</p>
+<p>新的 5GC 架构基于所谓的基于服务的架构，借鉴了云原生设计方法，采用了微服务、网络功能虚拟化、控制面与用户面分离、网络切片、边缘计算、网络能力开放等技术，将演进分组核心网（EPC，Evolved Packet Core）中的网元（Network Element，NE）进一步拆分为网络功能（Network  Function，NF）,包括NSSF、NEF、NRF、PCF、UDM、AUSF、AMF、SMF、UPF、AF,最终实现了 5GC 架构<strong>化整为零、由硬变软</strong>的演进</p>
+<blockquote>
+<p>华为，中兴，爱浦路IPLOOK厂商<br>NFV：网络功能虚拟化<br>边缘计算（Multi-access Edge Computing，MEC）</p>
+</blockquote>
+<p>全景图：<br><img src="/img/report2/3.png" alt="5"></p>
+<ol>
+<li>AMF(Core Access andMobility Management Function)接入及移动性管理，主要负责用户接入控制和移动性管理等；</li>
+<li>SMF(Session ManagementFunction)会话管理，主要负责会话管理，同时包括路由控制、地址分配和合法监听等控制功能；</li>
+<li>UDM(Unified DataManagement)统一数据管理，主要负责用户数据和签约信息的存储，但是不具备鉴权功能；</li>
+<li>UPF(User Plane Function)用户面功能，只做纯转发面，实现用户面的大数据量转发功能；</li>
+<li>PCF(Policy ControlFunction)策略控制功能，主要负责5G网络基于流的QoS控制等；</li>
+<li>NRF(NF RepositoryFunction)网络功能仓库，主要用于5G网络各种网元功能的注册管理；</li>
+<li>NEF(Network ExposureFunction)能力开放功能，便于与各类互联网和物联网应用对接和扩展；</li>
+<li>UDR(Unified DataRepository)统一数据仓库，主要为所有NF提供非结构化数据信息的存储和检索功能；</li>
+<li>NSSF( Network SliceSelection Function)网络切片选择，其主要功能是5G网络中为了实现切片管理新增的功能；</li>
+<li>AUSF(AuthenticationServer Function)认证服务器功能，主要是为了便于互联网业务鉴权的整合，实现5G网络的统一鉴权功能。</li>
+</ol>
+<h3 id="2-2-目的（Rel-16版本）"><a href="#2-2-目的（Rel-16版本）" class="headerlink" title="2.2 目的（Rel-16版本）"></a>2.2 目的（Rel-16版本）</h3><p>增强5G对于增强移动宽带（enhanced Mobile Broadband，eMBB）、超高可靠和低延迟通信（ultra Reliable and Low Latency Communication，uR LLC）和海量机器类通信（massive Machine Type of Communication，mMTC）场景的支持能力</p>
+<h3 id="2-3-解决方案"><a href="#2-3-解决方案" class="headerlink" title="2.3 解决方案"></a>2.3 解决方案</h3><ol>
+<li>Cloud Native:具有软件微服务化、数据分布式存储等特征，与5G不谋而合。华为5G核心网软件架构借鉴了Cloud Native的设计理念实现了<strong>软件微服务化</strong></li>
+<li>服务化网络架构(SBA)：3GPP协议将控制面网络功能(NF)全面解耦，摒弃了传统点对点组网的通信方式．采用服务化架构组网模式，5G核心网采用了基于服务化架构的SBI(service based interface）串行总线接口协议，传输层采用HTTP/2协议． </li>
+<li>网络切片(Network Slices)：为了满足不同行业用户对网络资源的不同指标要求，实现按业务需要灵活分配网络资源（类似微服务思想，负载均衡）有UeMBB切片和FWA切片两种</li>
+<li>极简融合：华为5G核心网实现了2/3/4/SG网络的全面融合，打造极简融合的核心网，图片同时兼顾存量网络的平滑演进</li>
+<li>边缘计算：使业务就近本地分流，使用户实现业务数据的本地运营，在边缘网络位置为用户提供差异化服务，带给用户超低时延的业务体验</li>
+</ol>
+<h4 id="2-3-1-Cloud-Native"><a href="#2-3-1-Cloud-Native" class="headerlink" title="2.3.1 Cloud Native"></a>2.3.1 Cloud Native</h4><p>轻量级虚拟化隔离，支持多云部署（包括公有云的部署形式）是未来电信网络发展的趋势．容器是Linux操作系统内核自带能力，容器实现了轻量级高性能资源隔离机制，5G Core产品基于Docker容器来部署和运行，使产品汇聚了Docker容器的各方面优势： </p>
+<ul>
+<li>通过镜像的方式进行产品软件打包．加快产品部署升级，实现秒级的弹性伸缩和HA.</li>
+<li>通过容器方式进行应用的部署，和通过虚拟机相比开销很小，能够节约资源。</li>
+<li>通过将除Linux内核外的环境信息都打包到镜像中，移植能力强，支持跨云部署，无厂商锁定。不管是华为私有云还是第三方公有云，产品均能部署上线．不虚要再次进行镜像的定制发布。 </li>
+<li>通过容器粒度的资源隔离定制．产品可以针对不同级别的SLA，进行资源的专属定制和规划。</li>
+</ul>
+<p>5G Core部署在华为电信级Fusionstage平台上．Fusionstage平台的核心是封装系统云化，微服务化的分布式复杂性，Fusionstage平台定义了以下几大功能：</p>
+<ul>
+<li>微服务治理框架：为应用提供自动注册、发现、治理、隔离、调用分析等一系列分布式/微服务治理能力．屏蔽分布式系统的复杂度。</li>
+<li>应用调度与资源管理框架：打通从应用建模、编排部署到资源调度、弹性伸缩、监控自愈的生命周期管理自动化．</li>
+<li>应用开发流水线框架：打通从编写代码提交到自动编泽打包、持续集成、自动部署上线的一系列CI/CD全流程自动化。</li>
+<li>云中间件服务：应用云化所需的数据库、大数据、通信和应用中间件服务；通过服务集成管控可集成传统非云化的中间件能力。</li>
+</ul>
+<p>产品微服务化容器化的过程中：</p>
+<ul>
+<li>通过应用调度与资源管理框架进行容器资源的调度管理，实现一健式的实例化、弹性和升级。 </li>
+<li>通过微服务治理框架，屏蔽产品服务化拆分后，新引入的分布式系统的复杂度。 </li>
+<li>通过应用开发流水线框架，构建DevOps能力系统。</li>
+<li>通过云中间件服务．未来产品或引入第三方服务，支排产品在特定领域的功能。</li>
+</ul>
+<blockquote>
+<p>SLA是服务等级协议（Service Level Agreement），是通信服务中的基础服务，通俗讲，就是服务商在提供的服务中确定要达到一个怎么样的等级的协议。但并不是每个产品都有SLA。<br>HA:高可用(High Availability)</p>
+</blockquote>
+<h4 id="2-3-2-微服务业务架构"><a href="#2-3-2-微服务业务架构" class="headerlink" title="2.3.2 微服务业务架构"></a>2.3.2 微服务业务架构</h4><p><img src="/img/report2/2.png" alt="6"></p>
+<ul>
+<li>业务微服务：上层业务逻辑相关的微服务，例如AM承载了移动性管理，接入管理功能</li>
+<li>链路及接口微服务：负责外部请求到微服务间的消息分发。</li>
+<li>公共微服务：为系统提供公共服务的微服务。例如CSLB负责消息的转发和负载均衡处理,CSDB负责微服务的分布式数据存储．</li>
+<li>微服务框架：管理微服务上线注册、微服务间通信、微服务发现及订阅、注销等．保证系统正常、可靠运行。</li>
+<li>操作运维框架：负责发给微服务以及将微服务的状态信息（告苦、过理数据等）上拓倒网管或 </li>
+</ul>
+<blockquote>
+<p>AM(Access and Mobility Management,接入与移动性管理)<br>SLB:负载均衡（Server Load Balancer）</p>
+</blockquote>
+<h2 id="3-云服务"><a href="#3-云服务" class="headerlink" title="3 云服务"></a>3 云服务</h2><blockquote>
+<p>对云服务相关概念进行了解</p>
+</blockquote>
+<p>云计算、云服务就是一种更优化的服务器功能，从只是个服务器硬件本身，升级到在这个硬件中集成了很多方便使用，或者开箱即用服务，不需要你知道怎么安装，怎么配置，你只要花钱买了，就开箱即用。即有硬件使用，也有服务提供，这就是云服务。</p>
+<h3 id="3-1-IaaS"><a href="#3-1-IaaS" class="headerlink" title="3.1 IaaS"></a>3.1 IaaS</h3><p>基础设施服务，Infrastructure as a service，如果把软件开发比作厨师做菜，那么IaaS就是他人提供了厨房，炉子，锅等基础东西，如租服务器</p>
+<h3 id="3-2-PaaS"><a href="#3-2-PaaS" class="headerlink" title="3.2 PaaS"></a>3.2 PaaS</h3><p>平台服务，Platform as a service，还是做菜比喻，比如我做一个黄焖鸡米饭，除了提供基础东西外，那么PaaS还给你提供了现成剁好的鸡肉，土豆，辣椒，你只要把这些东西放在一起，加些调料，用个小锅子在炉子上焖个20分钟就好了。如oj系统上的ide</p>
+<h3 id="3-3-FaaS"><a href="#3-3-FaaS" class="headerlink" title="3.3 FaaS"></a>3.3 FaaS</h3><p>函数服务，Function as a Service，同样是做黄焖鸡米饭，这次我只提供酱油，色拉油，盐，醋，味精这些调味料，其他我不提供，你自己根据不同口味是多放点盐，<br>还是多放点醋，你自己决定。如IBM Cloud Functions</p>
+<h3 id="3-4-SaaS"><a href="#3-4-SaaS" class="headerlink" title="3.4 SaaS"></a>3.4 SaaS</h3><p>软件服务，Software as a service，同样还是做黄焖鸡米饭，这次是直接现成搞好的一个一个小锅的鸡，什么调料都好了，已经是个成品了，你只要贴个牌，直接卖出<br>去就行了，做多是在炉子上焖个20分钟。</p>
+<h3 id="3-5-MicroService"><a href="#3-5-MicroService" class="headerlink" title="3.5 MicroService"></a>3.5 MicroService</h3><p>微服务，Micro service，微服务是服务整体的细化，如果还是做黄焖鸡米饭，就好比一家供应商提供好了所有调料，一家供应商提供好了所有的鸡块等食材，你只要把这两<br>家供应商提供的东西做成黄焖鸡米饭就行了。</p>
+<h3 id="3-6-Serverless"><a href="#3-6-Serverless" class="headerlink" title="3.6 Serverless"></a>3.6 Serverless</h3><p>无服务，Server less，说是无，其实有，无服务就是一种没有感知的服务，你不需要知道它怎么实现的。如果还是做黄焖鸡米饭，无服务在这里可以比喻为买一袋已经调味好的调料包，你直接往黄焖鸡里倒就行了，至于怎么调出的口味你不需要知道。</p>
+<h3 id="3-7-Serverless的历史"><a href="#3-7-Serverless的历史" class="headerlink" title="3.7 Serverless的历史"></a>3.7 Serverless的历史</h3><p>“无服务器”指的是我们的代码不会明确地部署在某些特定的软件或者硬件的服务器上。运行代码托管的环境是由例如阿里云或者腾讯云这样的云计算厂商所提供。其实这听上去又很像Paas,SaaS,FaaS,所以他们之间也充满了联系。</p>
+<h3 id="3-8-Serverless-与-PaaS"><a href="#3-8-Serverless-与-PaaS" class="headerlink" title="3.8 Serverless 与 PaaS"></a>3.8 Serverless 与 PaaS</h3><p>PaaS是平台即为服务，Serverless相当于平台提供了更加细粒度和碎片化的服务，从这个层次来说，Serverless=PaaS。</p>
+<h3 id="3-9-Serverless-与-SaaS"><a href="#3-9-Serverless-与-SaaS" class="headerlink" title="3.9 Serverless 与 SaaS"></a>3.9 Serverless 与 SaaS</h3><p>SaaS是软件本身即为服务，Serverless相当于软件提供了更加细粒度和碎片化的服务，因为Serverless也是一种软件，从这个层次来说，Serverless=SaaS。</p>
+<h3 id="3-10-Serverless-与-FaaS"><a href="#3-10-Serverless-与-FaaS" class="headerlink" title="3.10 Serverless 与 FaaS"></a>3.10 Serverless 与 FaaS</h3><p>FaaS是函数即为服务，Serverless相当于提供的更加细粒度和碎片化服务是一种函数，从这个层次来说，Serverless=FaaS。</p>
+<h3 id="3-11-Serverless-与-MicroService"><a href="#3-11-Serverless-与-MicroService" class="headerlink" title="3.11 Serverless 与 MicroService"></a>3.11 Serverless 与 MicroService</h3><p>MicroService是微服务，是一种专注于单一责任与功能的小型服务，Serverless相当于更加细粒度和碎片化的单一责任与功能小型服务，他们都是一种特定的小型服务，从这个层次来说，Serverless=MicroService。</p>
+<blockquote>
+<p>这几个之间有这么多联系，但是从架构的定义范围也有个包含关系，PaaS &gt; SaaS &gt; FaaS &gt; MicroService &gt; Serverless</p>
+</blockquote>
+<h2 id="4-参考文献"><a href="#4-参考文献" class="headerlink" title="4 参考文献"></a>4 参考文献</h2><p>[1]<a href="https://github.com/cncf/toc/blob/main/DEFINITION.md#%E4%B8%AD%E6%96%87%E7%89%88%E6%9C%AC" target="_blank" rel="noopener">云原生计算基金会（CNCF）定义</a></p>
+<p>[2]<a href="https://mp.weixin.qq.com/s/Q_o3ZLgF3Yu1CXymezZIHw" target="_blank" rel="noopener">CNCF微信推文</a></p>
+<p>[3]<a href="https://max.book118.com/html/2021/1101/6233234045004040.shtm" target="_blank" rel="noopener">华为5GC PPT介绍</a></p>
+<p>[4]<a href="https://jimmysong.io/kubernetes-handbook/usecases/service-mesh.html" target="_blank" rel="noopener">Jimmy Song(云原生社区创始人)博客介绍云原生</a></p>
+<p>[5]张皓然. 基于微服务的5G核心网管理与编排技术研究[D].西安电子科技大学,2021.DOI:10.27389/d.cnki.gxadu.2021.002059.</p>
+<p>[6]李铭轩,童俊杰,刘秋妍.基于云原生的5G核心网演进解决方案研究[J].信息通信技术,2020,14(01):63-69.</p>
+<blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;"><p> <strong>本文使用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a> 协议许可<br>具体请参见 <a href="https://zyhang8.github.io/agree/" target="_blank" rel="noopener">知识共享协议</a></strong><br> <strong>本文链接：</strong><a href="https://zyhang8.github.io/2022/04/20/report2/" target="_blank" rel="noopener">https://zyhang8.github.io/2022/04/20/report2/</a></p></blockquote>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2022/04/20/report2/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2022/04/20/report2/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//Roy Z..disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2022/04/27/report3/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2022/04/14/report1/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/head_sculpture.png" alt="Euan's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        ruadhan@qq.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:ruadhan@qq.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2022/04/">四月 2022<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2021/01/">一月 2021<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/12/">十二月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/11/">十一月 2019<span class="sidebar_archives-count">26</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/10/">十月 2019<span class="sidebar_archives-count">29</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/09/">九月 2019<span class="sidebar_archives-count">28</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/08/">八月 2019<span class="sidebar_archives-count">10</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/07/">七月 2019<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/06/">六月 2019<span class="sidebar_archives-count">1</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/5GC/">5GC<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/Database/">Database<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/IT项目管理/">IT项目管理<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/android/">android<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/c/">c++<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/j2ee/">j2ee<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/java/">java<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/letex/">letex<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/linux/">linux<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/lua/">lua<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/opencv/">opencv<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/oracle/">oracle<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/python/">python<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/scrapy/">scrapy<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/书籍/">书籍<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/企业/">企业<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/信息安全/">信息安全<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/前端/">前端<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/开箱/">开箱<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/心理学/">心理学<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/机器学习/">机器学习<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/测试/">测试<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/游记/">游记<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/笔记/">笔记<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/算法/">算法<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/计算机网络/">计算机网络<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/设计模式/">设计模式<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/评测/">评测<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/需求分析/">需求分析<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/categories/鱼的记忆/">鱼的记忆<span class="sidebar_archives-count">9</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+        <li>
+            <a href="/tags" title="标签">
+                
+                    <i class="material-icons sidebar-material-icons">table</i>
+                
+                标签
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/timeline" title="时间轴">
+                
+                    <i class="material-icons sidebar-material-icons">timeline</i>
+                
+                时间轴
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/video" title="目之所及">
+                
+                    <i class="material-icons sidebar-material-icons">movie</i>
+                
+                目之所及
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/gallery" title="图库">
+                
+                    <i class="material-icons sidebar-material-icons">collections</i>
+                
+                图库
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/links" title="好朋友">
+                
+                    <i class="material-icons sidebar-material-icons">favorite_border</i>
+                
+                好朋友
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/PGP" title="PGP密钥">
+                
+                    <i class="material-icons sidebar-material-icons">vpn_key</i>
+                
+                PGP密钥
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/agree" title="知识共享协议">
+                
+                    <i class="material-icons sidebar-material-icons">https</i>
+                
+                知识共享协议
+            </a>
+        </li>
+        
+    
+        <li>
+            <a href="/me" title="关于Euan">
+                
+                    <i class="material-icons sidebar-material-icons">person</i>
+                
+                关于Euan
+            </a>
+        </li>
+        
+    
+
+    <!-- Article Number  -->
+    
+        <li>
+            <a href="/archives">
+                文章总数
+                <span class="sidebar-badge">119</span>
+            </a>
+        </li>
+        
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+
+<!-- Theme Material -->
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="https:www.github.com/zyhang8" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+
+    <!-- V2EX -->
+    
+
+    <!-- Segmentfault -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©&nbsp;<span year></span>&nbsp;Euan's Blog
+            
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import JS File -->
+
+    <script>lsloader.load("lazyload_js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==", true)</script>
+
+
+
+    <script>lsloader.load("js_js","/js/js.min.js?Bn9UzEm8RrBSxqyZB0zPjA==", true)</script>
+
+
+
+    <script>lsloader.load("np_js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==", true)</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+    <!-- Busuanzi -->
+    <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//Roy Z..disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Import prettify js  -->
+
+
+
+<!-- Window Load -->
+<!-- add class for prettify -->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+
+    
+    
+</script>
+
+<!-- MathJax Load-->
+
+
+<!-- Bing Background -->
+
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Custom Footer -->
+
+
+
+<script>
+    var copyrightNow = new Date().getFullYear();
+    var textContent = document.querySelector('span[year]')
+
+    copyrightSince = 2017;
+    if (copyrightSince === copyrightNow||copyrightSince === 0000) {
+        textContent.textContent = copyrightNow
+    } else {
+        textContent.textContent = copyrightSince + ' - ' + copyrightNow
+    }
+
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.5.6 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
